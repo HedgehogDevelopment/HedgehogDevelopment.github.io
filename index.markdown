@@ -2,4 +2,6 @@
 title: Index Test
 ---
 
-# Test 3
+# Hi Mike
+
+Colour is spelt with a 'U'
