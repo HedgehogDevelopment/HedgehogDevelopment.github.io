@@ -1,6 +1,6 @@
 ---
 title: Index Test
-layout: MainLayout.html
+layout: MainLayout
 ---
 
 # Hi Mike
