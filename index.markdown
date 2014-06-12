@@ -3,6 +3,8 @@ title: Index Test
 layout: MainLayout
 ---
 
-Hello world
+
+<h1>Hedgehog Development</h1>
+<img src="/Images/Logo.png" />
 
 [TDS Manual](/tds/index.html)
