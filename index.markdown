@@ -7,6 +7,3 @@ layout: MainLayout
 </div>
 
 
-<ul>
-<li>[TDS Manual](/tds/index.html)</li>
-</ul>
