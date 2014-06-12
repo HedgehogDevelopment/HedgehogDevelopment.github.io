@@ -2,12 +2,12 @@
 title: Index Test
 layout: MainLayout
 ---
-
+ 
 # Team Development for Sitecore 
 
 ## About TDS
 
-TDS (Team Development for Sitecore), a Microsoft Visual Studio Plugin, brings Sitecore items into Visual Studio while reducing developer’s deployment time to almost zero.  
+TDS (Team Development for Sitecore), a Microsoft Visual Studio Plugin, brings Sitecore items into Visual Studio while reducing developerâ€™s deployment time to almost zero.  
 By using TDS, developers can improve control and overall team performance by integrating Source Code Control into Sitecore and Visual Studio projects.  
 TDS allows new developers to be easily added to a project. New developers can get the most recent updates from the Source Code Control and begin making 
 updates to the project almost immediately.  TDS eliminates the need for manually tracking item changes for deployment, since all changes are automatically 
@@ -25,14 +25,14 @@ Development team: Charlie Turano, Sean Kearney, Matt Friedlander, Elena Zlateva,
 * About TDS	2
 	* Acknowledgements	2
 * Contents	3
-* Chapter 1 – Introduction	6
+* Chapter 1 â€“ Introduction	6
 	* Team Development for Sitecore (TDS)	6
 	* How It Works	6
 	* Why TDS works	7
 	* Work Environments	9
 		* Development environment before TDS	9
 		* Development environment using TDS	10
-* Chapter 2 – Getting started with TDS	10
+* Chapter 2 â€“ Getting started with TDS	10
 	* System Requirements	10
 	* Installation	10
 		* Step-by-Step Instructions	12
@@ -45,10 +45,10 @@ Development team: Charlie Turano, Sean Kearney, Matt Friedlander, Elena Zlateva,
 	* TDS Project Types	20
 		* TDS Project	21
 		* TDS Project with Wizard	21
-* Chapter 3 – TDS Architecture	22
+* Chapter 3 â€“ TDS Architecture	22
 	* TDS Add-in	22
 	* TDS Web Service	22
-* Chapter 4 – Using TDS for Sitecore Development	23
+* Chapter 4 â€“ Using TDS for Sitecore Development	23
 	* The Sitecore database(s)	24
 	* Working outside the web root	24
 	* Solution Structure	24
@@ -78,11 +78,11 @@ Development team: Charlie Turano, Sean Kearney, Matt Friedlander, Elena Zlateva,
 		* Setting up Rocks and TDS	56
 		* Getting items using Rocks	57
 		* TDS and Sitecore upgrades	57
-* Chapter 5 – TDS Builds and Deployment	58
+* Chapter 5 â€“ TDS Builds and Deployment	58
 	* Solution Configurations and Project Configurations	58
 	* Configuration File Transforms	58
 	* Building Packages	59
-* Chapter 6 – Code Generation	59
+* Chapter 6 â€“ Code Generation	59
 	* vData Models	60
 		* ProjectHeader	60
 		* SitecoreItem	60
