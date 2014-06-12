@@ -3,6 +3,5 @@ title: Index Test
 layout: MainLayout
 ---
 
-# Hi Mike
 
-Colour is spelt with a 'U'
+[TDS Manual](/tds/index.html)
