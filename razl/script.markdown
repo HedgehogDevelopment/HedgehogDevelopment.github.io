@@ -24,43 +24,43 @@ The value {path to script file} should be replaced with the path to the XML file
 
 The XML for Razl is very simple and is made up primarily of connections and operations, by combining connections with operations Razl will perform tasks on the intended Sitecore instances. Below is an overview of the entire Razl XML:
 
-	&lt;razl&gt;
-	  &lt;connection name="" readOnly ="" install="true|false" preset=""&gt;
-	    &lt;url&gt;&lt;/url&gt;
-	    &lt;accessGuid&gt;&lt;/accessGuid&gt;
-	    &lt;database&gt;&lt;/database&gt;
-	    &lt;path&gt;&lt;/path&gt;
-	  &lt;/connection&gt;
-	  &lt;operation name="CopyHistory" source="" target=""&gt;
-	    &lt;parameter name="from"&gt;&lt;/parameter&gt;
-	    &lt;parameter name="recycle"&gt;true|false&lt;/parameter&gt;
-	    &lt;parameter name="include"&gt;
-	      &lt;value&gt;&lt;/value&gt;
-	    &lt;/parameter&gt;
-	    &lt;parameter name="exclude"&gt;
-	      &lt;value&gt;&lt;/value&gt;
-	    &lt;/parameter&gt;
-	  &lt;/operation&gt;
-	  &lt;operation name="CopyAll" source="" target=""&gt;
-	    &lt;parameter name="itemId"&gt;&lt;/parameter&gt;
-	    &lt;parameter name="overwrite"&gt;true|false&lt;/parameter&gt;
-	  &lt;/operation&gt;
-	  &lt;operation name="CopyItem" source="" target=""&gt;
-	    &lt;parameter name="itemId"&gt;&lt;/parameter&gt;
-	    &lt;parameter name="overwrite"&gt;true|false&lt;/parameter&gt;
-	  &lt;/operation&gt;
-	&lt;/razl&gt;
+	<razl>
+	  <connection name="" readOnly ="" install="true|false" preset="">
+	    <url></url>
+	    <accessGuid></accessGuid>
+	    <database></database>
+	    <path></path>
+	  </connection>
+	  <operation name="CopyHistory" source="" target="">
+	    <parameter name="from"></parameter>
+	    <parameter name="recycle">true|false</parameter>
+	    <parameter name="include">
+	      <value></value>
+	    </parameter>
+	    <parameter name="exclude">
+	      <value></value>
+	    </parameter>
+	  </operation>
+	  <operation name="CopyAll" source="" target="">
+	    <parameter name="itemId"></parameter>
+	    <parameter name="overwrite">true|false</parameter>
+	  </operation>
+	  <operation name="CopyItem" source="" target="">
+	    <parameter name="itemId"></parameter>
+	    <parameter name="overwrite">true|false</parameter>
+	  </operation>
+	</razl>
 
 ### Razl XML Connections
 
 Connections define how Razl should connect to a Sitecore instance. Connections can be fully defined in the XML or can be preset connections that have been defined in Razl GUI previously. The connection XML with all options looks like this:
 
-	  &lt;connection name="" readOnly ="" install="true|false" preset=""&gt;
-	    &lt;url&gt;&lt;/url&gt;
-	    &lt;accessGuid&gt;&lt;/accessGuid&gt;
-	    &lt;database&gt;&lt;/database&gt;
-	    &lt;path&gt;&lt;/path&gt;
-	  &lt;/connection&gt;
+	  <connection name="" readOnly ="" install="true|false" preset="">
+	    <url></url>
+	    <accessGuid></accessGuid>
+	    <database></database>
+	    <path></path>
+	  </connection>
 
 Summary of attributes and elements:
 
@@ -79,34 +79,34 @@ At least two connections should be defined in a Razl script.
 
 A defined connection is a connection that has the URL, AccessGuid and Database   and name defined in the XML. The minimum XML required is:
   
-	  &lt;connection name=""&gt;
-	    &lt;url&gt;&lt;/url&gt;
-	    &lt;accessGuid&gt;&lt;/accessGuid&gt;
-	    &lt;database&gt;&lt;/database&gt;
-	  &lt;/connection&gt;
+	  <connection name="">
+	    <url></url>
+	    <accessGuid></accessGuid>
+	    <database></database>
+	  </connection>
 
 Using a defined connection it is possible to install the Razl service required by Razl to communicate with Sitecore. The additional attribute install and the path element a required for this to work:
 
-	&lt;connection name="" install="true"&gt;
-	    &lt;url&gt;&lt;/url&gt;
-	    &lt;accessGuid&gt;&lt;/accessGuid&gt;
-	    &lt;database&gt;&lt;/database&gt;
-	    &lt;path&gt;&lt;/path&gt;
-	&lt;/connection&gt;
+	<connection name="" install="true">
+	    <url></url>
+	    <accessGuid></accessGuid>
+	    <database></database>
+	    <path></path>
+	</connection>
 
 A connection can also be made read only by adding the readOnly attribute:
 
-	&lt;connection name="" readOnly="true"&gt;
-	    &lt;url&gt;&lt;/url&gt;
-	    &lt;accessGuid&gt;&lt;/accessGuid&gt;
-	    &lt;database&gt;&lt;/database&gt;
-	&lt;/connection&gt;
+	<connection name="" readOnly="true">
+	    <url></url>
+	    <accessGuid></accessGuid>
+	    <database></database>
+	</connection>
 
 #### Preset Connections
 
 Preset connections are connections that have been defined in the Razl GUI first. The XML for a preset connection is:
 
-	&lt;connection name="" preset="" /&gt;
+	<connection name="" preset="" />
 
 The value for the preset connection should be save value shown in the Razl Connections dropdown. For example if in the Razl GUI the following connections are defined:
 
@@ -114,7 +114,7 @@ The value for the preset connection should be save value shown in the Razl Conne
 
 The configuration to use the **Awesome** connection would be:
 
-	&lt;connection name="" preset="Awesome" /&gt;
+	<connection name="" preset="Awesome" />
 
 Preset connections can not be made read only from the XML or be installed by the XML, these tasks should be performed in the Razl GUI.
 
@@ -122,8 +122,8 @@ Preset connections can not be made read only from the XML or be installed by the
 
 Operations define the actions that Razl should perform. The basic XML structure for an operation is:
    
-   &lt;operation name="" source="" target=""&gt;
-   &lt;/operation&gt;
+   <operation name="" source="" target="">
+   </operation>
 
 Summary of attributes and elements:
 
@@ -134,13 +134,13 @@ Summary of attributes and elements:
 
 An operation can have 0 or more child parameters. Parameters have the following basic XML structures:
 
-  	&lt;parameter name=""&gt;&lt;/parameter&gt;
+  	<parameter name=""></parameter>
 
 Or
-	  &lt;parameter name=""&gt;
-	       &lt;value&gt;&lt;/value&gt;
-	       &lt;value&gt;&lt;/value&gt;
-	  &lt;/parameter&gt;
+	  <parameter name="">
+	       <value></value>
+	       <value></value>
+	  </parameter>
 
 Summary of attributes and elements:
 
@@ -150,30 +150,30 @@ Summary of attributes and elements:
 
 If a parameters contains a single value it is possible to define the parameter without a value element, e.g:
 
-	&lt;parameter name="example"&gt;a value&lt;/parameter&gt;
+	<parameter name="example">a value</parameter>
 
 If the parameters required multiple values these can be defined using the value child element:
 
-	&lt;parameter name="example"&gt;
-	    &lt;value&gt;a value  1&lt;/value&gt;
-	    &lt;value&gt;a value  2&lt;/value&gt;
-	&lt;/parameter&gt;
+	<parameter name="example">
+	    <value>a value  1</value>
+	    <value>a value  2</value>
+	</parameter>
 
 #### CopyHistory Operation
 
 The CopyHistory operation will replay the actions recorded in the Sitecore history engine on one instance on another instance. The full XML for the CopyHistory operation is:
 
-	  &lt;operation name="CopyHistory" source="" target=""&gt;
-	    &lt;parameter name="from"&gt;&lt;/parameter&gt;
-	    &lt;parameter name="to"&gt;&lt;/parameter&gt;
-	    &lt;parameter name="recycle"&gt;true|false&lt;/parameter&gt;
-	    &lt;parameter name="include"&gt;
-	      &lt;value&gt;&lt;/value&gt;
-	    &lt;/parameter&gt;
-	    &lt;parameter name="exclude"&gt;
-	      &lt;value&gt;&lt;/value&gt;
-	    &lt;/parameter&gt;
-	  &lt;/operation&gt;
+	  <operation name="CopyHistory" source="" target="">
+	    <parameter name="from"></parameter>
+	    <parameter name="to"></parameter>
+	    <parameter name="recycle">true|false</parameter>
+	    <parameter name="include">
+	      <value></value>
+	    </parameter>
+	    <parameter name="exclude">
+	      <value></value>
+	    </parameter>
+	  </operation>
 
 Summary of parameters:
 
@@ -187,9 +187,9 @@ Summary of parameters:
 
 The CopyItem operation will copy an item from the source Sitecore instance to the target Sitecore instance. The full XML for the CopyItem operation is:
 
-	  &lt;operation name="CopyItem" source="" target=""&gt;
-	    &lt;parameter name="itemId"&gt;&lt;/parameter&gt;
-	  &lt;/operation&gt;
+	  <operation name="CopyItem" source="" target="">
+	    <parameter name="itemId"></parameter>
+	  </operation>
 
 Summary of parameters:
 
@@ -199,10 +199,10 @@ Summary of parameters:
 
 The CopyAll operation will copy an item from the source Sitecore instance to the target Sitecore instance and all child items. The full XML for the CopyAll operation is:
 
-	  &lt;operation name="CopyAll" source="" target=""&gt;
-	    &lt;parameter name="itemId"&gt;&lt;/parameter&gt;
-	    &lt;parameter name="overwrite"&gt;true|false&lt;/parameter&gt;
-	  &lt;/operation&gt;
+	  <operation name="CopyAll" source="" target="">
+	    <parameter name="itemId"></parameter>
+	    <parameter name="overwrite">true|false</parameter>
+	  </operation>
 
 Summary of parameters:
 
