@@ -1,5 +1,5 @@
 ---
-title: Index Test
+title: Hedgehog Development - Manuals
 layout: MainLayout
 ---
 <div class="text-center">
