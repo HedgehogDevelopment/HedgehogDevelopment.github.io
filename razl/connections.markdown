@@ -55,3 +55,17 @@ Once a connection has been created it can later be deleted:
 1. Click either the left or right connection drop down
 2. Click the cross icon that is next to the connection you want to delete:  ![](/Images/Razl/deleteconn.PNG)
 3. The connection will now be removed.
+
+## Connection Information
+
+Beside each connection in the toolbar is the connection info icon, when hovering over this icon information about the current connection will be displayed:
+
+![](/Images/Razl/conn1.PNG)
+
+The following information is displayed:
+
+* Database - The database the connection uses
+* Version - The Sitecore version number
+* Machine - The name of the machine hosting the Sitecore instance
+* Razl Version - The version of the web service used by the connection
+* Sites - A list of sites available on the Sitecore instance
