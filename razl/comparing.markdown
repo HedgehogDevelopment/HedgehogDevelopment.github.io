@@ -128,6 +128,7 @@ For example the English language is ignored in the image below, notice that the 
 
 If you right click on an item in the Content Tree a context menu will appear with the following options:
 
+|----|----|
 | Refresh | Forces Razl to refresh the item data and reload child items. |
 | Go To Template | Go to the template the item is based on. | 
 | Go To Branch | Go the the branch the item was created from. | 
