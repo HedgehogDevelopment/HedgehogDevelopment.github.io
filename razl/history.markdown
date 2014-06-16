@@ -10,12 +10,13 @@ layout: RazlLayout
 The history view allows you to review entries in the Sitecore history databases and then navigate to those items in the Content Tree. The Sitecore history database stores a record of items events, for example save, add version, delete and created.
 
 The history engine used by Sitecore may not be turned on by default, if Razl does not display any history items check your Sitecore configuration for the following in the database you are targeting:
-  <Engines.HistoryEngine.Storage>
-<obj type="Sitecore.Data.$(database).$(database)HistoryStorage, Sitecore.Kernel">
-  <param connectionStringName="$(id)" />
-  <EntryLifeTime>30.00:00:00</EntryLifeTime>
-</obj>
-  </Engines.HistoryEngine.Storage>
+
+	  <Engines.HistoryEngine.Storage>
+		<obj type="Sitecore.Data.$(database).$(database)HistoryStorage, Sitecore.Kernel">
+		  <param connectionStringName="$(id)" />
+		  <EntryLifeTime>30.00:00:00</EntryLifeTime>
+		</obj>
+	  </Engines.HistoryEngine.Storage>
 
 Also notice that the history engine specifies a lifetime to retain this data which by default is 30 days, Razl won’t be able to display any information before this time.
 
