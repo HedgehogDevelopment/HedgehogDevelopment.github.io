@@ -33,3 +33,8 @@ A typical simple Sitecore solution consists of a Web Project, one or more Class 
 * **Class Libraries** – The Class Libraries contain APIs that are used by the UI layer. These usually consist of ORM layers, data access layers, interfaces to other applications and any API's that may be reused across Sitecore solutions. Adding additional class libraries is the most common way a project grows.
 * **TDS Projects** – The TDS projects are used to hold Sitecore items and deploy the project. TDS can only deploy Sitecore items to a single Sitecore database. Having multiple projects allows TDS to manage and deploy to multiple databases (e.g. core and master). When there are multiple TDS projects in a solution, the Sitecore Access Guid must be the same for all project configurations pointing at a specific Sitecore instance.
 
+| Sample Visual Studio Project | Solution File Structure. |
+| -------- | -------- |
+| ![](/Images/chapter4-vsproject.png) | ![](/Images/chapter4-solutionproject.png) |
+| An example of a simple Sitecore solution. | The folder structure for this solution. The file structure closely resembles the solution in Visual Studio. |
+
