@@ -128,15 +128,15 @@ For example the English language is ignored in the image below, notice that the 
 
 If you right click on an item in the Content Tree a context menu will appear with the following options:
 
-| Menu Item | Description |
-|----|----|
-| Refresh | Forces Razl to refresh the item data and reload child items. |
-| Go To Template | Go to the template the item is based on. |
-| Go To Branch | Go the the branch the item was created from. |
-| Left References | Only appears on the left hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree |
-| Left Referrers | Only appears on the left hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree |
-| Right References | Only appears on the right hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree |
-| Right Referrers | Only appears on the right hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree |
-| Get All From Right | Only appears on the left hand side. Copies all items from the right hand instance to the left hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. |
-| Get All From Left | Only appears on the right hand side. Copies all items from the left hand instance to the right hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. |
+| Menu Item | Description | 
+|----|----| 
+| Refresh | Forces Razl to refresh the item data and reload child items. | 
+| Go To Template | Go to the template the item is based on. | 
+| Go To Branch | Go the the branch the item was created from. | 
+| Left References | Only appears on the left hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree | 
+| Left Referrers | Only appears on the left hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree | 
+| Right References | Only appears on the right hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree | 
+| Right Referrers | Only appears on the right hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree | 
+| Get All From Right | Only appears on the left hand side. Copies all items from the right hand instance to the left hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. | 
+| Get All From Left | Only appears on the right hand side. Copies all items from the left hand instance to the right hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. | 
 
