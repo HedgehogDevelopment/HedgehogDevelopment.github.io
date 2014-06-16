@@ -220,4 +220,72 @@ Many of the use cases for File Replacements have been superseded by the Configur
 
 * **Type** – The type dropdown allows you to choose the type of the Source Location. If you choose "File", the individual file specified in the Source Location is copied to the Target location. Choosing "Folder" causes all items under the Source Location to be copied to the Target Location.
 * **Source Location** – Specifies where to copy files from. The path can be relative to the project folder or an absolute path.
-* **Target Location** – Specifies the location to copy files to. The path for the target location can be relative to the build output folder or an absolute path.s
+* **Target Location** – Specifies the location to copy files to. The path for the target location can be relative to the build output folder or an absolute path.
+
+
+#### Validations
+
+The Validations tab allows you turn on checks that TDS can perform on the project when it is built.
+
+![](/Images/chapter4-validations.png) 
+ 
+* **Enable Validators** – Turns on validation for this build configuration.
+* **Validation Settings File Path** -  The path to the file containing the settings used by the validators.
+* **Validators** – The list of validators that can be activated.
+* **Action** – Determines if the selected validator should raise a build error or build warning.
+* **Additional Properties** – Allows the setting of additional properties used by each validator, for example item path.
+
+TDS supports the following validations:
+* **Template Structure** – Validates that templates have only a single Standard Value template, field sections and sections only contain fields.
+* **Should be Deploy Once** – Ensure that certain items are set to DeployOnce. The paths that the check will applied to can be configured in the Additional Propeties area.
+* **Don't Sync Children** – Ensure that specific items don't have child synchronization set, this prevents the possible deletion of items. The paths that the check will applied to can be configured in the Additional Propeties area.
+* **Ensure Parent Integrity** – Validates that the structure of the TDS project matches what will be deployed to Sitecore.
+* **Should use .user file** -  TDS properties for DEBUG configurations should typically be stored in the .user file.
+* **Prevent item by path** – Checks that items in the project are not found at or beneath the configured location.
+
+### Deployment Properties
+
+A TDS project contains many different types of Sitecore items. These items all serve different purposes in the Sitecore implementation, and it is likely they need to be treated differently at deployment time. Developers can easily manage how each Sitecore item in the TDS project is deployed through Deployment Properties.
+
+Setting deployment properties can be time consuming. TDS was designed to help developers with this process by intelligently choosing default values for deployment properties. If an item is added under an existing item, TDS will set the new items deployment properties to have the same values as the parent item.
+
+### Visual Studio Property Window
+
+Deployment properties are managed for an individual item in the Visual Studio property window. The property window is opened by right-clicking on an item and selecting properties. It may also be opened by clicking on an item and pressing the F4 key. 
+
+![](/Images/chapter4-properties.png) 
+
+* **Child Item Synchronization** – Sometimes it is necessary to remove Items from Sitecore as part of a deployment. This property controls how TDS responds to Sitecore items in the target Sitecore that are not present in the Project. There are three choices for this property.
+ * **NoChildSynchronization** – When this option is chosen, TDS will ignore any Sitecore items in the target Sitecore that are not in the TDS project.
+ * **KeepAllChildrenSynchronized** – When this option is chosen, TDS will remove Sitecore items under the current item in the target Sitecore if the items don't exist in the TDS project. When set, this setting applies to the current item and all items under it.
+ * **KeepDirectDescendantsSynchronized** – This option is very similar to **KeepAllChildrenSynchronized**. The main difference is that it applies to only the items directly under the current item, and will not be applied to items further down in the content tree.
+
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
+<p>
+How items are removed from the project by the <strong>Child Item Synchronization</strong> settings are controlled by a project configuration setting on the Build property tab.
+</p>
+<p>
+The <strong>Recursive Deploy Action</strong> setting determines the action TDS will take when an item should be removed. The default setting is to take no action, which effectively disables this feature. The recommended setting is "Move the item to the Sitecore Recycle Bin", which allows developers to easily recover from problems with these settings.
+</p>
+<p>
+It is recommended that the Sitecore databases are backed up before beginning any deployment regardless of the <strong>Recursive Deploy Action</strong> setting.
+</p>
+</div>
+</div>
+
+* **Code Generation Template** – Allows the developer to specify a particular template to use for code generation with this item. See the Code Generation section for more information.
+* **Custom Data** – metadata that will be passed to the code generator. See the Code Generation section for more information.
+* **Deploy Always Fields** – In some cases, developers may want to deploy only a few fields for an item, and not the entire item. This is useful when a Sitecore item is acting as both taxonomy and content and the development team wants to update a field like insert options or permissions on the item.<br />![](/Images/chapter4-fields.png) <br /> When the developer edits the Deploy Always Field, the above dialog is opened. Any field on the item can be chosen to always be deployed from this dialog. This setting is only available if the item is set to Deploy Once (see Item Deployment below).
+* **Exclude Item From** – This setting allows the developer to choose to exclude an item from a specific project configuration. This can be used to create test content items that the development team would use during development. The test items could be excluded from the production project configuration, preventing them from being deployed in that environment. This feature is very much like a conditional compilation directive in a code file.
+* **File Name** – The name of the file that contains the item information on disk.
+* **File System Alias** – The file system name to use when an items name is to long. This property is used to get around the file path limit in Windows by allowing the developer to specify a shorter name.
+* **Full Path** – The full disk path to the file that contains the information about the item.
+* **Item Deployment** – This setting determines if an item should be deployed to Sitecore based on its presence in the target Sitecore instance. 
+ * **DeployOnce** – When this option is chosen, an item will not be overwritten during deployment. This is useful for setting up new sections of the content tree. A new section or meta-data could be created with the proper permissions and insert options during a deployment. Content editors can update the item and future deployments will not overwrite their changes.
+ * **AlwaysUpdate** – When this option is chosen, the item will always be updated during deployment. This is normally used for Sitecore schema items like Templates, Layouts, Sublayouts and Renderings.
+* **Namespace** – A custom namespace to use with code generation. See the code generation section for more information.
+* **SitecorePath** – The path to the item within Sitecore.
