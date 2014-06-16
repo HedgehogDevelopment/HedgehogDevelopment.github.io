@@ -1,6 +1,6 @@
 ---
 title: TDS Documentation
-layout: TdsLayout
+layout: MainLayout
 ---
  
 # Team Development for Sitecore 
@@ -22,4 +22,4 @@ Development team: Charlie Turano, Sean Kearney, Matt Friedlander, Elena Zlateva,
 
 ## Contents
 
-{% include tdschapters.markdown %}
+{% include tdschapters.html %}
