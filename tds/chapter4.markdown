@@ -392,7 +392,7 @@ When the compare process is complete, the sync window will show the items that a
  
 ![](/Images/chapter4-syncwindow1.png)
 
-The Sync Window allows developers to inspect the differences between Sitecore and the TDS project and determine what to do about those changes. The developer may select individual items, or multi-select items using standard windows selection keys (<shift> and <ctrl>) and choose an operation to perform on the items. If an item is collapsed and selected, it will be assumed by the Sync Window that all items under the item are selected as well. Once the developer has selected the operation to perform on each item, they can click on "**Do Updates**" to perform the actions.
+The Sync Window allows developers to inspect the differences between Sitecore and the TDS project and determine what to do about those changes. The developer may select individual items, or multi-select items using standard windows selection keys (&lt;shift&gt; and &lt;ctrl&gt;) and choose an operation to perform on the items. If an item is collapsed and selected, it will be assumed by the Sync Window that all items under the item are selected as well. Once the developer has selected the operation to perform on each item, they can click on "**Do Updates**" to perform the actions.
 
 * A. If there is a difference between the TDS project and Sitecore, it will be noted here.
 * B. The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS will always choose "No Action".
