@@ -220,7 +220,7 @@ Many of the use cases for File Replacements have been superseded by the Configur
  
 ![](/Images/chapter4-filereplacement.png) 
 
-* **Type** – The type dropdown allows you to choose the type of the Source Location. If you choose “File”, the individual file specified in the Source Location is copied to the Target location. Choosing “Folder” causes all items under the Source Location to be copied to the Target Location.
+* **Type** – The type dropdown allows you to choose the type of the Source Location. If you choose "File", the individual file specified in the Source Location is copied to the Target location. Choosing "Folder" causes all items under the Source Location to be copied to the Target Location.
 * **Source Location** – Specifies where to copy files from. The path can be relative to the project folder or an absolute path.
 * **Target Location** – Specifies the location to copy files to. The path for the target location can be relative to the build output folder or an absolute path.
 
@@ -239,7 +239,7 @@ The Validations tab allows you turn on checks that TDS can perform on the projec
 TDS supports the following validations:
 * **Template Structure** – Validates that templates have only a single Standard Value template, field sections and sections only contain fields.
 * **Should be Deploy Once** – Ensure that certain items are set to DeployOnce. The paths that the check will applied to can be configured in the Additional Propeties area.
-* **Don’t Sync Children** – Ensure that specific items don’t have child synchronization set, this prevents the possible deletion of items. The paths that the check will applied to can be configured in the Additional Propeties area.
+* **Don't Sync Children** – Ensure that specific items don't have child synchronization set, this prevents the possible deletion of items. The paths that the check will applied to can be configured in the Additional Propeties area.
 * **Ensure Parent Integrity** – Validates that the structure of the TDS project matches what will be deployed to Sitecore.
 * **Should use .user file** -  TDS properties for DEBUG configurations should typically be stored in the .user file.
 * **Prevent item by path** – Checks that items in the project are not found at or beneath the configured location.
@@ -258,7 +258,7 @@ Deployment properties are managed for an individual item in the Visual Studio pr
 
 * **Child Item Synchronization** – Sometimes it is necessary to remove Items from Sitecore as part of a deployment. This property controls how TDS responds to Sitecore items in the target Sitecore that are not present in the Project. There are three choices for this property.
  * **NoChildSynchronization** – When this option is chosen, TDS will ignore any Sitecore items in the target Sitecore that are not in the TDS project.
- * **KeepAllChildrenSynchronized** – When this option is chosen, TDS will remove Sitecore items under the current item in the target Sitecore if the items don’t exist in the TDS project. When set, this setting applies to the current item and all items under it.
+ * **KeepAllChildrenSynchronized** – When this option is chosen, TDS will remove Sitecore items under the current item in the target Sitecore if the items don't exist in the TDS project. When set, this setting applies to the current item and all items under it.
  * **KeepDirectDescendantsSynchronized** – This option is very similar to **KeepAllChildrenSynchronized**. The main difference is that it applies to only the items directly under the current item, and will not be applied to items further down in the content tree.
 
 <div class="panel">
@@ -270,7 +270,7 @@ Deployment properties are managed for an individual item in the Visual Studio pr
 How items are removed from the project by the <strong>Child Item Synchronization</strong> settings are controlled by a project configuration setting on the Build property tab.
 </p>
 <p>
-The <strong>Recursive Deploy Action</strong> setting determines the action TDS will take when an item should be removed. The default setting is to take no action, which effectively disables this feature. The recommended setting is “Move the item to the Sitecore Recycle Bin”, which allows developers to easily recover from problems with these settings.
+The <strong>Recursive Deploy Action</strong> setting determines the action TDS will take when an item should be removed. The default setting is to take no action, which effectively disables this feature. The recommended setting is "Move the item to the Sitecore Recycle Bin", which allows developers to easily recover from problems with these settings.
 </p>
 <p>
 It is recommended that the Sitecore databases are backed up before beginning any deployment regardless of the <strong>Recursive Deploy Action</strong> setting.
@@ -321,7 +321,7 @@ Checking the **Hide fields with the same value in the Sync Results** will stop f
 
 The Deployment Property Manager allows developers to view and update deployment properties on many items at one time. This is a much more convenient way of managing deployment properties. 
 
-The Deployment Property Manager can be opened by right-clicking on the TDS project or any Sitecore item in the Solution Explorer and choosing “**Deployment Property Manager**”. This opens a window showing the **Exclude Items From, Child Item Synchronization** and **Item Deployment** properties for all the Sitecore items under the item selected in the Solution Explorer.
+The Deployment Property Manager can be opened by right-clicking on the TDS project or any Sitecore item in the Solution Explorer and choosing "**Deployment Property Manager**". This opens a window showing the **Exclude Items From, Child Item Synchronization** and **Item Deployment** properties for all the Sitecore items under the item selected in the Solution Explorer.
 
 ![](/Images/chapter4-propertymanager.png)  
 
@@ -350,7 +350,7 @@ The **Get Sitecore Items** dialog can be opened by right clicking on the TDS pro
 ![](/Images/chapter4-getitems.png) 
 
 The Get Sitecore Items dialog implements a number of features to make it easier to bring items into a project.
-* Any items already in the project are shown with a light colored font. See “templates” and “content” in the sample image.
+* Any items already in the project are shown with a light colored font. See "templates" and "content" in the sample image.
 * If an item is selected in the tree, the dialog always selects all parent items.
 * If an item in unselected in the tree, the dialog always unselects all child items.
 * All items have a right click menu that allows the developer to select all child items.
@@ -366,7 +366,7 @@ When an item has been selected using the right-click menu to select all child it
 </div>
 </div>
 
-After selecting the items from the Sitecore content tree, the developer can click the “**Get Items**” button and the selected items will be added to the project.
+After selecting the items from the Sitecore content tree, the developer can click the "**Get Items**" button and the selected items will be added to the project.
 
 <div class="panel">
  <div class="panel-header bg-lightBlue fg-white">
@@ -391,14 +391,14 @@ When the compare process is complete, the sync window will show the items that a
  
 ![](/Images/chapter4-syncwindow1.png)
 
-The Sync Window allows developers to inspect the differences between Sitecore and the TDS project and determine what to do about those changes. The developer may select individual items, or multi-select items using standard windows selection keys (<shift> and <ctrl>) and choose an operation to perform on the items. If an item is collapsed and selected, it will be assumed by the Sync Window that all items under the item are selected as well. Once the developer has selected the operation to perform on each item, they can click on “**Do Updates**” to perform the actions.
+The Sync Window allows developers to inspect the differences between Sitecore and the TDS project and determine what to do about those changes. The developer may select individual items, or multi-select items using standard windows selection keys (<shift> and <ctrl>) and choose an operation to perform on the items. If an item is collapsed and selected, it will be assumed by the Sync Window that all items under the item are selected as well. Once the developer has selected the operation to perform on each item, they can click on "**Do Updates**" to perform the actions.
 
 * A. If there is a difference between the TDS project and Sitecore, it will be noted here.
-* B. The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS will always choose “No Action”.
-* C. The “**Make selected project items match Sitecore**” button causes all selected items to choose the action that would make the project items match the Sitecore items. 
-* D. The “**Make selected Sitecore items match project**” button causes all selected items to choose the action that would make the Sitecore items match the project items.
-* E. The “**Merge fields during update**” button causes a merge window to open when updating Sitecore. The merge window allows the developer to choose to update only selected field values instead of the whole item.
-* F. The “**Hide fields with no changes**” check box causes the item differences pane in the lower half of the sync window to only show fields that are different.
+* B. The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS will always choose "No Action".
+* C. The "**Make selected project items match Sitecore**" button causes all selected items to choose the action that would make the project items match the Sitecore items. 
+* D. The "**Make selected Sitecore items match project**" button causes all selected items to choose the action that would make the Sitecore items match the project items.
+* E. The "**Merge fields during update**" button causes a merge window to open when updating Sitecore. The merge window allows the developer to choose to update only selected field values instead of the whole item.
+* F. The "**Hide fields with no changes**" check box causes the item differences pane in the lower half of the sync window to only show fields that are different.
 * G. Highlights changes between the project and Sitecore. Missing fields are shown in red, different fields are blue.
 
 <div class="panel">
@@ -440,7 +440,7 @@ The merge window allows the developer to pick individual fields from a Sitecore 
 
 The developer can pick which field value they wish to use by clicking on the field value or using the arrows at the bottom of the window to update multiple items.
 
-When they have completed their selection, they can click OK to accept the changes. Selecting “**Skip Merge**” will not perform the merge action. The “**Cancel Sync**” button will abort the sync process. This will skip any updates that have not been performed yet.
+When they have completed their selection, they can click OK to accept the changes. Selecting "**Skip Merge**" will not perform the merge action. The "**Cancel Sync**" button will abort the sync process. This will skip any updates that have not been performed yet.
 
 If you are merging fields that contain large amounts of date the merge screen will display a grey button next to the field that will allow you to see the full field contents:
 
