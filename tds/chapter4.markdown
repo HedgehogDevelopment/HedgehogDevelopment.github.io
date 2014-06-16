@@ -289,3 +289,54 @@ It is recommended that the Sitecore databases are backed up before beginning any
  * **AlwaysUpdate** – When this option is chosen, the item will always be updated during deployment. This is normally used for Sitecore schema items like Templates, Layouts, Sublayouts and Renderings.
 * **Namespace** – A custom namespace to use with code generation. See the code generation section for more information.
 * **SitecorePath** – The path to the item within Sitecore.
+
+
+### TDS Options Window
+
+The TDS Options Window allows you to access global settings for TDS, these settings will apply across all Visual Studio instances.
+
+To access the TDS Option Window click on the **Tools** menu then **Options**. **TDS Options** will be visible in the left hand list:
+ 
+![](/Images/chapter4-options.png) 
+
+#### General Options
+ 
+![](/Images/chapter4-generaloptions.png) 
+
+The following options are are available in the **General Options** screen:
+
+* **Autorun Code Generation** – Indicates if code generation should automatically run when new items are added to a TDS project or an items custom properties / namespace change. Setting this value to false will required a developer to manually run code generation.
+* **Autosave Project File** – When set to **true** the project file will automatically save when items are added to the TDS project file or items are synced.
+* **Check for Updates** – When set to **true** TDS will check for updates when a solution is loaded and prompt the developer when an update is available.
+
+#### Sync Window
+
+![](/Images/chapter4-syncwindow.png) 
+
+The Sync screen allows you to set a list of fields that should be ignored when comparing items. Items with differences only in these fields will not show up in the **Sync Window** as being different.
+
+Checking the **Hide fields with the same value in the Sync Results** will stop fields with identical values from being displayed in the **Sync Window**, this can make it easier to compare items.
+
+### Deployment Property Manager
+
+The Deployment Property Manager allows developers to view and update deployment properties on many items at one time. This is a much more convenient way of managing deployment properties. 
+
+The Deployment Property Manager can be opened by right-clicking on the TDS project or any Sitecore item in the Solution Explorer and choosing "**Deployment Property Manager**". This opens a window showing the **Exclude Items From, Child Item Synchronization** and **Item Deployment** properties for all the Sitecore items under the item selected in the Solution Explorer.
+
+![](/Images/chapter4-propertymanager.png)  
+
+For an explanation of the various options for each of the properties, please see the descriptions above. 
+
+#### Keyboard Shortcuts
+
+The Deployment Property Manager has the following keyboard shortcuts when you have selected an item(s):
+
+| Key Combination |	Action |
+| --- | --- |
+| Shift + w | Current Config - Include |
+| Shift + e	| Current Config – Exclude |
+| Shift + s	| Child Sync – All Children |
+| Shift + d	| Child Sync – Direct Descendants |
+| Shift + f	| Child Sync – No sync |
+| Shift + x	| Deploy – Always |
+| Shift + c	| Deploy – Once |
