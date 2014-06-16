@@ -8,7 +8,7 @@ layout: TdsLayout
 
 Code generation is the process by which a data model and one or more templates are passed through a template engine. The model is transformed and the resulting output of this process would be code that can be compiled and used within your application.
  
-![](/Images/chapter6-codegenprocess.png) 
+![](/Images/Tds/chapter6-codegenprocess.png) 
 
 TDS' code generation is composed of models of the Sitecore items within your project, transformation templates and a template engine within TDS. The process works by TDS parsing each .item file within your project and passing it to a transformation template. Once all of the items have been transformed an additional template may be executed being passed a model representation of the project.
 
@@ -72,15 +72,15 @@ To setup Code Generation follow the following steps:
 Once code generation has been enabled on a project it is possible to add TT files to the TDS project. After enabling Code Generation the **Code Generation Templates** node will appear in the TDS  project:
 
   
-![](/Images/chapter6-codegennode.png) 
+![](/Images/Tds/chapter6-codegennode.png) 
 
 Right clicking on this node and select **Add > New Item**:
  
-![](/Images/chapter6-codegennewitem.png) 
+![](/Images/Tds/chapter6-codegennewitem.png) 
 
 This will open the Add New Item  dialog:
  
-![](/Images/chapter6-codegendialog.png) 
+![](/Images/Tds/chapter6-codegendialog.png) 
 
 The dialog allows you to create the following file types:
 
@@ -108,7 +108,7 @@ Item level properties allow a developer to override the global item settings. Pr
 
 TDS will automatically create namespaces based on where a tempalte is within Sitecore. For example if the TDS project is setup as below where T2 is a template:
  
-![](/Images/chapter6-codegenname.png) 
+![](/Images/Tds/chapter6-codegenname.png) 
 
 If theNamespace setting on the Code Generation tab has the value "MyNamespace" TDS will generate the following Namespace:
 

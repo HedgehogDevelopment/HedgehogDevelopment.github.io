@@ -72,21 +72,21 @@ Once you have downloaded the TDS .zip package and extracted the version(s) you w
 
 1. Start by double-clicking the .msi file to begin the installation
 2. Click **Next** to begin the process of installing TDS
-3. Read and accept the license agreement. Then click **Next**.<br />![](/Images/chapter2-license.png)
-4. Enter the license key provided by Hedgehog Development. Make sure the company name is spelled exactly as specified with your license key. Do not put quotes around the company name or the license key.<br />![](/Images/chapter2-licenseKey.png)
-5. Select the path where you want TDS installed. Typically, the default value is acceptable.<br />![](/Images/chapter2-installationFolder.png)
+3. Read and accept the license agreement. Then click **Next**.<br />![](/Images/Tds/chapter2-license.png)
+4. Enter the license key provided by Hedgehog Development. Make sure the company name is spelled exactly as specified with your license key. Do not put quotes around the company name or the license key.<br />![](/Images/Tds/chapter2-licenseKey.png)
+5. Select the path where you want TDS installed. Typically, the default value is acceptable.<br />![](/Images/Tds/chapter2-installationFolder.png)
 6. Confirm the installation by clicking Next.
-7. When the installation is complete the following will appear.<br />![](/Images/chapter2-complete.png)
+7. When the installation is complete the following will appear.<br />![](/Images/Tds/chapter2-complete.png)
 
 #### Updateing the TDS License
 
 After you have installed TDS you may need to update the license you are using, e.g. when moving from a trial license to a full license. You can do this by opening Visual Studion and click on the **Help** menu then **View TDS License**:
 
-![](/Images/chapter2-viewlicense.png)
+![](/Images/Tds/chapter2-viewlicense.png)
 
 The TDS License dialog will appear showing you your current license:
 
-![](/Images/chapter2-licensedialog.png)
+![](/Images/Tds/chapter2-licensedialog.png)
  
 Enter your new license details and click update to change the license.
 
@@ -100,7 +100,7 @@ There are two mandatory conditions that must be met. They are as follows:
 1. TDS has been installed.
 2. There is an existing Sitecore installation with a project currently under development. The team wishes to use TDS to gain more control over their Sitecore Items.
 
-![](/Images/chapter2-addnewproject.png)
+![](/Images/Tds/chapter2-addnewproject.png)
 
 (Optional) There is an existing solution with custom application code in a Web Application Project.
 
@@ -118,7 +118,7 @@ TDS installs a web service on the Sitecore server to communicate with the Siteco
 
 1.	Locate the TDS project in the Solution explorer, right-click on it and select “**Properties**”. This opens the TDS project property page.
 2.	On the left side of the property page, click on “**Build**” to open the build property tab.
-3.	There are three settings that need to be configured to tell TDS how to find the Sitecore server.<br />![](/Images/chapter2-build.png)
+3.	There are three settings that need to be configured to tell TDS how to find the Sitecore server.<br />![](/Images/Tds/chapter2-build.png)
 	1.	**Sitecore Web URL** – This specifies the URL to local Sitecore install. This is the URL to the root of your Sitecore environment (not the /Sitecore folder). TDS installs a web service to your Sitecore Deploy Folder and then communicates through that web service to push your changes to Sitecore. It finds the service via this URL.
 	2.	**Sitecore Deploy Folder** – This specifies the absolute path to the web root. This is the UNC path to the web root of the Sitecore instance you are connecting TDS to. This tells TDS where you want it to place the web service and copy the supporting DLL and configuration file to.
 	3.	**Install Sitecore Connector** – Checking this will allow TDS to install the Sitecore Connector web service in your Sitecore instance. This allows access to Sitecore items on the server. **This check box must be checked to complete this example.**
@@ -131,7 +131,7 @@ To add a few items to your TDS project, follow the steps below.
 
 1. Right-click on the TDS project in the Solution Explorer and choose “**Get Sitecore Items**”.
 2. The Get Sitecore Items dialog will open and show the Sitecore items in the root of the content tree.
-3. Expand the template folder where you have created a few templates for your Sitecore solution. In the example below, it is /Template/MvcNewsApp. <br /> ![](/Images/chapter2-getitems.png)
+3. Expand the template folder where you have created a few templates for your Sitecore solution. In the example below, it is /Template/MvcNewsApp. <br /> ![](/Images/Tds/chapter2-getitems.png)
 4. Check the check-box next to an item to bring it into Sitecore. The dialog is aware of parent-child relationships, so checking a child item will automatically select the parents.
 5. If you want to bring all templates under the template folder you are using to hold your custom templates, you can right-click on the template and choose “**Select all children**”.
 6. Once you have selected the templates you wish to bring into your TDS project, click “**Get Items**” and TDS will begin getting the items
@@ -158,7 +158,7 @@ The above roles are to be used as guidelines for determining which items should 
 
 TDS comes with different project types from which to create your TDS projects. To access the different project types open the **New Projects** dialog in Visual Studio and select **TDS Project** from the Templates list:
 
-![](/Images/chapter2-newprojectwizard.png)
+![](/Images/Tds/chapter2-newprojectwizard.png)
  
 #### TDS Project
 
@@ -168,7 +168,7 @@ Creates a new TDS Project as part of your solution, you will then need to config
 
 Creates a new TDS Project as part of your solution but then runs you through a wizard to help setup a Sitecore instance. The first screen in the wizard will ask you for the basic connection information:
 
-![](/Images/chapter2-newprojectwizarddialog.png)
+![](/Images/Tds/chapter2-newprojectwizarddialog.png)
 
 * **Sitecore Web Url** – the URL to the Sitecore instance that TDS will connect to.
 * **Sitecore Deploy Folder** – the path to the Sitecore instance specified in the Sitecore Web Url field.

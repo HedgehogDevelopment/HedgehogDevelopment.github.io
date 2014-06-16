@@ -28,6 +28,6 @@ The settings that TDS uses to communicate with Sitecore are the **Sitecore Web U
 
 The “Configuration” drop down at the top left of the Build Property Page shows which project configuration the dialog is showing/editing.
 
-![/Images/chapter3-build.png](/Images/chapter3-build.png)
+![/Images/Tds/chapter3-build.png](/Images/Tds/chapter3-build.png)
  
 The (A) and (B) arrows point to the **Sitecore Web Url** and **Sitecore Deploy Folder** settings. The (C) arrow is pointing at the **Install Sitecore Connector** setting. This controls how TDS installs the service. If this is checked, the service is installed permanently, and TDS can use the Sync Window to compare the Sitecore server items to the project items.
