@@ -41,6 +41,7 @@ A typical simple Sitecore solution consists of a Web Project, one or more Class 
 In the example above, there is a \Lib folder in the file system. This contains any reference DLL’s needed to build the project. By keeping all resources needed for the project under a single folder, the development team can easily leverage advanced source control features like branching, merging and labeling. Additionally, this structure lends itself to setting up automated builds.
 
 ### TDS project property pages
+
 The TDS project property pages are used to connect the TDS project to a Sitecore instance and to control how the TDS project interacts with other projects in the solution during the build. 
 
 #### General
@@ -285,6 +286,7 @@ It is recommended that the Sitecore databases are backed up before beginning any
 * **SitecorePath** – The path to the item within Sitecore.
 
 ### TDS Options Window
+
 The TDS Options Window allows you to access global settings for TDS, these settings will apply across all Visual Studio instances.
 
 To access the TDS Option Window click on the **Tools** menu then **Options**. **TDS Options** will be visible in the left hand list:
@@ -320,6 +322,7 @@ The Deployment Property Manager can be opened by right-clicking on the TDS proje
 For an explanation of the various options for each of the properties, please see the descriptions above. 
 
 #### Keyboard Shortcuts
+
 The Deployment Property Manager has the following keyboard shortcuts when you have selected an item(s):
 
 | Key Combination |	Action |
@@ -369,6 +372,7 @@ Correctly choosing the Sitecore items to bring into a project is very important.
 </div>
 
 ### Updating Sitecore Items in a project
+
 As a Sitecore implementation grows, developers will add or make changes to items in their Sitecore development environment. TDS offers developers a way to track these changes and bring them into their TDS project. This is done by using the Sync Window.
 
 #### The Sync Window
@@ -409,6 +413,7 @@ Click the icon will open another dialog that shows the full contents of the fiel
 
  
 ##### Keyboard Shortcuts
+
 The Sync Window has the following keyboard shortcuts when you have selected an item:
 
 | Key Combination | Action |
@@ -418,6 +423,7 @@ The Sync Window has the following keyboard shortcuts when you have selected an i
 | Shift + up arrow | Merge items | 
 
 #### The Merge Window 
+
 The merge window allows the developer to pick individual fields from a Sitecore item and move them into the TDS project. This is useful for resolving changes multiple developers have made to an item.
 
  
@@ -500,6 +506,7 @@ Sitecore Rocks is a Visual Studio add-in that offers many great features designe
 When a developer adds, updates or removes an item or template in Rocks, TDS is notified and automatically pulls those changes into the TDS project. In addition, when Rocks is connected to TDS, double clicking on a Sitecore item in the Solution Explorer will open the item in the Rocks item/template editor.
 
 #### Setting up Rocks and TDS
+
 There are two things needed to make TDS react to changes made in Rocks. 
 
 1. The Hedgehog Development plugin must be enabled in the Rocks plugin screen. 
