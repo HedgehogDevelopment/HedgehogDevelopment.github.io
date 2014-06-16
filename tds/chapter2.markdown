@@ -5,16 +5,16 @@ layout: TdsLayout
 
 # Team Development for Sitecore 
 
-# Chapter 2 – Getting started with TDS
+## Chapter 2 – Getting started with TDS
 
-## System Requirements
+### System Requirements
 
 * Team Development for Sitecore has been fully tested with Team Foundation Server and Subversion, but will also work with any Microsoft compliant source control system. 
 * Visual Studio 2010, 2012 or 2013 .
 * Sitecore version 6.1 and higher. 
 * Sitecore Xpress is not supported by Team Development for Sitecore.
 
-## Installation
+### Installation
 
 Installing TDS is a quick and easy process.  It is recommended that you shut down all running applications prior to beginning the install process.
 The zip file you downloaded from the [Hedgehog Development](http://hhogdev.com) website contains a version of TDS to match up with the version of Visual Studio that you are running.
@@ -24,7 +24,7 @@ The zip file you downloaded from the [Hedgehog Development](http://hhogdev.com) 
 | Visual Studio 2010 | HedgehogDevelopmentTDS_2010.msi |
 | Visual Studio 2012 | HedgehogDevelopmentTDS_2012.msi |
 | Visual Studio 2013 | HedgehogDevelopmentTDS_2013.msi |
-| | |
+|                    |                                 |
 
 Unzip the files to a directory of your choice to install from. Once you selected the version of TDS that matches the version(s) of Visual Studio you work with you are ready to install. 
 
@@ -33,29 +33,40 @@ Unzip the files to a directory of your choice to install from. Once you selected
  NOTE
  </div>
  <div class="panel-content">
+
+<p>
 By default TDS wants to install the project templates (TDSProject.zip) in the My Documents folder on your C: drive. Located at:
+</p>
 
-```
+<pre>
 C:\Users\[Username]\AppData\Local\Microsoft\VisualStudio\11.0\ProjectTemplates
-```
+</pre>
 
+<p>
 If you have relocated the My Documents folder to a different directory, the Visual Studio path does not get updated.
-
+</p>
+<p>
 You should make sure that the Visual Studio User Project Template Location in Visual Studio is pointing to the desired location. You can do so by:
-
-In Visual Studio go to **Tools > Options menu.**
-
+</p>
+<p>
+In Visual Studio go to <strong>Tools &gt; Options menu.</strong>
+</p>
+<p>
 Under the Projects and Solutions highlight the General settings
-
-Locate the Visual Studio user project template location. Verify that this path is correct. For example in VS 2012 it should be: **Path to directory\Visual Studio 2012\Templates\ProjectTemplates**
-
+</p>
+<p>
+Locate the Visual Studio user project template location. Verify that this path is correct. For example in VS 2012 it should be: <strong>Path to directory\Visual Studio 2012\Templates\ProjectTemplates</strong>
+</p>
+<p>
 Click OK when you are done and now you should see the TDS Project Template when you try to create a new project.
-
+</p>
+<p>
 Also, please note that if Visual Studio is running in Safe Mode add-ins are NOT loaded.
+</p>
  </div>
 </div>
 
-### Step-by-Step Instructions 
+#### Step-by-Step Instructions 
 
 Once you have downloaded the TDS .zip package and extracted the version(s) you wish to install you may begin to install TDS.
 
@@ -68,7 +79,7 @@ Once you have downloaded the TDS .zip package and extracted the version(s) you w
 7. When the installation is complete the following will appear.
 
 
-### Updateing the TDS License
+#### Updateing the TDS License
 
 After you have installed TDS you may need to update the license you are using, e.g. when moving from a trial license to a full license. You can do this by opening Visual Studion and click on the **Help** menu then **View TDS License**:
 
@@ -76,7 +87,7 @@ The TDS License dialog will appear showing you your current license:
  
 Enter your new license details and click update to change the license.
 
-## Initial Configuration
+### Initial Configuration
 
 We will now show how to configure TDS for an existing Sitecore project. Syncing TDS with an existing Sitecore project is quick and simple. There is no need to start a Sitecore project over, or laboriously move existing code just because you’ve downloaded a new plug in. 
 Integrating an existing Sitecore project with a new TDS project is extremely easy. Once TDS is configured, Sitecore items are added through the “Get Sitecore Items” option. Before we begin configuring TDS, there are some assumptions that we need to consider.
@@ -88,7 +99,7 @@ There are two mandatory conditions that must be met. They are as follows:
 
 (Optional) There is an existing solution with custom application code in a Web Application Project.
 
-### Create the TDS Project
+#### Create the TDS Project
 
 Adding TDS to your development process is extremely simple. To create a new TDS project, follow these simple steps:
 
@@ -96,7 +107,7 @@ Adding TDS to your development process is extremely simple. To create a new TDS 
 2. Choose Project type: “**TDS Project**” and choose the template: “**TDS Project**” then specify the desired name, location and Source Code Control (SCC) options (if applicable). For more information on the different project types see the TDS Project Types section.
  
 
-## Connect the TDS Project to Sitecore
+### Connect the TDS Project to Sitecore
 
 TDS installs a web service on the Sitecore server to communicate with the Sitecore database. There are a number of installation options and settings that will be covered in a later chapter. The steps below outline how to quickly get TDS setup with a development server.
 
@@ -108,7 +119,7 @@ TDS installs a web service on the Sitecore server to communicate with the Siteco
 	3.	**Install Sitecore Connector** – Checking this will allow TDS to install the Sitecore Connector web service in your Sitecore instance. This allows access to Sitecore items on the server. **This check box must be checked to complete this example.**
 4.	The last step is to right-click on the TDS project and select “**Install Sitecore Connector**”. This installs the service to the target Sitecore instance specified in the build property page.
 
-### Adding Sitecore Items to the TDS Project 
+#### Adding Sitecore Items to the TDS Project 
 
 Items are initially added to the TDS project using the “**Get Sitecore Items**” dialog. This allows you the browse the items in your Sitecore content tree and pick the items to add to the project.
 To add a few items to your TDS project, follow the steps below.
@@ -120,7 +131,7 @@ To add a few items to your TDS project, follow the steps below.
 5. If you want to bring all templates under the template folder you are using to hold your custom templates, you can right-click on the template and choose “Select all children”.
 6. Once you have selected the templates you wish to bring into your TDS project, click “Get Items” and TDS will begin getting the items
 
-### Choosing which items to bring into a TDS porject
+#### Choosing which items to bring into a TDS porject
 
 TDS allows you to bring any Sitecore item into your TDS project. It is NOT best practice to bring every Sitecore item into the TDS project for the following reasons:
 
@@ -138,15 +149,15 @@ At Hedgehog Development, we try to determine the ownership of a given item to he
 
 The above roles are to be used as guidelines for determining which items should be included in the TDS projects. In some cases, it may be necessary to bring Sitecore items into the TDS project. This is usually done when the development team needs to make a change to a Sitecore owned item. After changing the item, it is owned by the development team. The item can now be easily managed by the development team, and if there is a conflict with the item after a Sitecore upgrade, it can easily be located and resolved.
 
-## TDS Project Types
+### TDS Project Types
 
 TDS comes with different project types from which to create your TDS projects. To access the different project types open the New Projects dialog in Visual Studio and select TDS Project from the Templates list:
  
-### TDS Project
+#### TDS Project
 
 Creates a new TDS Project as part of your solution, you will then need to configure the connection to your Sitecore instance in the project property pages.
 
-### TDS Project with wizard
+#### TDS Project with wizard
 
 Creates a new TDS Project as part of your solution but then runs you through a wizard to help setup a Sitecore instance. The first screen in the wizard will ask you for the basic connection information:
 
