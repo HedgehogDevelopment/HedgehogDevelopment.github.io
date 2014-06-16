@@ -15,7 +15,7 @@ To setup Razl for comparison select a connection in the Left Connection dropdown
 
 ![](/Images/Razl/compare1.PNG)
 
-#### Comparing Items
+### Comparing Items
 
 As you explorer the Sitecore content tree Razl will automatically load and start to compare items in both trees:
 
@@ -31,7 +31,7 @@ There are several basic symbols pairs in Razl when comparing an items. Each symb
 | ![](/Images/Razl/compare4.PNG) <br /> or <br /> ![](/Images/Razl/compare5.PNG) | **Deleted** - This pair are displayed when an item exists in one database but not in the other. The side that contains the item will display the red cross and allow you to remove it, the side that doesn’t contain the icon will display the black arrow and allow you to copy over. |
 | ![](/Images/Razl/compare6.PNG) | **Moved** - An item this moved will have this symbol next to is't name: <br /> ![](/Images/Razl/compare7.PNG) <br /> The item that is out of position (i.e. in another location) will be in light grey.  To see where each item exists click on the item itself and use the Field Information panels to see each sides path. |
 
-#### Comparing Fields
+### Comparing Fields
 
 When you click on an item in the Content Tree Razl will load the fields and information about the item and display the in the Field Information panes. Razl will then show you the individual fields differences, you can then select each fields to move across:
 

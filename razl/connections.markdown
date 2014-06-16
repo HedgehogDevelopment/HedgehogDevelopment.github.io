@@ -56,7 +56,7 @@ Once a connection has been created it can later be deleted:
 2. Click the cross icon that is next to the connection you want to delete:  ![](/Images/Razl/deleteconn.PNG)
 3. The connection will now be removed.
 
-## Connection Information
+### Connection Information
 
 Beside each connection in the toolbar is the connection info icon, when hovering over this icon information about the current connection will be displayed:
 
