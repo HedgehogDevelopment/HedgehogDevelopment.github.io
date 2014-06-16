@@ -91,10 +91,15 @@
     <Content Include="js\metro\metro-wizard.js" />
     <Content Include="index.markdown" />
     <Content Include="tds\index.markdown" />
+    <Content Include="tds\chapter1.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="_includes\foot.html" />
+    <Content Include="_includes\head.html" />
+    <Content Include="_includes\navigation.html" />
+    <Content Include="_layouts\TdsLayout.html" />
     <Content Include="_layouts\MainLayout.html" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>

@@ -23,13 +23,13 @@ Development team: Charlie Turano, Sean Kearney, Matt Friedlander, Elena Zlateva,
 ## Contents
 
 * [Chapter 1 – Introduction](./chapter1.html)
-	* Team Development for Sitecore (TDS)	6
-	* How It Works	6
-	* Why TDS works	7
-	* Work Environments	9
-		* Development environment before TDS	9
-		* Development environment using TDS	10
-* Chapter 2 – Getting started with TDS	10
+	* Team Development for Sitecore (TDS)](./chapter1.html#team_development_for_sitecore_tds)
+	* [How It Works](./chapter1.html#how_it_works)
+	* [Why TDS works](./chapter1.html#why_tds_works)
+	* [Work Environments](./chapter1.html#work_environments)
+		* [Development environment before TDS](./chapter1.html#development_environment_before_tds)
+		* [Development environment using TDS](./chapter1.html#development_environment_using_tds)
+* [Chapter 2 – Getting started with TDS](./chapter2.html)
 	* System Requirements	10
 	* Installation	10
 		* Step-by-Step Instructions	12
