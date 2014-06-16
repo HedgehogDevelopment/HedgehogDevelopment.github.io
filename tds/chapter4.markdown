@@ -63,7 +63,7 @@ Used to turn on and control TDS Code Generation.
 ![](/Images/chapter4-codegeneration.png)
 
 * **Target Project** – The target project in which the generated code file will be generated.
-* **Code Generation Target File** – the name of the file that will contain the generated code. Remember to add the appropriate extension, e.g. “.cs” for c-sharp files.
+* **Code Generation Target File** – the name of the file that will contain the generated code. Remember to add the appropriate extension, e.g. ".cs" for c-sharp files.
 * **Base Namespace** – The namespace that class will be generated in.
 * **Header Transform File** – The TT file used to generate the header of the generated file.
 * **Base Project Transform File** – The TT file used to generate output for each item in the generated file.
