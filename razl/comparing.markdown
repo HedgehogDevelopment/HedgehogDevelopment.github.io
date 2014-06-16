@@ -27,8 +27,8 @@ There are several basic symbols pairs in Razl when comparing an items. Each symb
 | Symbol | Description |
 |---- |---- |
 | | **Same** - If no symbols are displayed both sides are considered the same. |
-
-| ![](/Images/Razl/compare3.PNG) | **Different** - This pair are display when the items in each database contain different data in their fields. You can then choose which side to copy all field values from. | 
+| ![](/Images/Razl/compare3.PNG) | **Different** - This pair are display when the items in each database contain different data in their fields. You can then choose which side to copy all field values from. |
+ 
 | ![](/Images/Razl/compare4.PNG) <br /> or <br /> ![](/Images/Razl/compare5.PNG) | **Deleted** - This pair are displayed when an item exists in one database but not in the other. The side that contains the item will display the red cross and allow you to remove it, the side that doesn’t contain the icon will display the black arrow and allow you to copy over. |
 | ![](/Images/Razl/compare6.PNG) | **Moved** - An item this moved will have this symbol next to is't name: <br /> ![](/Images/Razl/compare7.PNG) <br /> The item that is out of position (i.e. in another location) will be in light grey.  To see where each item exists click on the item itself and use the Field Information panels to see each sides path. |
 
