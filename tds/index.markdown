@@ -22,7 +22,7 @@ Development team: Charlie Turano, Sean Kearney, Matt Friedlander, Elena Zlateva,
 
 ## Contents
 
-* Chapter 1 – Introduction	6
+* [Chapter 1 – Introduction](./chapter1.html)
 	* Team Development for Sitecore (TDS)	6
 	* How It Works	6
 	* Why TDS works	7
