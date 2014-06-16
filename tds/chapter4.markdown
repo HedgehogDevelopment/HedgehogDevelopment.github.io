@@ -33,26 +33,3 @@ A typical simple Sitecore solution consists of a Web Project, one or more Class 
 * **Class Libraries** – The Class Libraries contain APIs that are used by the UI layer. These usually consist of ORM layers, data access layers, interfaces to other applications and any API's that may be reused across Sitecore solutions. Adding additional class libraries is the most common way a project grows.
 * **TDS Projects** – The TDS projects are used to hold Sitecore items and deploy the project. TDS can only deploy Sitecore items to a single Sitecore database. Having multiple projects allows TDS to manage and deploy to multiple databases (e.g. core and master). When there are multiple TDS projects in a solution, the Sitecore Access Guid must be the same for all project configurations pointing at a specific Sitecore instance.
 
-| Sample Visual Studio Project | Solution File Structure. |
-| -------- | -------- |
-| ![](/Images/chapter4-vsproject.png) | ![](/Images/chapter4-solutionproject.png) |
-| An example of a simple Sitecore solution. | The folder structure for this solution. The file structure closely resembles the solution in Visual Studio. |
-
-In the example above, there is a \Lib folder in the file system. This contains any reference DLL's needed to build the project. By keeping all resources needed for the project under a single folder, the development team can easily leverage advanced source control features like branching, merging and labeling. Additionally, this structure lends itself to setting up automated builds.
-
-### TDS project property pages
-
-The TDS project property pages are used to connect the TDS project to a Sitecore instance and to control how the TDS project interacts with other projects in the solution during the build. 
-
-#### General
-
-Contains settings that are common to all project configurations.
-
-![](/Images/chapter4-general.png) 
-
-* **Source Web Project** – This dropdown selects the web project to copy to Sitecore when the TDS project is built. This may be set to <None> if there is no need to copy files to Sitecore.
-* **Source Web Physical Path** – For information only. This shows the path to the web project.
-* **Source Web Virtual Path** – For information only. This shows the path within the solution to the web project.
-* **Sitecore Database** – Configures the Sitecore database the TDS project will use.
-* **Assemblies** – When deploying to Sitecore, TDS can skip the deployment of certain assemblies. These assemblies may be referenced by one or more projects in the solution. Excluding/including static assemblies from the build will reduce the size of the packages TDS generates and improve deployment time. By default, TDS excludes assemblies beginning with "Sitecore.". Selecting **Exclude** from the dropdown will cause TDS to skip these files and not add them to the deployment. Selecting **Include** from the dropdown will only include the files listed and cause TDS to skip all the files not listed.
-
