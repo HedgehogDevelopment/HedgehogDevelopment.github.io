@@ -24,7 +24,7 @@ The zip file you downloaded from the [Hedgehog Development](http://hhogdev.com) 
 | Visual Studio 2010 | HedgehogDevelopmentTDS_2010.msi |
 | Visual Studio 2012 | HedgehogDevelopmentTDS_2012.msi |
 | Visual Studio 2013 | HedgehogDevelopmentTDS_2013.msi |
-| .                  |                                 |
+<br />
 
 Unzip the files to a directory of your choice to install from. Once you selected the version of TDS that matches the version(s) of Visual Studio you work with you are ready to install. 
 
@@ -131,10 +131,10 @@ To add a few items to your TDS project, follow the steps below.
 
 1. Right-click on the TDS project in the Solution Explorer and choose “**Get Sitecore Items**”.
 2. The Get Sitecore Items dialog will open and show the Sitecore items in the root of the content tree.
-3. Expand the template folder where you have created a few templates for your Sitecore solution. In the example below, it is /Template/MvcNewsApp.
+3. Expand the template folder where you have created a few templates for your Sitecore solution. In the example below, it is /Template/MvcNewsApp. <br /> ![](/Images/chapter2-getitems.png)
 4. Check the check-box next to an item to bring it into Sitecore. The dialog is aware of parent-child relationships, so checking a child item will automatically select the parents.
-5. If you want to bring all templates under the template folder you are using to hold your custom templates, you can right-click on the template and choose “Select all children”.
-6. Once you have selected the templates you wish to bring into your TDS project, click “Get Items” and TDS will begin getting the items
+5. If you want to bring all templates under the template folder you are using to hold your custom templates, you can right-click on the template and choose “**Select all children**”.
+6. Once you have selected the templates you wish to bring into your TDS project, click “**Get Items**” and TDS will begin getting the items
 
 #### Choosing which items to bring into a TDS porject
 
@@ -156,7 +156,9 @@ The above roles are to be used as guidelines for determining which items should 
 
 ### TDS Project Types
 
-TDS comes with different project types from which to create your TDS projects. To access the different project types open the New Projects dialog in Visual Studio and select TDS Project from the Templates list:
+TDS comes with different project types from which to create your TDS projects. To access the different project types open the **New Projects** dialog in Visual Studio and select **TDS Project** from the Templates list:
+
+![](/Images/chapter2-newprojectwizard.png)
  
 #### TDS Project
 
@@ -166,6 +168,7 @@ Creates a new TDS Project as part of your solution, you will then need to config
 
 Creates a new TDS Project as part of your solution but then runs you through a wizard to help setup a Sitecore instance. The first screen in the wizard will ask you for the basic connection information:
 
+![](/Images/chapter2-newprojectwizarddialog.png)
 
 * Sitecore Web Url – the URL to the Sitecore instance that TDS will connect to.
 * Sitecore Deploy Folder – the path to the Sitecore instance specified in the Sitecore Web Url field.
