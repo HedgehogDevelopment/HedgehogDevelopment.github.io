@@ -53,7 +53,7 @@ Contains settings that are common to all project configurations.
 
 ![](/Images/chapter4-general.png) 
 
-* **Source Web Project** – This dropdown selects the web project to copy to Sitecore when the TDS project is built. This may be set to <None> if there is no need to copy files to Sitecore.
+* **Source Web Project** – This dropdown selects the web project to copy to Sitecore when the TDS project is built. This may be set to &lt;None&gt; if there is no need to copy files to Sitecore.
 * **Source Web Physical Path** – For information only. This shows the path to the web project.
 * **Source Web Virtual Path** – For information only. This shows the path within the solution to the web project.
 * **Sitecore Database** – Configures the Sitecore database the TDS project will use.
