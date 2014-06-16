@@ -340,3 +340,75 @@ The Deployment Property Manager has the following keyboard shortcuts when you ha
 | Shift + f	| Child Sync – No sync |
 | Shift + x	| Deploy – Always |
 | Shift + c	| Deploy – Once |
+<br />
+
+### Adding Sitecore items to a project
+
+TDS helps developers to manage their Sitecore items. To do this, the items the development team wants to manage must be brought into the TDS project. This can be done with the **Get Sitecore Items** dialog and the Sync Window (see below). 
+
+The **Get Sitecore Items** dialog can be opened by right clicking on the TDS project or a Sitecore item in the Solution Explorer window. The dialog will show the Sitecore content tree. Developers can browse the tree and select items to bring into their project by using the check boxes to the left of the Sitecore item.
+
+![](/Images/chapter4-getitems.png) 
+
+The Get Sitecore Items dialog implements a number of features to make it easier to bring items into a project.
+* Any items already in the project are shown with a light colored font. See "templates" and "content" in the sample image.
+* If an item is selected in the tree, the dialog always selects all parent items.
+* If an item in unselected in the tree, the dialog always unselects all child items.
+* All items have a right click menu that allows the developer to select all child items.
+
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
+<p>
+When an item has been selected using the right-click menu to select all child items, TDS will automatically set the <strong>Child Item Synchronization</strong> setting in the items to <strong>KeepAllChildrenSynchronized</strong>.
+</p>
+</div>
+</div>
+
+After selecting the items from the Sitecore content tree, the developer can click the "**Get Items**" button and the selected items will be added to the project.
+
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
+<p>
+Correctly choosing the Sitecore items to bring into a project is very important. Adding the wrong items to a TDS project will make the project difficult to maintain and deploy. Please review the section Choosing which items to bring into a TDS project for guidelines on choosing which items to add to TDS.
+</p>
+</div>
+</div>
+
+### Updating Sitecore Items in a project
+
+As a Sitecore implementation grows, developers will add or make changes to items in their Sitecore development environment. TDS offers developers a way to track these changes and bring them into their TDS project. This is done by using the Sync Window.
+
+#### The Sync Window
+
+To open the Sync Window, right click on the TDS project or any item in the Solution Explorer and select **Sync with Sitecore**,  the sync window will then begin comparing the item and its descendants in the TDS project to the Sitecore instance for the current project configuration.
+
+When the compare process is complete, the sync window will show the items that are different between the project and Sitecore. You can compare just the select item by clicking **Sync this Item** instead of **Sync with Sitecore**.
+ 
+![](/Images/chapter4-syncwindow1.png)
+
+The Sync Window allows developers to inspect the differences between Sitecore and the TDS project and determine what to do about those changes. The developer may select individual items, or multi-select items using standard windows selection keys (<shift> and <ctrl>) and choose an operation to perform on the items. If an item is collapsed and selected, it will be assumed by the Sync Window that all items under the item are selected as well. Once the developer has selected the operation to perform on each item, they can click on "**Do Updates**" to perform the actions.
+
+* A. If there is a difference between the TDS project and Sitecore, it will be noted here.
+* B. The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS will always choose "No Action".
+* C. The "**Make selected project items match Sitecore**" button causes all selected items to choose the action that would make the project items match the Sitecore items. 
+* D. The "**Make selected Sitecore items match project**" button causes all selected items to choose the action that would make the Sitecore items match the project items.
+* E. The "**Merge fields during update**" button causes a merge window to open when updating Sitecore. The merge window allows the developer to choose to update only selected field values instead of the whole item.
+* F. The "**Hide fields with no changes**" check box causes the item differences pane in the lower half of the sync window to only show fields that are different.
+* G. Highlights changes between the project and Sitecore. Missing fields are shown in red, different fields are blue.
+
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
+<p>
+The Sync Window uses the **Child Item Synchronization** setting to determine if it should look for new items under an existing Sitecore item. This feature of TDS is an optimization to prevent large content trees that are not part of the TDS project from being scanned during a sync operation.
+</p>
+</div>
+</div>
