@@ -1,6 +1,6 @@
 ---
-title: Index Test
-layout: MainLayout
+title: TDS Documentation
+layout: TdsLayout
 ---
  
 # Team Development for Sitecore 
