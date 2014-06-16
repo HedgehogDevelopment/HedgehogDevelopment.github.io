@@ -25,7 +25,7 @@ The zip file you downloaded from the [Hedgehog Development](http://hhogdev.com) 
 | Visual Studio 2012 | HedgehogDevelopmentTDS_2012.msi |
 | Visual Studio 2013 | HedgehogDevelopmentTDS_2013.msi |
 |                    |                                 |
-
+\s\s
 Unzip the files to a directory of your choice to install from. Once you selected the version of TDS that matches the version(s) of Visual Studio you work with you are ready to install. 
 
 <div class="panel">
@@ -72,7 +72,7 @@ Once you have downloaded the TDS .zip package and extracted the version(s) you w
 
 1. Start by double-clicking the .msi file to begin the installation
 2. Click **Next** to begin the process of installing TDS
-3. Read and accept the license agreement. Then click **Next**.
+3. Read and accept the license agreement. Then click **Next**.\s\s ![](/Images/chapter2-license.png)
 4. Enter the license key provided by Hedgehog Development. Make sure the company name is spelled exactly as specified with your license key. Do not put quotes around the company name or the license key.
 5.Select the path where you want TDS installed. Typically, the default value is acceptable.
 6. Confirm the installation by clicking Next.
