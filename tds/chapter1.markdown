@@ -32,8 +32,8 @@ Having everything in a SCMS gives you one master repository for the project. The
 
 Over the course of a project's life, the amount of time spent performing code deployments can be significant, and thus, the time savings of TDS can also be significant. Based on Hedgehog’s experience developing many small, medium and large Sitecore projects, we have compiled extensive statistics on the life cycle of Sitecore projects. From these statistics, we have created graphs detailing a hypothetical Sitecore project that runs for 30 weeks.
 When development on a project starts, there is an immediate need to begin creating Sitecore items. As development progresses, the number of new items tends to taper off. Changes to existing items continue and eventually tapers off as well.
- 
-![](/Images/chapter1-lifecycle.PNG)
+
+<img src='/Images/chapter1-lifecycle.PNG' style="text-align:center" />
 
 As more templates are added, the cost (time) to deploy the items rises. The cost of deployment is also influenced by the number of changes to the existing items. Since each environment (development, Quality Assurance (QA), User Acceptance (UAT) sometimes also called Integration, and Production) is different, the costs associated with creating a QA build doesn’t completely offset the cost of building a UAT or Production build. In addition, since each deployment is a manual process, the risk of differences being introduced between each environment rises.
  
