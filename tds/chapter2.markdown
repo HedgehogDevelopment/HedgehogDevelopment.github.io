@@ -112,7 +112,7 @@ Adding TDS to your development process is extremely simple. To create a new TDS 
 2. Choose Project type: “**TDS Project**” and choose the template: “**TDS Project**” then specify the desired name, location and Source Code Control (SCC) options (if applicable). For more information on the different project types see the TDS Project Types section.
  
 
-### Connect the TDS Project to Sitecore
+#### Connect the TDS Project to Sitecore
 
 TDS installs a web service on the Sitecore server to communicate with the Sitecore database. There are a number of installation options and settings that will be covered in a later chapter. The steps below outline how to quickly get TDS setup with a development server.
 
@@ -170,9 +170,9 @@ Creates a new TDS Project as part of your solution but then runs you through a w
 
 ![](/Images/chapter2-newprojectwizarddialog.png)
 
-* Sitecore Web Url – the URL to the Sitecore instance that TDS will connect to.
-* Sitecore Deploy Folder – the path to the Sitecore instance specified in the Sitecore Web Url field.
-* Source Web Project – the web project to use if you have one.
-* Sitecore Database  - the Sitecore database to read and write items to.
+* **Sitecore Web Url** – the URL to the Sitecore instance that TDS will connect to.
+* **Sitecore Deploy Folder** – the path to the Sitecore instance specified in the Sitecore Web Url field.
+* **Source Web Project** – the web project to use if you have one.
+* **Sitecore Database**  - the Sitecore database to read and write items to.
 
 If you have multiple TDS Projects in you solution and you enter a Sitecore Web Url used by another project the wizard will fill in the other fields automatically. Clicking ok will configure the project and install the Sitecore Connector if you checked it.

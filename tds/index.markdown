@@ -30,18 +30,18 @@ Development team: Charlie Turano, Sean Kearney, Matt Friedlander, Elena Zlateva,
 		* [Development environment before TDS](./chapter1.html#development_environment_before_tds)
 		* [Development environment using TDS](./chapter1.html#development_environment_using_tds)
 * [Chapter 2 – Getting started with TDS](./chapter2.html)
-	* System Requirements	10
-	* Installation	10
-		* Step-by-Step Instructions	12
-		* Updating the TDS License	15
-	* Initial Configuration	15
-		* Create the TDS Project	16
-		* Connect the TDS Project to Sitecore	17
-		* Adding Sitecore items to the TDS Project	18
-		* Choosing which items to bring into a TDS project	19
-	* TDS Project Types	20
-		* TDS Project	21
-		* TDS Project with Wizard	21
+	* [System Requirements](./chapter2.html#system_requirements)
+	* [Installation](./chapter2.html#installation)
+		* [Step-by-Step Instructions](./chapter2.html#stepbystep_instructions)
+		* [Updating the TDS License](./chapter2.html#updateing_the_tds_license)
+	* [Initial Configuration](./chapter2.html#initial_configuration)
+		* [Create the TDS Project](./chapter2.html#create_the_tds_project)
+		* [Connect the TDS Project to Sitecore](./chapter2.htm#connect_the_tds_project_to_sitecorel)
+		* [Adding Sitecore items to the TDS Project](./chapter2.html#adding_sitecore_items_to_the_tds_project)
+		* [Choosing which items to bring into a TDS project](./chapter2.html#choosing_which_items_to_bring_into_a_tds_porject)
+	* [TDS Project Types](./chapter2.html#tds_project_types)
+		* [TDS Project](./chapter2.html#tds_project)
+		* [TDS Project with Wizard](./chapter2.html#tds_project_with_wizard)
 * Chapter 3 – TDS Architecture	22
 	* TDS Add-in	22
 	* TDS Web Service	22
