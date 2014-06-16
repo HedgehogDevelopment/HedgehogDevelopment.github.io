@@ -358,6 +358,7 @@ The Get Sitecore Items dialog implements a number of features to make it easier 
 When an item has been selected using the right-click menu to select all child items, TDS will automatically set the <strong>Child Item Synchronization</strong> setting in the items to <strong>KeepAllChildrenSynchronized</strong>.
 </p>
 </div>
+</div>
 
 After selecting the items from the Sitecore content tree, the developer can click the “**Get Items**” button and the selected items will be added to the project.
 
@@ -369,6 +370,7 @@ After selecting the items from the Sitecore content tree, the developer can clic
 <p>
 Correctly choosing the Sitecore items to bring into a project is very important. Adding the wrong items to a TDS project will make the project difficult to maintain and deploy. Please review the section Choosing which items to bring into a TDS project for guidelines on choosing which items to add to TDS.
 </p>
+</div>
 </div>
 
 ### Updating Sitecore Items in a project
@@ -401,6 +403,7 @@ The Sync Window allows developers to inspect the differences between Sitecore an
 <p>
 The Sync Window uses the **Child Item Synchronization** setting to determine if it should look for new items under an existing Sitecore item. This feature of TDS is an optimization to prevent large content trees that are not part of the TDS project from being scanned during a sync operation.
 </p>
+</div>
 </div>
 
 If you are comparing fields with large amounts of data the Sync screen will display a grey button next to the field that will allow you to see the full field contents:
