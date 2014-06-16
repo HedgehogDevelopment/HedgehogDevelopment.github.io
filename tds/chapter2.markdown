@@ -49,7 +49,7 @@ If you have relocated the My Documents folder to a different directory, the Visu
 You should make sure that the Visual Studio User Project Template Location in Visual Studio is pointing to the desired location. You can do so by:
 </p>
 <p>
-In Visual Studio go to <strong>Tools &gt; Options menu.</strong>
+In Visual Studio go to <strong>Tools > Options menu.</strong>
 </p>
 <p>
 Under the Projects and Solutions highlight the General settings
