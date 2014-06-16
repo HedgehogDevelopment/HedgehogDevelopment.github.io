@@ -22,4 +22,4 @@ Development team: Charlie Turano, Sean Kearney, Matt Friedlander, Elena Zlateva,
 
 ## Contents
 
-{% include tdschapters.html %}
+{% include tdschapters.markdown %}
