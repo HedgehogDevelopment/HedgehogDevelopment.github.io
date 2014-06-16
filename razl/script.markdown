@@ -118,7 +118,7 @@ The configuration to use the **Awesome** connection would be:
 
 Preset connections can not be made read only from the XML or be installed by the XML, these tasks should be performed in the Razl GUI.
 
-#### Operations
+### Operations
 
 Operations define the actions that Razl should perform. The basic XML structure for an operation is:
    
