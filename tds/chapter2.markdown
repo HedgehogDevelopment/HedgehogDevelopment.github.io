@@ -17,18 +17,22 @@ layout: TdsLayout
 ## Installation
 
 Installing TDS is a quick and easy process.  It is recommended that you shut down all running applications prior to beginning the install process.
-The zip file you downloaded from the Hedgehog Development website contains a version of TDS to match up with the version of Visual Studio that you are running.
+The zip file you downloaded from the [Hedgehog Development](http://hhogdev.com) website contains a version of TDS to match up with the version of Visual Studio that you are running.
 
-| Visual Studio version	Team | Development for Sitecore version |
+| **Visual Studio version	Team** | **Development for Sitecore version** |
 | ------------- | ----------- |
 | Visual Studio 2010 | HedgehogDevelopmentTDS_2010.msi |
 | Visual Studio 2012 | HedgehogDevelopmentTDS_2012.msi |
 | Visual Studio 2013 | HedgehogDevelopmentTDS_2013.msi |
+| | |
 
 Unzip the files to a directory of your choice to install from. Once you selected the version of TDS that matches the version(s) of Visual Studio you work with you are ready to install. 
 
-**NOTE:**
-
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
 By default TDS wants to install the project templates (TDSProject.zip) in the My Documents folder on your C: drive. Located at:
 
 ```
@@ -48,6 +52,8 @@ Locate the Visual Studio user project template location. Verify that this path i
 Click OK when you are done and now you should see the TDS Project Template when you try to create a new project.
 
 Also, please note that if Visual Studio is running in Safe Mode add-ins are NOT loaded.
+ </div>
+</div>
 
 ### Step-by-Step Instructions 
 
