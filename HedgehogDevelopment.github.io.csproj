@@ -41,8 +41,227 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\iconFont.min.css" />
+    <Content Include="css\metro-bootstrap-responsive.css" />
+    <Content Include="css\metro-bootstrap-responsive.min.css" />
+    <Content Include="css\metro-bootstrap.css" />
+    <Content Include="css\metro-bootstrap.min.css" />
+    <Content Include="fonts\iconFont.dev.svg" />
+    <Content Include="fonts\iconFont.svg" />
+    <Content Include="fonts\metroSysIcons.svg" />
+    <Content Include="Images\Logo-24.png" />
     <Content Include="Images\Logo.png" />
+    <Content Include="js\metro.min.js" />
+    <Content Include="js\metro\metro-accordion.js" />
+    <Content Include="js\metro\metro-button-set.js" />
+    <Content Include="js\metro\metro-calendar.js" />
+    <Content Include="js\metro\metro-carousel.js" />
+    <Content Include="js\metro\metro-core.js" />
+    <Content Include="js\metro\metro-countdown.js" />
+    <Content Include="js\metro\metro-date-format.js" />
+    <Content Include="js\metro\metro-datepicker.js" />
+    <Content Include="js\metro\metro-dialog.js" />
+    <Content Include="js\metro\metro-drag-tile.js" />
+    <Content Include="js\metro\metro-dropdown.js" />
+    <Content Include="js\metro\metro-fluentmenu.js" />
+    <Content Include="js\metro\metro-global.js" />
+    <Content Include="js\metro\metro-hint.js" />
+    <Content Include="js\metro\metro-initiator.js" />
+    <Content Include="js\metro\metro-input-control.js" />
+    <Content Include="js\metro\metro-listview.js" />
+    <Content Include="js\metro\metro-live-tile.js" />
+    <Content Include="js\metro\metro-loader.js" />
+    <Content Include="js\metro\metro-locale.js" />
+    <Content Include="js\metro\metro-notify.js" />
+    <Content Include="js\metro\metro-panel.js" />
+    <Content Include="js\metro\metro-plugin-template.js" />
+    <Content Include="js\metro\metro-progressbar.js" />
+    <Content Include="js\metro\metro-pull.js" />
+    <Content Include="js\metro\metro-rating.js" />
+    <Content Include="js\metro\metro-scroll.js" />
+    <Content Include="js\metro\metro-slider.js" />
+    <Content Include="js\metro\metro-stepper.js" />
+    <Content Include="js\metro\metro-streamer.js" />
+    <Content Include="js\metro\metro-tab-control.js" />
+    <Content Include="js\metro\metro-table.js" />
+    <Content Include="js\metro\metro-tile-transform.js" />
+    <Content Include="js\metro\metro-times.js" />
+    <Content Include="js\metro\metro-touch-handler.js" />
+    <Content Include="js\metro\metro-treeview.js" />
+    <Content Include="js\metro\metro-wizard.js" />
+    <Content Include="index.markdown" />
+    <Content Include="tds\index.markdown" />
+    <None Include="_config.yml" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="_layouts\MainLayout.html" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\wizard.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\window.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\variables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\utils.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\typography.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\treeview.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\transform.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\tiles.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\tables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\tab-control.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\streamer.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\stepper.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\slider.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\sidebar.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\scroll.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\reset.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\rating.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\progress-bar.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\panels.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\pagination.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\notify.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\notice.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\navigation-bar.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\misc.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\metro-bootstrap-responsive.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\metro-bootstrap.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\menus.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\lists.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\layout.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\images.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\icons.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\iconFont-content.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\iconFont.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\hint.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\grid.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\funcs.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\forms.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\fluent-menu.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\dataTables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\countdown.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\colors.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\carousel.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\calendar.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\buttons.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\breadcrumbs.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\balloon.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="less\accordion.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\metroSysIcons.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\metroSysIcons.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\iconFont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\iconFont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\iconFont.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\iconFont.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
