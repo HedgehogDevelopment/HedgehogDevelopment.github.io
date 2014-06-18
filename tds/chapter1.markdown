@@ -31,6 +31,7 @@ Having everything in a SCMS gives you one master repository for the project. The
 ### Why TDS works
 
 Over the course of a project's life, the amount of time spent performing code deployments can be significant, and thus, the time savings of TDS can also be significant. Based on Hedgehog’s experience developing many small, medium and large Sitecore projects, we have compiled extensive statistics on the life cycle of Sitecore projects. From these statistics, we have created graphs detailing a hypothetical Sitecore project that runs for 30 weeks.
+
 When development on a project starts, there is an immediate need to begin creating Sitecore items. As development progresses, the number of new items tends to taper off. Changes to existing items continue and eventually tapers off as well.
 
 <p  style="text-align:center">
