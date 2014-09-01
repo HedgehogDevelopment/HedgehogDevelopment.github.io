@@ -9,7 +9,7 @@ layout: RazlLayout
 
 <dl>
 	<dt>
-		How do I change the Access Guid?
+		How do I change the Access Guid used by the Razl Application?
 	<dt>
 	<dd>
 		Razl uses an Guid to act as the authentication token between the Razl application and the Razl web service. You will need this Guid
