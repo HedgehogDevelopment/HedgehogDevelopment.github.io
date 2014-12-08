@@ -11,7 +11,7 @@ Hedgehog Development originally developed TDS as an internal project to help our
 
 The primary goal of TDS was to allow developers to manage their Sitecore schema (Templates, Layouts, Sublayouts, Taxonomy and meta-data items) the same way they manage source code. The Software development field has, over the years, built many exceptional tools and practices for managing and deploying source code, but Sitecore developers were not able to leverage things like Source Control, automated builds and automated deployments for their Sitecore items.
 
-### The Sitecore database(s)
+###<a id="the_sitecore_databases"></a> The Sitecore database(s)
 
 When developing a website, it makes sense for developers to build the implementation on a local IIS instance and commit the result to source control. Since Sitecore is a platform built on IIS, the practice of developing on a local IIS instance is a given. 
 
@@ -19,11 +19,11 @@ Before TDS was developed, Sitecores' recommended development environment was a l
 
 One of the reasons Hedgehog Development created TDS was to easily allow developers to build a Sitecore implementation in an isolated development environment. This would mean each developer would have their own instance of the Sitecore databases on their local machine and could work without fear of causing problems for other developers on the team. TDS allows developers to bring their changes into a Visual Studio project and, much like source code, the changes made to Sitecore can be committed to source control. 
 
-### Working outside the web root
+###<a id="working_outside_the_web_root"></a> Working outside the web root
 
 One of the practices we use at Hedgehog Development is to locate all source files and projects outside of the Sitecore web root. TDS has a built in process that allows the compiled solution to be copied to the target Sitecore website at build time. This allows the developer to easily keep track of items in their project. This arrangement is also advantageous when using file system based source control systems like GIT. There is no longer a need to exclude Sitecore components from Source Control, since the source control system does not see them in the file system. This arrangement also closely resembles the deployment process and configuration used in production environments, which leads to more stable releases.
 
-### Solution Structure
+###<a id="Solution_Structure"></a> Solution Structure
 
 TDS, much like other Visual Studio projects, allows developers to create both simple and very complex Visual Studio solutions. Since solutions tend to grow in both size and complexity over time, it makes sense to start with a very simple and flat file structure. As the solution grows, keeping the solution files as flat as possible makes it easier to work with, build and deploy.
 
@@ -42,12 +42,12 @@ A typical simple Sitecore solution consists of a Web Project, one or more Class 
 
 In the example above, there is a \Lib folder in the file system. This contains any reference DLL's needed to build the project. By keeping all resources needed for the project under a single folder, the development team can easily leverage advanced source control features like branching, merging and labeling. Additionally, this structure lends itself to setting up automated builds.
 
-### TDS project property pages
+###<a id="tds_project_property_pages"></a> TDS project property pages
 
 The TDS project property pages are used to connect the TDS project to a Sitecore instance and to control how the TDS project interacts with other projects in the solution during the build. 
 
 
-#### General
+####<a id="general"></a> General
 
 Contains settings that are common to all project configurations.
 
@@ -59,7 +59,7 @@ Contains settings that are common to all project configurations.
 * **Sitecore Database** – Configures the Sitecore database the TDS project will use.
 * **Assemblies** – When deploying to Sitecore, TDS can skip the deployment of certain assemblies. These assemblies may be referenced by one or more projects in the solution. Excluding/including static assemblies from the build will reduce the size of the packages TDS generates and improve deployment time. By default, TDS excludes assemblies beginning with "Sitecore.". Selecting **Exclude** from the dropdown will cause TDS to skip these files and not add them to the deployment. Selecting **Include** from the dropdown will only include the files listed and cause TDS to skip all the files not listed.
 
-#### Code Generation
+####<a id="code_generation"></a> Code Generation
  
 Used to turn on and control TDS Code Generation. 
  
@@ -74,14 +74,14 @@ Used to turn on and control TDS Code Generation.
 
 Please see the code generation section below for more information on the Code Generation property page.
 
-#### Multi-Project Properties
+####<a id="multiproject_properties"></a> Multi-Project Properties
 
 The Multi-Project properties page allow you to setup dependencies between projects within the same solution.
 
 ![](/Images/Tds/chapter4-multiproject.png)
 
 
-##### Base Template Reference
+#####<a id="Base_Template_Reference"></a> Base Template Reference
 
 The Base Template Reference section can be used to tell a TDS project where it should look for base templates when generating code for templates in the current project:
  
@@ -120,7 +120,7 @@ Notice that the second code generated file references the classes generated by t
 
 The referencing project must know how to generate the namespaces required by the referenced project. For example if the referenced and referencing project use different methods of generating namespaces then the referencing project may not be able to find the classes in the referenced project.
 
-##### Package Bundling
+#####<a id="Package_Bundling"></a> Package Bundling
 
 The Package Bundling section can be used to tell a TDS to pull in items from another project when creating an Update Package. When TDS builds the current project it will automatically add any items in the referenced projects to the update package.
 
@@ -131,7 +131,7 @@ referencing project is used.
 
 Package bundling only works when the Update Package has been configured, see the Update Package section below.
 
-#### Build
+####<a id="build"></a> Build
  
 Contains settings used to connect TDS to a Sitecore instance. The settings on this page are different for each project configuration, allowing TDS to easily work with multiple Sitecore instances.
 
@@ -179,7 +179,7 @@ Clicking the **Test** button will bring up a second prompt that will automatical
 
 ![](/Images/Tds/chapter4-testdialog.png)  
 
-#### Update Package 
+####<a id="update_package"></a> Update Package 
 Contains the settings needed to build Sitecore Update Packages. 
 
 <div class="panel">
@@ -203,7 +203,7 @@ TDS generates Sitecore Update Packages. These packages are not the same as the p
 * Append the current date and time to the package name – When checked, the package name has the current date and time. This is sometimes useful for associating the package with a specific version or build.
 * **Sitecore Assembly Path** – TDS needs to use the Sitecore Update Package Builder to create a package. To do this, TDS needs to know where to find the four Sitecore assemblies that make up the Package Builder. These are **Sitecore.Kernel.dll, Sitecore.Logging.dll, Sitecore.Update.dll** and **Sitecore.Zip.dll**. This path can be a relative, absolute or network path to these four Dlls.
 
-#### File Replacement 
+####<a id="file_replacement"></a> File Replacement 
  
 Allows the TDS project to be configured to automatically copy files into the build folder before deploying the built project. This is useful for managing environment specific configuration files. The File Replacement step runs after the web project has been built and copied, but before package generation and/or deployment to Sitecore.
 
@@ -223,7 +223,7 @@ Many of the use cases for File Replacements have been superseded by the Configur
 * **Target Location** – Specifies the location to copy files to. The path for the target location can be relative to the build output folder or an absolute path.
 
 
-#### Validations
+####<a id="validations"></a> Validations
 
 The Validations tab allows you turn on checks that TDS can perform on the project when it is built.
 
@@ -243,13 +243,13 @@ TDS supports the following validations:
 * **Should use .user file** -  TDS properties for DEBUG configurations should typically be stored in the .user file.
 * **Prevent item by path** – Checks that items in the project are not found at or beneath the configured location.
 
-### Deployment Properties
+###<a id="deployment_properties"></a> Deployment Properties
 
 A TDS project contains many different types of Sitecore items. These items all serve different purposes in the Sitecore implementation, and it is likely they need to be treated differently at deployment time. Developers can easily manage how each Sitecore item in the TDS project is deployed through Deployment Properties.
 
 Setting deployment properties can be time consuming. TDS was designed to help developers with this process by intelligently choosing default values for deployment properties. If an item is added under an existing item, TDS will set the new items deployment properties to have the same values as the parent item.
 
-### Visual Studio Property Window
+###<a id="visual_studio_property_window"></a> Visual Studio Property Window
 
 Deployment properties are managed for an individual item in the Visual Studio property window. The property window is opened by right-clicking on an item and selecting properties. It may also be opened by clicking on an item and pressing the F4 key. 
 
@@ -291,7 +291,7 @@ It is recommended that the Sitecore databases are backed up before beginning any
 * **SitecorePath** – The path to the item within Sitecore.
 
 
-### TDS Options Window
+###<a id="tds_options_window"></a> TDS Options Window
 
 The TDS Options Window allows you to access global settings for TDS, these settings will apply across all Visual Studio instances.
 
@@ -299,7 +299,7 @@ To access the TDS Option Window click on the **Tools** menu then **Options**. **
  
 ![](/Images/Tds/chapter4-options.png) 
 
-#### General Options
+####<a id="general_options"></a> General Options
  
 ![](/Images/Tds/chapter4-generaloptions.png) 
 
@@ -309,7 +309,7 @@ The following options are are available in the **General Options** screen:
 * **Autosave Project File** – When set to **true** the project file will automatically save when items are added to the TDS project file or items are synced.
 * **Check for Updates** – When set to **true** TDS will check for updates when a solution is loaded and prompt the developer when an update is available.
 
-#### Sync Window
+####<a id="sync_window"></a> Sync Window
 
 ![](/Images/Tds/chapter4-syncwindow.png) 
 
@@ -317,7 +317,7 @@ The Sync screen allows you to set a list of fields that should be ignored when c
 
 Checking the **Hide fields with the same value in the Sync Results** will stop fields with identical values from being displayed in the **Sync Window**, this can make it easier to compare items.
 
-### Deployment Property Manager
+###<a id="deployment_property_manager"></a> Deployment Property Manager
 
 The Deployment Property Manager allows developers to view and update deployment properties on many items at one time. This is a much more convenient way of managing deployment properties. 
 
@@ -327,7 +327,7 @@ The Deployment Property Manager can be opened by right-clicking on the TDS proje
 
 For an explanation of the various options for each of the properties, please see the descriptions above. 
 
-#### Keyboard Shortcuts
+####<a id="DPM_Keyboard_Shortcuts"></a> Keyboard Shortcuts
 
 The Deployment Property Manager has the following keyboard shortcuts when you have selected an item(s):
 
@@ -342,7 +342,7 @@ The Deployment Property Manager has the following keyboard shortcuts when you ha
 | Shift + c	| Deploy – Once |
 <br />
 
-### Adding Sitecore items to a project
+###<a id="adding_sitecore_items_to_a_project"></a> Adding Sitecore items to a project
 
 TDS helps developers to manage their Sitecore items. To do this, the items the development team wants to manage must be brought into the TDS project. This can be done with the **Get Sitecore Items** dialog and the Sync Window (see below). 
 
@@ -380,11 +380,11 @@ Correctly choosing the Sitecore items to bring into a project is very important.
 </div>
 </div>
 
-### Updating Sitecore Items in a project
+###<a id="updating_sitecore_items_in_a_project"></a> Updating Sitecore Items in a project
 
 As a Sitecore implementation grows, developers will add or make changes to items in their Sitecore development environment. TDS offers developers a way to track these changes and bring them into their TDS project. This is done by using the Sync Window.
 
-#### The Sync Window
+####<a id="the_sync_window"></a> The Sync Window
 
 To open the Sync Window, right click on the TDS project or any item in the Solution Explorer and select **Sync with Sitecore**,  the sync window will then begin comparing the item and its descendants in the TDS project to the Sitecore instance for the current project configuration.
 
@@ -394,13 +394,13 @@ When the compare process is complete, the sync window will show the items that a
 
 The Sync Window allows developers to inspect the differences between Sitecore and the TDS project and determine what to do about those changes. The developer may select individual items, or multi-select items using standard windows selection keys (&lt;shift&gt; and &lt;ctrl&gt;) and choose an operation to perform on the items. If an item is collapsed and selected, it will be assumed by the Sync Window that all items under the item are selected as well. Once the developer has selected the operation to perform on each item, they can click on "**Do Updates**" to perform the actions.
 
-* A. If there is a difference between the TDS project and Sitecore, it will be noted here.
-* B. The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS will always choose "No Action".
-* C. The "**Make selected project items match Sitecore**" button causes all selected items to choose the action that would make the project items match the Sitecore items. 
-* D. The "**Make selected Sitecore items match project**" button causes all selected items to choose the action that would make the Sitecore items match the project items.
-* E. The "**Merge fields during update**" button causes a merge window to open when updating Sitecore. The merge window allows the developer to choose to update only selected field values instead of the whole item.
-* F. The "**Hide fields with no changes**" check box causes the item differences pane in the lower half of the sync window to only show fields that are different.
-* G. Highlights changes between the project and Sitecore. Missing fields are shown in red, different fields are blue.
+* A: If there is a difference between the TDS project and Sitecore, it will be noted here.
+* B: The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS will always choose "No Action".
+* C: The "**Make selected project items match Sitecore**" button causes all selected items to choose the action that would make the project items match the Sitecore items. 
+* D: The "**Make selected Sitecore items match project**" button causes all selected items to choose the action that would make the Sitecore items match the project items.
+* E: The "**Merge fields during update**" button causes a merge window to open when updating Sitecore. The merge window allows the developer to choose to update only selected field values instead of the whole item.
+* F: The "**Hide fields with no changes**" check box causes the item differences pane in the lower half of the sync window to only show fields that are different.
+* G: Highlights changes between the project and Sitecore. Missing fields are shown in red, different fields are blue.
 
 <div class="panel">
  <div class="panel-header bg-lightBlue fg-white">
@@ -414,9 +414,6 @@ The Sync Window uses the **Child Item Synchronization** setting to determine if 
 </div>
 
 
- 
-
-
 If you are comparing fields with large amounts of data the Sync screen will display a grey button next to the field that will allow you to see the full field contents:
  
 ![](/Images/Tds/chapter4-longfields.png)
@@ -426,7 +423,7 @@ Click the icon will open another dialog that shows the full contents of the fiel
 ![](/Images/Tds/chapter4-longfieldsdialog.png) 
 
  
-##### Keyboard Shortcuts
+#####<a id="Sync_Keyboard_Shortcuts"></a> Keyboard Shortcuts
 
 The Sync Window has the following keyboard shortcuts when you have selected an item:
 
@@ -436,7 +433,7 @@ The Sync Window has the following keyboard shortcuts when you have selected an i
 | Shift + right arrow | Update Sitecore | 
 | Shift + up arrow | Merge items | 
 
-#### The Merge Window 
+####<a id="the_merge_window"></a> The Merge Window 
 
 The merge window allows the developer to pick individual fields from a Sitecore item and move them into the TDS project. This is useful for resolving changes multiple developers have made to an item.
 
@@ -456,7 +453,7 @@ Click the icon will open another dialog that shows the full field contents:
 ![](/Images/Tds/chapter4-longfieldsdialog.png)
  
 
-##### Keyboard Shortcuts
+#####<a id="Merge_Keyboard_Shortcuts"></a> Keyboard Shortcuts
 
 The Merge Window has the following keyboard shortcuts when you have selected a field:
 
@@ -465,15 +462,216 @@ The Merge Window has the following keyboard shortcuts when you have selected a f
 | Shift + left arrow | Update project |
 | Shift + right arrow |	Update Sitecore |
 
-#### Renaming Items
+####<a id="renaming_items"></a> Renaming Items
 
 Due to the nature of Sitecore items, renaming a Sitecore item will cause cascading changes to all items below the renamed item. While TDS handles these changes correctly, the source control system used by the development team may have issues with the changes made to the project. At Hedgehog Development, we recommend that renaming Sitecore items be performed separately from other sync operations. If possible, each rename operation should be committed to source control individually before performing any additional sync steps. Following these guidelines should reduce the number of problems encountered while renaming items.
 
-#### Moving Items
+####<a id="moving_items"></a> Moving Items
 
 Moving Sitecore items is very similar to renaming Sitecore items, and the guidelines for renaming Sitecore items also applies to moving items. When moving items, there is an additional requirement that the developer must sync from a folder that is an ancestor of the location where the moved item originated and the location where the moved item currently resides. This will ensure that the move operation on the item is correctly recognized.
 
-### Global Config
+####<a id="Sync_Using_History_Window"></a> Sync Using History Window
+
+The Sync Using History Window allows the developer to view their changes based on the content of the Sitecore History table. This sync window works much like the original sync window; the major upgrade of the Sync Using History Window is focused around its performance over the original sync window. Since the Sync Using History Window is only viewing items in the history table, it can find changes made by the developer much more rapidly.
+
+The Sync Using History Window will intelligently filter the content of the history table before presenting them to the user. The filter criteria for showing an item in the Sync Using History Window is based on the following:
+
+1. After right-clicking on the solution and choosing the option to open the Sync window, all items under that project’s Sitecore item will be shown.
+2. If the item is in the project.
+3. If the item in the history is under a Sitecore item in the project that has Child Item Sync set to All Children.
+
+If an item, in the history table, meets these criteria, then its latest history entry is shown in the top portion of the dialog.
+
+![](/Images/Tds/chapter4-SyncUsingHistory.png)
+
+Here are the new buttons in the Sync Using History Window (see above image):
+
+* A: The “**Make selected project items match Sitecore**” button causes all selected project items,  in the project, match their cooresponding Sitecore items. 
+* B: The “**Make selected Sitecore items match project**” button causes all selected Sitecore items, in the project, to match their cooresponding project items.
+* C: The “**Merge fields during update**” button causes a merge window to open when updating Sitecore. This merge window allows the developer to choose to update only selected field values instead of the whole item.
+* D: The “**Hide fields with no changes**” check box causes the item differences pane in the lower half of the sync window to filter out fields that match, only showing fields that are different.
+* E: The “**Date**” column contains the date of the most recent change to the item. Only the most recent changes are shown in the list.
+* F: The “**Item Path**” column contains the current path to the item.
+* G: The “**Status**” column describes the difference between the item in TDS and the item in the target Sitecore instance.
+* H: The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS will always choose “**No Action**”.
+* I: The developer can review the changes to an item in more detail in the lower pane.
+After selecting the desired operations, clicking the “**Do Updates**” button performs the actions on the items.
+
+**Please Note:** The Sync Using History Window will only find changes based on the content of the history table. This means that Sitecore operations that do not make an entry in the history table, such as Serialization, will not be included in the window.
+
+####<a id="Sync_Sitecore_Roles"></a> Sync Sitecore Roles
+
+The Sync Sitecore Roles window allows the developer to compare all roles in Sitecore with the roles in the TDS project, much the same way Sitecore items are managed. Before using the Sync Sitecore Roles feature, it must be enabled for the project.
+ 
+1. This is done by opening the TDS project properties and, on the General Property tab, enabling the “Manage Sitecore Roles in TDS” check box.
+2. Once this is enabled, a “Sitecore Roles” folder will appear under the TDS project in the solution explorer.
+
+![](/Images/Tds/chapter4-SyncRolesSolutionExplorer.png)
+
+Right clicking on the “**Sitecore Roles**” folder will open a menu with an option called “**Sync Sitecore Roles**”. Choosing this option will open the Sync Sitecore Roles window.
+
+![](/Images/Tds/chapter4-SyncSitecoreRoles.png)
+
+The Sync Sitecore Roles window operates much like the other Sitecore sync windows. Since there are far fewer roles in Sitecore than items, the Sync Sitecore Roles window is much simpler.
+
+* A: The “**Make selected project items match Sitecore**” button causes all selected project items,  in the project, to match their cooresponding Sitecore items. 
+* B: The “**Make selected Sitecore items match project**” button causes all selected Sitecore items, in the project, to match their cooresponding project items.
+* C: This column contains the name of the role.
+* D: The “**Status**” column describes the difference between the item in TDS and the item in the target Sitecore instance.
+* E: The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS will always choose “**No Action**”.
+* F: Shows the members that are part of the role in the project.
+* G: Shows the members that are part of the role in Sitecore.
+
+After selecting the desired operations, clicking the “**Do Updates**” button performs the actions on the roles.
+
+Roles in the TDS project can be deployed using TDS, or compiled into an update package for deployment on a remote server.
+
+###<a id=""></a> Sitecore Item Merge
+
+The Sitecore Item Merge tool is a stand alone tool used to resolve merge conflicts in .item files during a source control merge/check-in. During installation, TDS automatically configures the Item Merge Tool for TFS. Configuring the Sitecore Item Merge tool for other Source Control providers will be covered below.
+
+When your source control detects a conflict, it will require user intervention to merge the files. Although, Sitecore item files are plain text files, they are not as simple as text files. Care needs to be taken to properly manage field ID’s, versions and languages during the merge. This requires a specialized tool to do the process quickly and efficiently.
+
+![](/Images/Tds/chapter4-SitecoreItemMerge.png)
+
+This screenshot shows a number of possible merge scenarios that may occur:
+
+* The __**Lock** field is the same in the Source, Target and Result, and therefore has no special highlighting in any of the windows.
+* The __**Long** description field was added in the source branch. Since this change is not a conflict between the two branches, it is highlighted in green. It is present on the left indicated by a solid highlight. It is not present on the right indicated by hashes. The grey hashes on the bottom indicate that there is a difference between the original and a branch. The item was not present in the original file.
+* The __**Revision** field was changed in both branches, and is different in both branches. This is indicated by a red box around each item in the branches. This indicates a conflict between the two branches, and extra care should be taken when deciding how to proceed with the merge.
+* The __**Short** description field has a green highlight, indicating the field values are not in conflict. The same value was added in both branches.
+
+When resolving a merge, the user can choose to accept a change, reject a change or choose the value from one side or the other by checking the checkboxes and/or radio buttons in the top portion of the merge tool. You can see the result of your choices in the lower portion.
+
+The merge tool offers a few shortcut functions from a toolbar. The tool bar buttons perform the following tasks:
+
+* ![](/Images/Tds/chapter4-arrow-previous.png) - Move to the previous difference.
+* ![](/Images/Tds/chapter4-arrow-next.png) - Move to the next difference.
+* ![](/Images/Tds/chapter4-arrow-previous-conflict.png) - Move to the previous conflict.
+* ![](/Images/Tds/chapter4-arrow-next-conflict.png) - Move to the next conflict.
+* ![](/Images/Tds/chapter4-wand.png) - Select all non-conflict changes.
+* ![](/Images/Tds/chapter4-checkmark3.png) - Accept all changes.
+
+####<a id="Sitecore_Item_Merge_Setup"></a> Setting up Sitecore Item Merge for Source Control Providers
+
+TDS automatically configures the Sitecore Item Merge to run for .item files inside of TFS. However, it needs to be configured for other source control providers.
+
+The Sitecore Item Merge tool can be run from the command prompt. It accepts seven parameters from source control, which represent the four files that are part of the three-way merge and the labels for each of the three sections of the screen. The arguments for the Sitecore Item Merge are shown below in the order they are expected.
+
+1.	**[baseFilePath]** – The file the merged files both started from.
+2.	**[branch1FilePath]** – The file from the first branch.
+3.	**[branch2FilePath]** – The file from the second branch.
+4.	**[finalFilePath]** – The path to the file that holds the result of the merge.
+5.	**[branch1FileLabel]** – Label for the branch1 file. This can be defined by source control or hard coded.
+6.	**[branch2FileLabel]** – Label for the Branch2 file. This can be defined by source control or hard coded.
+7.	**[finalFileLabel]** – Label for the Final file. This can be defined by source control or hard coded.
+
+####<a id="Sitecore_Item_Merge_Git1Setup"></a> Configuring Sitecore Item Merge for Git using script
+
+By default, Git only allows a single file merge tool. Fortunately, Git allows the developer to easily extend the merge functionality. Please see the article: [merge-wrapper (https://gist.github.com/elsevers/11349227)](https://gist.github.com/elsevers/11349227 "merge-wrapper (https://gist.github.com/elsevers/11349227)") for more information on extending Git to use multiple merge tools.
+
+The following code block is sample code modified from the above to provide Sitecore item merge capabilities in Git:
+
+    #!/bin/bash
+	# Wrapper script for git mergetool
+	# This requires the .gitconfig file to have:
+	#  - mergetool entry for "TDSMerge";
+	#  - mergetool entry for "kdiff3";
+	# These merge tool entries must both specify the
+	# cmd field. The command to call this script:
+	# [mergetool "merge_wrapper"]
+	#	cmd = $HOME/merge-wrapper \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	# Locate this script in your $HOME
+	 
+	BASE=$1
+	LOCAL=$2
+	REMOTE=$3
+	MERGED=$4
+	 
+	SCITEM="\.item"
+	 
+	if echo "$BASE" | grep -q "$SCITEM"; then
+		echo "Using merge tool for sitecore item file";
+		CMD=$(git config mergetool.TDSMerge.cmd)	
+		eval $CMD
+	else
+	#checking for additional special merge tool cases
+	#Finally, the default case:
+		echo "Using default merge tool";
+		CMD=$(git config mergetool.kdiff3.cmd)	
+		eval $CMD
+	fi
+
+This solution needs some changes in the .gitconfig file:
+
+	[merge]
+	#	tool = kdiff3
+		tool = merge_wrapper
+	[diff]
+		tool = kdiff3
+		guitool = kdiff3
+	[core]
+		editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+		autocrlf = false
+	[credential]
+		helper = !'C:\\Users\\cturano\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
+	[mergetool "kdiff3"]
+		path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+	[difftool "kdiff3"]
+		path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+		cmd = \"C:/Program Files (x86)/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
+	[i18n]
+		filesEncoding = utf-8
+	
+	[mergetool "merge_wrapper"]
+		cmd = $HOME/merge-wrapper \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	
+	[mergetool "TDSMerge"]
+	    cmd = \"C:/Program Files (x86)/Hedgehog Development/Team Development for Sitecore (VS2013)/SitecoreItemMerge\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+
+####<a id="Sitecore_Item_Merge_Git2Setup"></a> Configuring Sitecore Item Merge for Git using MergeChooser
+
+Some Git tools don’t allow you to configure multiple merge tools based on the file extension. If you are using a tool like this, we have provided a simple merge tool wrapper that can be configured to allow you to use multiple merge tools.
+
+To setup the merge tool chooser, you will need to change your .gitconfig:
+
+	[merge]
+	#	tool = kdiff3
+		tool = merge_chooser
+	[diff]
+		tool = kdiff3
+		guitool = kdiff3
+	[core]
+		editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+		autocrlf = false
+	[credential]
+		helper = !'C:\\Users\\cturano\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
+	[mergetool "kdiff3"]
+		path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+	[difftool "kdiff3"]
+		path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+		cmd = \"C:/Program Files (x86)/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
+	[i18n]
+		filesEncoding = utf-8
+	
+	[mergetool "merge_chooser"]
+		cmd = \"C:/Program Files (x86)/Hedgehog Development/Team Development for Sitecore (VS2013)/MergeToolChooser\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+
+The default **MergeToolChooserConfig.xml** file specifies that **SitecoreItemMerge.exe** is the merge file for .item files and KDiff3 is the default merge tool for everything else.
+
+	<?xml version="1.0" encoding="utf-8" ?>
+	<MergeToolChooserConfig>
+	  <!-- TDS Item Merge Tool -->
+	  <MergeTool Extension=".item" Cmd=".\SitecoreItemMerge.exe" Parameters="&quot;$1&quot; &quot;$2&quot; &quot;$3&quot; &quot;$4&quot;"/>
+	  <!-- Default entry -->
+	  <MergeTool Cmd="C:\Program Files (x86)\KDiff3" Parameters="&quot;$1&quot; &quot;$2&quot; &quot;$3&quot; -o &quot;$4&quot;"/>
+	</MergeToolChooserConfig>
+
+This file can be altered to allow any merge tool(s) the developer wants to use. The parameters are specified in the **Parameter** attribute by using $1, $2, $3, etc. Where $1 represents the first parameter passed to the merge tool, $2 represents the second, and so on. The **Extension** attribute specifies the file extension to use for the specified merge tool. The **Cmd**  attribute specifies the full path to the merge tool.
+
+The merge tool is matched the order *&lt;MergeTool&gt;* elements are specified in the file. The match is based on one of the first 4 parameters ending with the string specified in the **Extension** attribute. If no **Extension** attribute is specified, the merge tool is considered the default merge tool.
+
+###<a id="global_config"></a> Global Config
 
 A global configuration file can be added to a solution to control project properties across multiple TDS projects.
 
@@ -513,20 +711,20 @@ Opening the properties page for a project will now show that the Package Author 
 
 Values pulled from the global config can not be altered on the project page and therefore the control is disabled. The property will also display a globe to the right of the property to indicate it is a global value.
 
-### Sitecore Rocks
+###<a id="sitecore_rocks"></a> Sitecore Rocks
 
 Sitecore Rocks is a Visual Studio add-in that offers many great features designed to improve developer productivity when working with Sitecore. The features of Rocks that concern TDS are the features that allow developers to perform some of the functions found in the Sitecore desktop without leaving the Visual Studio. TDS takes advantage of the Sitecore Rocks plug-in framework to create a connectivity layer between TDS and Rocks.
 
 When a developer adds, updates or removes an item or template in Rocks, TDS is notified and automatically pulls those changes into the TDS project. In addition, when Rocks is connected to TDS, double clicking on a Sitecore item in the Solution Explorer will open the item in the Rocks item/template editor.
 
-#### Setting up Rocks and TDS
+####<a id="setting_up_rocks_and_tds"></a> Setting up Rocks and TDS
 
 There are two things needed to make TDS react to changes made in Rocks. 
 
 1. The Hedgehog Development plugin must be enabled in the Rocks plugin screen. 
 2. The Sitecore Web Url (see Build Property Page above) for the active project configuration matches the Host Name in the Rocks connection dialog.
 
-#### Getting items using Rocks
+####<a id="getting_items_using_rocks"></a> Getting items using Rocks
 
 You can include Sitecore items directly from Rocks, right clicking on an item in Rocks you will be able to access the Team Development for Sitecore menu that allows you to add items to a TDS project:
   
@@ -537,7 +735,7 @@ Once an item has been added to a TDS project you can Sync the item and its child
 
 ![](/Images/Tds/chapter4-rock2.png) 
 
-### TDS and Sitecore upgrades
+###<a id="tds_and_sitecor_upgrades"></a> TDS and Sitecore upgrades
 
 The difficulty of a Sitecore upgrade can vary depending on how much has changed between the current and target version of Sitecore. TDS can help during the upgrade process, **but should not be used to perform the actual upgrade**. Sitecore invests a significant amount of resources testing their upgrade procedures, and TDS is not part of that testing. TDS helps during the upgrade process by allowing the development team to compare the upgraded Sitecore instance with the latest version of the project using the Sync Window. This can help pinpoint places where the changes made by the Sitecore upgrade may affect the Sitecore implementation.
 Each Sitecore upgrade is different. We start with the typical scenario shown below and make changes to the plan where needed based on our findings during the upgrade.
