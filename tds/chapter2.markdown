@@ -136,7 +136,7 @@ To add a few items to your TDS project, follow the steps below.
 5. If you want to bring all templates under the template folder you are using to hold your custom templates, you can right-click on the template and choose “**Select all children**”.
 6. Once you have selected the templates you wish to bring into your TDS project, click “**Get Items**” and TDS will begin getting the items
 
-#### Choosing which items to bring into a TDS porject
+#### Choosing which items to bring into a TDS project
 
 TDS allows you to bring any Sitecore item into your TDS project. It is NOT best practice to bring every Sitecore item into the TDS project for the following reasons:
 
