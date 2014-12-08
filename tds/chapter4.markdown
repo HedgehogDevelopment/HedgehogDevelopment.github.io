@@ -566,7 +566,7 @@ The Sitecore Item Merge tool can be run from the command prompt. It accepts seve
 6.	**[branch2FileLabel]** – Label for the Branch2 file. This can be defined by source control or hard coded.
 7.	**[finalFileLabel]** – Label for the Final file. This can be defined by source control or hard coded.
 
-####<a id="Sitecore_Item_Merge_Git1Setup"></a> Configuring Sitecore Item Merge for Git using script
+#### Configuring Sitecore Item Merge for Git using script
 
 By default, Git only allows a single file merge tool. Fortunately, Git allows the developer to easily extend the merge functionality. Please see the article: [merge-wrapper (https://gist.github.com/elsevers/11349227)](https://gist.github.com/elsevers/11349227 "merge-wrapper (https://gist.github.com/elsevers/11349227)") for more information on extending Git to use multiple merge tools.
 
@@ -629,7 +629,7 @@ This solution needs some changes in the .gitconfig file:
 	[mergetool "TDSMerge"]
 	    cmd = \"C:/Program Files (x86)/Hedgehog Development/Team Development for Sitecore (VS2013)/SitecoreItemMerge\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 
-####<a id="Sitecore_Item_Merge_Git2Setup"></a> Configuring Sitecore Item Merge for Git using MergeChooser
+#### Configuring Sitecore Item Merge for Git using MergeChooser
 
 Some Git tools don’t allow you to configure multiple merge tools based on the file extension. If you are using a tool like this, we have provided a simple merge tool wrapper that can be configured to allow you to use multiple merge tools.
 
