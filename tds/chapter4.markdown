@@ -218,7 +218,7 @@ The NuGet package generation property page allows the developer to set all NuGet
 
 * **Generate NuGet package** - Enable this checkbox to create a NuGet package during the build. 
 * **Path to NuGet.exe** TDS needs to know where to find the NuGet executable. This can be downloaded from the [NuGet Download Page](http://nuget.codeplex.com/releases "NuGet Download Page") or you can add the "NuGet Command Line" package to a project in your solution. The NuGet executable will be located in the [solution dir]\packages folder.
-* **NuGet Metadata fields** - All other fields are NuGet metadata passed to NuGet.exe when creating the NuGet package. Documentation for these fields can be found in the metadata reference section of the [Nuspec Reference](https://docs.nuget.org/Create/Nuspec-Reference "Nuspec Reference") page.
+* **NuGet Metadata fields** - All other fields are NuGet metadata fields passed to NuGet.exe when creating the NuGet package. Documentation for these fields can be found in the metadata reference section of the [Nuspec Reference](https://docs.nuget.org/Create/Nuspec-Reference "Nuspec Reference") page.
 
 #### File Replacement 
  
