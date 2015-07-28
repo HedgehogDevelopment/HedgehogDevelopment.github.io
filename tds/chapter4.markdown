@@ -210,7 +210,14 @@ The created packages can be uploaded to any NuGet package repository and install
 
 ![](/Images/Tds/chapter4-manage-nuget-packages.png)
 
-**Please Note:** NuGet packages are only supported by NuGet 3.0 and above. At this time, only VS2015 supports NuGet 3.0. Once NuGet 3.0 is available for other versions of Visual Studio, NuGet package functionality will be enabled for those versions.
+<div class="panel">
+  <div class="panel-header bg-lightBlue fg-white">
+    NOTE
+  </div>
+  <div class="panel-content">
+    NuGet packages are only supported by NuGet 3.0 and above. At this time, only VS2015 supports NuGet 3.0. Once NuGet 3.0 is available for other versions of Visual Studio, NuGet package functionality will be enabled for those versions.
+  </div>
+</div>
 
 The NuGet package generation property page allows the developer to set all NuGet package generation options:
 
