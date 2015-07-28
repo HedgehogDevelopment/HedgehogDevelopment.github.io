@@ -177,7 +177,7 @@ Once you have set the **Sitecore Web Url, Sitecore Deploy Folder** and checked t
 
 Clicking the **Test** button will bring up a second prompt that will automatically check that you have configured you TDS project correctly:
 
-![](/Images/Tds/chapter4-testdialog.png)  
+![](/Images/Tds/chapter4-testdialog.png)
 
 #### Update Package 
 Contains the settings needed to build Sitecore Update Packages. 
@@ -202,6 +202,23 @@ TDS generates Sitecore Update Packages. These packages are not the same as the p
 * **Generate separate code and item packages** – When checked, the build will generate two separate update packages. These packages separate the output of the build into a package just for items, and another that contains only code. Breaking up the packages this way facilitates some more advanced deployment scenarios.
 * Append the current date and time to the package name – When checked, the package name has the current date and time. This is sometimes useful for associating the package with a specific version or build.
 * **Sitecore Assembly Path** – TDS needs to use the Sitecore Update Package Builder to create a package. To do this, TDS needs to know where to find the four Sitecore assemblies that make up the Package Builder. These are **Sitecore.Kernel.dll, Sitecore.Logging.dll, Sitecore.Update.dll** and **Sitecore.Zip.dll**. This path can be a relative, absolute or network path to these four Dlls.
+
+#### NuGet Package
+TDS allows developers to create and use NuGet packages the same way they do with other projects. Packages can be created from any TDS project by enabling NuGet package generation in the NuGet Package property tab.
+
+The created packages can be uploaded to any NuGet package repository and installed into other TDS projects by using the "Manage NuGet Packages..." right click menu on the TDS project in the solution explorer.
+
+![](/Images/Tds/chapter4-manage-nuget-packages.png)
+
+**Please Note:** NuGet packages are only supported by NuGet 3.0 and above. At this time, only VS2015 supports NuGet 3.0. Once NuGet 3.0 is available for other versions of Visual Studio, NuGet package functionality will be enabled for those versions.
+
+The NuGet package generation property page allows the developer to set all NuGet package generation options:
+
+![](/Images/Tds/chapter4-nuget-properties.png)
+
+* **Generate NuGet package** - Enable this checkbox to create a NuGet package during the build. 
+* **Path to NuGet.exe** TDS needs to know where to find the NuGet executable. This can be downloaded from the [NuGet Download Page](http://nuget.codeplex.com/releases "NuGet Download Page") or you can add the "NuGet Command Line" package to a project in your solution. The NuGet executable will be located in the [solution dir]\packages folder.
+* **NuGet Metadata fields** - All other fields are NuGet metadata passed to NuGet.exe when creating the NuGet package. Documentation for these fields can be found in the metadata reference section of the [Nuspec Reference](https://docs.nuget.org/Create/Nuspec-Reference "Nuspec Reference") page.
 
 #### File Replacement 
  

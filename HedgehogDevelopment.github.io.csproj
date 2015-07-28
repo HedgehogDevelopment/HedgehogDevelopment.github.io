@@ -101,6 +101,8 @@
     <Content Include="Images\Tds\chapter4-arrow-previous-conflict.png" />
     <Content Include="Images\Tds\chapter4-arrow-previous.png" />
     <Content Include="Images\Tds\chapter4-checkmark3.png" />
+    <Content Include="Images\Tds\chapter4-manage-nuget-packages.png" />
+    <Content Include="Images\Tds\chapter4-nuget-properties.png" />
     <Content Include="Images\Tds\chapter4-SitecoreItemMerge.png" />
     <Content Include="Images\Tds\chapter4-SyncRolesSolutionExplorer.png" />
     <Content Include="Images\Tds\chapter4-SyncSitecoreRoles.png" />
@@ -201,7 +203,9 @@
     <Content Include="tds\chapter1.markdown" />
     <Content Include="tds\chapter2.markdown" />
     <Content Include="tds\chapter3.markdown" />
-    <Content Include="tds\chapter4.markdown" />
+    <Content Include="tds\chapter4.markdown">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="tds\chapter5.markdown" />
     <Content Include="tds\chapter6.markdown" />
     <Content Include="razl\index.markdown" />

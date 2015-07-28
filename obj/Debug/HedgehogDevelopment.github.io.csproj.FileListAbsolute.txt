@@ -3,3 +3,8 @@ C:\github\HedgehogDevelopment.github.io\bin\HedgehogDevelopment.github.io.pdb
 C:\github\HedgehogDevelopment.github.io\obj\Debug\HedgehogDevelopment.github.io.csprojResolveAssemblyReference.cache
 C:\github\HedgehogDevelopment.github.io\obj\Debug\HedgehogDevelopment.github.io.dll
 C:\github\HedgehogDevelopment.github.io\obj\Debug\HedgehogDevelopment.github.io.pdb
+C:\Git\TDSManual\bin\HedgehogDevelopment.github.io.dll
+C:\Git\TDSManual\bin\HedgehogDevelopment.github.io.pdb
+C:\Git\TDSManual\obj\Debug\HedgehogDevelopment.github.io.csprojResolveAssemblyReference.cache
+C:\Git\TDSManual\obj\Debug\HedgehogDevelopment.github.io.dll
+C:\Git\TDSManual\obj\Debug\HedgehogDevelopment.github.io.pdb
