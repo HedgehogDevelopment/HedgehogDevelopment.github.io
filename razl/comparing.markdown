@@ -43,11 +43,11 @@ When an item is clicked on in the tree, a full compare of the item is done and f
 
 A new feature of Razl 5.1 is Deep Compare. This allows all items in a tree to be compared. You can deep compare a folder by right clicking on the item in the tree and choosing **Deep Compare**
 
-![](/Images/razl/DeepCompareMenu.png)
+![](/Images/Razl/DeepCompareMenu.png)
 
 Deep Compare looks at all items under a folder on both sides and shows differences in the change detail view. 
 
-![](/Images/razl/DeepCompareView.png)
+![](/Images/Razl/DeepCompareView.png)
 
 Deep Compare will compare all fields or just Revision Id's depending on your Lightning Mode setting. Lightning Mode can be 3-5 times faster when comparing many items.
 
