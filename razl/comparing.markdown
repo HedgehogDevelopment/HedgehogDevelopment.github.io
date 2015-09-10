@@ -33,7 +33,7 @@ There are several basic symbols pairs in Razl when comparing an items. Each symb
 
 ### Lightning Mode
 
-When you click the Lightning Mode ![](/Images/Razl/LightningMode.PNG) button, Lightning Mode will be toggled on and off. When Lightning Mode is enabled, Razl only compares the revision ID's of the items, making the compare very quick. If the revision ID's are different, then an Item is considered different regardless of your filter settings. Razl is much faster when Lightning mode is enabled because all items in the folder are retrieved at once, and the comparison doesn't look at all fields.
+When you click the Lightning Mode ![](/Images/Razl/LightningMode.png) button, Lightning Mode will be toggled on and off. When Lightning Mode is enabled, Razl only compares the revision ID's of the items, making the compare very quick. If the revision ID's are different, then an Item is considered different regardless of your filter settings. Razl is much faster when Lightning mode is enabled because all items in the folder are retrieved at once, and the comparison doesn't look at all fields.
 
 The main disadvantage to Lightning Mode is that your filters are ignored. This means that items may be consdered different even though your filter specification would indicate that they aren't. 
 
