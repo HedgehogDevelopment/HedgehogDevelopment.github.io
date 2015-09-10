@@ -33,7 +33,7 @@ There are several basic symbols pairs in Razl when comparing an items. Each symb
 
 ### Lightning Mode
 
-When you click the Lightning Mode [](/Images/Razl/LightningMode.PNG) button, Lightning Mode will be toggled on and off. When Lightning Mode is enabled, Razl only compares the revision ID's of the items, making the compare very quick. If the revision ID's are different, then an Item is considered different regardless of your filter settings. Razl is much faster when Lightning mode is enabled because all items in the folder are retrieved at once, and the comparison doesn't look at all fields.
+When you click the Lightning Mode ![](/Images/Razl/LightningMode.PNG) button, Lightning Mode will be toggled on and off. When Lightning Mode is enabled, Razl only compares the revision ID's of the items, making the compare very quick. If the revision ID's are different, then an Item is considered different regardless of your filter settings. Razl is much faster when Lightning mode is enabled because all items in the folder are retrieved at once, and the comparison doesn't look at all fields.
 
 The main disadvantage to Lightning Mode is that your filters are ignored. This means that items may be consdered different even though your filter specification would indicate that they aren't. 
 
@@ -43,11 +43,11 @@ When an item is clicked on in the tree, a full compare of the item is done and f
 
 A new feature of Razl 5.1 is Deep Compare. This allows all items in a tree to be compared. You can deep compare a folder by right clicking on the item in the tree and choosing **Deep Compare**
 
-[](/Images/razl/DeepCompareMenu.png)
+![](/Images/razl/DeepCompareMenu.png)
 
 Deep Compare looks at all items under a folder on both sides and shows differences in the change detail view. 
 
-[](/Images/razl/DeepCompareView.png)
+![](/Images/razl/DeepCompareView.png)
 
 Deep Compare will compare all fields or just Revision Id's depending on your Lightning Mode setting. Lightning Mode can be 3-5 times faster when comparing many items.
 
@@ -130,15 +130,15 @@ Follow the following instructions to ignore a language:
 
 #### Hiding unchanged fields
 
-The Hide Unchanged Fields [](/Images/Razl/HideUnchangedFieldsOff.png) button will toggle showing/hiding fields that are different. 
+The Hide Unchanged Fields ![](/Images/Razl/HideUnchangedFieldsOff.png) button will toggle showing/hiding fields that are different. 
 
-When hide unchanged fields is off [](/Images/Razl/HideUnchangedFieldsOff.png), the field window will show all fields even if they are the same.
+When hide unchanged fields is off ![](/Images/Razl/HideUnchangedFieldsOff.png), the field window will show all fields even if they are the same.
 
-[](/Images/Razl/HideUnchangedFieldsAllFields.png)
+![](/Images/Razl/HideUnchangedFieldsAllFields.png)
 
 If hide unchanged fields is enabled [](/Images/Razl/HideUnchangedFieldsOn.png), the field window will show only fields with differences.
 
-[](/Images/Razl/HideUnchangedFieldsDiffFields.png)
+![](/Images/Razl/HideUnchangedFieldsDiffFields.png)
 
 
 #### Compare Filters Dropdown
