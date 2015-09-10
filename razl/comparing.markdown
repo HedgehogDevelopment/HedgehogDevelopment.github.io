@@ -136,7 +136,7 @@ When hide unchanged fields is off ![](/Images/Razl/HideUnchangedFieldsOff.png), 
 
 ![](/Images/Razl/HideUnchangedFieldsAllFields.png)
 
-If hide unchanged fields is enabled [](/Images/Razl/HideUnchangedFieldsOn.png), the field window will show only fields with differences.
+If hide unchanged fields is enabled ![](/Images/Razl/HideUnchangedFieldsOn.png), the field window will show only fields with differences.
 
 ![](/Images/Razl/HideUnchangedFieldsDiffFields.png)
 
