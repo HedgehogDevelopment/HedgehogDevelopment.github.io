@@ -24,32 +24,69 @@ The value {path to script file} should be replaced with the path to the XML file
 
 The XML for Razl is very simple and is made up primarily of connections and operations, by combining connections with operations Razl will perform tasks on the intended Sitecore instances. Below is an overview of the entire Razl XML:
 
-	<razl>
-	  <connection name="" readOnly ="" install="true|false" preset="">
-	    <url></url>
-	    <accessGuid></accessGuid>
-	    <database></database>
-	    <path></path>
-	  </connection>
-	  <operation name="CopyHistory" source="" target="">
-	    <parameter name="from"></parameter>
-	    <parameter name="recycle">true|false</parameter>
-	    <parameter name="include">
-	      <value></value>
-	    </parameter>
-	    <parameter name="exclude">
-	      <value></value>
-	    </parameter>
-	  </operation>
-	  <operation name="CopyAll" source="" target="">
-	    <parameter name="itemId"></parameter>
-	    <parameter name="overwrite">true|false</parameter>
-	  </operation>
-	  <operation name="CopyItem" source="" target="">
-	    <parameter name="itemId"></parameter>
-	    <parameter name="overwrite">true|false</parameter>
-	  </operation>
-	</razl>
+    <razl>
+      <connection name="" readOnly ="" install="true|false">
+        <url></url>
+        <accessGuid></accessGuid>
+        <database></database>
+        <path></path>
+      </connection>
+      <connection name="">
+        <url></url>
+        <guid></guid>
+        <database></database>
+      </connection>
+      <connection name="" preset="" />
+      <operation name="CopyHistory" source="" target="">
+        <parameter name="from"></parameter>
+        <parameter name="recycle">true|false</parameter>
+        <parameter name="lightningMode">true|false</parameter>
+        <parameter name="include">
+          <value></value>
+        </parameter>
+        <parameter name="exclude">
+          <value></value>
+        </parameter>
+      </operation>
+      <operation name="CopyAll" source="" target="">
+        <parameter name="itemId"></parameter>
+        <parameter name="overwrite">true|false</parameter>
+        <parameter name="lightningMode">true|false</parameter>
+      </operation>
+      <operation name="CopyItem" source="" target="">
+        <parameter name="itemId"></parameter>
+      </operation>
+      <operation name="CopyVersion" source="" target="">
+        <parameter name="itemId"></parameter>
+        <parameter name="languageId"></parameter>
+        <parameter name="versionNum">number or [blank]</parameter>
+        <parameter name="folderType">shared, unversioned or [blank]</parameter>
+        <parameter name="removeVersion">true|false</parameter>
+      </operation>
+      <operation name="DeleteItem" source="" target="">
+        <parameter name="itemId"></parameter>
+        <parameter name="recycle">true|false</parameter>
+      </operation>
+      <operation name="MoveItem" source="" target="">
+        <parameter name="itemId"></parameter>
+        <parameter name="newItemPath"></parameter>
+        <parameter name="newParentId"></parameter>
+      </operation>
+      <operation name="SetFieldValue" source="" target="">
+        <parameter name="itemId"></parameter>
+        <parameter name="fieldId"></parameter>
+        <parameter name="fieldName"></parameter>
+        <parameter name="fieldValue"></parameter>
+        <parameter name="languageId"></parameter>
+        <parameter name="versionNum"></parameter>
+      </operation>
+      <operation name="SetPropertyValue" source="Sitecore7.local.master" target="Sitecore7.Local.Web">
+        <parameter name="itemId"></parameter>
+        <parameter name="propertyName">Template Id</parameter>
+        <parameter name="propertyValue"></parameter>
+      </operation>
+    </razl>
+
 
 ### Razl XML Connections
 
@@ -167,6 +204,7 @@ The CopyHistory operation will replay the actions recorded in the Sitecore histo
 	    <parameter name="from"></parameter>
 	    <parameter name="to"></parameter>
 	    <parameter name="recycle">true|false</parameter>
+        <parameter name="lightningMode">true|false</parameter>
 	    <parameter name="include">
 	      <value></value>
 	    </parameter>
@@ -180,6 +218,7 @@ Summary of parameters:
 * **from** - the date from which Razl should start copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T03:48:57. This parameter is required.
 * **to** - the date which Razl should stop copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T13:48:57. This parameter is optional.
 * **recycle** - indicates what should happen to an item that is deleted by Razl. If set to true the item is sent to the recycle bin on the target Sitecore instance, if set to false the item is removed from the Sitecore instance. Default value is true. This parameter is optional.
+* **lightningMode** - Enables or disables lightning mode when comparing items.
 * **include** - the path to items to include when copying history. Only actions on items that exist beneath the defined paths will be performed on the target instance. Multiple paths can be defined. If this parameter is absent then all actions are performed. This parameter is optional.
 * **exclude**  - the path to items to exclude when copying history. Actions on items that exist beneath the defined paths will be ignored. Multiple paths can be defined. If this parameter is absent then all actions are performed. Excludes take precedence over includes. This parameter is optional.
 
@@ -202,12 +241,14 @@ The CopyAll operation will copy an item from the source Sitecore instance to the
 	  <operation name="CopyAll" source="" target="">
 	    <parameter name="itemId"></parameter>
 	    <parameter name="overwrite">true|false</parameter>
+        <parameter name="lightningMode">true|false</parameter>
 	  </operation>
 
 Summary of parameters:
 
 * **itemId** - the ID of the item to start coping from. This parameter is required.
 * **overwrite** - indicates if the operation should remove items that exist in the target instance but don’t exist in the source instance. If set to true items in the target instance that are missing in the source instance will be removed, if set to false  items in the target instance that are missing in the source instance are skipped.
+* **lightningMode** - Enables or disables lightning mode when moving items.
 
 ### Logging
 Razl Script mode will output actions as they happen to the command prompt, this output can be piped to a text file if required.

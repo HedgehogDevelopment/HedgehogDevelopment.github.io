@@ -20,12 +20,12 @@ Once a connection has been created it is saved between Razl sessions so that the
 If the machine Razl is running on has access to the Sitecore web root via the file system then it is recommended to use this installation method:
 
 1. Click the **Create Connection** button in the toolbar (see Toolbar section for the button)
-2. The connection wizard will appear.
-3. Enter a name into the **Connection Name** field: <br /> ![](/Images/Razl/wizard1.PNG) <br /> The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this connection. This option is highly recommended for scenarios where the instance being connected to is a live instance and where data is only being pulled. This will stop any accidental overwrites of the live server data. <br /> Click **Next**
-4. The next screen will ask what type of connection to use, select **Direct Connection**:  <br /> ![](/Images/Razl/wizard2.PNG) <br /> Click **Next**
-5. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs) and select the path to the web root: <br /> ![](/Images/Razl/wizard3.PNG) <br /> Before clicking Next you will need to test the connection by clicking the **Test Connection** button. If the test is successful click **Next**.
-6. On the next screen select the Sitecore database to use with this connection:<br /> ![](/Images/Razl/wizard4.PNG) <br /> Select a database and  click **Next**.
-7. The wizard will close and the new connection will be accessible in both the left and right connection dropdowns:<br /> ![](/Images/Razl/wizard5.PNG)
+1. The connection wizard will appear.
+1. Enter a name into the **Connection Name** field: <br /> ![](/Images/Razl/wizard1.PNG) <br /> The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this connection. This option is highly recommended for scenarios where the instance being connected to is a live instance and where data is only being pulled. This will stop any accidental overwrites of the live server data. <br /> Click **Next**
+1. The next screen will ask what type of connection to use, select **Direct Connection**:  <br /> ![](/Images/Razl/wizard2.PNG) <br /> Click **Next**
+1. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs) and select the path to the web root: <br /> ![](/Images/Razl/wizard3.PNG) <br /> You may also enter a Guid used to secure the connection. If multiple developers are accessing the instance of Sitecore using Razl, you will have to use the same Guid. By default, Razl chooses a random Guid for you. <br/>Before clicking Next you will need to test the connection by clicking the **Test Connection** button. If the test is successful click **Next**.
+1. On the next screen select the Sitecore database to use with this connection:<br /> ![](/Images/Razl/wizard4.PNG) <br /> Select a database and  click **Next**.
+1. The wizard will close and the new connection will be accessible in both the left and right connection dropdowns:<br /> ![](/Images/Razl/wizard5.PNG)
 
 
 #### Creating a Connection using Packaged Connection
@@ -33,28 +33,28 @@ If the machine Razl is running on has access to the Sitecore web root via the fi
 If the machine running Razl does not have access to the Sitecore web root via the file system then use this installation method:
 
 1. Click the **Create Connection** button in the toolbar (see Toolbar section for the button)
-2. The connection wizard will appear.
-3. Enter a name into the **Connection Name** field:<br /> ![](/Images/Razl/wizard1.PNG) <br /> The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this connection. This option is highly recommended for scenarios where the instance being connected to is a live instance and where data is only being pulled. This will stop any accidental overwrites of the live server data. <br /> Click **Next**
-4. The next screen will ask what type of connection to use, select Package Connections: <br /> ![](/Images/Razl/wizard6.PNG)<br /> Click **Next**
-5. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs): <br /> ![](/Images/Razl/wizard7.PNG)<br /> Clicking **Pick Package Location** will open a dialogue that will save the Sitecore package to disk. This package will need be deployed to the Sitecore solution. Save the zip file to a convenient location on the computer. Install this package on the target Sitecore instance and after installation click  the **Test Connection** button. If the test is successful click **Next**.
-6. On the next screen select the Sitecore database to use with this connection: <br /> ![](/Images/Razl/wizard4.PNG) <br /> Select a database and  click **Next**.
-7. The wizard will close and the new connection will be accessible in both the left and right connection dropdowns: <br /> ![](/Images/Razl/wizard5.PNG)
+1. The connection wizard will appear.
+1. Enter a name into the **Connection Name** field:<br /> ![](/Images/Razl/wizard1.PNG) <br /> The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this connection. This option is highly recommended for scenarios where the instance being connected to is a live instance and where data is only being pulled. This will stop any accidental overwrites of the live server data. <br /> Click **Next**
+1. The next screen will ask what type of connection to use, select Package Connections: <br /> ![](/Images/Razl/wizard6.PNG)<br /> Click **Next**
+1. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs): <br /> ![](/Images/Razl/wizard7.PNG)<br /> Clicking **Pick Package Location** will open a dialogue that will save the Sitecore package to disk. This package will need be deployed to the Sitecore solution. Save the zip file to a convenient location on the computer. Install this package on the target Sitecore instance and after installation click  the **Test Connection** button. If the test is successful click **Next**.
+1. On the next screen select the Sitecore database to use with this connection: <br /> ![](/Images/Razl/wizard4.PNG) <br /> Select a database and  click **Next**.
+1. The wizard will close and the new connection will be accessible in both the left and right connection dropdowns: <br /> ![](/Images/Razl/wizard5.PNG)
 
 ### Editing a Connection
 
 Once a connection has been created it can later be edited:
 
 1. Click either the left or right connection drop down
-2. Click the pencil icon that is next to the connection you want to edit:<br /> ![](/Images/Razl/editconn1.PNG)
-3. The edit connection screen will appear, you will see different edit screens depending on the connection being used. For Direct Connections you will see:<br /> ![](/Images/Razl/editconn2.PNG) <br /> For Package Connections you will see:<br /> ![](/Images/Razl/editconn3.PNG)
-4. If you make any changes you must click **Test Connection** before you can save the settings.
-5. Update the settings you want to change and click **Ok**.
+1. Click the pencil icon that is next to the connection you want to edit:<br /> ![](/Images/Razl/editconn1.PNG)
+1. The edit connection screen will appear, you will see different edit screens depending on the connection being used. For Direct Connections you will see:<br /> ![](/Images/Razl/editconn2.PNG) <br /> For Package Connections you will see:<br /> ![](/Images/Razl/editconn3.PNG)<br/> In either case, the **Export** button will allow you to export your connection so it may be used by other developers.
+1. If you make any changes you must click **Test Connection** before you can save the settings.
+1. Update the settings you want to change and click **Ok**.
 
 ### Deleting a Connection
 Once a connection has been created it can later be deleted:
 1. Click either the left or right connection drop down
-2. Click the cross icon that is next to the connection you want to delete:  ![](/Images/Razl/deleteconn.PNG)
-3. The connection will now be removed.
+1. Click the cross icon that is next to the connection you want to delete:  ![](/Images/Razl/deleteconn.PNG)
+1. The connection will now be removed.
 
 ### Connection Information
 
@@ -69,3 +69,7 @@ The following information is displayed:
 * Machine - The name of the machine hosting the Sitecore instance
 * Razl Version - The version of the web service used by the connection
 * Sites - A list of sites available on the Sitecore instance
+
+### Importing and Exporting connections
+
+Sometimes multiple developers would like to connect to the same instance of Sitecore using Razl. A developer can now export a connection to Sitecore to a file. This file may be imported into another developers instance of Razl so the connection settings are shared between the developers. Please note, both developers need to be running the same instance of Razl.

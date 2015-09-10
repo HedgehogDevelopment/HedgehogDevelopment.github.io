@@ -71,11 +71,17 @@
     <Content Include="Images\Razl\conn1.PNG" />
     <Content Include="Images\Razl\connectionsummary.PNG" />
     <Content Include="Images\Razl\contenttree.PNG" />
+    <Content Include="Images\Razl\DeepCompareMenu.png" />
+    <Content Include="Images\Razl\DeepCompareView.png" />
     <Content Include="Images\Razl\deleteconn.PNG" />
     <Content Include="Images\Razl\editconn1.PNG" />
     <Content Include="Images\Razl\editconn2.PNG" />
     <Content Include="Images\Razl\editconn3.PNG" />
     <Content Include="Images\Razl\fields.PNG" />
+    <Content Include="Images\Razl\HideUnchangedFieldsAllFields.png" />
+    <Content Include="Images\Razl\HideUnchangedFieldsDiffFields.png" />
+    <Content Include="Images\Razl\HideUnchangedFieldsOff.png" />
+    <Content Include="Images\Razl\HideUnchangedFieldsOn.png" />
     <Content Include="Images\Razl\history1.PNG" />
     <Content Include="Images\Razl\history2.PNG" />
     <Content Include="Images\Razl\history3.PNG" />

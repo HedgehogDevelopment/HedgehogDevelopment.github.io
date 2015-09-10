@@ -25,6 +25,10 @@ Razl supports the following list of tasks:
 | Set Field Value | Copy the specified field value from the source instance to the target instance. | 
 | Set Property Value | Copy the specified item property from the source instance to the target instance. | 
 
+### Copy All and Lightning Mode
+
+When you have added a copy all task to the task list, you may run the task in normal mode or lightning mode. In normal mode, all items are copied even if they are the same. In Lightning Mode, the Revision Id for both sides is compared and if it matches, the item is skipped. This makes lightning mode much quicker when there are only a few scattered differences between the two Sitecore trees.
+
 ### Removing Tasks
 
 Tasks can be removed from the list by clicking the red cross next to a task:

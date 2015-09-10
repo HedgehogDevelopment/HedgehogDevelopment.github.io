@@ -33,29 +33,11 @@ When you open the history view you will be presented with the following screen:
 
 ![](/Images/Razl/history1.PNG)
 
-This history list appears above the Content Tree and displays the the date and time of the latest entry with the path to the item. Entries made on the same day are grouped under a day separator. To keep the list simple Razl shows only the latest entry for an item, older changes to an item can be seen by hovering over it's entry in the history table:
+This history list appears above the Content Tree and displays the the date and time of the latest entry with the path to the item and the available move operations. Entries made on the same day are grouped under a day separator. To keep the list simple Razl shows only the latest entry for an item if the item is different between the two Sitecore databases.
 
-![](/Images/Razl/history2.PNG)
+You may click on one of the operations in the history view to add the operation to the task list. Clicking on the task icon in the History Change Detail view is the same as clicking on the task icon in the comare window.
 
-When you hover over an entry the following information is displayed:
-
-* Date and time of the latest entry
-* Path to the item
-* List of previous entries with the following information
- * Date and time of entry
- * Action performed
- * User who made the action
- * Language
- * Version
-
-When hovering over an entry you may see "Item history incomplete" at the bottom of the previous entries list:
-
-![](/Images/Razl/history3.PNG)
-
-This is displayed for the following two reasons:
-
-* The history for the item is no longer in the database, i.e. the item is more than 30 days old so some of it's history has been deleted.
-* Razl hasn't loaded all the history for that item yet. To reduce the amount of data Razl has to process data is loaded into Razl as you scroll down the list and therefore back in time.
+The performance of the History Change Detail window may be improved by selecting Lightning Mode. This works the same way as Lightning Mode when comparing items.
 
 ### Navigating to Item
 

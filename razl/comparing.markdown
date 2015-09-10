@@ -31,6 +31,26 @@ There are several basic symbols pairs in Razl when comparing an items. Each symb
 | ![](/Images/Razl/compare4.PNG) <br /> or <br /> ![](/Images/Razl/compare5.PNG) | **Deleted** - This pair are displayed when an item exists in one database but not in the other. The side that contains the item will display the red cross and allow you to remove it, the side that doesn’t contain the icon will display the black arrow and allow you to copy over. |
 | ![](/Images/Razl/compare6.PNG) | **Moved** - An item this moved will have this symbol next to is't name: <br /> ![](/Images/Razl/compare7.PNG) <br /> The item that is out of position (i.e. in another location) will be in light grey.  To see where each item exists click on the item itself and use the Field Information panels to see each sides path. |
 
+### Lightning Mode
+
+When you click the Lightning Mode [](/Images/Razl/LightningMode.PNG) button, Lightning Mode will be toggled on and off. When Lightning Mode is enabled, Razl only compares the revision ID's of the items, making the compare very quick. If the revision ID's are different, then an Item is considered different regardless of your filter settings. Razl is much faster when Lightning mode is enabled because all items in the folder are retrieved at once, and the comparison doesn't look at all fields.
+
+The main disadvantage to Lightning Mode is that your filters are ignored. This means that items may be consdered different even though your filter specification would indicate that they aren't. 
+
+When an item is clicked on in the tree, a full compare of the item is done and filters applied even if lightning mode is enabled. This may cause the item to loose it's difference arrows if your filters exclude the changed fields.
+
+### Deep Compare
+
+A new feature of Razl 5.1 is Deep Compare. This allows all items in a tree to be compared. You can deep compare a folder by right clicking on the item in the tree and choosing **Deep Compare**
+
+[](/Images/razl/DeepCompareMenu.png)
+
+Deep Compare looks at all items under a folder on both sides and shows differences in the change detail view. 
+
+[](/Images/razl/DeepCompareView.png)
+
+Deep Compare will compare all fields or just Revision Id's depending on your Lightning Mode setting. Lightning Mode can be 3-5 times faster when comparing many items.
+
 ### Comparing Fields
 
 When you click on an item in the Content Tree Razl will load the fields and information about the item and display the in the Field Information panes. Razl will then show you the individual fields differences, you can then select each fields to move across:
@@ -108,6 +128,19 @@ Follow the following instructions to ignore a language:
 4. Right click on the language to unignore and a context menu will appear: <br /> ![](/Images/Razl/compare16.PNG)
 5. Click the Unignore language option
 
+#### Hiding unchanged fields
+
+The Hide Unchanged Fields [](/Images/Razl/HideUnchangedFieldsOff.png) button will toggle showing/hiding fields that are different. 
+
+When hide unchanged fields is off [](/Images/Razl/HideUnchangedFieldsOff.png), the field window will show all fields even if they are the same.
+
+[](/Images/Razl/HideUnchangedFieldsAllFields.png)
+
+If hide unchanged fields is enabled [](/Images/Razl/HideUnchangedFieldsOn.png), the field window will show only fields with differences.
+
+[](/Images/Razl/HideUnchangedFieldsDiffFields.png)
+
+
 #### Compare Filters Dropdown
 
 When you select to ignore either a field or language it is added to the compare filters dropdown in the toolbar:
@@ -131,6 +164,7 @@ If you right click on an item in the Content Tree a context menu will appear wit
 | Menu Item | Description | 
 |-------------------|----| 
 | Refresh | Forces Razl to refresh the item data and reload child items. | 
+| Deep Compare | Compares all items under the selected item and shows the differences in the Change Details window. | 
 | Go To Template | Go to the template the item is based on. | 
 | Go To Branch | Go the the branch the item was created from. | 
 | Left References | Only appears on the left hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree | 

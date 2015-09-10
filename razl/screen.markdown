@@ -24,18 +24,20 @@ The toolbar provides access to the different functions available in Razl:
 
 ![](/Images/Razl/toolbar.PNG) 
 
-1. Left connection - the Sitecore connection used by the left hand side of Razl
-2. Left History engine view - displays entries in the left hand Sitecore history engine.
-3. Left connection information - summary information about the left connection.
-4. Create connection - allows the user to create a  new connection
-5. Right connection information - summary information about the right connection.
-6. RightHistory engine view -  displays entries in the righthand Sitecore history engine.
-7. Right connection - the Sitecore connection used by the right hand side of Razl
-8. Razl settings - opens the Razl settings window
-9. Log console - opens the Razl log console which contains the log output for the current session
-10. Compare filters - displays a drop down list of fields and languages not being used by Razl for comparison
-11. Razl About - display information about the version of Razl you are using
-12. Razl Help - Opens the Razl help website.
+1. Left connection - the Sitecore connection used by the left hand side of Razl.
+1. Left History engine view - displays entries in the left hand Sitecore history engine.
+1. Left connection information - summary information about the left connection.
+1. Create connection - allows the user to create a  new connection.
+1. Right connection information - summary information about the right connection.
+1. RightHistory engine view -  displays entries in the righthand Sitecore history engine.
+1. Right connection - the Sitecore connection used by the right hand side of Razl.
+1. Razl settings - opens the Razl settings window.
+1. Toggle Lightning Mode.
+1. Toggle Show/Hide fields that are the same in the field information window.
+1. Log console - opens the Razl log console which contains the log output for the current session.
+1. Compare filters - displays a drop down list of fields and languages not being used by Razl for comparison.
+1. Razl About - display information about the version of Razl you are using.
+1. Razl Help - Opens the Razl help website.
  
 ### Content Trees
 
