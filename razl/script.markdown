@@ -38,7 +38,8 @@ The XML for Razl is very simple and is made up primarily of connections and oper
       </connection>
       <connection name="" preset="" />
       <operation name="CopyHistory" source="" target="">
-        <parameter name="from"></parameter>
+        <parameter name="from">[date]</parameter>
+        <parameter name="to">[date]</parameter>
         <parameter name="recycle">true|false</parameter>
         <parameter name="lightningMode">true|false</parameter>
         <parameter name="include">
