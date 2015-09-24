@@ -41,6 +41,7 @@ The XML for Razl is very simple and is made up primarily of connections and oper
         <parameter name="from">[date]</parameter>
         <parameter name="to">[date]</parameter>
         <parameter name="recycle">true|false</parameter>
+        <parameter name="lightningMode">true|false</parameter>
         <parameter name="include">
           <value></value>
         </parameter>
@@ -204,6 +205,7 @@ The CopyHistory operation will replay the actions recorded in the Sitecore histo
 	    <parameter name="from"></parameter>
 	    <parameter name="to"></parameter>
 	    <parameter name="recycle">true|false</parameter>
+        <parameter name="lightningMode">true|false</parameter>
 	    <parameter name="include">
 	      <value></value>
 	    </parameter>
@@ -217,6 +219,7 @@ Summary of parameters:
 * **from** - the date from which Razl should start copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T03:48:57. This parameter is required.
 * **to** - the date which Razl should stop copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T13:48:57. This parameter is optional.
 * **recycle** - indicates what should happen to an item that is deleted by Razl. If set to true the item is sent to the recycle bin on the target Sitecore instance, if set to false the item is removed from the Sitecore instance. Default value is true. This parameter is optional.
+* **lightningMode** - Enables or disables lightning mode when moving items.
 * **include** - the path to items to include when copying history. Only actions on items that exist beneath the defined paths will be performed on the target instance. Multiple paths can be defined. If this parameter is absent then all actions are performed. This parameter is optional.
 * **exclude**  - the path to items to exclude when copying history. Actions on items that exist beneath the defined paths will be ignored. Multiple paths can be defined. If this parameter is absent then all actions are performed. Excludes take precedence over includes. This parameter is optional.
 
