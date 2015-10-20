@@ -41,7 +41,7 @@ When an item is clicked on in the tree, a full compare of the item is done and f
 
 ### Deep Compare
 
-A new feature of Razl 5.1 is Deep Compare. This allows all items in a tree to be compared. You can deep compare a folder by right clicking on the item in the tree and choosing **Deep Compare**
+A new feature of Razl 3.0 is Deep Compare. This allows all items in a tree to be compared. You can deep compare a folder by right clicking on the item in the tree and choosing **Deep Compare**
 
 ![](/Images/Razl/DeepCompareMenu.png)
 
