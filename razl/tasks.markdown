@@ -43,3 +43,7 @@ Tasks can be run by click the buttons at the bottom of the screen:
 
 * Do All - Runs all tasks in the task list
 * Do Selected - Runs the selected task from the task list
+
+##Exporting Tasks
+Razl supports exporting the task list as a Razl Script. This is done by clicking the Export Tasks button at the 
+bottom of the Razl form. The exported .xml task list can be executed using the [razl script](http://hedgehogdevelopment.github.io/razl/script.html) mechanism.
