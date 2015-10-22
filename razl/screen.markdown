@@ -31,9 +31,9 @@ The toolbar provides access to the different functions available in Razl:
 1. Right connection information - summary information about the right connection.
 1. RightHistory engine view -  displays entries in the righthand Sitecore history engine.
 1. Right connection - the Sitecore connection used by the right hand side of Razl.
-1. Razl settings - opens the Razl settings window.
 1. Toggle Lightning Mode.
 1. Toggle Show/Hide fields that are the same in the field information window.
+1. Razl settings - opens the Razl settings window.
 1. Log console - opens the Razl log console which contains the log output for the current session.
 1. Compare filters - displays a drop down list of fields and languages not being used by Razl for comparison.
 1. Razl About - display information about the version of Razl you are using.
