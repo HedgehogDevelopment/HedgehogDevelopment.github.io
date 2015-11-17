@@ -53,6 +53,7 @@ The XML for Razl is very simple and is made up primarily of connections and oper
         <parameter name="itemId"></parameter>
         <parameter name="overwrite">true|false</parameter>
         <parameter name="lightningMode">true|false</parameter>
+        <parameter name="continueOnError">true|false</parameter>
       </operation>
       <operation name="CopyItem" source="" target="">
         <parameter name="itemId"></parameter>
@@ -250,6 +251,7 @@ Summary of parameters:
 * **itemId** - the ID of the item to start coping from. This parameter is required.
 * **overwrite** - indicates if the operation should remove items that exist in the target instance but don’t exist in the source instance. If set to true items in the target instance that are missing in the source instance will be removed, if set to false  items in the target instance that are missing in the source instance are skipped.
 * **lightningMode** - Enables or disables lightning mode when moving items.
+* **continueOnError** - Default is false. If set to true, the CopyAll command will log the error and attempt to continue copying items.
 
 ### Logging
 Razl Script mode will output actions as they happen to the command prompt, this output can be piped to a text file if required.
