@@ -1,3 +1,15 @@
-﻿.metro code, .metro .code {
+.metro code, .metro .code {
     line-height: 15pt !important;
+}
+
+tr {
+    border-bottom: 1px solid #ccc;
+}
+
+thead tr {
+    border-bottom: 1px solid black;
+}
+
+td, th {
+    padding: .2em .5em;
 }
