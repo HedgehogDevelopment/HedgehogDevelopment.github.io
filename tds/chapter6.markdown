@@ -2,13 +2,13 @@
 title: Chapter 6 - TDS Documentation
 layout: TdsLayout
 ---
-# Team Development for Sitecore 
+# Team Development for Sitecore
 
 ## Chapter 6 – Code Generation
 
 Code generation is the process by which a data model and one or more templates are passed through a template engine. The model is transformed and the resulting output of this process would be code that can be compiled and used within your application.
- 
-![](/Images/Tds/chapter6-codegenprocess.png) 
+
+![](/Images/Tds/chapter6-codegenprocess.png)
 
 TDS' code generation is composed of models of the Sitecore items within your project, transformation templates and a template engine within TDS. The process works by TDS parsing each .item file within your project and passing it to a transformation template. Once all of the items have been transformed an additional template may be executed being passed a model representation of the project.
 
@@ -28,7 +28,7 @@ The ProjectHeader model is a representation of the TDS project and the code gene
 
 This model is the default representation of the Sitecore item within your TDS project. It is also the basis for the other two Sitecore models.
 
-#### SitecoreTemplate 
+#### SitecoreTemplate
 
 This model represents a Sitecore template item. It has all of the properties of a SitecoreItem model in addition to a list of base template, fields and its path segments. If TDS determines that the .item file represents a Sitecore template then this is the type of model that is passed to the T4 template.
 
@@ -38,20 +38,20 @@ This model represents a Sitecore field item. It has all of the properties of a S
 
 ### Transformation Templates
 
-The Text Template Transformation Toolkit (T4) is a template based code generation engine built into Visual Studio. A T4 text template is a text file, with a .tt extension, that contains a mixture of text blocks and control logic that can generate a text file. The control logic is written as fragments of C# or VB.NET code. The generated file can be text of any kind, such as a Web page, or a resource file, or program source code in any language. 
+The Text Template Transformation Toolkit (T4) is a template based code generation engine built into Visual Studio. A T4 text template is a text file, with a .tt extension, that contains a mixture of text blocks and control logic that can generate a text file. The control logic is written as fragments of C# or VB.NET code. The generated file can be text of any kind, such as a Web page, or a resource file, or program source code in any language.
 
 #### Header Transformation File
 
 The header transformation template is passed the ProjectHeader model. This transformation template is typically used to generate ‘using' statements or common code shared amongst the rest of the generated code.
 
-# Item Transformation File 
+# Item Transformation File
 
 Each item in your project can be configured with a transformation template. In most cases, you don't want to run code generation for all .items, only your Sitecore templates. To allow you the most flexibility, an inheritance model for determining the T4 template exists. Each .item file has a property in the items property page that allows you to set a t4 template for that item and all its descendants. It can be overridden at any level.
 
 ### Sample Transformation Templates
 
 Once code generation is enabled, a new folder will show up in the TDS project within solution explorer. It is called "Code Generation Templates". Right click on this and choose "Add -> New Item…". You have 4 possible templates to start from. The "document" templates are provided to help you see what is available to you in the T4 templates. These will generate text output containing all the fields passed into the T4 template. They are a good place to start for seeing all the information provided. The other two are empty templates that you can use to start writing your own T4 transforms.
-    
+
 Sample T4 templates are available on GitHub and there is a link to them on the code generation property page. The sample templates cover different types of code generation scenarios, and provide a great way to see what a real code generation template looks like.
 
 ### Setup
@@ -67,20 +67,20 @@ To setup Code Generation follow the following steps:
 6.	Create the Header and Base Project Transform files.
 7.	Set the Header and Base Project Transform files to use.
 
-#### Creating Header and Base Project Transformation Files 
+#### Creating Header and Base Project Transformation Files
 
 Once code generation has been enabled on a project it is possible to add TT files to the TDS project. After enabling Code Generation the **Code Generation Templates** node will appear in the TDS  project:
 
-  
-![](/Images/Tds/chapter6-codegennode.png) 
+
+![](/Images/Tds/chapter6-codegennode.png)
 
 Right clicking on this node and select **Add > New Item**:
- 
-![](/Images/Tds/chapter6-codegennewitem.png) 
+
+![](/Images/Tds/chapter6-codegennewitem.png)
 
 This will open the Add New Item  dialog:
- 
-![](/Images/Tds/chapter6-codegendialog.png) 
+
+![](/Images/Tds/chapter6-codegendialog.png)
 
 The dialog allows you to create the following file types:
 
@@ -93,8 +93,8 @@ The dialog allows you to create the following file types:
 ### Item Level Properties
 
 Item level properties allow a developer to override the global item settings. Properties set on an item are inherited by all items beneath the item being set.
- 
-* **Code Generation Template** - Allows a different code generation file to be set for items beneath the current item. 
+
+* **Code Generation Template** - Allows a different code generation file to be set for items beneath the current item.
 * **Custom Data** -We allow you to add custom metadata to be passed into the SitecoreItem model for each .item in the property page. This is useful for things such as:
  *  Ignoring items for code generation
  *  Controlling the generated output such as
@@ -106,11 +106,11 @@ Item level properties allow a developer to override the global item settings. Pr
 
 ### Namespaces
 
-TDS will automatically create namespaces based on where a tempalte is within Sitecore. For example if the TDS project is setup as below where T2 is a template:
- 
-![](/Images/Tds/chapter6-codegenname.png) 
+TDS will automatically create namespaces based on where a template is within Sitecore. For example if the TDS project is setup as below where T2 is a template:
 
-If theNamespace setting on the Code Generation tab has the value "MyNamespace" TDS will generate the following Namespace:
+![](/Images/Tds/chapter6-codegenname.png)
+
+If the Namespace setting on the Code Generation tab has the value "MyNamespace" TDS will generate the following Namespace:
 
 	namespace TdsDemo.MyNamespace.sitecore.templates.TDS.Set2
 	{
