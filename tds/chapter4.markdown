@@ -629,11 +629,12 @@ The following code block is sample code modified from the above to provide Sitec
 	fi
 
 The above code will detect the extension of the file being merged. For .item files it will run a mergetool entry called 'TDSMerge' from the .gitconfig file.
+
 For all other files, it will run a mergetool entry called 'kdiff3' from the .gitconfig file. You can change 'kdiff3' to any other mergetool entry of your choice that you have installed, for example 'winmerge' or 'TortoiseMerge'.
 
 **Note:** .gitconfig files may exist in different locations for a developer's machine. Typically, a global .gitconfig file (used for all of your git repositories) can be found at `$HOME\.gitconfig` (i.e `C:\Users\myUserName\.gitconfig`).
 
-Now the .gitconfig file needs some updates for the script to work.
+Now three modifications will be needed for the .gitconfig file:
 
 First, change which mergetool entry Git will use for merges to 'merge_wrapper'.
 
@@ -646,7 +647,7 @@ Now create the 'merge_wrapper' entry which will call the merge-wrapper-script.
 	[mergetool "merge_wrapper"]
 		cmd = $HOME/merge-wrapper-script \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 
-Finally, create a TDSMerge entry, which is the entry that will be called by script for .item file merges.
+Finally, create a TDSMerge entry, which is the entry that will be called by the script for any .item file merges.
 
 	[mergetool "TDSMerge"]
 	    cmd = \"C:/Program Files (x86)/Hedgehog Development/Team Development for Sitecore (VS2013)/SitecoreItemMerge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
