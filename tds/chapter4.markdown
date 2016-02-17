@@ -582,21 +582,21 @@ The merge tool offers a few shortcut functions from a toolbar. The tool bar butt
 
 TDS automatically configures the Sitecore Item Merge to run for .item files inside of TFS. However, it needs to be configured for other source control providers.
 
-The Sitecore Item Merge tool can be run from the command prompt. It accepts seven parameters from source control, which represent the four files that are part of the three-way merge and the labels for each of the three sections of the screen. The arguments for the Sitecore Item Merge are shown below in the order they are expected.
+The Sitecore Item Merge tool can be run from the command prompt. It accepts seven parameters from source control, which represent the four files that are part of the three-way merge, and optionally, the labels for each of the three sections of the window. The arguments for the Sitecore Item Merge are shown below in the order they are expected.
 
 1.	**[baseFilePath]** – The file the merged files both started from.
 2.	**[branch1FilePath]** – The file from the first branch.
 3.	**[branch2FilePath]** – The file from the second branch.
 4.	**[finalFilePath]** – The path to the file that holds the result of the merge.
-5.	**[branch1FileLabel]** – Label for the branch1 file. This can be defined by source control or hard coded.
-6.	**[branch2FileLabel]** – Label for the Branch2 file. This can be defined by source control or hard coded.
-7.	**[finalFileLabel]** – Label for the Final file. This can be defined by source control or hard coded.
+5.	**[branch1FileLabel]** – *Optional* Label for the Branch1 file pane (the left window pane within the tool). This can be defined by source control or hard coded.
+6.	**[branch2FileLabel]** – *Optional* Label for the Branch2 file pane (the right window pane within the tool). This can be defined by source control or hard coded.
+7.	**[finalFileLabel]** – *Optional* Label for the Final file (the bottom window pane within the tool). This can be defined by source control or hard coded.
 
 #### Configuring Sitecore Item Merge for Git using script
 
-By default, Git only allows a single file merge tool. Fortunately, Git allows the developer to easily extend the merge functionality. Please see the article: [merge-wrapper (https://gist.github.com/elsevers/11349227)](https://gist.github.com/elsevers/11349227 "merge-wrapper (https://gist.github.com/elsevers/11349227)") for more information on extending Git to use multiple merge tools.
+By default, Git only allows a single file merge tool. Fortunately, Git allows the developer to easily extend the merge functionality and allow us to use different merge tools for different file types. Please see the article: [merge-wrapper (https://gist.github.com/elsevers/11349227)](https://gist.github.com/elsevers/11349227 "merge-wrapper (https://gist.github.com/elsevers/11349227)") for more information on extending Git to use multiple merge tools.
 
-The following code block is sample code modified from the above to provide Sitecore item merge capabilities in Git:
+The following code block is sample code modified from the above to provide Sitecore item merge capabilities in Git. Copy this script into a text editor, and **save it without any file extension** to your $HOME directory as 'merge-wrapper-script' (i.e `C:\Users\myUserName\merge-wrapper-script`).
 
     #!/bin/bash
 	# Wrapper script for git mergetool
@@ -628,74 +628,64 @@ The following code block is sample code modified from the above to provide Sitec
 		eval $CMD
 	fi
 
-This solution needs some changes in the .gitconfig file:
+The above code will detect the extension of the file being merged. For .item files it will run a mergetool entry called 'TDSMerge' from the .gitconfig file.
+
+For all other files, it will run a mergetool entry called 'kdiff3' from the .gitconfig file. You can change 'kdiff3' to any other mergetool entry of your choice that you have installed, for example 'winmerge' or 'TortoiseMerge'.
+
+**Note:** .gitconfig files may exist in different locations for a developer's machine. Typically, a global .gitconfig file (used for all of your git repositories) can be found at `$HOME\.gitconfig` (i.e `C:\Users\myUserName\.gitconfig`).
+
+Now three modifications will be needed for the .gitconfig file:
+
+First, change which mergetool entry Git will use for merges to 'merge_wrapper'.
 
 	[merge]
-	#	tool = kdiff3
+	#	tool = kdiff3    Commented out because we're switching over from kdiff to our merge wrapper script
 		tool = merge_wrapper
-	[diff]
-		tool = kdiff3
-		guitool = kdiff3
-	[core]
-		editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
-		autocrlf = false
-	[credential]
-		helper = !'C:\\Users\\cturano\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
-	[mergetool "kdiff3"]
-		path = C:/Program Files (x86)/KDiff3/kdiff3.exe
-	[difftool "kdiff3"]
-		path = C:/Program Files (x86)/KDiff3/kdiff3.exe
-		cmd = \"C:/Program Files (x86)/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
-	[i18n]
-		filesEncoding = utf-8
+
+Now create the 'merge_wrapper' entry which will call the merge-wrapper-script.
 
 	[mergetool "merge_wrapper"]
-		cmd = $HOME/merge-wrapper \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+		cmd = $HOME/merge-wrapper-script \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+
+Finally, create a TDSMerge entry, which is the entry that will be called by the script for any .item file merges.
 
 	[mergetool "TDSMerge"]
-	    cmd = \"C:/Program Files (x86)/Hedgehog Development/Team Development for Sitecore (VS2013)/SitecoreItemMerge\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	    cmd = \"C:/Program Files (x86)/Hedgehog Development/Team Development for Sitecore (VS2013)/SitecoreItemMerge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+
+**Note:** Update the path of the SitecoreItemMerge.exe to the installation folder of TDS for whichever Visual Studio version it is installed for. In this case, we're pointing to the TDS installation folder for Visual Studio 2013.
 
 #### Configuring Sitecore Item Merge for Git using MergeChooser
 
-Some Git tools don’t allow you to configure multiple merge tools based on the file extension. If you are using a tool like this, we have provided a simple merge tool wrapper that can be configured to allow you to use multiple merge tools.
+Some Git tools don’t allow you to configure multiple merge tools based on the file extension. If you are using a tool like this, we have provided a simple merge tool wrapper application that can be configured to allow you to use multiple merge tools.
+This will effectively produce the same result as the merge-wrapper script above.
 
-To setup the merge tool chooser, you will need to change your .gitconfig:
+To setup the merge tool chooser, you will need to change your .gitconfig to point to a new 'merge_chooser' mergetool entry.
 
 	[merge]
 	#	tool = kdiff3
 		tool = merge_chooser
-	[diff]
-		tool = kdiff3
-		guitool = kdiff3
-	[core]
-		editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
-		autocrlf = false
-	[credential]
-		helper = !'C:\\Users\\cturano\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
-	[mergetool "kdiff3"]
-		path = C:/Program Files (x86)/KDiff3/kdiff3.exe
-	[difftool "kdiff3"]
-		path = C:/Program Files (x86)/KDiff3/kdiff3.exe
-		cmd = \"C:/Program Files (x86)/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
-	[i18n]
-		filesEncoding = utf-8
+
+Also add the 'merge_chooser' entry as follows
 
 	[mergetool "merge_chooser"]
-		cmd = \"C:/Program Files (x86)/Hedgehog Development/Team Development for Sitecore (VS2013)/MergeToolChooser\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+		cmd = \"C:/Program Files (x86)/Hedgehog Development/Team Development for Sitecore (VS2013)/MergeToolChooser.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 
-The default **MergeToolChooserConfig.xml** file specifies that **SitecoreItemMerge.exe** is the merge file for .item files and KDiff3 is the default merge tool for everything else.
+**Note:** Update the path of the MergeToolChooser.exe to the installation folder of TDS for whichever Visual Studio version it is installed for. In this case, we're pointing to the TDS installation folder for Visual Studio 2013.
+
+The MergeToolChooser.exe application reads it's configuration from the **MergeToolChooserConfig.xml** file located in the same directory.
+By default it specifies that **SitecoreItemMerge.exe** is the merge file for .item files and KDiff3 is the default merge tool for everything else.
 
 	<?xml version="1.0" encoding="utf-8" ?>
 	<MergeToolChooserConfig>
 	  <!-- TDS Item Merge Tool -->
 	  <MergeTool Extension=".item" Cmd=".\SitecoreItemMerge.exe" Parameters="&quot;$1&quot; &quot;$2&quot; &quot;$3&quot; &quot;$4&quot;"/>
 	  <!-- Default entry -->
-	  <MergeTool Cmd="C:\Program Files (x86)\KDiff3" Parameters="&quot;$1&quot; &quot;$2&quot; &quot;$3&quot; -o &quot;$4&quot;"/>
+	  <MergeTool Cmd="C:\Program Files (x86)\KDiff3\kdiff3.exe" Parameters="&quot;$1&quot; &quot;$2&quot; &quot;$3&quot; -o &quot;$4&quot;"/>
 	</MergeToolChooserConfig>
 
 This file can be altered to allow any merge tool(s) the developer wants to use. The parameters are specified in the **Parameter** attribute by using $1, $2, $3, etc. Where $1 represents the first parameter passed to the merge tool, $2 represents the second, and so on. The **Extension** attribute specifies the file extension to use for the specified merge tool. The **Cmd**  attribute specifies the full path to the merge tool.
 
-The merge tool is matched the order *&lt;MergeTool&gt;* elements are specified in the file. The match is based on one of the first 4 parameters ending with the string specified in the **Extension** attribute. If no **Extension** attribute is specified, the merge tool is considered the default merge tool.
+The merge tool is matched using the order that *&lt;MergeTool&gt;* elements are specified in the file and is based on the string specified in the **Extension** attribute. If no **Extension** attribute is specified, the merge tool is considered the default merge tool, therefore ensure it is the final entry in the list.
 
 ### Global Config
 
