@@ -53,11 +53,13 @@ Contains settings that are common to all project configurations.
 
 ![](/Images/Tds/chapter4-general.png) 
 
-* **Source Web Project** – This dropdown selects the web project to copy to Sitecore when the TDS project is built. This may be set to &gt;None&lt; if there is no need to copy files to Sitecore.
+* **Source Web Project** – This dropdown selects the web project to copy to Sitecore when the TDS project is built. This may be set to **&lt;None&gt;** if there is no need to copy files to Sitecore.
 * **Source Web Physical Path** – For information only. This shows the path to the web project.
 * **Source Web Virtual Path** – For information only. This shows the path within the solution to the web project.
 * **Sitecore Database** – Configures the Sitecore database the TDS project will use.
-* **Assemblies** – When deploying to Sitecore, TDS can skip the deployment of certain assemblies. These assemblies may be referenced by one or more projects in the solution. Excluding/including static assemblies from the build will reduce the size of the packages TDS generates and improve deployment time. By default, TDS excludes assemblies beginning with "Sitecore.". Selecting **Exclude** from the dropdown will cause TDS to skip these files and not add them to the deployment. Selecting **Include** from the dropdown will only include the files listed and cause TDS to skip all the files not listed.
+* **Assemblies** – When deploying to Sitecore, TDS can skip the deployment of certain assemblies. These assemblies may be referenced by one or more projects in the solution. Excluding/including static assemblies from the build will reduce the size of the packages TDS generates and improve deployment time. By default, TDS excludes assemblies beginning with "Sitecore.". Selecting **Exclude** from the dropdown will cause TDS to skip these files and not add them to the deployment. Selecting **Include** from the dropdown will only include the assemblies listed and cause TDS to skip all other assemblies.
+* **Manage Sitecore Roles in TDS** - Enables the Sitecore Role Sync functionality. This allows you to compare the roles in your TDS project to the roles in Sitecore. Roles are deployed and packaged along with your Sitecore items.
+* **Deploy Items Changed After** - When deploying and/or packaging items, can check the item to see if it should be included in the build/package. When this check box is enabled, __**updated** field is checked on the Sitecore item and if any version of the __**updated** field has a date before the date specified in the date selector, it is excluded from the build. This allows TDS to create delta deployments.
 
 #### Code Generation
  
@@ -66,10 +68,10 @@ Used to turn on and control TDS Code Generation.
 ![](/Images/Tds/chapter4-codegeneration.png)
 
 * **Target Project** – The target project in which the generated code file will be generated.
-* **Code Generation Target File** – the name of the file that will contain the generated code. Remember to add the appropriate extension, e.g. ".cs" for c-sharp files.
+* **Code Generation Target File** – The name of the file that will contain the generated code. Remember to add the appropriate extension, e.g. ".cs" for c-sharp files.
 * **Base Namespace** – The namespace that class will be generated in.
-* **Header Transform File** – The TT file used to generate the header of the generated file.
-* **Base Project Transform File** – The TT file used to generate output for each item in the generated file.
+* **Header Transform File** – The T4 template file used to generate the header of the generated file.
+* **Base Project Transform File** – The T4 template file used to generate output for each item in the generated file.
 * **Sitecore Fields to Pass to Code Generation** – Standard Sitecore fields that should be passed to the code generation template. By default standard Sitecore fields are skipped but developer created fields are always passed to the code generator.
 
 Please see the code generation section below for more information on the Code Generation property page.
@@ -79,7 +81,6 @@ Please see the code generation section below for more information on the Code Ge
 The Multi-Project properties page allow you to setup dependencies between projects within the same solution.
 
 ![](/Images/Tds/chapter4-multiproject.png)
-
 
 ##### Base Template Reference
 
@@ -103,7 +104,7 @@ The generated class for TdsDemo.Layouts will look like this:
         }
     }
 
-And the generated glasses for  TdsDemo.Templates will be:
+And the generated glasses for TdsDemo.Templates will be:
 
 	namespace TdsDemo.Templates.sitecore.templates.TDS.Set2
 	{
@@ -130,6 +131,18 @@ If the referencing and referenced project both contain the same item, the item i
 referencing project is used.
 
 Package bundling only works when the Update Package has been configured, see the Update Package section below.
+
+#### Package Validation
+
+Many Sitecore projects include Modules distributed as Sitecore Packages. These packages are .zip files and contain compiled code, assets and Sitecore items. In many cases, a Sitecore solution depends on a list of packages being installed on the server. If the packages aren't deployed, there is a good chance the Sitecore solution would fail. TDS Package Validation ensures the package is installed and will fail the deployment if the package isn't present.
+
+![](/Images/Tds/chapter4-packagevalidation.png)
+
+##### Selected Package
+The Selected Package list is the list of Sitecore packages that are required for the solution. The packages must be reachable at build time. TDS only checks if the package is installed if the solution is being deployed. If the package isn't present on the server, the build fails with an error message.
+
+##### Install Package Configurations
+Install Package Configurations shows the available configurations in the TDS project. If the configuration is selected in the list, TDS will install the package on the server if it is missing instead of failing the buld. Please note, package post steps will not run when this package is installed. The only items and files will be deployed.
 
 #### Build
  
@@ -199,9 +212,32 @@ TDS generates Sitecore Update Packages. These packages are not the same as the p
 * **Package Publisher** – Sets the publisher field in the generated package.
 * **Package Version** – Sets the version number in the generated package.
 * **Package Readme** – Sets the readme field in the generated package.
-* **Generate separate code and item packages** – When checked, the build will generate two separate update packages. These packages separate the output of the build into a package just for items, and another that contains only code. Breaking up the packages this way facilitates some more advanced deployment scenarios.
-* Append the current date and time to the package name – When checked, the package name has the current date and time. This is sometimes useful for associating the package with a specific version or build.
+* **Package Generation Options** – There are three options for generating a package. They are:
+	1. Generate a package with compiled code and items
+	2. Generate separate code and item packages
+	3. Generate an item only package
+* **Append the current date and time to the package name** – When checked, the package name has the current date and time. This is sometimes useful for associating the package with a specific version or build.
 * **Sitecore Assembly Path** – TDS needs to use the Sitecore Update Package Builder to create a package. To do this, TDS needs to know where to find the four Sitecore assemblies that make up the Package Builder. These are **Sitecore.Kernel.dll, Sitecore.Logging.dll, Sitecore.Update.dll** and **Sitecore.Zip.dll**. This path can be a relative, absolute or network path to these four Dlls.
+
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
+If you are using NuGet to include the Sitecore assemblies, TDS will automatically look in the $(SolutionDir)\packages folder for the Sitecore Dll's if this field is left blank. As long as each of the four Sitecore assemblies specified above are present in at least one NuGet package, they will be picked up by the Package Builder.
+
+#### Deploy
+The TDS Deploy property page allows the developer to select actions to perform at deployment time. These actions will be executed for TDS Deployments and Package Installation as Post Deploy Steps. 
+
+![](/Images/Tds/chapter4-deploy.png)
+
+The Deploy property page comes with a few built in functions. These are designed to solve some of the most common problems encountered with package deployments. The built in deploy functions are:
+
+* **Publish After Deploy** - Adds the deployed items to the publish queue for the publish target(s) specified in the parameter text box. The publish targets are specified as a comma separated list of deployment targets. These should be entered as the 'Parameter' values.
+* **Update Link Database** - Adds the items in the deployment/package to the Sitecore link database. This is needed because Sitecore serialization may not update the link database when items are deployed.
+* **Trigger Save Events** - In some cases, Sitecore functionality depends on save events. Since Serialization doesn't trigger save events, it is difficult for these features to function correctly. Triggering save events helps these functions to work correctly.
+
+Each post deployment action has its own parameter value.
 
 #### NuGet Package
 TDS allows developers to create and use NuGet packages the same way they do with other projects. Packages can be created from any TDS project by enabling NuGet package generation in the NuGet Package property tab.
@@ -227,6 +263,34 @@ The NuGet package generation property page allows the developer to set all NuGet
 * **Path to NuGet.exe** TDS needs to know where to find the NuGet executable. This can be downloaded from the [NuGet Download Page](http://nuget.codeplex.com/releases "NuGet Download Page") or you can add the "NuGet Command Line" package to a project in your solution. The NuGet executable will be located in the [solution dir]\packages folder.
 * **NuGet Metadata fields** - All other fields are NuGet metadata fields passed to NuGet.exe when creating the NuGet package. Documentation for these fields can be found in the metadata reference section of the [Nuspec Reference](https://docs.nuget.org/Create/Nuspec-Reference "Nuspec Reference") page.
 
+#### Validations
+
+The Validations tab allows you turn on checks that TDS can perform on the project when it is built.
+
+![](/Images/Tds/chapter4-validations.png) 
+ 
+* **Enable Validators** – Turns on validation for this build configuration.
+* **Validation Settings File Path** -  The path to the file containing the settings used by the validators.
+* **Validators** – The list of validators that can be activated.
+* **Action** – Determines if the selected validator should raise a build error or build warning.
+* **Additional Properties** – Allows the setting of additional properties used by each validator, for example item path.
+
+TDS supports the following validations:
+
+* **Template Structure** – Validates that templates have only a single Standard Value template, field sections and sections only contain fields. 
+* **Should be Deploy Once** – Ensure that certain items are set to DeployOnce. The paths that the check will applied to can be configured in the Additional Propeties area.
+* **Don't Sync Children** – Ensure that specific items don't have child synchronization set, this prevents the possible deletion of items. The paths that the check will applied to can be configured in the Additional Propeties area.
+* **Ensure Parent Integrity** – Validates that the structure of the TDS project matches what will be deployed to Sitecore.
+* **Should use .user file** -  TDS properties for DEBUG configurations should typically be stored in the .user file.
+* **Prevent item by path** – Checks that items in the project are not found at or beneath the configured location.
+* **Deployment Properties** - Ensure that deployment properties are set. This will expose issues with parent items being excluded from a deployment.
+* **Tree should be Deploy Once** - Ensure that an item and its children are set to deploy once.
+* **Item should be Always Update** - Ensure that a single item should be always update.
+* **Tree should be Always Update** - Ensure that an item and its children are set to deploy always.
+* **Item Code Generation templates are blank** - Ensures that an items code generation templates are blank.
+* **Prevent illegal characters in fields** - Checks all fields for illegal characters like 0x03 that can cause problems when building packages.
+* **Prevent Deploy Once Standard Values** - When Sitecore deploys a package, it forces __Standard Values items to be deploy always. This setting flags any __Standard Values items that are set to Deploy Once as errors to prevent inconsistencies in deployment environments.  
+
 #### File Replacement 
  
 Allows the TDS project to be configured to automatically copy files into the build folder before deploying the built project. This is useful for managing environment specific configuration files. The File Replacement step runs after the web project has been built and copied, but before package generation and/or deployment to Sitecore.
@@ -245,27 +309,6 @@ Many of the use cases for File Replacements have been superseded by the Configur
 * **Type** – The type dropdown allows you to choose the type of the Source Location. If you choose "File", the individual file specified in the Source Location is copied to the Target location. Choosing "Folder" causes all items under the Source Location to be copied to the Target Location.
 * **Source Location** – Specifies where to copy files from. The path can be relative to the project folder or an absolute path.
 * **Target Location** – Specifies the location to copy files to. The path for the target location can be relative to the build output folder or an absolute path.
-
-
-#### Validations
-
-The Validations tab allows you turn on checks that TDS can perform on the project when it is built.
-
-![](/Images/Tds/chapter4-validations.png) 
- 
-* **Enable Validators** – Turns on validation for this build configuration.
-* **Validation Settings File Path** -  The path to the file containing the settings used by the validators.
-* **Validators** – The list of validators that can be activated.
-* **Action** – Determines if the selected validator should raise a build error or build warning.
-* **Additional Properties** – Allows the setting of additional properties used by each validator, for example item path.
-
-TDS supports the following validations:
-* **Template Structure** – Validates that templates have only a single Standard Value template, field sections and sections only contain fields.
-* **Should be Deploy Once** – Ensure that certain items are set to DeployOnce. The paths that the check will applied to can be configured in the Additional Propeties area.
-* **Don't Sync Children** – Ensure that specific items don't have child synchronization set, this prevents the possible deletion of items. The paths that the check will applied to can be configured in the Additional Propeties area.
-* **Ensure Parent Integrity** – Validates that the structure of the TDS project matches what will be deployed to Sitecore.
-* **Should use .user file** -  TDS properties for DEBUG configurations should typically be stored in the .user file.
-* **Prevent item by path** – Checks that items in the project are not found at or beneath the configured location.
 
 ### Deployment Properties
 
@@ -330,41 +373,45 @@ To access the TDS Option Window click on the **Tools** menu then **Options**. **
 The following options are are available in the **General Options** screen:
 
 * **Autorun Code Generation** – Indicates if code generation should automatically run when new items are added to a TDS project or an items custom properties / namespace change. Setting this value to false will required a developer to manually run code generation.
-* **Autosave Project File** – When set to **true** the project file will automatically save when items are added to the TDS project file or items are synced.
-* **Check for Updates** – When set to **true** TDS will check for updates when a solution is loaded and prompt the developer when an update is available.
+* **Run Code Generation for Changes** - Causes code generation to run after items are changed in the project. If this is set to 'False', the developer will have to manually re-generate code from the project right-click menu.
+* **Autosave Project File** – When set to 'True' the project file will automatically save when items are added to the TDS project file or items are synced.
+* **AutoSync changes in Sitecore** - When set to true, TDS will automatically update fetch any changed items in the project file. TDS uses the history table for this, so TDS will update the project with items that were changed even if the items were changed when the project was closed. The rules TDS uses to update the items are the same rules TDS uses when the user chooses 'Sync Using History'. The auto sync function behaves as if the use choose Sync Using History and accepted all changes in the order they were made.
+* **Background Cache Loading** - When set to True, TDS will parse Sitecore items in the background at load time. This dramatically speeds up the load time of large solutions.
+* **Check for Updates** – When set to 'True' TDS will check for updates when a solution is loaded and prompt the developer when an update is available.
+* **File Content Sync** - When set to 'True', TDS will watch the Source Web Project specified in the General property tab for changes to content files (cshtml, aspx, ascx, css, js, config, etc...) and automatically copy those files to the correct location in the Sitecore Deploy Folder specified in the Build property tab.
+* **Old Deployment Property Manager** - Switches the new Deploy Property Manager off and allows the developer to use the previous version of the Deployment Property Manager.
 
 #### Sync Window
 
 ![](/Images/Tds/chapter4-syncwindow.png) 
 
-The Sync screen allows you to set a list of fields that should be ignored when comparing items. Items with differences only in these fields will not show up in the **Sync Window** as being different.
+The Sync Window screen allows you to set a list of fields that should be ignored when comparing items. Items with differences only in these fields will not show up in the **Sync Window** as being different.
 
 Checking the **Hide fields with the same value in the Sync Results** will stop fields with identical values from being displayed in the **Sync Window**, this can make it easier to compare items.
+
+#### Sync Window Languages
+
+![](/Images/Tds/chapter4-syncwindow_language.png)
+ 
+The Sync Window Languages screen allows you to manage a list of languages that should be ignored when comparing item. Items with differences on languages will not should up in the **Sync Window** as being different.
+
+This behaves very similar to the ignore fields window.
 
 ### Deployment Property Manager
 
 The Deployment Property Manager allows developers to view and update deployment properties on many items at one time. This is a much more convenient way of managing deployment properties. 
 
-The Deployment Property Manager can be opened by right-clicking on the TDS project or any Sitecore item in the Solution Explorer and choosing "**Deployment Property Manager**". This opens a window showing the **Exclude Items From, Child Item Synchronization** and **Item Deployment** properties for all the Sitecore items under the item selected in the Solution Explorer.
+The Deployment Property Manager can be opened by right-clicking on the TDS project or any Sitecore item in the Solution Explorer and choosing "**Deployment Property Manager**". This opens a window showing the **Exclude Items From, Child Item Synchronization** and **Item Deployment** properties for all the Sitecore items under the item selected in the Solution Explorer. Initially, the Deployment property manager only shows Sitecore items with deployment properties that are different than their parents properties. Expanding the items in the tree will show all Sitecore items under the expanded item. Collapsing the item will hide any items that have the same properties as their parents.
 
 ![](/Images/Tds/chapter4-propertymanager.png)  
 
-For an explanation of the various options for each of the properties, please see the descriptions above. 
+For an explanation of the various options for each of the properties, please see the descriptions in the Visual Studio Property Window section
 
-#### Keyboard Shortcuts
+The **Set Descendant Properties** button will change the deployment properties of all Sitecore items under the selected item to have the same deployment properties.
 
-The Deployment Property Manager has the following keyboard shortcuts when you have selected an item(s):
+The **Inherit Parent Properties** button will set the current item to have the same deployment properties as its parent.
 
-| Key Combination |	Action |
-| --- | --- |
-| Shift + w | Current Config - Include |
-| Shift + e	| Current Config – Exclude |
-| Shift + s	| Child Sync – All Children |
-| Shift + d	| Child Sync – Direct Descendants |
-| Shift + f	| Child Sync – No sync |
-| Shift + x	| Deploy – Always |
-| Shift + c	| Deploy – Once |
-<br />
+Clicking either of the buttons will potentially change the visibility of items in the tree view because their properties are being changed.
 
 ### Adding Sitecore items to a project
 
@@ -510,8 +557,8 @@ If an item, in the history table, meets these criteria, then its latest history 
 
 Here are the new buttons in the Sync Using History Window (see above image):
 
-* A: The “**Make selected project items match Sitecore**” button causes all selected project items,  in the project, match their cooresponding Sitecore items. 
-* B: The “**Make selected Sitecore items match project**” button causes all selected Sitecore items, in the project, to match their cooresponding project items.
+* A: The “**Make selected project items match Sitecore**” button causes all selected project items,  in the project, match their corresponding Sitecore items. 
+* B: The “**Make selected Sitecore items match project**” button causes all selected Sitecore items, in the project, to match their corresponding project items.
 * C: The “**Merge fields during update**” button causes a merge window to open when updating Sitecore. This merge window allows the developer to choose to update only selected field values instead of the whole item.
 * D: The “**Hide fields with no changes**” check box causes the item differences pane in the lower half of the sync window to filter out fields that match, only showing fields that are different.
 * E: The “**Date**” column contains the date of the most recent change to the item. Only the most recent changes are shown in the list.
@@ -522,6 +569,20 @@ Here are the new buttons in the Sync Using History Window (see above image):
 After selecting the desired operations, clicking the “**Do Updates**” button performs the actions on the items.
 
 **Please Note:** The Sync Using History Window will only find changes based on the content of the history table. This means that Sitecore operations that do not make an entry in the history table, such as Serialization, will not be included in the window.
+
+#### Sync All Projects Using History Window
+
+If your solution contains many TDS projects, ensuring all projects are up to date can be done using a single Sync operation. Sync All Projects Using History looks at all changes in Sitecore and checks them against all TDS projects in the solution using the same Sync rules as the Sync Using History function.
+
+To start syncing all projects, right-click on the solution in the Solution Explorer and choose "Sync all TDS Projects using History"
+
+![](/Images/Tds/chapter4-syncallusinghistorymenu.png)
+
+TDS will open a sync using history window with an additional "Project" column, indicating which project the changes in Sitecore belong to.
+
+![](/Images/Tds/chapter4-syncallusinghistory.png)
+
+All functions of the Sync All Projects Using History window work exactly the same as the Sync Using History window. For an explanation of how to use the window, please see above.
 
 #### Sync Sitecore Roles
 

@@ -48,3 +48,34 @@ Although it is possible to setup a build with TDS that allows one click deployme
 </div>
 
 TDS can be configured to automatically build a Sitecore update package during the build. These packages can be deployed through automated scripts or by a separate deployment team, offering additional control over the deployment process. For more information on about how to configure a build to generate a package please see the **Update Package** property tab in the TDS project property pages section.
+
+### TDS builds using cloud servers
+
+Before TDS version 5.5, the build server needed to have TDS installed on it to build TDS projects. This is no longer necessary. The TDS build components can now be added to a project as a NuGet package. The NuGet package is available in the .zip that contains the TDS install. 
+
+#### Installing the NuGet build components package
+
+If you wish to use the build components in the NuGet package on your build server, you should add the NuGet package to a **private** NuGet repository that the build server can access. Password protected feeds like MyGet are a great place to host these package.
+
+The NuGet package containing the build components is named **HedgehogDevelopment.TDS.[x.x.x.x].nupkg**, where x.x.x.x is the version of the package. This follows the standard NuGet naming convention.
+
+The NuGet package can be added to your TDS project(s) the same way you add any other NuGet packages in Visual Studio.
+
+#### Licensing TDS on the build server ###
+
+The TDS components need to validate your license at build time. The recommended way to pass the license information to the build server is through environment variables. The names and values for the environment variables are: 
+
+-  **TDS_Owner** - The owner of the license. This value must exactly match the value you use to install TDS.
+-  **TDS_Key** - The license key supplied by Hedgehog Development.
+
+Please do not include quotes or leading/trailing spaces in these values.
+
+Adding these environment variables to your build process varies depending on the build server you are using.
+
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
+
+To ensure all TDS features work correctly, it is important that the installed version of TDS is the same version as the build components. Since the build component version is tied to the project, it is important that all team members use the same version of TDS.
