@@ -35,7 +35,7 @@ When you open the history view you will be presented with the following screen:
 
 This history list appears above the Content Tree and displays the the date and time of the latest entry with the path to the item and the available move operations. Entries made on the same day are grouped under a day separator. To keep the list simple Razl shows only the latest entry for an item if the item is different between the two Sitecore databases.
 
-You may click on one of the operations in the history view to add the operation to the task list. Clicking on the task icon in the History Change Detail view is the same as clicking on the task icon in the comare window.
+You may click on one of the operations in the history view to add the operation to the task list. Clicking on the task icon in the History Change Detail view is the same as clicking on the task icon in the compare window.
 
 The performance of the History Change Detail window may be improved by selecting Lightning Mode. This works the same way as Lightning Mode when comparing items.
 

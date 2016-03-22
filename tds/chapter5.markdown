@@ -2,7 +2,7 @@
 title: Chapter 5 - TDS Documentation
 layout: TdsLayout
 ---
-# Team Development for Sitecore 
+# Team Development for Sitecore
 
 ## Chapter 5 – TDS Builds and Deployment
 
@@ -23,28 +23,25 @@ By default, Visual Studio only supports configuration transforms on the web.conf
 TDS is aware of all of the configuration transforms in a project when it is being built. If TDS sees a configuration file with a transformation for the current configuration during a build, TDS will automatically apply the configuration transformation before deploying the file or adding it to a package.
 
 <div class="panel">
- <div class="panel-header bg-lightBlue fg-white">
- NOTE
- </div>
- <div class="panel-content">
-
-TDS uses the name of the configuration for the TDS project to determine the configuration transform to apply, not the name of the configuration in the Web Project. It is a good practice to make sure the names of the configurations in the web project match the names of the configurations in the TDS project.
-</div>
+  <div class="panel-header bg-lightBlue fg-white">
+    NOTE
+  </div>
+  <div class="panel-content">
+    TDS uses the name of the configuration for the TDS project to determine the configuration transform to apply, not the name of the configuration in the Web Project. It is a good practice to make sure the names of the configurations in the web project match the names of the configurations in the TDS project.
+  </div>
 </div>
 
 ### Building Packages
 
-Building and deploying Sitecore items directly to a server is a very good practice for internal test servers. It allows developers to quickly and easily integrate their changes with other developers and also gives the QA team faster access to application updates. 
+Building and deploying Sitecore items directly to a server is a very good practice for internal test servers. It allows developers to quickly and easily integrate their changes with other developers and also gives the QA team faster access to application updates.
 
 <div class="panel">
- <div class="panel-header bg-lightBlue fg-white">
- NOTE
- </div>
- <div class="panel-content">
-
-
-Although it is possible to setup a build with TDS that allows one click deployment to a production server careful thought is required before implementing such a solution. Production deployments often require multiple steps to be performed ( e.g. taking backups, removing servers from load, content freezes) which can’t be accounted for in a single click deployment.
-</div>
+  <div class="panel-header bg-lightBlue fg-white">
+    NOTE
+  </div>
+  <div class="panel-content">
+    Although it is possible to setup a build with TDS that allows one click deployment to a production server careful thought is required before implementing such a solution. Production deployments often require multiple steps to be performed ( e.g. taking backups, removing servers from load, content freezes) which can’t be accounted for in a single click deployment.
+  </div>
 </div>
 
 TDS can be configured to automatically build a Sitecore update package during the build. These packages can be deployed through automated scripts or by a separate deployment team, offering additional control over the deployment process. For more information on about how to configure a build to generate a package please see the **Update Package** property tab in the TDS project property pages section.

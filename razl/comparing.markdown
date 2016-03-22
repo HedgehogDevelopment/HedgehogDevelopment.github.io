@@ -35,7 +35,7 @@ There are several basic symbols pairs in Razl when comparing an items. Each symb
 
 When you click the Lightning Mode ![](/Images/Razl/LightningMode.png) button, Lightning Mode will be toggled on and off. When Lightning Mode is enabled, Razl only compares the revision ID's of the items, making the compare very quick. If the revision ID's are different, then an Item is considered different regardless of your filter settings. Razl is much faster when Lightning mode is enabled because all items in the folder are retrieved at once, and the comparison doesn't look at all fields.
 
-The main disadvantage to Lightning Mode is that your filters are ignored. This means that items may be consdered different even though your filter specification would indicate that they aren't. 
+The main disadvantage to Lightning Mode is that your filters are ignored. This means that items may be considered different even though your filter specification would indicate that they aren't. 
 
 When an item is clicked on in the tree, a full compare of the item is done and filters applied even if lightning mode is enabled. This may cause the item to loose it's difference arrows if your filters exclude the changed fields.
 
@@ -45,7 +45,7 @@ A new feature of Razl 3.0 is Deep Compare. This allows all items in a tree to be
 
 ![](/Images/Razl/DeepCompareMenu.png)
 
-Deep Compare looks at all items under a folder on both sides and shows differences in the change detail view. 
+Deep Compare looks at all items under a folder on both sides and shows differences in the change detail view.
 
 ![](/Images/Razl/DeepCompareView.png)
 
@@ -130,7 +130,7 @@ Follow the following instructions to ignore a language:
 
 #### Hiding unchanged fields
 
-The Hide Unchanged Fields ![](/Images/Razl/HideUnchangedFieldsOff.png) button will toggle showing/hiding fields that are different. 
+The Hide Unchanged Fields ![](/Images/Razl/HideUnchangedFieldsOff.png) button will toggle showing/hiding fields that are different.
 
 When hide unchanged fields is off ![](/Images/Razl/HideUnchangedFieldsOff.png), the field window will show all fields even if they are the same.
 
@@ -161,16 +161,15 @@ For example the English language is ignored in the image below, notice that the 
 
 If you right click on an item in the Content Tree a context menu will appear with the following options:
 
-| Menu Item | Description | 
-|-------------------|----| 
-| Refresh | Forces Razl to refresh the item data and reload child items. | 
-| Deep Compare | Compares all items under the selected item and shows the differences in the Change Details window. | 
-| Go To Template | Go to the template the item is based on. | 
-| Go To Branch | Go the the branch the item was created from. | 
-| Left References | Only appears on the left hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree | 
-| Left Referrers | Only appears on the left hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree | 
-| Right References | Only appears on the right hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree | 
-| Right Referrers | Only appears on the right hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree | 
-| Get All From Right | Only appears on the left hand side. Copies all items from the right hand instance to the left hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. | 
-| Get All From Left | Only appears on the right hand side. Copies all items from the left hand instance to the right hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. | 
-
+| Menu Item | Description |
+|-------------------|----|
+| Refresh | Forces Razl to refresh the item data and reload child items. |
+| Deep Compare | Compares all items under the selected item and shows the differences in the Change Details window. |
+| Go To Template | Go to the template the item is based on. |
+| Go To Branch | Go the the branch the item was created from. |
+| Left References | Only appears on the left hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree |
+| Left Referrers | Only appears on the left hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree |
+| Right References | Only appears on the right hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree |
+| Right Referrers | Only appears on the right hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree |
+| Get All From Right | Only appears on the left hand side. Copies all items from the right hand instance to the left hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. |
+| Get All From Left | Only appears on the right hand side. Copies all items from the left hand instance to the right hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. |

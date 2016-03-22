@@ -1,1 +1,4 @@
 encoding: UTF-8
+markdown: redcarpet
+redcarpet:
+  extensions: [tables, with_toc_data]
