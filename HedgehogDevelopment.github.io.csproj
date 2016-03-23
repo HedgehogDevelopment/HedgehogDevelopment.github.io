@@ -109,12 +109,17 @@
     <Content Include="Images\Tds\chapter4-arrow-previous-conflict.png" />
     <Content Include="Images\Tds\chapter4-arrow-previous.png" />
     <Content Include="Images\Tds\chapter4-checkmark3.png" />
+    <Content Include="Images\Tds\chapter4-deploy.png" />
     <Content Include="Images\Tds\chapter4-manage-nuget-packages.png" />
     <Content Include="Images\Tds\chapter4-nuget-properties.png" />
+    <Content Include="Images\Tds\chapter4-packagevalidation.png" />
     <Content Include="Images\Tds\chapter4-SitecoreItemMerge.png" />
+    <Content Include="Images\Tds\chapter4-syncallusinghistory.png" />
+    <Content Include="Images\Tds\chapter4-syncallusinghistorymenu.png" />
     <Content Include="Images\Tds\chapter4-SyncRolesSolutionExplorer.png" />
     <Content Include="Images\Tds\chapter4-SyncSitecoreRoles.png" />
     <Content Include="Images\Tds\chapter4-SyncUsingHistory.png" />
+    <Content Include="Images\Tds\chapter4-syncwindow_language.png" />
     <Content Include="Images\Tds\chapter4-wand.png" />
     <Content Include="Images\Tds\chapter6-codegendialog.png" />
     <Content Include="Images\Tds\chapter6-codegenname.png" />

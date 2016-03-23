@@ -290,7 +290,7 @@ Allows the TDS project to be configured to automatically copy files into the bui
 
 The Validations tab allows you turn on checks that TDS can perform on the project when it is built.
 
-![](/Images/Tds/chapter4-validations.png)
+![](/Images/Tds/chapter4-packagevalidation.png)
 
 * **Enable Validators** – Turns on validation for this build configuration.
 * **Validation Settings File Path** -  The path to the file containing the settings used by the validators.
