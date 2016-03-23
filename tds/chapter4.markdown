@@ -221,10 +221,13 @@ TDS generates Sitecore Update Packages. These packages are not the same as the p
 
 <div class="panel">
  <div class="panel-header bg-lightBlue fg-white">
- NOTE
+	NOTE
  </div>
  <div class="panel-content">
-If you are using NuGet to include the Sitecore assemblies, TDS will automatically look in the $(SolutionDir)\packages folder for the Sitecore Dll's if this field is left blank. As long as each of the four Sitecore assemblies specified above are present in at least one NuGet package, they will be picked up by the Package Builder.
+	If you are using NuGet to include the Sitecore assemblies, TDS will automatically look in the $(SolutionDir)\packages folder for the Sitecore Dll's if this field is left blank. As long as each of the four Sitecore assemblies specified above are present in at least one NuGet package, they will be picked up by the Package Builder.
+  </div>
+</div>
+
 
 #### Deploy
 The TDS Deploy property page allows the developer to select actions to perform at deployment time. These actions will be executed for TDS Deployments and Package Installation as Post Deploy Steps. 
@@ -269,10 +272,10 @@ Allows the TDS project to be configured to automatically copy files into the bui
 
 <div class="panel">
  <div class="panel-header bg-lightBlue fg-white">
- NOTE
+	NOTE
  </div>
  <div class="panel-content">
-Many of the use cases for File Replacements have been superseded by the Configuration Transform feature that is now part of TDS 4.0.
+	Many of the use cases for File Replacements have been superseded by the Configuration Transform feature that is now part of TDS 4.0.
 </div>
 </div>
 
@@ -317,10 +320,10 @@ Allows the TDS project to be configured to automatically copy files into the bui
 
 <div class="panel">
  <div class="panel-header bg-lightBlue fg-white">
- NOTE
+	NOTE
  </div>
  <div class="panel-content">
-Many of the use cases for File Replacements have been superseded by the Configuration Transform feature that is now part of TDS 4.0.
+	Many of the use cases for File Replacements have been superseded by the Configuration Transform feature that is now part of TDS 4.0.
 </div>
 </div>
  
@@ -349,19 +352,19 @@ Deployment properties are managed for an individual item in the Visual Studio pr
 
 <div class="panel">
  <div class="panel-header bg-lightBlue fg-white">
- NOTE
+	NOTE
  </div>
  <div class="panel-content">
-<p>
-How items are removed from the project by the <strong>Child Item Synchronization</strong> settings are controlled by a project configuration setting on the Build property tab.
-</p>
-<p>
-The <strong>Recursive Deploy Action</strong> setting determines the action TDS will take when an item should be removed. The default setting is to take no action, which effectively disables this feature. The recommended setting is "Move the item to the Sitecore Recycle Bin", which allows developers to easily recover from problems with these settings.
-</p>
-<p>
-It is recommended that the Sitecore databases are backed up before beginning any deployment regardless of the <strong>Recursive Deploy Action</strong> setting.
-</p>
-</div>
+   <p>
+	How items are removed from the project by the <strong>Child Item Synchronization</strong> settings are controlled by a project configuration setting on the Build property tab.
+   </p>
+   <p>
+	The <strong>Recursive Deploy Action</strong> setting determines the action TDS will take when an item should be removed. The default setting is to take no action, which effectively disables this feature. The recommended setting is "Move the item to the Sitecore Recycle Bin", which allows developers to easily recover from problems with these settings.
+   </p>
+   <p>
+	It is recommended that the Sitecore databases are backed up before beginning any deployment regardless of the <strong>Recursive Deploy Action</strong> setting.
+   </p>
+ </div>
 </div>
 
 * **Code Generation Template** – Allows the developer to specify a particular template to use for code generation with this item. See the Code Generation section for more information.
@@ -449,26 +452,26 @@ The Get Sitecore Items dialog implements a number of features to make it easier 
 
 <div class="panel">
  <div class="panel-header bg-lightBlue fg-white">
- NOTE
+	NOTE
  </div>
  <div class="panel-content">
-<p>
-When an item has been selected using the right-click menu to select all child items, TDS will automatically set the <strong>Child Item Synchronization</strong> setting in the items to <strong>KeepAllChildrenSynchronized</strong>.
-</p>
-</div>
+   <p>
+	When an item has been selected using the right-click menu to select all child items, TDS will automatically set the <strong>Child Item Synchronization</strong> setting in the items to <strong>KeepAllChildrenSynchronized</strong>.
+   </p>
+ </div>
 </div>
 
 After selecting the items from the Sitecore content tree, the developer can click the "**Get Items**" button and the selected items will be added to the project.
 
 <div class="panel">
  <div class="panel-header bg-lightBlue fg-white">
- NOTE
+	NOTE
  </div>
  <div class="panel-content">
-<p>
-Correctly choosing the Sitecore items to bring into a project is very important. Adding the wrong items to a TDS project will make the project difficult to maintain and deploy. Please review the section Choosing which items to bring into a TDS project for guidelines on choosing which items to add to TDS.
-</p>
-</div>
+   <p>
+	Correctly choosing the Sitecore items to bring into a project is very important. Adding the wrong items to a TDS project will make the project difficult to maintain and deploy. Please review the section Choosing which items to bring into a TDS project for guidelines on choosing which items to add to TDS.
+   </p>
+ </div>
 </div>
 
 ### Updating Sitecore Items in a project
