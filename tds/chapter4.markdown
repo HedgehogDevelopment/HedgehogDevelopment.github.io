@@ -711,6 +711,9 @@ The following code block is sample code modified from the above to provide Sitec
 		CMD=$(git config mergetool.kdiff3.cmd)
 		eval $CMD
 	fi
+	
+	[mergetool "kdiff3"]
+            cmd = \"C:/Program Files (x86)/KDiff3/kdiff3.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 
 The above code will detect the extension of the file being merged. For .item files it will run a mergetool entry called 'TDSMerge' from the .gitconfig file.
 
