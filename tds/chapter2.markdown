@@ -21,10 +21,10 @@ The zip file you downloaded from the [Hedgehog Development](http://hhogdev.com) 
 
  | Visual Studio version | Team Development for Sitecore version |
  | --------- | ------- |
- | Visual Studio 2010 | HedgehogDevelopmentTDS_2010.msi |
- | Visual Studio 2012 | HedgehogDevelopmentTDS_2012.msi |
- | Visual Studio 2013 | HedgehogDevelopmentTDS_2013.msi |
- | Visual Studio 2015 | HedgehogDevelopmentTDS_2015.msi |
+ | Visual Studio 2010  | HedgehogDevelopmentTDS_2010.msi |
+ | Visual Studio 2012  | HedgehogDevelopmentTDS_2012.msi |
+ | Visual Studio 2013  | HedgehogDevelopmentTDS_2013.msi |
+ | Visual Studio 2015  | HedgehogDevelopmentTDS_2015.msi |
 
 <br />
 
