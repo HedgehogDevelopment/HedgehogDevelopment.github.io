@@ -45,10 +45,12 @@ The Sitecore components of Feydra consist of two additional files. These are
 To install Feydra without using NuGet, extract the files from the NuGet packages and place the 
 files in the folders specified in the table below:
 
-| File | Folder |
-| ---- | ------ |
-| Hedgehog.Feydra.dll Hedgehog.Feydra.SC.dll | \bin |
-| Z_Feydra.config | /App_Config/Include |
+
+| File | Folder | 
+| ---- | ------ | 
+| Hedgehog.Feydra.dll Hedgehog.Feydra.SC.dll | \bin | 
+| Z_Feydra.config | /App_Config/Include | 
+
 
 ### Deployment ###
 Feydra needs to be deployed on the servers where the front-end developers are going to 
