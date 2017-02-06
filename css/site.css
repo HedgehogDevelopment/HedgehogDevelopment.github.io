@@ -13,3 +13,13 @@ thead tr {
 td, th {
     padding: .2em .5em;
 }
+
+.navigation-bar-content a.element
+{
+    height: 54px;
+}
+
+.navigation-bar-content element-divider
+{
+    padding-top: 54px;
+}
