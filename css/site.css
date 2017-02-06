@@ -16,10 +16,10 @@ td, th {
 
 .metro .navigation-bar .navigation-bar-content .element
 {
-    height: 54px;
+    height: 74px;
 }
 
-.navigation-bar-content .element-divider
+.metro .navigation-bar .navigation-bar-content .element-divider
 {
-    padding-top: 54px;
+    padding-top: 74px;
 }
