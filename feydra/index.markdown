@@ -1,4 +1,5 @@
-﻿# Feydra: Getting Started #
+﻿
+# Feydra: Getting Started
 
 ### About ###
 When creating a Sitecore web application, there are many dependencies between the tasks of 
