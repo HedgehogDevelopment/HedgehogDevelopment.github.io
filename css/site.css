@@ -16,10 +16,15 @@ td, th {
 
 .metro .navigation-bar .navigation-bar-content .element
 {
-    height: 74px;
+    line-height: 45px;
+}
+
+.metro .navigation-bar .navigation-bar-content .element img
+{
+    margin-top: -10px;
 }
 
 .metro .navigation-bar .navigation-bar-content .element-divider
 {
-    padding-top: 74px;
+    padding-top: 60px;
 }
