@@ -39,6 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="feydra\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
