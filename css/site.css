@@ -14,12 +14,12 @@ td, th {
     padding: .2em .5em;
 }
 
-.navigation-bar-content a.element
+.metro .navigation
 {
     height: 54px;
 }
 
-.navigation-bar-content element-divider
+.navigation-bar-content .element-divider
 {
     padding-top: 54px;
 }
