@@ -39,7 +39,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="feydra\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
@@ -231,6 +230,7 @@
     <Content Include="razl\tasks.markdown" />
     <Content Include="razl\script.markdown" />
     <Content Include="razl\faq.markdown" />
+    <Content Include="feydra\index.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
