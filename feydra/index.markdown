@@ -47,8 +47,8 @@ files in the folders specified in the table below:
 
 | File | Folder |
 | ---- | ------ |
-|Hedgehog.Feydra.dll Hedgehog.Feydra.SC.dll | \bin |
-|Z_Feydra.config | /App_Config/Include |
+| Hedgehog.Feydra.dll Hedgehog.Feydra.SC.dll | \bin |
+| Z_Feydra.config | /App_Config/Include |
 
 ### Deployment ###
 Feydra needs to be deployed on the servers where the front-end developers are going to 
