@@ -29,3 +29,13 @@ td, th {
 {
     padding-top: 60px;
 }
+
+table td
+{
+    padding: 5px;
+    border: 1px solid #888;
+}
+
+tr:nth-child(even) {
+    background-color: #ccc;
+}

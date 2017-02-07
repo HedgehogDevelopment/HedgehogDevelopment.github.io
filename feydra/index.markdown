@@ -1,12 +1,17 @@
-﻿# Feydra Getting Started #
+﻿---
+title: Chapter 1 - TDS Documentation
+layout: TdsLayout
+---
 
-### About ###
+# Feydra Getting Started
+
+### About
 When creating a Sitecore web application, there are many dependencies between the tasks of 
 front-end and back-end developers. Feydra tries to break these dependencies by allowing 
 front-end developers to work on the Sitecore web application without needing to install 
 and maintain an entire Sitecore development environment.
 
-### The Virtual Sandbox - How it works ###
+### The Virtual Sandbox - How it works
 Feydra allows any MVC web application to host front-end development by creating virtual 
 sandboxes for each front-end developer.  A virtual sandbox is a virtualized environment 
 in which front-end assets (css, js, cshtml, etc.) can be selectively replaced without 
@@ -25,7 +30,7 @@ Ultimately, Feydra is designed to allow front-end developers to use their prefer
 development environment; make their changes in a virtual sandbox and test by pushing 
 their changes to a shared location (File share, FTP, etc.) using standard tools.
 
-### Installation with NuGet ###
+### Installation with NuGet
 Feydra is distributed as a .zip of NuGet packages. These packages can be added to a local 
 NuGet feed to make them accessible to developers and the build process.
 
@@ -41,18 +46,16 @@ The Sitecore components of Feydra consist of two additional files. These are
 **Hedgehog.Feydra.SC.dll** and **Z_Feydra.config**. These are installed in the **/bin** and 
 **/App_Config/Include** folders, respectively.
 
-### Installation without NuGet ###
+### Installation without NuGet
 To install Feydra without using NuGet, extract the files from the NuGet packages and place the 
 files in the folders specified in the table below:
-
 
 | File | Folder | 
 | ---- | ------ | 
 | Hedgehog.Feydra.dll Hedgehog.Feydra.SC.dll | \bin | 
 | Z_Feydra.config | /App_Config/Include | 
 
-
-### Deployment ###
+### Deployment
 Feydra needs to be deployed on the servers where the front-end developers are going to 
 be updating front-end assets. This can be any server capable of running the web 
 application. We recommend using a server that is not used for CI builds, since the 
@@ -64,7 +67,7 @@ needed in a development environment, so this should not be a major problem.
 The Feydra assemblies and configuration files should not be deployed to a production 
 server.
 
-### Setup ###
+### Setup
 Once Feydra is installed on a server, Feydra will verify the environment and display 
 error messages indicating any problems found on the server that would prevent Feydra 
 from functioning correctly. The following is a list of requirements Feydra will check 
