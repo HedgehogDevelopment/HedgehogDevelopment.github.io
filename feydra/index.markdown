@@ -1,5 +1,5 @@
 ---
-title: Chapter 1 - TDS Documentation
+title: Feydra - Getting Started
 layout: FeydraLayout
 ---
 
