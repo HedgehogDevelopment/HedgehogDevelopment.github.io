@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body class="metro">
+        <div class="container">
+            {% include navigation.html %}
+            
+            <div class="grid">
+                <div class="row">
+                    <div class="span4">
+                        {% include tdschapters.html %}
+                    </div>
+                    <div class="span10">
+                        {{content}}
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+        {% include foot.html %}
+
+    </body>
+</html>

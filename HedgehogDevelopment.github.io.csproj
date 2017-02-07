@@ -239,7 +239,9 @@
     <Content Include="_includes\foot.html" />
     <Content Include="_includes\head.html" />
     <Content Include="_includes\navigation.html" />
+    <Content Include="_includes\feydrachapters.html" />
     <Content Include="_layouts\RazlLayout.html" />
+    <Content Include="_layouts\FeydraLayout.html" />
     <Content Include="_layouts\TdsLayout.html" />
     <Content Include="_layouts\MainLayout.html" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
