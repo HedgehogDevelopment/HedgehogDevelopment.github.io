@@ -57,6 +57,7 @@
     <Content Include="Images\Feydra\ExampleHtml.png" />
     <Content Include="Images\Feydra\FeydraStatus.png" />
     <Content Include="Images\Feydra\LicensesScreen.png" />
+    <Content Include="Images\Feydra\LicensesScreen.png" />
     <Content Include="Images\Feydra\Refresh.png" />
     <Content Include="Images\Feydra\SettingsScreen.png" />
     <Content Include="Images\Feydra\UsersScreen.png" />
