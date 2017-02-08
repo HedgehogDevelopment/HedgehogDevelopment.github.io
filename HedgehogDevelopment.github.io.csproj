@@ -51,7 +51,15 @@
     <Content Include="fonts\iconFont.dev.svg" />
     <Content Include="fonts\iconFont.svg" />
     <Content Include="fonts\metroSysIcons.svg" />
+    <Content Include="Images\Feydra\ActivationDropdown.png" />
+    <Content Include="Images\Feydra\ActivationLink.png" />
+    <Content Include="Images\Feydra\Delete.png" />
+    <Content Include="Images\Feydra\ExampleHtml.png" />
     <Content Include="Images\Feydra\FeydraStatus.png" />
+    <Content Include="Images\Feydra\LicensesScreen.png" />
+    <Content Include="Images\Feydra\Refresh.png" />
+    <Content Include="Images\Feydra\SettingsScreen.png" />
+    <Content Include="Images\Feydra\UsersScreen.png" />
     <Content Include="Images\Razl\compare1.PNG" />
     <Content Include="Images\Razl\compare10.PNG" />
     <Content Include="Images\Razl\compare11.PNG" />
