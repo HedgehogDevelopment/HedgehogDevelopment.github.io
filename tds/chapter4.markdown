@@ -136,7 +136,7 @@ Package bundling only works when the Update Package has been configured, see the
 
 Many Sitecore projects include Modules distributed as Sitecore Packages. These packages are .zip files and contain compiled code, assets and Sitecore items. In many cases, a Sitecore solution depends on a list of packages being installed on the server. If the packages aren't deployed, there is a good chance the Sitecore solution would fail. TDS Package Validation ensures the package is installed and will fail the deployment if the package isn't present.
 
-![](/Images/Tds/chapter4-validations.png)
+![](/Images/Tds/chapter4-packagevalidation.png)
 
 ##### Selected Package
 The Selected Package list is the list of Sitecore packages that are required for the solution. The packages must be reachable at build time. TDS only checks if the package is installed if the solution is being deployed. If the package isn't present on the server, the build fails with an error message.
@@ -290,7 +290,7 @@ Allows the TDS project to be configured to automatically copy files into the bui
 
 The Validations tab allows you turn on checks that TDS can perform on the project when it is built.
 
-![](/Images/Tds/chapter4-packagevalidation.png)
+![](/Images/Tds/chapter4-validations.png)
 
 * **Enable Validators** – Turns on validation for this build configuration.
 * **Validation Settings File Path** -  The path to the file containing the settings used by the validators.
