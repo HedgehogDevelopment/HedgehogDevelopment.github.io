@@ -10,14 +10,14 @@ layout: TdsLayout
 ### System Requirements
 
 * Team Development for Sitecore has been fully tested with Team Foundation Server and Subversion, but will also work with any Microsoft compliant source control system.
-* Visual Studio 2010, 2012 or 2013 .
+* Visual Studio 2010, 2012, 2013, 2015 and 2017.
 * Sitecore version 6.1 and higher.
 * Sitecore Xpress is not supported by Team Development for Sitecore.
 
 ### Installation
 
 Installing TDS is a quick and easy process.  It is recommended that you shut down all running applications prior to beginning the install process.
-The zip file you downloaded from the [Hedgehog Development](http://hhogdev.com) website contains a version of TDS to match up with the version of Visual Studio that you are running.
+The zip file you downloaded from the [Team Development for Sitecore](http://www.TeamDevelopmentForSitecore.com) website contains a version of TDS to match up with the version of Visual Studio that you are running.
 
  | Visual Studio version | Team Development for Sitecore version |
  | --------- | ------- |
@@ -25,6 +25,7 @@ The zip file you downloaded from the [Hedgehog Development](http://hhogdev.com) 
  | Visual Studio 2012  | HedgehogDevelopmentTDS_2012.msi |
  | Visual Studio 2013  | HedgehogDevelopmentTDS_2013.msi |
  | Visual Studio 2015  | HedgehogDevelopmentTDS_2015.msi |
+ | Visual Studio 2017  | HedgehogDevelopmentTDS_2017.msi |
 
 <br />
 

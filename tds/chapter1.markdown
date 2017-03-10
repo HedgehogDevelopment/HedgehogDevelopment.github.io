@@ -9,8 +9,8 @@ layout: TdsLayout
 
 ### Team Development for Sitecore (TDS)
 
-Team Development for Sitecore (TDS) is a Sitecore developer productivity tool created by Hedgehog Development ([http://www.hhogdev.com](http://www.hhogdev.com)), a company that designs and develops customized applications and Web sites, and provides technology consulting services.  TDS is used by Hedgehog Development internally and by development teams around the globe.
-TDS is a Visual Studio add-in that supports 2010, 2012 and 2013 versions.  Sitecore developers use Team Development for Sitecore to increase the productivity of the Sitecore software development process. TDS allows you to treat your Sitecore Items as you would .Net code, allowing you to bring your Sitecore items into your development lifecycle.
+Team Development for Sitecore (TDS) is a Sitecore developer productivity tool created by Hedgehog Development ([http://www.hhog.com](http://www.hhog.com)), a company that designs and develops customized applications and Web sites, and provides technology consulting services.  TDS is used by Hedgehog Development internally and by development teams around the globe.
+TDS is a Visual Studio add-in that supports 2010, 2012, 2013, 2015 and 2017 versions.  Sitecore developers use Team Development for Sitecore to increase the productivity of the Sitecore software development process. TDS allows you to treat your Sitecore Items as you would .Net code, allowing you to bring your Sitecore items into your development lifecycle.
 
 ### How It Works
 
