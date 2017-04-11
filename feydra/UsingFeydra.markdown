@@ -47,7 +47,9 @@ sandbox by going to the dashboard and clicking on the link "Deactivate Feydra".
 ![](/Images/Feydra/DeactivateLink.png)
 
 The user can also browse to the target of that link without going to the dashboard. The 
-url is http://[Webserver domain]/Feydra/FyUser/Deactivate
+url is:
+
+**http://[Webserver domain]/Feydra/FyUser/Deactivate**
 
 ## Updating the front-end assets
 When the front-end developer activates Feydra, they will see a copy of the application 
