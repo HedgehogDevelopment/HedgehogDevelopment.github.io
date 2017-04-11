@@ -53,6 +53,7 @@
     <Content Include="fonts\metroSysIcons.svg" />
     <Content Include="Images\Feydra\ActivationDropdown.png" />
     <Content Include="Images\Feydra\ActivationLink.png" />
+    <Content Include="Images\Feydra\DeactivateLink.png" />
     <Content Include="Images\Feydra\Delete.png" />
     <Content Include="Images\Feydra\ExampleHtml.png" />
     <Content Include="Images\Feydra\FeydraStatus.png" />

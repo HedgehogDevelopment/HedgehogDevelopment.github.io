@@ -40,6 +40,15 @@ The user can also obtain an activation link from the users page by clicking on t
 
 ![](/Images/Feydra/UsersScreen.png)
 
+### Deactivating Feydra
+When the front end developer is finished using Feydra, they can deactivate their virtual
+sandbox by going to the dashboard and clicking on the link "Deactivate Feydra". 
+
+![](/Images/Feydra/DeactivateLink.png)
+
+The user can also browse to the target of that link without going to the dashboard. The 
+url is http://[Webserver domain]/Feydra/FyUser/Deactivate
+
 ## Updating the front-end assets
 When the front-end developer activates Feydra, they will see a copy of the application 
 running application. We call this the users’ virtual sandbox. This virtual sandbox uses 
