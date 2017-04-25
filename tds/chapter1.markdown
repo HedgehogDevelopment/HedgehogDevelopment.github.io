@@ -35,13 +35,13 @@ Over the course of a project's life, the amount of time spent performing code de
 When development on a project starts, there is an immediate need to begin creating Sitecore items. As development progresses, the number of new items tends to taper off. Changes to existing items continue and eventually tapers off as well.
 
 <p  style="text-align:center">
-<img src='/Images/TDS Classic/chapter1-lifecycle.PNG' />
+<img src='/Images/Tds/chapter1-lifecycle.PNG' />
 </p>
 
 As more templates are added, the cost (time) to deploy the items rises. The cost of deployment is also influenced by the number of changes to the existing items. Since each environment (development, Quality Assurance (QA), User Acceptance (UAT) sometimes also called Integration, and Production) is different, the costs associated with creating a QA build doesn’t completely offset the cost of building a UAT or Production build. In addition, since each deployment is a manual process, the risk of differences being introduced between each environment rises.
  
 <p  style="text-align:center">
-<img src='/Images/TDS Classic/chapter1-developmentcost.PNG' />
+<img src='/Images/Tds/chapter1-developmentcost.PNG' />
 </p>
 
 Setting up an automated TDS Classic build at the start of a project incurs a small cost in developer time, but once the initial project and build are created, there is minimal costs associated with maintaining them. Having an automated process also resolves the issue of differences between deployments and environments.
