@@ -70,7 +70,7 @@ server.
 ## Configuration
 
 Feydra needs to create a few folders on the web server for proper operation. In most cases, 
-Feydra can created these folders automatically. Feydra will display an error message if it 
+Feydra can create these folders automatically. Feydra will display an error message if it 
 does not have permission to create the folders during the initialization process. Granting the 
 permission to create/write to the folders specified in the Feydra error messages will resolve 
 the startup errors. If this is not possible because of infrastructure restrictions, you need 
