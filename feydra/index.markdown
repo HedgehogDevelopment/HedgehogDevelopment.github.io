@@ -67,6 +67,24 @@ needed in a development environment, so this should not be a major problem.
 The Feydra assemblies and configuration files should not be deployed to a production 
 server.
 
+## Configuration
+
+Feydra needs to create a few folders on the web server for proper operation. In most cases, 
+Feydra can created these folders automatically. Feydra will display an error message if it 
+does not have permission to create the folders during the initialization process. Granting the 
+permission to create/write to the folders specified in the Feydra error messages will resolve 
+the startup errors. If this is not possible because of infrastructure restrictions, you need 
+to create the folders Feydra requires as part of your deployment process.
+
+The following is a list of the folders used by Feydra:
+
+| File/Folder | Comments| 
+| ---- | ------ | 
+| ~/App_Data/Feydra | This folder stores all Feydra data (Users, Licenses, Logs, etc.). Feydra must be able to write to this folder. Overwriting or removing this folder at deployment time will remove any users or licenses installed in Feydra.  | 
+| ~/Areas/Feydra | Feydra uses this folder to store the **web.config** file needed for the Feydra views. Feydra creates the **web.config** file at initialization time, and therefore, Feydra needs write access to this folder. | 
+| ~/App_Data/Feydra/*.dat | Any data files (.dat extension) files in this folder must be writable for Feydra to function correctly. |
+| ~/FeydraRoot | This is the location of the users Virtual Sandboxes. This folder must be writable for Feydra to function correctly. The front-end developers must also be able to write files to this folder using a file share or FTP protocol. Creating a new user will cause Feydra to create a user’s Virtual Sandbox as a folder under the FeydraRoot folder. |
+
 ## Setup
 Once Feydra is installed on a server, Feydra will verify the environment and display 
 error messages indicating any problems found on the server that would prevent Feydra 
