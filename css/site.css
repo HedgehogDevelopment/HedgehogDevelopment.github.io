@@ -13,3 +13,19 @@ thead tr {
 td, th {
     padding: .2em .5em;
 }
+
+.metro .navigation-bar .navigation-bar-content .element
+{
+    line-height: 45px;
+    height: 75px;
+}
+
+.metro .navigation-bar .navigation-bar-content .element img
+{
+    margin-top: -10px;
+}
+
+.metro .navigation-bar .navigation-bar-content .element-divider
+{
+    padding-top: 60px;
+}

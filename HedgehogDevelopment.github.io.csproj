@@ -51,6 +51,18 @@
     <Content Include="fonts\iconFont.dev.svg" />
     <Content Include="fonts\iconFont.svg" />
     <Content Include="fonts\metroSysIcons.svg" />
+    <Content Include="Images\Feydra\ActivationDropdown.png" />
+    <Content Include="Images\Feydra\ActivationLink.png" />
+    <Content Include="Images\Feydra\DeactivateLink.png" />
+    <Content Include="Images\Feydra\Delete.png" />
+    <Content Include="Images\Feydra\ExampleHtml.png" />
+    <Content Include="Images\Feydra\FeydraStatus.png" />
+    <Content Include="Images\Feydra\LicensesScreen.png" />
+    <Content Include="Images\Feydra\LicensesScreen.png" />
+    <Content Include="Images\Feydra\Refresh.png" />
+    <Content Include="Images\Feydra\SettingsScreen.png" />
+    <Content Include="Images\Feydra\UsersScreen.png" />
+    <Content Include="Images\new logo.png" />
     <Content Include="Images\Razl\compare1.PNG" />
     <Content Include="Images\Razl\compare10.PNG" />
     <Content Include="Images\Razl\compare11.PNG" />
@@ -230,6 +242,8 @@
     <Content Include="razl\tasks.markdown" />
     <Content Include="razl\script.markdown" />
     <Content Include="razl\faq.markdown" />
+    <Content Include="feydra\index.markdown" />
+    <Content Include="feydra\UsingFeydra.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -238,7 +252,9 @@
     <Content Include="_includes\foot.html" />
     <Content Include="_includes\head.html" />
     <Content Include="_includes\navigation.html" />
+    <Content Include="_includes\feydrachapters.html" />
     <Content Include="_layouts\RazlLayout.html" />
+    <Content Include="_layouts\FeydraLayout.html" />
     <Content Include="_layouts\TdsLayout.html" />
     <Content Include="_layouts\MainLayout.html" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
