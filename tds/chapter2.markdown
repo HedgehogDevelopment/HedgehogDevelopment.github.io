@@ -75,11 +75,11 @@ Once you have downloaded the TDS Classic .zip package and extracted the version(
 
 1. Start by double-clicking the .msi file to begin the installation
 2. Click **Next** to begin the process of installing TDS Classic
-3. Read and accept the license agreement. Then click **Next**.<br />![](/Images/Tds/chapter2-license.png)
-4. Enter the license key provided by Hedgehog Development. Make sure the company name is spelled exactly as specified with your license key. Do not put quotes around the company name or the license key.<br />![](/Images/Tds/chapter2-licenseKey.png)
-5. Select the path where you want TDS Classic installed. Typically, the default value is acceptable.<br />![](/Images/Tds/chapter2-installationFolder.png)
+3. Read and accept the license agreement. Then click **Next**.<br /><br />![](/Images/Tds/chapter2-license.png)<br />
+4. Enter the license key provided by Hedgehog Development. Make sure the company name is spelled exactly as specified with your license key. Do not put quotes around the company name or the license key.<br /><br />![](/Images/Tds/chapter2-licenseKey.png)<br />
+5. Select the path where you want TDS Classic installed. Typically, the default value is acceptable.<br /><br />![](/Images/Tds/chapter2-installationFolder.png)<br />
 6. Confirm the installation by clicking Next.
-7. When the installation is complete the following will appear.<br />![](/Images/Tds/chapter2-complete.png)
+7. When the installation is complete the following will appear.<br /><br />![](/Images/Tds/chapter2-complete.png)<br />
 
 #### Updating the TDS Classic License
 

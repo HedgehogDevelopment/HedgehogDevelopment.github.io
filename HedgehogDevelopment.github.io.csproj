@@ -125,7 +125,9 @@
     <Content Include="Images\Tds\chapter4-manage-nuget-packages.png" />
     <Content Include="Images\Tds\chapter4-nuget-properties.png" />
     <Content Include="Images\Tds\chapter4-packagevalidation.png" />
+    <Content Include="Images\Tds\chapter4-projectreport.png" />
     <Content Include="Images\Tds\chapter4-SitecoreItemMerge.png" />
+    <Content Include="Images\Tds\chapter4-SyncAllProjectsWithSitecore.png" />
     <Content Include="Images\Tds\chapter4-syncallusinghistory.png" />
     <Content Include="Images\Tds\chapter4-syncallusinghistorymenu.png" />
     <Content Include="Images\Tds\chapter4-SyncRolesSolutionExplorer.png" />
