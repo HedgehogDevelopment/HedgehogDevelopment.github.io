@@ -634,6 +634,22 @@ TDS Classic will open a sync using history window with an additional "Project" c
 
 All functions of the Sync All Projects Using History window work exactly the same as the Sync Using History window. For an explanation of how to use the window, please see above.
 
+#### Quick Push Items
+The Quick Push Items function is designed to quickly deploy Sitecore items from the project into Sitecore. No code is pushed, only items. The items are pushed in dependency order to ensure that templates are pushed before content and/or other templates that depend on them.
+
+Quick push is accessed from the right-click menu on the project:
+
+![](/Images/Tds/chapter4-quickpushmenu.png)
+
+This will open the quick push dialog and immediately start pushing items to Sitecore:
+
+![](/Images/Tds/chapter4-quickpushdialog.png)
+
+If you have a large number of TDS projects, you can use the Quick push all TDS Projects menu found by right clicking the solution in the solution explorer and opening Team Development for Sitecore -> QUick push all TDS Projects.
+
+![](/Images/Tds/chapter4-quickpushallmenu.png)
+ 
+
 #### Sync Sitecore Roles
 
 The Sync Sitecore Roles window allows the developer to compare all roles in Sitecore with the roles in the TDS Classic project, much the same way Sitecore items are managed. Before using the Sync Sitecore Roles feature, it must be enabled for the project.

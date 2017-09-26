@@ -126,6 +126,9 @@
     <Content Include="Images\Tds\chapter4-nuget-properties.png" />
     <Content Include="Images\Tds\chapter4-packagevalidation.png" />
     <Content Include="Images\Tds\chapter4-projectreport.png" />
+    <Content Include="Images\Tds\chapter4-quickpushallmenu.png" />
+    <Content Include="Images\Tds\chapter4-quickpushdialog.png" />
+    <Content Include="Images\Tds\chapter4-quickpushmenu.png" />
     <Content Include="Images\Tds\chapter4-SitecoreItemMerge.png" />
     <Content Include="Images\Tds\chapter4-SyncAllProjectsWithSitecore.png" />
     <Content Include="Images\Tds\chapter4-syncallusinghistory.png" />
