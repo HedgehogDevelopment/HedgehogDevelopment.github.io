@@ -645,10 +645,9 @@ This will open the quick push dialog and immediately start pushing items to Site
 
 ![](/Images/Tds/chapter4-quickpushdialog.png)
 
-If you have a large number of TDS projects, you can use the Quick push all TDS Projects menu found by right clicking the solution in the solution explorer and opening Team Development for Sitecore -> QUick push all TDS Projects.
+If you have a large number of TDS projects, you can use the Quick push all TDS Projects menu found by right clicking the solution in the solution explorer and opening Team Development for Sitecore -> Quick push all TDS Projects.
 
-![](/Images/Tds/chapter4-quickpushallmenu.png)
- 
+![](/Images/Tds/chapter4-quickpushallmenu.png) 
 
 #### Sync Sitecore Roles
 
