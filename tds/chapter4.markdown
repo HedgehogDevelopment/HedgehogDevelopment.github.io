@@ -147,7 +147,9 @@ Many Sitecore projects include Modules distributed as Sitecore Packages. These p
 ![](/Images/Tds/chapter4-packagevalidation.png)
 
 ##### Selected Package
-The Selected Package list is the list of Sitecore packages that are required for the solution. The packages must be reachable at build time. TDS Classic only checks if the package is installed if the solution is being deployed. If the package isn't present on the server, the build fails with an error message.
+The Selected Package list is the list of Sitecore packages that are required for the solution. The packages must be reachable at build time. TDS Classic only checks if the selected Sitecore packages are installed when solution is being deployed. These checks are not performed when an update package is deployed.
+
+If the selected Sitecore packages are not present on the server, the build fails with an error message.
 
 ##### Install Package Configurations
 Install Package Configurations shows the available configurations in the TDS Classic project. If the configuration is selected in the list, TDS Classic will install the package on the server if it is missing instead of failing the buld. Please note, package post steps will not run when this package is installed. The only items and files will be deployed.
