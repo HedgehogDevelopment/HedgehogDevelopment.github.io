@@ -9,9 +9,21 @@ layout: RazlLayout
 
 Start from version 2.1 of Razl it is possible to create XML documents that define the connections and operations Razl should perform. These can then be executed from the Command Prompt or build scripts.
 
+
+### Command line parameters
+
+The command line parameters Razl accepts from the command line are as follows:
+
+1) **/script** Specifies the path to the script file
+2) **/TLS12** when passed the value "true", Razl enables the TLS 1.2 protocol when communicating with the webserver
+
+To run a Razl script with TLS 1.2 enabled, use a command similar to:
+
+    Razl.exe /script:Migrate.xml /TLS12:true
+
 ### Running a Razl Script
 
-A Razl script can be run from the command line with the following parameters:
+A Razl script can be run from the command line with the following parameter:
 
     Razl.exe /script:"{path to script file}"
 
