@@ -253,6 +253,7 @@
     <Content Include="feydra\UsingFeydra.markdown" />
     <Content Include="razl\index-v4.markdown" />
     <Content Include="razl\screen-v4.markdown" />
+    <Content Include="razl\connections-v4.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
