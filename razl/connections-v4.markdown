@@ -11,7 +11,7 @@ Razl allows you to save multiple connections to instances of Sitecore. You conne
 
 ### Creating a Connection
 
-Before connection to a Sitecore instance a connection has to be created. To create a connection the URL of the Sitecore instance and the name of the Sitecore database (master, web, core) must be known. The developer will also need access to either file system the instance is on or to the Sitecore shell.
+Before connecting to a Sitecore instance a connection has to be created. To create a connection the URL of the Sitecore instance and the name of the Sitecore database (master, web, core) must be known. The developer will also need access to either file system the instance is on or to the Sitecore shell.
 
 To communicate to the Sitecore server Razl installs a web service in a directory called “_CMP” beneath the root of the Sitecore website. There are two options to install the required files, either directly via the file system if Razl has access or by creating a Sitecore package which can  be installed on the target server. For Razl to work the machine that Razl is on MUST be able to communicate to the Sitecore server over HTTP or HTTPs.
 
