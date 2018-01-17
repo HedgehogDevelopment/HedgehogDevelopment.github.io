@@ -7,31 +7,38 @@ layout: RazlLayout
 
 ## Connections
 
-Razl allows you to save multiple connections to instances of Sitecore. You connect to two instances of Sitecore and view the differences side-by-side in Razl.
+Razl allows you to create connections to instances of Sitecore and view the differences in between the instances side-by-side.
 
 ### Creating a Connection
 
-Before connecting to a Sitecore instance a connection has to be created. To create a connection the URL of the Sitecore instance and the name of the Sitecore database (master, web, core) must be known. The developer will also need access to either file system the instance is on or to the Sitecore shell.
+Before connecting to a Sitecore instance a connection has to be created. To create a connection the URL of the Sitecore instance and the name of the Sitecore database (master, web, core) must be known. The developer will also need access to either file system the instance is on or to the Sitecore CMS Desktop.
 
-To communicate to the Sitecore server Razl installs a web service in a directory called “_CMP” beneath the root of the Sitecore website. There are two options to install the required files, either directly via the file system if Razl has access or by creating a Sitecore package which can  be installed on the target server. For Razl to work the machine that Razl is on MUST be able to communicate to the Sitecore server over HTTP or HTTPs.
+To communicate with the Sitecore server Razl installs a web service in a directory called **_CMP** beneath the root of the Sitecore website. There options to install the required files are either directly via the file system or by creating a Sitecore package which is installed on the target server. For Razl to work the machine that Razl is on MUST be able to communicate to the Sitecore server over HTTP or HTTPs.
 
-Once a connection has been created it is saved between Razl sessions so that the details do not have to be re-entered.
+Once a connection has been created it is saved so that the details do not have to be re-entered.
 
 #### Creating a Connection using Direct Connection
 
 If the machine Razl is running on has access to the Sitecore web root via the file system then it is recommended to use this installation method:
 
-1. Click the **Connection Manager** button in the toolbar (see Toolbar section for the button)
+1. Click the **Connection Manager** button in the toolbar (see the [Toolbar](/razl/screen-v4.html#toolbar) section for an image of the button)
 
 ![](/Images/Razl-V4/ConnectionManager.png)
 
-1. Next click the "Add" button in the lower left side of the Connection Manager dialog.
+2. Next click the "Add" button in the lower left side of the Connection Manager dialog.
+
 1. The connection wizard will appear.
-1. Enter a name into the **Connection Name** field: <br /> <br /> ![](/Images/Razl-V4/wizard1.png) <br /> <br /> The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this connection. This option is highly recommended for scenarios where the Sitecore server is a live instance. This will help prevent any accidental updates of the live server data. <br /> <br /> Click **Next**<br /> <br /> 
-1. The next screen will ask what type of connection to use, select **Direct Connection**:  <br /> <br /> ![](/Images/Razl-V4/wizard2.png) <br /> <br /> Click **Next** <br /> <br />
+
+1. Enter a name into the **Connection Name** field:<br /> <br />![](/Images/Razl-V4/wizard1.png)<br /> <br />The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this Sitecore server. This option is highly recommended for scenarios where the Sitecore server is a live instance. This will help prevent any accidental updates of the live server data.<br /> <br />Click **Next**
+
+1. The next screen will ask what type of connection to use, select **Direct Connection**:<br /> <br />![](/Images/Razl-V4/wizard2.png) <br /> <br /> Click **Next** 
+
 1. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs) and select the path to the web root: <br /> <br /> ![](/Images/Razl-V4/wizard3.png) <br /> <br /> You may also enter a Guid used to secure the connection. If multiple developers are accessing the instance of Sitecore using Razl, you will have to use the same Guid. By default, Razl chooses a random Guid for you. <br/><br />Before clicking Next you will need to test the connection by clicking the **Test Connection** button. If the test is successful click **Next**.
-1. The Multi-Thraded screen allows you to choose the number of read threads and write threads when copying large amounts of items.<br /> <br /> ![](/Images/Razl-V4/wizard8.png) <br /> <br />Choosing a large number of threads could cause performance problems on the server(s) you are working with. The default of 4 threads is a good balance between performance of the copy operation and server load. Choosing numbers greater than 15 is unlikely to yield performance benefits.
-1. On the next screen select the Sitecore database to use with this connection:<br /><br />  ![](/Images/Razl-V4/wizard4.png) <br /><br />  Select a database and  click **Next**.
+
+1. The Multi-Threaded screen allows you to choose the number of read threads and write threads Razl will use when copying a large number of items.<br /> <br /> ![](/Images/Razl-V4/wizard8.png) <br /> <br />Choosing a large number of threads could cause performance problems on the server(s) you are working with. The default of 4 threads is a good balance between performance of the copy operation and server load. Choosing numbers greater than 15 is unlikely to yield performance benefits.
+
+1. On the next screen select the Sitecore database to use with this connection:<br> <br/> ![](/Images/Razl-V4/wizard4.png) <br /><br /> Select a database and click **Next**.
+
 1. The wizard will close and the new connection will be shown in the connection manager dialog:<br /><br />  ![](/Images/Razl-V4/wizard9.png) <br /><br />The new connection will also be accessible in both the left and right connection dropdowns after the connection manager dialog is closed:<br /><br /> ![](/Images/Razl-V4/wizard5.png)
 
 
@@ -39,7 +46,7 @@ If the machine Razl is running on has access to the Sitecore web root via the fi
 
 If the machine running Razl does not have access to the Sitecore web root via the file system then use this installation method:
 
-1. Click the **Connection Manager** button in the toolbar (see [Toolbar](/razl/screen-v4.html#toolbar) section for the button)
+1. Click the **Connection Manager** button in the toolbar (see the [Toolbar](/razl/screen-v4.html#toolbar) section for an image of the button)
 
 ![Blank connection manager](/Images/Razl-V4/ConnectionManager.png)
 
