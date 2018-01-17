@@ -23,11 +23,11 @@ If the machine Razl is running on has access to the Sitecore web root via the fi
 
 1. Click the **Connection Manager** button in the toolbar (see the [Toolbar](/razl/screen-v4.html#toolbar) section for an image of the button)<br /> <br />![](/Images/Razl-V4/ConnectionManager.png)
 
-1. Next click the "Add" button in the lower left side of the Connection Manager dialog.
+1. Next click the **Add** button in the lower left side of the Connection Manager dialog.
 
 1. The connection wizard will appear.
 
-1. Enter a name into the **Connection Name** field:<br /> <br />![](/Images/Razl-V4/wizard1.png)<br /> <br />The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this Sitecore server. This option is highly recommended for scenarios where the Sitecore server is a live instance. This will help prevent any accidental updates of the live server data.<br />Click **Next**
+1. Enter a name into the **Connection Name** field:<br /> <br />![](/Images/Razl-V4/wizard1.png)<br /> <br />The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this Sitecore server. This option is highly recommended for scenarios where the Sitecore server is a live instance. This will help prevent any accidental updates of the live server data.<br /><br />Click **Next**
 
 1. The next screen will ask what type of connection to use, select **Direct Connection**:<br /> <br />![](/Images/Razl-V4/wizard2.png) <br /> <br /> Click **Next** 
 
@@ -46,17 +46,17 @@ If the machine running Razl does not have access to the Sitecore web root via th
 
 1. Click the **Connection Manager** button in the toolbar (see the [Toolbar](/razl/screen-v4.html#toolbar) section for an image of the button)<br /><br />![Blank connection manager](/Images/Razl-V4/ConnectionManager.png)
 
-1. Next click the "Add" button in the lower left side of the Connection Manager dialog.
+1. Next click the **Add** button in the lower left side of the Connection Manager dialog.
 
 1. The connection wizard will appear.
 
-1. Enter a name into the **Connection Name** field:<br /><br />  ![](/Images/Razl-V4/wizard1.png) <br /><br /> The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this connection. This option is highly recommended for scenarios where the instance being connected to is a live instance and where data is only being pulled. This will stop any accidental overwrites of the live server data. <br /> <br /> Click **Next**
+1. Enter a name into the **Connection Name** field:<br /> <br />![](/Images/Razl-V4/wizard1.png)<br /> <br />The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this Sitecore server. This option is highly recommended for scenarios where the Sitecore server is a live instance. This will help prevent any accidental updates of the live server data.<br /><br />Click **Next**
 
-1. The next screen will ask what type of connection to use, select Package Connections: <br /><br />  ![](/Images/Razl-V4/wizard6.png)<br /><br />  Click **Next**
+1. The next screen will ask what type of connection to use, select **Package Connections**: <br /><br />  ![](/Images/Razl-V4/wizard6.png)<br /><br />  Click **Next**
 
 1. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs): <br /> <br /> ![](/Images/Razl-V4/wizard7.png)<br /> <br /> Clicking **Pick Package Location** will open a dialog that will save the Sitecore package to disk. This package will need be deployed to the Sitecore solution. Save the zip file to a convenient location on the computer. Install this package on the target Sitecore instance and after installation click  the **Test Connection** button. If the test is successful click **Next**.
 
-1. The Multi-Threded screen allows you to choose the number of read threads and write threads when copying large amounts of items.<br /> <br /> ![](/Images/Razl-V4/wizard8.png) <br /> <br />Choosing a large number of threads could cause performance problems on the server(s) you are working with. The default of 4 threads is a good balance between performance of the copy operation and server load. Choosing numbers greater than 15 is unlikely to yield performance benefits.
+1. The Multi-Threaded screen allows you to choose the number of read threads and write threads when copying large amounts of items.<br /> <br /> ![](/Images/Razl-V4/wizard8.png) <br /> <br />Choosing a large number of threads could cause performance problems on the server(s) you are working with. The default of 4 threads is a good balance between performance of the copy operation and server load. Choosing numbers greater than 15 is unlikely to yield performance benefits.
 
 1. On the next screen select the Sitecore database to use with this connection: <br /> <br /> ![](/Images/Razl-V4/wizard4.png) <br /> <br /> Select a database and  click **Next**.
 
@@ -71,20 +71,20 @@ When the connection manager opens, it will display a screen with all known conne
 
 ![Connection manager with connections](/Images/Razl-V4/ConnectionManagerWithConnections.png)
 
-Clicking on a connection on the left side with select it and display its properties on the right.
+Clicking on a connection on the left will select it and display its properties on the right.
 
 ![Connection manager with connections](/Images/Razl-V4/ConnectionManagerWithSelection.png)
 
-Any of the fields in the connecton can be updated, and will automatically be updated in the connection.
+Any of the fields in the connecton can be updated and automatically applied to the connection.
 
 #### Using the Connection manager
 The fields in the connection manager have the following function:
 
 - **Connection Name** - The name of the connection shown in the connection selection dropdown and in the connection list on the left.
-- **Read Only **- When checked, the connection is read only, and Razl will not update or delete any items from the connection.
-- Server Url - The url for the Sitecore server. This must be the root of the server. i.e. no path or query strings are allowed.
-- **Unc Path to Root** - This is the path to the webroot in the file system. This can be a local path or a file system share. The user running Razl must have write access to the path to instal the Razl service. This field is displayed only for direct connections.
-- **Access Guid** - The Guid Razl passes to the server on every request to ensure the request is comming from Razl. If more than one instances of Razl needs access to a server, the Access Guid needs to be the same on each instance.
+- **Read Only**- When checked, the connection is read only, and Razl will not update or delete any items from the Sitecore server using that connection.
+- **Server Url** - The url for the Sitecore server. This must be the root of the server. i.e. no path or query strings are allowed.
+- **Unc Path to Root** - This is the path to the webroot in the file system. This can be a local path or a file system share. The user running Razl must have write access to the path to instal the Razl service. Note: This field is displayed for direct connections only.
+- **Access Guid** - The Guid Razl passes to the server on every request to ensure the request is comming from Razl. If more than one instances of Razl needs access to a Sitecore server, the Access Guid needs to be the same on each instance.
 - **Database** - Dropdown that allows the user to select the Sitecore database for the Razl connection. The list of databases in this dropdown can be refreshed by clicking the "Test Connection" button.
 - **Write Threads** - The number of threads allowed to concurrently write items to the database when using the Razl bulk copy function.
 - **Read Threads** - The number of threads allowed to read from the database looking for changes when using the Razl bulk copy function.
@@ -104,8 +104,8 @@ The buttons on the connection manager have the following function:
 The connection can also be edited right from the connection selection dropdown:
 
 1. Click either the left or right connection drop down
-1. Click the pencil icon that is next to the connection you want to edit:<br /> <br /> ![](/Images/Razl/editconn1.PNG)
-1. The edit connection screen will appear, you will see different edit screens depending on the connection being used. For Direct Connections you will see:<br /> <br /> ![](/Images/Razl/editconn2.PNG) <br /> <br /> For Package Connections you will see:<br /> <br /> ![](/Images/Razl/editconn3.PNG)<br/> <br /> In either case, the **Export** button will allow you to export your connection so it may be used by other developers.
+1. Click the pencil icon that is next to the connection you want to edit:<br /> <br /> ![](/Images/Razl-V4/editconn1.png)
+1. The edit connection screen will appear, you will see different edit screens depending on the connection being used. For Direct Connections you will see:<br /> <br /> ![](/Images/Razl-V4/editconn2.png) <br /> <br /> For Package Connections you will see:<br /> <br /> ![](/Images/Razl/editconn3.PNG)<br/> <br /> In either case, the **Export** button will allow you to export your connection so it may be used by other developers.
 1. If you make any changes you must click **Test Connection** before you can save the settings.
 1. Update the settings you want to change and click **Ok**.
 
@@ -123,11 +123,11 @@ Beside each connection in the toolbar is the connection info icon, when hovering
 
 The following information is displayed:
 
-* Database - The database the connection uses
-* Version - The Sitecore version number
-* Machine - The name of the machine hosting the Sitecore instance
-* Razl Version - The version of the web service used by the connection
-* Sites - A list of sites available on the Sitecore instance
+* **Database** - The database the connection uses
+* **Version** - The Sitecore version number
+* **Machine** - The name of the machine hosting the Sitecore instance
+* **Razl Version** - The version of the web service used by the connection
+* **Sites** - A list of sites available on the Sitecore instance
 
 ### Importing and Exporting connections
 
