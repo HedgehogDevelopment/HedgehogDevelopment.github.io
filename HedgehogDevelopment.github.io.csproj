@@ -70,6 +70,7 @@
     <Content Include="Images\Razl-V4\ConnectionManagerButton.png" />
     <Content Include="Images\Razl-V4\ConnectionManagerWithConnections.png" />
     <Content Include="Images\Razl-V4\ConnectionManagerWithSelection.png" />
+    <Content Include="Images\Razl-V4\deepcomparearrow.png" />
     <Content Include="Images\Razl-V4\deepcomparedifference.png" />
     <Content Include="Images\Razl-V4\editconn1.png" />
     <Content Include="Images\Razl-V4\editconn2.png" />

@@ -54,7 +54,7 @@ Deep Compare looks at all items under a folder on both sides and shows differenc
 
 Deep Compare will compare all fields or just Revision Id's depending on your **Lightning Mode** setting. **Lightning Mode** can be 3-5 times faster when comparing many items.
 
-After performing a Deep Compare, Razl will know if an item contains different items under it even if the item isn't expanded. This is indicated on the item in the tree using the following icon:
+After performing a **Deep Compare**, Razl will know if an item contains different items under it even if the item isn't expanded. This is indicated on the item in the tree using the following icon:
 
 ![](/Images/Razl-V4/deepcomparedifference.png)
 
