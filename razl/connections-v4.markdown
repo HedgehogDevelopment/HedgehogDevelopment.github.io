@@ -23,16 +23,16 @@ If the machine Razl is running on has access to the Sitecore web root via the fi
 
 1. Click the **Connection Manager** button in the toolbar (see Toolbar section for the button)
 
-![](/Images/Razl-v4/ConnectionManager.PNG)
+![](/Images/Razl-V4/ConnectionManager.PNG)
 
 1. Next click the "Add" button in the lower left side of the Connection Manager dialog.
 1. The connection wizard will appear.
-1. Enter a name into the **Connection Name** field: <br /> <br /> ![](/Images/Razl-v4/wizard1.PNG) <br /> <br /> The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this connection. This option is highly recommended for scenarios where the Sitecore server is a live instance. This will help prevent any accidental updates of the live server data. <br /> <br /> Click **Next**<br /> <br /> 
-1. The next screen will ask what type of connection to use, select **Direct Connection**:  <br /> <br /> ![](/Images/Razl-v4/wizard2.PNG) <br /> <br /> Click **Next** <br /> <br />
-1. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs) and select the path to the web root: <br /> <br /> ![](/Images/Razl-v4/wizard3.PNG) <br /> <br /> You may also enter a Guid used to secure the connection. If multiple developers are accessing the instance of Sitecore using Razl, you will have to use the same Guid. By default, Razl chooses a random Guid for you. <br/><br />Before clicking Next you will need to test the connection by clicking the **Test Connection** button. If the test is successful click **Next**.
-1. The Multi-Thraded screen allows you to choose the number of read threads and write threads when copying large amounts of items.<br /> <br /> ![](/Images/Razl-v4/wizard8.PNG) <br /> <br />Choosing a large number of threads could cause performance problems on the server(s) you are working with. The default of 4 threads is a good balance between performance of the copy operation and server load. Choosing numbers greater than 15 is unlikely to yield performance benefits.
-1. On the next screen select the Sitecore database to use with this connection:<br /><br />  ![](/Images/Razl-v4/wizard4.PNG) <br /><br />  Select a database and  click **Next**.
-1. The wizard will close and the new connection will be shown in the connection manager dialog:<br /><br />  ![](/Images/Razl-v4/wizard9.PNG) <br /><br />The new connection will also be accessible in both the left and right connection dropdowns after the connection manager dialog is closed:<br /><br /> ![](/Images/Razl-v4/wizard5.PNG)
+1. Enter a name into the **Connection Name** field: <br /> <br /> ![](/Images/Razl-V4/wizard1.PNG) <br /> <br /> The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this connection. This option is highly recommended for scenarios where the Sitecore server is a live instance. This will help prevent any accidental updates of the live server data. <br /> <br /> Click **Next**<br /> <br /> 
+1. The next screen will ask what type of connection to use, select **Direct Connection**:  <br /> <br /> ![](/Images/Razl-V4/wizard2.PNG) <br /> <br /> Click **Next** <br /> <br />
+1. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs) and select the path to the web root: <br /> <br /> ![](/Images/Razl-V4/wizard3.PNG) <br /> <br /> You may also enter a Guid used to secure the connection. If multiple developers are accessing the instance of Sitecore using Razl, you will have to use the same Guid. By default, Razl chooses a random Guid for you. <br/><br />Before clicking Next you will need to test the connection by clicking the **Test Connection** button. If the test is successful click **Next**.
+1. The Multi-Thraded screen allows you to choose the number of read threads and write threads when copying large amounts of items.<br /> <br /> ![](/Images/Razl-V4/wizard8.PNG) <br /> <br />Choosing a large number of threads could cause performance problems on the server(s) you are working with. The default of 4 threads is a good balance between performance of the copy operation and server load. Choosing numbers greater than 15 is unlikely to yield performance benefits.
+1. On the next screen select the Sitecore database to use with this connection:<br /><br />  ![](/Images/Razl-V4/wizard4.PNG) <br /><br />  Select a database and  click **Next**.
+1. The wizard will close and the new connection will be shown in the connection manager dialog:<br /><br />  ![](/Images/Razl-V4/wizard9.PNG) <br /><br />The new connection will also be accessible in both the left and right connection dropdowns after the connection manager dialog is closed:<br /><br /> ![](/Images/Razl-V4/wizard5.PNG)
 
 
 #### Creating a Connection using Packaged Connection
@@ -41,29 +41,29 @@ If the machine running Razl does not have access to the Sitecore web root via th
 
 1. Click the **Connection Manager** button in the toolbar (see [Toolbar](/razl/screen-v4.html#toolbar) section for the button)
 
-![Blank connection manager](/Images/Razl-v4/ConnectionManager.PNG)
+![Blank connection manager](/Images/Razl-V4/ConnectionManager.PNG)
 
 1. Next click the "Add" button in the lower left side of the Connection Manager dialog.
 1. The connection wizard will appear.
 1. Enter a name into the **Connection Name** field:<br /><br />  ![](/Images/Razl-v4/wizard1.PNG) <br /><br />  The screen also gives the option of making the connection read only, this means that items can not be written or deleted from this connection. This option is highly recommended for scenarios where the instance being connected to is a live instance and where data is only being pulled. This will stop any accidental overwrites of the live server data. <br /> <br /> Click **Next**
-1. The next screen will ask what type of connection to use, select Package Connections: <br /><br />  ![](/Images/Razl-v4/wizard6.PNG)<br /><br />  Click **Next**
-1. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs): <br /> <br /> ![](/Images/Razl-v4/wizard7.PNG)<br /> <br /> Clicking **Pick Package Location** will open a dialog that will save the Sitecore package to disk. This package will need be deployed to the Sitecore solution. Save the zip file to a convenient location on the computer. Install this package on the target Sitecore instance and after installation click  the **Test Connection** button. If the test is successful click **Next**.
-1. The Multi-Thraded screen allows you to choose the number of read threads and write threads when copying large amounts of items.<br /> <br /> ![](/Images/Razl-v4/wizard8.PNG) <br /> <br />Choosing a large number of threads could cause performance problems on the server(s) you are working with. The default of 4 threads is a good balance between performance of the copy operation and server load. Choosing numbers greater than 15 is unlikely to yield performance benefits.
-1. On the next screen select the Sitecore database to use with this connection: <br /> <br /> ![](/Images/Razl-v4/wizard4.PNG) <br /> <br /> Select a database and  click **Next**.
-1. The wizard will close and the new connection will be shown in the connection manager dialog:<br /><br />  ![](/Images/Razl-v4/wizard9.PNG) <br /><br />The new connection will also be accessible in both the left and right connection dropdowns after the connection manager dialog is closed:<br /><br /> ![](/Images/Razl-v4/wizard5.PNG)
+1. The next screen will ask what type of connection to use, select Package Connections: <br /><br />  ![](/Images/Razl-V4/wizard6.PNG)<br /><br />  Click **Next**
+1. Enter the connection details for the server, enter the URL to server (this can be HTTP or HTTPs): <br /> <br /> ![](/Images/Razl-V4/wizard7.PNG)<br /> <br /> Clicking **Pick Package Location** will open a dialog that will save the Sitecore package to disk. This package will need be deployed to the Sitecore solution. Save the zip file to a convenient location on the computer. Install this package on the target Sitecore instance and after installation click  the **Test Connection** button. If the test is successful click **Next**.
+1. The Multi-Thraded screen allows you to choose the number of read threads and write threads when copying large amounts of items.<br /> <br /> ![](/Images/Razl-V4/wizard8.PNG) <br /> <br />Choosing a large number of threads could cause performance problems on the server(s) you are working with. The default of 4 threads is a good balance between performance of the copy operation and server load. Choosing numbers greater than 15 is unlikely to yield performance benefits.
+1. On the next screen select the Sitecore database to use with this connection: <br /> <br /> ![](/Images/Razl-V4/wizard4.PNG) <br /> <br /> Select a database and  click **Next**.
+1. The wizard will close and the new connection will be shown in the connection manager dialog:<br /><br />  ![](/Images/Razl-V4/wizard9.PNG) <br /><br />The new connection will also be accessible in both the left and right connection dropdowns after the connection manager dialog is closed:<br /><br /> ![](/Images/Razl-V4/wizard5.PNG)
 
 ### The Connection Manager
 The connection manager allows the user to view and edit all of their connections in one place. Opening the connection manager is done by clicking the connection manager button in the toolbar:
 
-![Connection maanger button](/Images/Razl-v4/ConnectionManagerButton.PNG)
+![Connection maanger button](/Images/Razl-V4/ConnectionManagerButton.PNG)
 
 When the connection manager opens, it will display a screen with all known connections listed on the left and the details of each connection shown on the right.
 
-![Connection manager with connections](/Images/Razl-v4/ConnectionManagerWithConnections.PNG)
+![Connection manager with connections](/Images/Razl-V4/ConnectionManagerWithConnections.PNG)
 
 Clicking on a connection on the left side with select it and display its properties on the right.
 
-![Connection manager with connections](/Images/Razl-v4/ConnectionManagerWithSelection.PNG)
+![Connection manager with connections](/Images/Razl-V4/ConnectionManagerWithSelection.PNG)
 
 Any of the fields in the connecton can be updated, and will automatically be updated in the connection.
 
