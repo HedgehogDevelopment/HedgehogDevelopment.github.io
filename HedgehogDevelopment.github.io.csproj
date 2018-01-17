@@ -64,10 +64,16 @@
     <Content Include="Images\Feydra\SettingsScreen.png" />
     <Content Include="Images\Feydra\UsersScreen.png" />
     <Content Include="Images\new logo.png" />
+    <Content Include="Images\Razl-V4\compare1.png" />
+    <Content Include="Images\Razl-V4\compare2.png" />
     <Content Include="Images\Razl-V4\ConnectionManager.png" />
     <Content Include="Images\Razl-V4\ConnectionManagerButton.png" />
     <Content Include="Images\Razl-V4\ConnectionManagerWithConnections.png" />
     <Content Include="Images\Razl-V4\ConnectionManagerWithSelection.png" />
+    <Content Include="Images\Razl-V4\deepcomparedifference.png" />
+    <Content Include="Images\Razl-V4\editconn1.png" />
+    <Content Include="Images\Razl-V4\editconn2.png" />
+    <Content Include="Images\Razl-V4\itemnewer.png" />
     <Content Include="Images\Razl-V4\screenlayout.png" />
     <Content Include="Images\Razl-V4\toolbar.png" />
     <Content Include="Images\Razl-V4\wizard1.png" />
@@ -268,6 +274,7 @@
     <Content Include="razl\index-v4.markdown" />
     <Content Include="razl\screen-v4.markdown" />
     <Content Include="razl\connections-v4.markdown" />
+    <Content Include="razl\comparing-v4.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
