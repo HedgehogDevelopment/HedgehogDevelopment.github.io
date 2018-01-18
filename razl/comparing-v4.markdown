@@ -30,10 +30,11 @@ There are several basic symbols pairs in Razl when comparing an items. Each symb
 | ![Different](/Images/Razl/compare3.PNG) | **Different** - This pair are display when the items in each database contain different data in their fields. You can then choose which side to copy all field values from. |
 | ![Deleted left](/Images/Razl/compare4.PNG) <br /> or <br /> ![Deleted right](/Images/Razl/compare5.PNG) | **Deleted** - This pair are displayed when an item exists in one database but not in the other. The side that contains the item will display the red cross and allow you to remove it, the side that doesn’t contain the icon will display the black arrow and allow you to copy over. |
 | ![Moved](/Images/Razl/compare6.PNG) | **Moved** - An item this moved will have this symbol next to is't name: <br /> ![](/Images/Razl/compare7.PNG) <br /> The item that is out of position (i.e. in another location) will be in light grey.  To see where each item exists click on the item itself and use the Field Information panels to see each sides path. |
-
+<br/><br/>
 If the updated date of an item on one server is newer than the updated date of the item on the other server, a yellow star will be shown next to the item:
-
+<br/><br/>
 ![Deleted left](/Images/Razl-V4/itemnewer.png)
+<br/><br/>
 
 ### Lightning Mode
 
@@ -41,30 +42,30 @@ When you click the Lightning Mode ![](/Images/Razl/LightningMode.png) button, **
 
 The main disadvantage to **Lightning Mode** is that your filters are ignored. This means that items may be considered different even though your filter specification would indicate that they aren't. 
 
-When an item is clicked on in the tree, a full compare of the item is done and filters applied even if lightning mode is enabled. This may cause the item to loose it's difference arrows if your filters exclude the changed fields.
+When an item is clicked on in the tree, a full compare of the item is done and filters applied even if lightning mode is enabled. This may cause the item to loose it's difference arrows if your filters exclude the changed fields, or gain filter arrows if a field is different, but the revision ID'ss are the same.
 
 ### Deep Compare
-Deep Compare allows all items in a tree to be compared. You can deep compare a folder by right clicking on the item in the tree and choosing **Deep Compare**
+Deep Compare allows all items in a Sitecore content tree to be easily compared. You can deep compare a folder by right clicking on the item in the tree and choosing **Deep Compare**
 
 ![](/Images/Razl/DeepCompareMenu.png)
 
 Deep Compare looks at all items under a folder on both sides and shows differences in the change detail view.
 
-![](/Images/Razl/DeepCompareView.png)
+![](/Images/Razl-V4/DeepCompareView.png)
 
-Deep Compare will compare all fields or just Revision Id's depending on your **Lightning Mode** setting. **Lightning Mode** can be 3-5 times faster when comparing many items.
+Deep Compare will compare all fields or just Revision ID's depending on your **Lightning Mode** setting. Enabling **Lightning Mode** can be 3-5 times faster when comparing many items.
 
-After performing a **Deep Compare**, Razl will know if an item contains different items under it even if the item isn't expanded. This is indicated on the item in the tree using the following icon:
+After performing a **Deep Compare**, Razl will know if an item contains different items under it even if the item isn't expanded. This is indicated on the item in the tree using a blue arrow need the expand toggle:
 
 ![](/Images/Razl-V4/deepcomparedifference.png)
 
-The blue arrow ![Deep Compare Arrow](/Images/Razl-V4/deepcomparearrow.png) shows when there are changes under an item and the item hasn't been expanded.
+The blue arrow ![Deep Compare Arrow](/Images/Razl-V4/deepcomparearrow.png) shows after a **Deep Compare** when there are changes under an item and the item hasn't been expanded.
 
 ### Comparing Fields
 
-When you click on an item in the Content Tree Razl will load the fields and information about the item and display the in the Field Information panes. Razl will then show you the individual fields differences, you can then select each fields to move across:
+When you click on an item in the Content Tree Razl will load the fields and information about the item and display the in the Field Information panes. Razl will then show you the individual fields differences, you can then select each fields to move between servers:
 
-![](/Images/Razl/compare8.PNG)
+![](/Images/Razl-V4/compare8.png)
 
 Fields are grouped together based on the following rules:
 
@@ -81,9 +82,33 @@ There are several basic symbols pairs in Razl when comparing fields. Each symbol
 | Symbol | Description |
 |---- |---- |
 | | **Same** - If no symbols are displayed both sides are considered the same. |
-| ![](/Images/Razl/compare3.PNG) | **Different** - This pair are display when the field values don’t match. You can then choose which side to copy the value from. |
+| ![](/Images/Razl-V4/compare3.png) | **Different** - This is displayed when the field values don’t match. You can then choose which side to copy the value from or open the field value editor. |
 | ![](/Images/Razl/compare4.PNG) <br /> or <br /> ![](/Images/Razl/compare5.PNG) | **Deleted**  - This pair are displayed when an field exists in one database but not in the other. The side that contains the item will display the red cross and allow you to remove it, the side that doesn’t contain the icon will display the black arrow and allow you to copy over. |
 | ![](/Images/Razl/compare10.PNG) | Block - No action can be performed. This is normally due to a field existing in one instance but not the other instance. |
+
+### Field Value Editor
+The field value editor allows the user to edit field values before moving them. This is espically useful for complex sitecore fields like multi-list and renderig fields. The field value editor will choose an editor that is appropriate for the field type.
+
+#### Text Field Editor
+The Text Field Editor allows the user to view a fields values side-by-side. The user can move the entire field from one server to the other by using arrows, or edit the contents of either field by clicking on the field and entering new text.
+
+![](/Images/Razl-V4/TextFieldEditor.png)
+
+#### Multi-List Field Editor
+The Multi-List Field Editor allows a user to view and edit bar seperated Sitecore ID fields in a much more user friendly way. Each ID is shown on its own line, and ID's are lined up so the matching ID's share the same line on the left and right sides.
+
+The user can move individual ID's left or right, and ID's can be dragged up and down in the list, allowing them to be re-ordered.
+
+When Razl opens the Multi-List Field Editor, it will check to see if the ID's in the list exist on the server and automatically replace the ID's with thier paths. This is only for display purposes, the original ID is still stored in Sitecore. When this happens, the path is shown with bold text, indicating it has been replaced. Hovering the mouse over a Sitecore path will show it's original ID in a tool tip.
+
+![](/Images/Razl-V4/MultiListFieldEditor.png)
+
+#### Xml Field Editor
+The Xml Field editor allows users to easily edit and update Xml fields in Razl. The XML editor attempts to line up Xml elements by their ID, and displays each attribute of the element on it's own line. The user can move individual ID's left or right or move the entire element and all it's children.
+
+Like the Multi-List Field Editor, the Xml field editor will locate Sitecore ID's and replace them with their paths.
+
+![](/Images/Razl-V4/XmlFieldEditor.png)
 
 ### Controlling Comparison
 
@@ -160,7 +185,7 @@ Fields and languages are identified by the different symbols.  By unchecking a f
 
 #### Filtering Effects
 
-When you a field or language is ignored for comparison it stops the field/language from being compared when determining which symbols to display in the Content Tree. The field and language will still be compared in the Field Information pane when you select an item.
+When a field or language is ignored for comparison it stops the field/language from being compared when determining which symbols to display in the Content Tree. The field and language will still be compared in the Field Information pane when you select an item.
 
 For example the English language is ignored in the image below, notice that the Content Tree shows that the item is the same but when the item is selected Razl shows that the English fields are actually different:
 
@@ -180,5 +205,8 @@ If you right click on an item in the Content Tree a context menu will appear wit
 | Left Referrers | Only appears on the left hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree |
 | Right References | Only appears on the right hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree |
 | Right Referrers | Only appears on the right hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree |
+| Copy to Clipboard | Allows the user to copy information about the item to the clipboard. Selecting this menu item will open a menu, allowing the user to select the Item ID, Item Path, Template ID or Template Path to be copied to the clipboard |
+| Copy item and Related from Right | Only appears on the left hand site. Copies the item and all items related to the item based on the contents of the link database. |
+| Copy item and Related from Left | Only appears on the right hand site. Copies the item and all items related to the item based on the contents of the link database. |
 | Get All From Right | Only appears on the left hand side. Copies all items from the right hand instance to the left hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. |
 | Get All From Left | Only appears on the right hand side. Copies all items from the left hand instance to the right hand instance including all children with merger and overwrite options. See Copy All in the Tasks Section. |
