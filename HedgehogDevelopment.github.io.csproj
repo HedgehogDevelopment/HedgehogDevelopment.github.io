@@ -77,7 +77,10 @@
     <Content Include="Images\Razl-V4\DeepCompareView.png" />
     <Content Include="Images\Razl-V4\editconn1.png" />
     <Content Include="Images\Razl-V4\editconn2.png" />
+    <Content Include="Images\Razl-V4\history1.png" />
+    <Content Include="Images\Razl-V4\HistoryExport.png" />
     <Content Include="Images\Razl-V4\itemnewer.png" />
+    <Content Include="Images\Razl-V4\ItemSearch.png" />
     <Content Include="Images\Razl-V4\MultiListFieldEditor.png" />
     <Content Include="Images\Razl-V4\screenlayout.png" />
     <Content Include="Images\Razl-V4\TextFieldEditor.png" />
@@ -281,6 +284,7 @@
     <Content Include="razl\screen-v4.markdown" />
     <Content Include="razl\connections-v4.markdown" />
     <Content Include="razl\comparing-v4.markdown" />
+    <Content Include="razl\history-v4.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
