@@ -94,29 +94,29 @@ There are several basic symbols pairs in Razl when comparing fields:
 | | **Same** - If no symbols are displayed both sides are considered the same. |
 | ![](/Images/Razl-V4/compare3.png) | **Different** - This is displayed when the field values don’t match. You can then choose which side to copy the value from or open the field value editor. |
 | ![](/Images/Razl/compare4.PNG) <br /> or <br /> ![](/Images/Razl/compare5.PNG) | **Deleted**  - This pair are displayed when an field exists in one database but not in the other. The side that contains the item will display the red cross and allow you to remove it, the side that doesn’t contain the icon will display the black arrow and allow you to copy over. |
-| ![](/Images/Razl/compare10.PNG) | Block - No action can be performed. This is normally due to a field existing in one instance but not the other instance. |
+| ![](/Images/Razl/compare10.PNG) | **Block** - No action can be performed. This is normally due to a field existing in one instance but not the other instance. |
 
 ### The Field Value Editor
 The field value editor allows the user to edit field values before selecting them to be moved between servers. This is very useful for complex sitecore fields like multi-list and renderig fields. The field value editor will choose an the appropriate editor for the field type.
 
 #### Text Field Editor
-The Text Field Editor allows the user to view field values side-by-side. The user can move the entire field from one server to the other by using arrows, or edit the contents of either field by clicking on the field and entering new text.
+The **Text Field Editor** allows the user to view field values side-by-side. The user can move the entire field from one server to the other by using arrows, or edit the contents of either field by clicking on the field and entering new text.
 
 ![](/Images/Razl-V4/TextFieldEditor.png)
 
 #### Multi-List Field Editor
-The Multi-List Field Editor allows a user to view and edit Sitecore ID list fields in a very user friendly way. Each ID is shown on its own line, and ID's are lined up so matching ID's share the same line on the left and right sides.
+The **Multi-List Field Editor** allows a user to view and edit Sitecore ID list fields in a very user friendly way. Each ID is shown on its own line, and ID's are lined up so matching ID's share the same line on the left and right sides.
 
 The user can move individual ID's left or right, and ID's can be dragged up and down in the list, allowing them to be re-ordered.
 
-When Razl opens the Multi-List Field Editor, it will check to see if the ID's in the list exist on the server and automatically replace the ID's with thier paths. This is only for display purposes. The original ID is still stored in the Sitecore field. When an ID is replaced with a path, the path is shown with bold text, indicating it has been replaced. Hovering the mouse over a Sitecore path will show the original ID in a tool tip.
+When Razl opens the **Multi-List Field Editor**, it will check to see if the ID's in the list exist on the server and automatically replace the ID's with thier paths. This is only for display purposes. The original ID is still stored in the Sitecore field. When an ID is replaced with a path, the path is shown with bold text, indicating it has been replaced. Hovering the mouse over a Sitecore path will show the original ID in a tool tip.
 
 ![](/Images/Razl-V4/MultiListFieldEditor.png)
 
 #### Xml Field Editor
-The Xml Field editor allows users to easily edit and update Xml fields in Razl. The XML editor attempts to line up Xml elements by their ID, and displays each attribute of the element on it's own line. The user can move individual attributes left or right or move the entire element and all it's children.
+The **Xml Field Editor** allows users to easily edit and update Xml fields in Razl. The XML editor attempts to line up Xml elements by their ID, and displays each attribute of the element on it's own line. The user can move individual attributes left or right or move the entire element and all it's children.
 
-Like the Multi-List Field Editor, the Xml field editor will locate Sitecore ID's and replace them with their paths.
+Like the **Multi-List Field Editor**, the Xml field editor will locate Sitecore ID's and replace them with their paths.
 
 ![](/Images/Razl-V4/XmlFieldEditor.png)
 
