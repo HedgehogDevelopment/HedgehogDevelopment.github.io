@@ -50,7 +50,7 @@ Razl does not load the entire history database when you open the history view, i
 If you scroll back to the top of the history list Razl will try to load any new history entries or you can right click on the history list and click the **Get Latest History** option.
 
 ### Exporting history changes
-If you want a list of items in the history window, you can right click on the any item in the history list and select "Export changes to .csv file". This will open a save dialog, allowing you to specify the location and name of the exporeted item list.
+If you want a list of items in the history window, you can right click on the any item in the history list and select **Export changes to .csv file**. This will open a save dialog, allowing you to specify the location and name of the exporeted item list.
 
 ![](/Images/Razl-V4/HistoryExport.png)
 
