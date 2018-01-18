@@ -62,7 +62,7 @@ The blue arrow ![Deep Compare Arrow](/Images/Razl-V4/deepcomparearrow.png) shows
 
 ### Comparing Fields
 
-When you click on an item in the Content Tree Razl will load the fields and information about the item and display the in the Field Information panes. Razl will then show you the individual fields differences, you can then select each fields to move between servers:
+When you click on an item in the Sitecore Content Tree, Razl will load the fields and information about the item and display them in the Field Information panes. Razl will then show you the individual fields differences, you can then select each fields to move between servers:
 
 ![](/Images/Razl-V4/compare8.png)
 
@@ -76,7 +76,7 @@ The Field Information pane also displays information about an item beneath the "
 
 ![](/Images/Razl/compare9.PNG)
 
-There are several basic symbols pairs in Razl when comparing fields. Each symbol :
+There are several basic symbols pairs in Razl when comparing fields:
 
 | Symbol | Description |
 |---- |---- |
@@ -85,25 +85,25 @@ There are several basic symbols pairs in Razl when comparing fields. Each symbol
 | ![](/Images/Razl/compare4.PNG) <br /> or <br /> ![](/Images/Razl/compare5.PNG) | **Deleted**  - This pair are displayed when an field exists in one database but not in the other. The side that contains the item will display the red cross and allow you to remove it, the side that doesn’t contain the icon will display the black arrow and allow you to copy over. |
 | ![](/Images/Razl/compare10.PNG) | Block - No action can be performed. This is normally due to a field existing in one instance but not the other instance. |
 
-### Field Value Editor
-The field value editor allows the user to edit field values before moving them. This is espically useful for complex sitecore fields like multi-list and renderig fields. The field value editor will choose an editor that is appropriate for the field type.
+### The Field Value Editor
+The field value editor allows the user to edit field values before selecting them to be moved between servers. This is very useful for complex sitecore fields like multi-list and renderig fields. The field value editor will choose an the appropriate editor for the field type.
 
 #### Text Field Editor
-The Text Field Editor allows the user to view a fields values side-by-side. The user can move the entire field from one server to the other by using arrows, or edit the contents of either field by clicking on the field and entering new text.
+The Text Field Editor allows the user to view field values side-by-side. The user can move the entire field from one server to the other by using arrows, or edit the contents of either field by clicking on the field and entering new text.
 
 ![](/Images/Razl-V4/TextFieldEditor.png)
 
 #### Multi-List Field Editor
-The Multi-List Field Editor allows a user to view and edit bar seperated Sitecore ID fields in a much more user friendly way. Each ID is shown on its own line, and ID's are lined up so the matching ID's share the same line on the left and right sides.
+The Multi-List Field Editor allows a user to view and edit Sitecore ID list fields in a very user friendly way. Each ID is shown on its own line, and ID's are lined up so matching ID's share the same line on the left and right sides.
 
 The user can move individual ID's left or right, and ID's can be dragged up and down in the list, allowing them to be re-ordered.
 
-When Razl opens the Multi-List Field Editor, it will check to see if the ID's in the list exist on the server and automatically replace the ID's with thier paths. This is only for display purposes, the original ID is still stored in Sitecore. When this happens, the path is shown with bold text, indicating it has been replaced. Hovering the mouse over a Sitecore path will show it's original ID in a tool tip.
+When Razl opens the Multi-List Field Editor, it will check to see if the ID's in the list exist on the server and automatically replace the ID's with thier paths. This is only for display purposes. The original ID is still stored in the Sitecore field. When an ID is replaced with a path, the path is shown with bold text, indicating it has been replaced. Hovering the mouse over a Sitecore path will show the original ID in a tool tip.
 
 ![](/Images/Razl-V4/MultiListFieldEditor.png)
 
 #### Xml Field Editor
-The Xml Field editor allows users to easily edit and update Xml fields in Razl. The XML editor attempts to line up Xml elements by their ID, and displays each attribute of the element on it's own line. The user can move individual ID's left or right or move the entire element and all it's children.
+The Xml Field editor allows users to easily edit and update Xml fields in Razl. The XML editor attempts to line up Xml elements by their ID, and displays each attribute of the element on it's own line. The user can move individual attributes left or right or move the entire element and all it's children.
 
 Like the Multi-List Field Editor, the Xml field editor will locate Sitecore ID's and replace them with their paths.
 
