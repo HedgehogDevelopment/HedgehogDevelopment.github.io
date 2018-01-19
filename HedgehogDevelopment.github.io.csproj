@@ -288,6 +288,8 @@
     <Content Include="razl\comparing-v4.markdown" />
     <Content Include="razl\history-v4.markdown" />
     <Content Include="razl\tasks-v4.markdown" />
+    <Content Include="razl\logging-v4.markdown" />
+    <Content Include="razl\script-v4.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
