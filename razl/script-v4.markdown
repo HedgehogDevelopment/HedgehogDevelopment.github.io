@@ -42,11 +42,15 @@ The XML for Razl scripts is very simple and is made up of connections and operat
         <accessGuid></accessGuid>
         <database></database>
         <path></path>
+	    <readThreads></readThreads>
+	    <writeThreads></writeThreads>
       </connection>
       <connection name="">
         <url></url>
         <guid></guid>
         <database></database>
+	    <readThreads></readThreads>
+	    <writeThreads></writeThreads>
       </connection>
       <connection name="" preset="" />
       <operation name="CopyHistory" source="" target="">
