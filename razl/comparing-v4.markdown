@@ -17,7 +17,7 @@ To setup Razl for comparison select a connection in the Left Connection dropdown
 
 ### Comparing Items
 
-As you explorer the Sitecore content tree Razl will automatically load and start to compare items in both trees:
+As you explore the Sitecore content tree Razl will automatically load and start to compare items in both trees:
 
 ![](/Images/Razl-V4/compare2.png)
 
@@ -97,7 +97,7 @@ There are several basic symbols pairs in Razl when comparing fields:
 | ![](/Images/Razl/compare10.PNG) | **Block** - No action can be performed. This is normally due to a field existing in one instance but not the other instance. |
 
 ### The Field Value Editor
-The field value editor allows the user to edit field values before selecting them to be moved between servers. This is very useful for complex sitecore fields like multi-list and renderig fields. The field value editor will choose an the appropriate editor for the field type.
+The field value editor allows the user to edit field values before selecting them to be moved between servers. This is very useful for complex sitecore fields like multi-list and rendering fields. The field value editor will choose an the appropriate editor for the field type.
 
 #### Text Field Editor
 The **Text Field Editor** allows the user to view field values side-by-side. The user can move the entire field from one server to the other by using arrows, or edit the contents of either field by clicking on the field and entering new text.

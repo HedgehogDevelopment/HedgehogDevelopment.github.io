@@ -9,7 +9,7 @@ layout: RazlLayout
 
 When Razl opens the following screen will display:
 
-![](/Images/Razl-V4/screenlayout.PNG) 
+![](/Images/Razl-V4/screenlayout.png) 
 
 The screen is split into several sections:
 
@@ -22,7 +22,7 @@ The screen is split into several sections:
 
 The toolbar provides access to the different functions available in Razl:
 
-![](/Images/Razl-V4/toolbar.PNG) 
+![](/Images/Razl-V4/toolbar.png) 
 
 1. Left connection - the Sitecore connection used by the left hand side of Razl.
 1. Left History engine view - displays entries in the left hand Sitecore history engine.
@@ -46,7 +46,7 @@ When a user has created and selected which connections to use the Content Trees 
 
 ![](/Images/Razl/contenttree.PNG) 
 
-Click the arrow next to the left hand side Content Tree item will expand the item and display its child items. 
+Clicking the triangle to the left of an item in the content tree will expand the item and display its child items. 
 
 When exploring items in a database the name of the database and the URL to Sitecore site will be displayed at the top of the Content Tree:
 
