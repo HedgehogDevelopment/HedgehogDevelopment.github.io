@@ -21,7 +21,7 @@ Once a connection has been created it is saved so that the details do not have t
 
 If the machine Razl is running on has access to the Sitecore web root via the file system then it is recommended to use this installation method:
 
-1. Click the **Connection Manager** button in the toolbar (see the [Toolbar](/razl/screen-v4.html#toolbar) section for an image of the button)<br /> <br />![](/Images/Razl-V4/ConnectionManager.png)
+1. Click the **Connection Manager** button in the toolbar (see the [Toolbar](/razl/screen.html#toolbar) section for an image of the button)<br /> <br />![](/Images/Razl-V4/ConnectionManager.png)
 
 1. Next click the **Add** button in the lower left side of the Connection Manager dialog.
 
@@ -44,7 +44,7 @@ If the machine Razl is running on has access to the Sitecore web root via the fi
 
 If the machine running Razl does not have access to the Sitecore web root via the file system then use this installation method:
 
-1. Click the **Connection Manager** button in the toolbar (see the [Toolbar](/razl/screen-v4.html#toolbar) section for an image of the button)<br /><br />![Blank connection manager](/Images/Razl-V4/ConnectionManager.png)
+1. Click the **Connection Manager** button in the toolbar (see the [Toolbar](/razl/screen.html#toolbar) section for an image of the button)<br /><br />![Blank connection manager](/Images/Razl-V4/ConnectionManager.png)
 
 1. Next click the **Add** button in the lower left side of the Connection Manager dialog.
 

@@ -13,4 +13,4 @@ Razl is a database comparison tool for the Sitecore CMS. It allows a developer t
 
 ## Contents
 
-{% include razlchapters-v4.html %}
+{% include razlchapters.html %}
