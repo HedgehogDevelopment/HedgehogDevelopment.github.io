@@ -31,7 +31,7 @@ To open the history view follows these instructions:
 
 When you open the history view you will be presented with the following screen:
 
-![](/Images/Razl/history1.PNG)
+![](/Images/Razl-V4/history1.png)
 
 This history list appears above the Content Tree and displays the the date and time of the latest entry with the path to the item and the available move operations. Entries made on the same day are grouped under a day separator. To keep the list simple Razl shows only the latest entry for an item if the item is different between the two Sitecore databases.
 
@@ -39,12 +39,19 @@ You may click on one of the operations in the history view to add the operation 
 
 The performance of the History Change Detail window may be improved by selecting Lightning Mode. This works the same way as Lightning Mode when comparing items.
 
-### Navigating to Item
+### Navigating to an Item
 
-To navigate to an item displayed in the history list click on the desired item and Razl will find the item in the Content Tree.
+To navigate to an item displayed in the history list double click on the desired item and Razl will find the item in the Content Tree.
 
 ### Loading More History
 
 Razl does not load the entire history database when you open the history view, instead this data is loaded as you scroll through the history list. When you approach the bottom of the loaded list of item Razl will automatically try to retrieve more data.
 
 If you scroll back to the top of the history list Razl will try to load any new history entries or you can right click on the history list and click the **Get Latest History** option.
+
+### Exporting history changes
+If you want a list of items in the history window, you can right click on the any item in the history list and select **Export changes to .csv file**. This will open a save dialog, allowing you to specify the location and name of the exporeted item list.
+
+![](/Images/Razl-V4/HistoryExport.png)
+
+The export will contain the item path, compare state, item id, left and right server names and the change date.

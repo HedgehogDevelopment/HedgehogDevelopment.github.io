@@ -7,15 +7,15 @@ layout: RazlLayout
 
 ## Razl Script
 
-Start from version 2.1 of Razl it is possible to create XML documents that define the connections and operations Razl should perform. These can then be executed from the Command Prompt or build scripts.
+Razl allows the user to to create XML documents that define connections to Sitecore servers and the operations Razl should perform on those servers. These can then be executed from the Command Prompt or build scripts.
 
 
 ### Command line parameters
 
 The command line parameters Razl accepts from the command line are as follows:
 
-1) **/script** Specifies the path to the script file
-2) **/TLS12** when passed the value "true", Razl enables the TLS 1.2 protocol when communicating with the webserver
+1. **/script** Specifies the path to the script file
+2. **/TLS12** when passed the value "true", Razl enables the TLS 1.2 protocol when communicating with the webserver
 
 To run a Razl script with TLS 1.2 enabled, use a command similar to:
 
@@ -34,7 +34,7 @@ The value {path to script file} should be replaced with the path to the XML file
 
 ### Razl Script XML
 
-The XML for Razl is very simple and is made up primarily of connections and operations, by combining connections with operations Razl will perform tasks on the intended Sitecore instances. Below is an overview of the entire Razl XML:
+The XML for Razl scripts is very simple and is made up of connections and operations, by combining connections with operations Razl will perform tasks on the intended Sitecore instances. Below is an overview of the entire Razl XML:
 
     <razl>
       <connection name="" readOnly ="" install="true|false">
@@ -42,11 +42,15 @@ The XML for Razl is very simple and is made up primarily of connections and oper
         <accessGuid></accessGuid>
         <database></database>
         <path></path>
+	    <readThreads></readThreads>
+	    <writeThreads></writeThreads>
       </connection>
       <connection name="">
         <url></url>
         <guid></guid>
         <database></database>
+	    <readThreads></readThreads>
+	    <writeThreads></writeThreads>
       </connection>
       <connection name="" preset="" />
       <operation name="CopyHistory" source="" target="">
@@ -104,25 +108,29 @@ The XML for Razl is very simple and is made up primarily of connections and oper
 
 ### Razl XML Connections
 
-Connections define how Razl should connect to a Sitecore instance. Connections can be fully defined in the XML or can be preset connections that have been defined in Razl GUI previously. The connection XML with all options looks like this:
+Connections define how Razl should connect to a Sitecore instance. Connections can be fully defined in the XML or can be preset connections that have been defined in the Razl GUI. The connection XML with all options looks like this:
 
-	  <connection name="" readOnly ="" install="true|false" preset="">
+	  <connection name="" readOnly="" install="true|false" preset="">
 	    <url></url>
 	    <accessGuid></accessGuid>
 	    <database></database>
 	    <path></path>
+	    <readThreads></readThreads>
+	    <writeThreads></writeThreads>
 	  </connection>
 
 Summary of attributes and elements:
 
-* **connection** - containing element for the connection definition
-* **name** - the name of the connection. This will be used by operations to identify the connection they should use
-* **install** - indicates if the Razl connector should be installed at the target location
-* **preset** - the name of the pre-configured connection defined using the Razl GUI
-* **url** - the URL to the Sitecore instance. Must start with http or https.
-* **accessGuid** - the Guid used by Razl to access the Sitecore instance.
-* **database** - the database on the Sitecore instance Razl should interact with.
-* **path** - the path to the Sitecore instance. Used when installing the Razl service.
+* **connection** - Containing element for the connection definition
+* **name** - The name of the connection. This will be used by operations to identify the connection they should use
+* **install** - Indicates if the Razl connector should be installed at the target location
+* **preset** - The name of the pre-configured connection defined using the Razl GUI
+* **url** - The URL to the Sitecore instance. Must start with http or https.
+* **accessGuid** - The Guid used by Razl to access the Sitecore instance.
+* **database** - The database on the Sitecore instance Razl should interact with.
+* **path** - The path to the Sitecore instance. Used when installing the Razl service.
+* **readThreads** - The number of threads to use while looking for differences in a copyAll operation. The default value is 4.
+* **writeThreads** - The number of threads to use while copying differences in a copyAll operation. The default value is 4.
 
 At least two connections should be defined in a Razl script.
 

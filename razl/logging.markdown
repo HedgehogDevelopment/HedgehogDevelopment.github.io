@@ -13,7 +13,7 @@ Razl logs all of the actions it carries out in Sitecore to help you understand a
 
 To access the log console in Razl click the Log Console button in the toolbar (see [Toolbar](/razl/screen.html#toolbar)). The log console will look like this:
 
-![](/Images/Razl/logging1.PNG)
+![](/Images/Razl-V4/logging1.png)
 
 You can continue to use Razl with the Log Console open, new entries will appear as you use Razl.
 
