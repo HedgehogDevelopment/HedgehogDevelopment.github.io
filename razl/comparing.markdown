@@ -54,13 +54,13 @@ Deep Compare looks at all items under a folder on both sides and shows differenc
 
 Once the **Deep Compare** operation completes, you may use the arrows on the left to move an item from one server to another and double clicking on an item finds it in the tree.
 
-Deep Compare will compare all fields or just Revision ID's depending on your **Lightning Mode** setting. Enabling **Lightning Mode** can be 3-5 times faster when comparing many items.
-
 After performing a **Deep Compare**, Razl will know if an item contains different items under it even if the item isn't expanded. This is indicated on the item in the tree using a blue arrow need the expand toggle:
 
 ![](/Images/Razl-V4/deepcomparedifference.png)
 
 The blue arrow ![Deep Compare Arrow](/Images/Razl-V4/deepcomparearrow.png) shows after a **Deep Compare** when there are changes under an item and the item hasn't been expanded.
+
+**NOTE**: Deep Compare will only compare Revision ID's regardless of your **Lightning Mode** setting.
 
 ### Searching for Items
 Razl can use the Sitecore content indexes to find items in the content tree on both servers. Simply enter text into the serch window and Razl will look for those items on both servers using the Sitecore Content Search API. When Items are found, they are shown in the item list pane.
