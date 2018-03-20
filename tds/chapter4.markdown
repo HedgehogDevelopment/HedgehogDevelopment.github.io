@@ -343,7 +343,8 @@ Allows the TDS Classic project to be configured to automatically copy files into
 	NOTE
  </div>
  <div class="panel-content">
-	Many of the use cases for File Replacements have been superseded by the Configuration Transform feature that is now part of TDS Classic 4.0.
+	Many of the use cases for File Replacements have been superseded by the Configuration Transform feature that is now part of TDS Classic 4.0.<br /><br />
+    **File replacements is not compatible with multiple source web projects. If file replacements exists in a project with multiple source web projects, the build will fail with an error tell the user to disable either file replacements or multiple souce web projects.**
 </div>
 </div>
  
@@ -353,7 +354,7 @@ Allows the TDS Classic project to be configured to automatically copy files into
 * **Source Location** – Specifies where to copy files from. The path can be relative to the project folder or an absolute path.
 * **Target Location** – Specifies the location to copy files to. The path for the target location can be relative to the build output folder or an absolute path.
 
-**Note:** To delete an item from the replacement list, select the row using the row selector on the left and press the &lt;delete&gt; button.
+To delete an item from the replacement list, select the row using the row selector on the left and press the &lt;delete&gt; button.
 
 ### Deployment Properties
 
