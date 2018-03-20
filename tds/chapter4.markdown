@@ -353,6 +353,8 @@ Allows the TDS Classic project to be configured to automatically copy files into
 * **Source Location** – Specifies where to copy files from. The path can be relative to the project folder or an absolute path.
 * **Target Location** – Specifies the location to copy files to. The path for the target location can be relative to the build output folder or an absolute path.
 
+**Note:** To delete an item from the replacement list, select the row using the row selector on the left and press the &lt;delete&gt; button.
+
 ### Deployment Properties
 
 A TDS Classic project contains many different types of Sitecore items. These items all serve different purposes in the Sitecore implementation, and it is likely they need to be treated differently at deployment time. Developers can easily manage how each Sitecore item in the TDS Classic project is deployed through Deployment Properties.
