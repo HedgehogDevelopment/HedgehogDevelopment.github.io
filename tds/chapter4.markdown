@@ -344,10 +344,10 @@ Allows the TDS Classic project to be configured to automatically copy files into
  </div>
  <div class="panel-content">
 	Many of the use cases for File Replacements have been superseded by the Configuration Transform feature that is now part of TDS Classic 4.0.<br /><br />
-    **File replacements is not compatible with multiple source web projects. If file replacements exists in a project with multiple source web projects, the build will fail with an error tell the user to disable either file replacements or multiple souce web projects.**
+    <b>File replacements is not compatible with multiple source web projects. If file replacements exists in a project with multiple source web projects, the build will fail with an error tell the user to disable either file replacements or multiple souce web projects.</b>
 </div>
 </div>
- 
+<br />
 ![](/Images/Tds/chapter4-filereplacement.png) 
 
 * **Type** – The type dropdown allows you to choose the type of the Source Location. If you choose "File", the individual file specified in the Source Location is copied to the Target location. Choosing "Folder" causes all items under the Source Location to be copied to the Target Location.
