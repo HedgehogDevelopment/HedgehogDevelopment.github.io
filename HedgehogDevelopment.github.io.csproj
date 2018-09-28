@@ -53,6 +53,16 @@
     <Content Include="fonts\iconFont.svg" />
     <Content Include="fonts\metroSysIcons.svg" />
     <Content Include="Images\Avtor\Avtor.png" />
+    <Content Include="Images\Avtor\GettingStarted_AddFirstFieldSet.png" />
+    <Content Include="Images\Avtor\GettingStarted_ContentEditor.png" />
+    <Content Include="Images\Avtor\GettingStarted_ContentEditorTree.png" />
+    <Content Include="Images\Avtor\GettingStarted_Desktop.png" />
+    <Content Include="Images\Avtor\GettingStarted_EmptyEditPane.png" />
+    <Content Include="Images\Avtor\GettingStarted_LaunchPad.png" />
+    <Content Include="Images\Avtor\GettingStarted_ManageFieldSet.png" />
+    <Content Include="Images\Avtor\GettingStarted_NameFieldSet.png" />
+    <Content Include="Images\Avtor\GettingStarted_NavigateRight.png" />
+    <Content Include="Images\Avtor\GettingStarted_SelectedFields.png" />
     <Content Include="Images\Avtor\LicMan_1.png" />
     <Content Include="Images\Avtor\LicMan_2.png" />
     <Content Include="Images\Avtor\LicMan_3.png" />
