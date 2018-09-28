@@ -52,6 +52,6 @@ Avtor licenses are installed using the Avtor license manager application. This a
 6. The license will be validated and the number of users and expiration date will be filled in on the dialog. <br/> ![](/Images/Avtor/LicMan_4.png)<br/><br/>
 7. Click "OK" to close the dialog
 
-Your content editors are now rady to start using Avtor.
+Your content editors are now ready to start using Avtor.
 
 **Please note**: Users are added to Avtor automatically as they start using Avtor. The number of users in you organization allowed to access Avtor is specified in the Avtor license. Once the number of users with access to Avtor reaches the number of users specified by the license, no additional users will be allowed to use Avtor. For more information, please see the documentation for the license manager.

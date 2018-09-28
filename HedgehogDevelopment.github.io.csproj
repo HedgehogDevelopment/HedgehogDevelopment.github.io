@@ -52,6 +52,7 @@
     <Content Include="fonts\iconFont.dev.svg" />
     <Content Include="fonts\iconFont.svg" />
     <Content Include="fonts\metroSysIcons.svg" />
+    <Content Include="Images\Avtor\Avtor.png" />
     <Content Include="Images\Avtor\LicMan_1.png" />
     <Content Include="Images\Avtor\LicMan_2.png" />
     <Content Include="Images\Avtor\LicMan_3.png" />
