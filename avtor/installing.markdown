@@ -47,7 +47,7 @@ Avtor licenses are installed using the Avtor license manager application. This a
 1. Log into Sitecore as an administrator
 2. Click on "Desktop" on the launch pad
 3. Open the start menu and select Security Tools > Avtor License Manager<br/> ![](/Images/Avtor/LicMan_1.png)<br/><br/>
-4. Click "Add License" </br> ![](/Images/Avtor/LicMan_2.png)<br/><br/>
+4. Click "Add License" ![](/Images/Avtor/LicMan_2.png)<br/><br/>
 5. Enter your license key in the popup and click "OK" <br/> ![](/Images/Avtor/LicMan_3.png)<br/><br/>
 6. The license will be validated and the number of users and expiration date will be filled in on the dialog. <br/> ![](/Images/Avtor/LicMan_4.png)<br/><br/>
 7. Click "OK" to close the dialog
