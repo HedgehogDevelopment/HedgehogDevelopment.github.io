@@ -97,13 +97,14 @@ After saving the item, the user can check the item back in to Sitecore by clicki
 <hr/>
 
 # Going further
-This tutorial show the content editor how to get started with Avtor. There are many other features of the tool like:
+This tutorial shows the content editor how to get started with Avtor. There are many other features of the tool like:
 
 - Workflow
+- Automatic checkin
 - Item buckets
 - Export to Excel
 - Import from Excel
-- Search
+- Search for items
 
 Please see our other documentation topics for additional information on these features.
 
