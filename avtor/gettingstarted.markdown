@@ -76,7 +76,7 @@ Here is a Avtor edit pane where a few fields have been added to a Field Set.
 <br/><br/>
 The fields in this screenshot are "read only" because the items have not been locked for editing by the current user. If the current user already has items locked for editing, they will be immediately editable. To lock an item for editing, the user needs to click the ![](/Images/Avtor/GettingStarted_EditInWorkflow.png) icon to start editing the item. This icon is located in the "Version" column.
 
-![](/Images/Avtor/GettingStated_StartEditing.png)
+![](/Images/Avtor/GettingStarted_StartEditing.png)
 <br/><br/>
 The content editor can click on any of the editable fields in the Avtor edit pane and begin updating the fields. As the fields are changed, they are highlighted so the user can track which fields have been edited. The screenshot below shows how the pane would look after a few fields have been updated.
 
@@ -88,7 +88,7 @@ if the user makes a mistake editing a field, they can click the "Undo" icon at t
 <br/><br/>
 Once the user has completed editing of the items in the tree, the user can click the "Save" button at the top left of the screen to save all changes to Sitecore.
 
-![](/Images/Avtor/GettingStarted_EditedFieldsSave.png)
+![](/Images/Avtor/GettingStarted_StartEditingSave.png)
 <br/><br/>
 After saving the item, the user can check the item back in to Sitecore by clicking the ![](/Images/Avtor/GettingStarted_Check.png) icon. This will allow the item to be updated by other users and/or published.
 
