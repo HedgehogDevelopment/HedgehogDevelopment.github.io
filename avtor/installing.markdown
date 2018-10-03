@@ -49,7 +49,7 @@ Avtor licenses are installed using the Avtor license manager application. This a
 3. Open the start menu and select Security Tools > Avtor License Manager<br/> ![](/Images/Avtor/LicMan_1.png)<br/><br/>
 4. You will be required to accept the Avtor License Agreement before you can begin. Please check the box at the bottom and click OK to continue.<br/> ![](/Images/Avtor/EulaAgreement.png)<br/><br/>
 5. Click "Add License" ![](/Images/Avtor/LicMan_2.png)<br/><br/>
-6. 6. 5. Enter your license key in the popup and click "OK" <br/> ![](/Images/Avtor/LicMan_3.png)<br/><br/>
+6. Enter your license key in the popup and click "OK" <br/> ![](/Images/Avtor/LicMan_3.png)<br/><br/>
 7. The license will be validated and the number of users and expiration date will be filled in on the dialog. <br/> ![](/Images/Avtor/LicMan_4.png)<br/><br/>
 8. Click "OK" to close the dialog
 
