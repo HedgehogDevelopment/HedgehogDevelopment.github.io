@@ -53,12 +53,18 @@
     <Content Include="fonts\iconFont.svg" />
     <Content Include="fonts\metroSysIcons.svg" />
     <Content Include="Images\Avtor\Avtor.png" />
-    <Content Include="Images\Avtor\GettingStarted_Check.png" />
+    <Content Include="Images\Avtor\Icon_Save.png" />
+    <Content Include="Images\Avtor\EditingItems_AvtorEditor.png" />
+    <Content Include="Images\Avtor\EditingItems_LockedRow.png" />
+    <Content Include="Images\Avtor\EditingItem_CheckoutRow.png" />
+    <Content Include="Images\Avtor\EditingItem_RowSelected.png" />
+    <Content Include="Images\Avtor\EditingItem_UpdatedField.png" />
+    <Content Include="Images\Avtor\Icon_Check.png" />
     <Content Include="Images\Avtor\GettingStarted_CheckIn.png" />
     <Content Include="Images\Avtor\GettingStarted_EditedFields.png" />
     <Content Include="Images\Avtor\GettingStarted_EditedFieldsUndo.png" />
     <Content Include="Images\Avtor\GettingStarted_EditFields.png" />
-    <Content Include="Images\Avtor\GettingStarted_EditInWorkflow.png" />
+    <Content Include="Images\Avtor\Icon_EditInWorkflow.png" />
     <Content Include="Images\Avtor\GettingStarted_AddFirstFieldSet.png" />
     <Content Include="Images\Avtor\GettingStarted_ContentEditor.png" />
     <Content Include="Images\Avtor\GettingStarted_ContentEditorTree.png" />
@@ -67,7 +73,7 @@
     <Content Include="Images\Avtor\GettingStarted_LaunchPad.png" />
     <Content Include="Images\Avtor\GettingStarted_ManageFieldSet.png" />
     <Content Include="Images\Avtor\GettingStarted_NameFieldSet.png" />
-    <Content Include="Images\Avtor\GettingStarted_NavigateRight.png" />
+    <Content Include="Images\Avtor\Icon_NavigateRight.png" />
     <Content Include="Images\Avtor\GettingStarted_SelectedFields.png" />
     <Content Include="Images\Avtor\GettingStarted_StartEditing.png" />
     <Content Include="Images\Avtor\GettingStarted_StartEditingSave.png" />
@@ -75,6 +81,7 @@
     <Content Include="Images\Avtor\LicMan_2.png" />
     <Content Include="Images\Avtor\LicMan_3.png" />
     <Content Include="Images\Avtor\LicMan_4.png" />
+    <Content Include="Images\Avtor\Icon_Undo.png" />
     <Content Include="Images\Feydra\ActivationDropdown.png" />
     <Content Include="Images\Feydra\ActivationLink.png" />
     <Content Include="Images\Feydra\DeactivateLink.png" />
@@ -307,6 +314,7 @@
     <Content Include="feydra\index.markdown" />
     <Content Include="feydra\UsingFeydra.markdown" />
     <Content Include="avtor\installing.markdown" />
+    <Content Include="avtor\editingitems.markdown" />
     <None Include="avtor\gettingstarted.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />

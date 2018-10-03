@@ -53,7 +53,7 @@ The content editor can quickly create their first Field Set by choosing an item 
 
 ![](/Images/Avtor/GettingStarted_ManageFieldSet.png)
 <br/><br/>
-The content editor can select a few fields to edit by double clicking on the fields in the left side list. They can also select the field in the left and click on the ![Navigate right](/Images/Avtor/GettingStarted_NavigateRight.png) icon. This will move the selected fields to the right-side list, where the list of fields being edited is kept.
+The content editor can select a few fields to edit by double clicking on the fields in the left side list. They can also select the field in the left and click on the ![Navigate right](/Images/Avtor/Icon_NavigateRight.png) icon. This will move the selected fields to the right-side list, where the list of fields being edited is kept.
 
 **Please Note**: The fields shown in this example are specific to the Sitecore implementation used for this tutorial. The names of fields in your instance of Sitecore will be different, but should be familiar to the content editor, since they are fields they have been working with in the Sitecore content editor.
 
@@ -74,7 +74,7 @@ Here is an Avtor edit pane where a few fields have been added to a Field Set.
 
 ![](/Images/Avtor/GettingStarted_EditFields.png)
 <br/><br/>
-The fields in this screenshot are "read-only" because the items have not been locked for editing by the current user. If the current user already has items locked for editing, they will be immediately editable. To lock an item for editing, the user needs to click the ![](/Images/Avtor/GettingStarted_EditInWorkflow.png) icon to start editing the item. This icon is located in the "Version" column.
+The fields in this screenshot are "read-only" because the items have not been locked for editing by the current user. If the current user already has items locked for editing, they will be immediately editable. To lock an item for editing, the user needs to click the ![](/Images/Avtor/Icon_EditInWorkflow.png) icon to start editing the item. This icon is located in the "Version" column.
 
 ![](/Images/Avtor/GettingStarted_StartEditing.png)
 <br/><br/>
@@ -90,7 +90,7 @@ Once the user has completed editing of the items in the tree, the user can click
 
 ![](/Images/Avtor/GettingStarted_StartEditingSave.png)
 <br/><br/>
-After saving the item, the user can check the item back into Sitecore by clicking the ![](/Images/Avtor/GettingStarted_Check.png) icon. This will allow the item to be updated by other users and/or published.
+After saving the item, the user can check the item back into Sitecore by clicking the ![](/Images/Avtor/Icon_Check.png) icon. This will allow the item to be updated by other users and/or published.
 
 ![](/Images/Avtor/GettingStarted_CheckIn.png)
 <br/><br/>
