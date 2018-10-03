@@ -56,9 +56,9 @@
     <Content Include="Images\Avtor\Icon_Save.png" />
     <Content Include="Images\Avtor\EditingItems_AvtorEditor.png" />
     <Content Include="Images\Avtor\EditingItems_LockedRow.png" />
-    <Content Include="Images\Avtor\EditingItem_CheckoutRow.png" />
-    <Content Include="Images\Avtor\EditingItem_RowSelected.png" />
-    <Content Include="Images\Avtor\EditingItem_UpdatedField.png" />
+    <Content Include="Images\Avtor\EditingItems_CheckoutRow.png" />
+    <Content Include="Images\Avtor\EditingItems_SelectedRow.png" />
+    <Content Include="Images\Avtor\EditingItems_UpdatedField.png" />
     <Content Include="Images\Avtor\Icon_Check.png" />
     <Content Include="Images\Avtor\GettingStarted_CheckIn.png" />
     <Content Include="Images\Avtor\GettingStarted_EditedFields.png" />
