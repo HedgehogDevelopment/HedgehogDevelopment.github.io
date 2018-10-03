@@ -31,31 +31,31 @@ If the user is a content editor, they may be presented with a screen similar to 
 
 A locked item looks like:
 
-![Locked Item](./Images/Avtor/EditingItems_LockedRow.png)
+![Locked Item](/Images/Avtor/EditingItems_LockedRow.png)
 
 The column next to the content tree shows the version number of the current item and any item actions the user can perform on the item. Depending on the item state and user permissions, these may be check-out, check-in or add new version. The user may also use the version drop-down to select a different version for the item.
 
 If the user clicks on the row, it will be selected and look like:
 
-![Selected Row](./Images/Avtor/EditingItems_SelectedRow.png)
+![Selected Row](/Images/Avtor/EditingItems_SelectedRow.png)
 
 This allows the user to easily see which fields are associated with which item in the content tree.
 
 Since the row is locked, the fields are read only, and are shown as grayed out. Clicking on the ![](/Images/Avtor/Icon_EditInWorkflow.png) icon in the version column will check out the item to the current user.
 
-![Checkout Row](./Images/Avtor/EditingItems_CheckoutRow.png)
+![Checkout Row](/Images/Avtor/EditingItems_CheckoutRow.png)
 
 Once the row is checked out, we can see the version number has been incremented, as expected, and the ![](/Images/Avtor/Icon_EditInWorkflow.png) icon hash changed to a ![](/Images/Avtor/Icon_Check.png), which allows the user to check-in the item when they have finished editing it.
 
 The user can now click on any of the fields and update its value. When a field is updated, it will look like:
 
-![Updated Field](./Images/Avtor/EditingItems_UpdatedField.png)
+![Updated Field](/Images/Avtor/EditingItems_UpdatedField.png)
 
-There are two changes to the field in the field edit area. The first is the outline of the field indicates it has been edited. An ![Undo](/Images/Avtor/Icon_Undo.png) icon has been added to the top left. The icon is small, but if you mouse over it, it will grow to a more appropriate size.
+There are two changes to the field in the field edit area. The first is the outline of the field indicates it has been edited. An "Undo" ![Undo](/Images/Avtor/Icon_Undo.png) icon has been added to the top left. The icon is small, but if you mouse over it, it will grow to a more appropriate size.
 
 Clicking the Undo icon will revert the change to the current value in the database. This will allow you to undo any changes you may have made in error.
 
 The user can continue to edit any items on the screen. Expanding the item in the content tree will expose more items for the user to edit.
 
-Once the user has completed their changes, clicking the ![Save](/Images/Avtor/Icon_Save.png) icon will write their changes back to the Sitecore database.
+Once the user has completed their changes, clicking the "Save" ![Save](/Images/Avtor/Icon_Save.png) icon will write their changes back to the Sitecore database.
 
