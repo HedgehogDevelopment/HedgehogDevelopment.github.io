@@ -53,6 +53,7 @@
     <Content Include="fonts\iconFont.svg" />
     <Content Include="fonts\metroSysIcons.svg" />
     <Content Include="Images\Avtor\Avtor.png" />
+    <Content Include="Images\Avtor\EulaAgreement.png" />
     <Content Include="Images\Avtor\Icon_Save.png" />
     <Content Include="Images\Avtor\EditingItems_AvtorEditor.png" />
     <Content Include="Images\Avtor\EditingItems_LockedRow.png" />
