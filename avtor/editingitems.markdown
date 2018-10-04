@@ -59,3 +59,33 @@ The user can continue to edit any items on the screen. Expanding the item in the
 
 Once the user has completed their changes, clicking the "Save" ![Save](/Images/Avtor/Icon_Save.png) icon will write their changes back to the Sitecore database.
 
+## Missing fields
+When editing a complex content tree, there may be items missing one or more fields being edited. This doesn't present a problem for Avtor. The missing fields will simple be rendered without a field in the Avtor field editor.
+
+![Updated Field](/Images/Avtor/EditingItems_MissingFields.png)
+
+In the above image, the "Company" folder does not have any of the fields being edited, and therefore there is no field editor present on the screen.
+
+## Editing fields as an Administrator
+In most cases, the content editor shouldn't be an administrator when working on the website. Since administrators occasionally edit content in Sitecore, Avtor is aware of administrators special capabilities and allows them to edit content as well.
+
+The biggest change for administrators is they do not need to "Check out" a version of the item before editing it. When an administrator is using Avtor, the check-out button is removed and replaced with an "add version" ![Add Version](/Images/Avtor/Icon_Plus.png) button. This allows the administrator to add a new version of the item if needed. Otherwise, the administrator can edit the current version of the item without checking it out.
+
+![Edit as Administrator](/Images/Avtor/EditingItems_Administrator.png)
+
+Administrators do not need to check-in items after editing, so in most cases, the check-in button will not be present. If an item is locked by someone else, the check-in button will be shown, giving the administrator the opportunity to unlock the item.
+
+![Unlock Item](/Images/Avtor/EditingItems_Administrator.png)
+
+## Editing items in a Sitecore workflow
+Avtor supports Sitecore workflow by allowing the content editor to see the workflow actions available to the editor on each item in the Avtor editor pane. This option is disabled by default, but can easily be enabled by selecting the Options ribbon and enabling the "Show workflow column" checkbox.
+
+![Enable Workflow](/Images/Avtor/EditingItems_EnableWorkflow.png)
+
+This creates a column in the editor pane called "Workflow on Save", which will show any available workflow actions, and if selected, the action will take place when the items are saved.
+
+![Workflow](/Images/Avtor/EditingItems_Workflow.png)
+
+Only one workflow action may be selected for a given item. A selected workflow action can be deselected before saving by clicking on the selected workflow again.
+
+If any validation errors occur during saving, the user will be presented with validation error dialogs for each of the items failing validation.

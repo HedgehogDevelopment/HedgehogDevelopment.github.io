@@ -53,6 +53,11 @@
     <Content Include="fonts\iconFont.svg" />
     <Content Include="fonts\metroSysIcons.svg" />
     <Content Include="Images\Avtor\Avtor.png" />
+    <Content Include="Images\Avtor\EditingItems_Administrator.png" />
+    <Content Include="Images\Avtor\EditingItems_EnableWorkflow.png" />
+    <Content Include="Images\Avtor\EditingItems_MissingFields.png" />
+    <Content Include="Images\Avtor\EditingItems_UnlockItem.png" />
+    <Content Include="Images\Avtor\EditingItems_Workflow.png" />
     <Content Include="Images\Avtor\Icon_Save.png" />
     <Content Include="Images\Avtor\EditingItems_AvtorEditor.png" />
     <Content Include="Images\Avtor\EditingItems_LockedRow.png" />
@@ -82,6 +87,7 @@
     <Content Include="Images\Avtor\LicMan_3.png" />
     <Content Include="Images\Avtor\LicMan_4.png" />
     <Content Include="Images\Avtor\Icon_Undo.png" />
+    <Content Include="Images\Avtor\Icon_Plus.png" />
     <Content Include="Images\Feydra\ActivationDropdown.png" />
     <Content Include="Images\Feydra\ActivationLink.png" />
     <Content Include="Images\Feydra\DeactivateLink.png" />
