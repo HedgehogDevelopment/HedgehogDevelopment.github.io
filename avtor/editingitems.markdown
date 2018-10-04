@@ -62,6 +62,13 @@ Avtor allows the user to edit multiple items at one. The user can event expand i
 
 Once the user has completed their changes, clicking the "Save" ![Save](/Images/Avtor/Icon_Save.png) icon will write their changes back to the Sitecore database.
 
+## Switching Languages
+Avtor allows the user to quickly switch between the languages installed on their server. This is done by choosing the new language from the Selected Language dropdown in the Home ribbon.
+
+![Updated Field](/Images/Avtor/EditingItems_MissingFields.png)
+
+**Please Note:** You must save any changes made to fields in the Avtor editing pane before switching languages.
+
 ## Missing fields
 When editing a complex content tree, there may be items missing one or more fields being edited. This doesn't present a problem for Avtor. The missing fields will simple be rendered without a field in the Avtor field editor.
 
