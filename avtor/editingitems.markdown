@@ -65,7 +65,7 @@ Once the user has completed their changes, clicking the "Save" ![Save](/Images/A
 ## Switching Languages
 Avtor allows the user to quickly switch between the languages installed on their server. This is done by choosing the new language from the Selected Language dropdown in the Home ribbon.
 
-![Updated Field](/Images/Avtor/EditingItems_MissingFields.png)
+![Updated Field](/Images/Avtor/EditingItems_SelectLanguage.png)
 
 **Please Note:** You must save any changes made to fields in the Avtor editing pane before switching languages.
 
