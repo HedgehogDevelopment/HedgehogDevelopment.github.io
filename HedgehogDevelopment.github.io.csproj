@@ -57,7 +57,7 @@
     <Content Include="Images\Avtor\FieldSets_CopyFieldSet.png" />
     <Content Include="Images\Avtor\FieldSets_EditFieldSet.png" />
     <Content Include="Images\Avtor\FieldSets_FieldSetSelector.png" />
-    <Content Include="Images\Avtor\FieldSets_FieldSetSelectorDropdownpng.png" />
+    <Content Include="Images\Avtor\FieldSets_FieldSetSelectorDropdown.png" />
     <Content Include="Images\Avtor\FieldSets_NewFieldSet.png" />
     <Content Include="Images\Avtor\FieldSets_RemoveFieldSet.png" />
     <Content Include="Images\Avtor\Icon_Delete.png" />
