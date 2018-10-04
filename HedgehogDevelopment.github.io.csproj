@@ -43,6 +43,7 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="avtor\fieldsets.markdown" />
     <Content Include="css\iconFont.min.css" />
     <Content Include="css\metro-bootstrap-responsive.css" />
     <Content Include="css\metro-bootstrap-responsive.min.css" />
@@ -53,6 +54,13 @@
     <Content Include="fonts\iconFont.svg" />
     <Content Include="fonts\metroSysIcons.svg" />
     <Content Include="Images\Avtor\Avtor.png" />
+    <Content Include="Images\Avtor\FieldSets_CopyFieldSet.png" />
+    <Content Include="Images\Avtor\FieldSets_EditFieldSet.png" />
+    <Content Include="Images\Avtor\FieldSets_FieldSetSelector.png" />
+    <Content Include="Images\Avtor\FieldSets_FieldSetSelectorDropdownpng.png" />
+    <Content Include="Images\Avtor\FieldSets_NewFieldSet.png" />
+    <Content Include="Images\Avtor\FieldSets_RemoveFieldSet.png" />
+    <Content Include="Images\Avtor\Icon_Delete.png" />
     <Content Include="Images\Avtor\EditingItems_OtherFields1.png" />
     <Content Include="Images\Avtor\EditingItems_OtherFields2.png" />
     <Content Include="Images\Avtor\EulaAgreement.png" />
@@ -61,6 +69,8 @@
     <Content Include="Images\Avtor\EditingItems_MissingFields.png" />
     <Content Include="Images\Avtor\EditingItems_UnlockItem.png" />
     <Content Include="Images\Avtor\EditingItems_Workflow.png" />
+    <Content Include="Images\Avtor\FieldSets_AddFieldSet.png" />
+    <Content Include="Images\Avtor\FieldSets_EmptyFieldSet.png" />
     <Content Include="Images\Avtor\Icon_Save.png" />
     <Content Include="Images\Avtor\EditingItems_AvtorEditor.png" />
     <Content Include="Images\Avtor\EditingItems_LockedRow.png" />
@@ -91,6 +101,9 @@
     <Content Include="Images\Avtor\LicMan_4.png" />
     <Content Include="Images\Avtor\Icon_Undo.png" />
     <Content Include="Images\Avtor\Icon_Plus.png" />
+    <Content Include="Images\Avtor\Icon_NavigateDown.png" />
+    <Content Include="Images\Avtor\Icon_NavigateUp.png" />
+    <Content Include="Images\Avtor\Pointer.png" />
     <Content Include="Images\Feydra\ActivationDropdown.png" />
     <Content Include="Images\Feydra\ActivationLink.png" />
     <Content Include="Images\Feydra\DeactivateLink.png" />
