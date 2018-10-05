@@ -351,6 +351,9 @@
     <None Include="avtor\gettingstarted.markdown" />
     <Content Include="avtor\index.markdown" />
     <Content Include="avtor\importexport.markdown" />
+    <Content Include="avtor\search.markdown" />
+    <Content Include="avtor\itembuckets.markdown" />
+    <Content Include="avtor\specialfeatures.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
