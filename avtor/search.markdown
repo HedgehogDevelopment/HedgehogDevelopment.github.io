@@ -28,4 +28,4 @@ The above screen shows how search results are indicated in the editing pane. The
 Some items may contain a magnifying glass ![Child results](/Images/Avtor/Icon_ChildResults.png) next to the name in the content tree. This icon is present when child items under a collapsed item match the search criteria.
 
 ## Search Results in Item Buckets
-When content in an item bucket matches the search criteria, the items will be displayed under the item bucket search box and automatically highlighted. Please see ![item buckets](/Avtor/itembuckets.html) for more information.
+When content in an item bucket matches the search criteria, the items will be displayed under the item bucket search box and automatically highlighted. Please see [item buckets](/Avtor/itembuckets.html) for more information.
