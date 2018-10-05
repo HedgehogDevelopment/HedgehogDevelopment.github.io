@@ -60,18 +60,40 @@ To use the Exported XML file in Excel, perform the following steps:
 1. Save the exported file to a folder on your computer.
 2. Open Excel
 3. Use Excel to open a workbook by browsing to the Export file in excel. The default name is **ItemExport.Xml**
-4. Excel will present a dialog similar to this: <br/>![Excel Open XML](/Images/Avtor/ImportExport_ExcelOpenXML.png)<br/><br/>
+4. Excel will present a dialog similar to this: <br/><br/>![Excel Open XML](/Images/Avtor/ImportExport_ExcelOpenXML.png)<br/><br/>
 5. Choose "As an XML Table" and click OK.
 6. Excel will open the spreadsheet. 
 
 The first 3 columns in the spreadsheet contains values Avtor uses to import the items back into Sitecore, and those values must remain associated with the field values in the spreadsheet. The first 3 columns may be hidden, but may not be removed if you wish to import the field values back into Sitecore.
 
-![Excel XML](/Images/Avtor/ImportExport_ExceXML.png)
+![Excel XML](/Images/Avtor/ImportExport_ExcelXML.png)
 
 To import items, you must save the Excel spreadsheet as an XML file. This is done using the Save As function in Excel and choosing "XML Data" in the SAve as type dropdown on the Save As dialog.
 
 ![Excel Save XML](/Images/Avtor/ImportExport_ExcelSaveXML.png)
 
+Excel will warn you about loosing Worksheet features, but this is on. Just click "Continue".
+
 ## Importing items
-Avtor can import items from an 
+Avtor can import items from an XML file previously exported from Avtor. This file must contain the field values for Item URI and Item Revision. Avtor uses these values to correctly match items in the Sitecore database to items in the import file. Without these values, Avtor would have no way to ensure any field value is being stored in the correct item.
+
+To import a file, click Import Items on the Home ribbon.
+
+![Import Items Ribbon](/Images/Avtor/ImportExport_ImportItemsRibbon.png)
+
+This will open the import wizard. The Avtor import wizard allows the user to choose a file to import and then shows the status of the file import.
+
+![Import Wizard 1](/Images/Avtor/ImportExport_ImportWizard1.png)
+
+The file will be uploaded and Avtor will begin importing the updated items. 
+
+Once the import is complete, Avtor will show the status of the import in the Import Results screen.
+
+![Import Wizard 1](/Images/Avtor/ImportExport_ImportResults.png)
+
+The Import Results allows the user to download the detailed log and also provides some summary status detailing the number of items imported, updated, unchanged and skipped.
+
+An item may be skipped if the ID in the Item Revision in the Sitecore database doesn't match the Item Revision in the Import. This is done to prevent overwriting changes that may have occurred since the item was exported.
+
+The import wizard will also allow the content editor to download a new export file by checking the "Download a new export file" checkbox. This file will contain all updated values from the Sitecore database. This file should be used to edit the items if further updates a required.
 
