@@ -4,20 +4,20 @@ layout: AvtorLayout
 ---
 
 # Field Sets
-Avtor uses Field Sets to group a small number of fields together for the editor to review and/or update. The Field Set is named and saved as part of the content editors profile so they can quickly re-select those fields for editing. Avtor makes creating and managing the fields in a Field Set very simple. The user simply selects an item they want to update and all editable fields are presented to the user. They can choose the fields for the fields set and then save the fieldset for future use.
+Avtor uses Field Sets to group a small number of fields together for the editor to review and/or update. The Field Set is named and saved as part of the content editor's profile so they can quickly re-select those fields for editing. Avtor makes creating and managing the fields in a Field Set very simple. The user simply selects an item from the tree that they want to update and all the editable fields are presented to the them. They can then choose the fields for their Fields Set and then save the Field Set for future use.
 
 ## Creating a Field Set
 Before the content editor can begin updating Sitecore content, they must create at least one Field Set. This is done by selecting an item in the content tree having the fields they would like to edit and selecting "Add Field Set". Add Field Set can be found on the ribbon bar or in the right click content menu for an item.
 
 ![Add Field Set](/Images/Avtor/FieldSets_AddFieldSet.png)
 
-Selecting either option in the above image will open the Manager Field Set dialog. This is where the user will select the fields for the Field Set and choose a name.
+Selecting either option in the above image will open the Manage Field Set dialog. This is where the user will select the fields for the Field Set and choose a name.
 
 ![Empty Field Set Dialog](/Images/Avtor/FieldSets_EmptyFieldSet.png)
 
 In this dialog, the content editor can choose a name for the Field Set and select the fields to edit.
 
-The fields are selected by moving fields from the list on the left side list to the right. This can be done a few different ways.
+The fields are added to their set by moving them from the list on the left side to the list on the right side. This can be done a few different ways:
 
 - Selecting a section name and clicking the Move Right ![Move right](/Images/Avtor/Icon_NavigateRight.png) icon. The section names have a dark background and light text. 
 - Selecting a single field and clicking the Move Right ![Move right](/Images/Avtor/Icon_NavigateRight.png) icon.
@@ -30,7 +30,7 @@ The content editor can change the order of fields in the Field Set by selecting 
 
 Fields in the Field Set can be removed by selecting a field and using the Delete Field ![Delete Field](/Images/Avtor/Icon_Delete.png) icon or double clicking on the field in the right side list.
 
-**Please Note:** Avtor allows a maximum of 8 fields in the Field Set. This is done to ensure the best possible editing experience for the user. By limiting the number of fields, we can ensure the browser and server don't get overloaded by the complexities of editing the fields and we can also reduce the amount of scrolling the user needs to perform to view or edit the selected fields. 
+**Please Note:** Avtor allows a maximum of 8 fields in the Field Set. This is done to ensure the best possible editing experience for the user. By limiting the number of fields, we can ensure the browser and server don't get overloaded by the complexities of editing the fields and we can also reduce the amount of scrolling the user needs to perform to view or edit the selected fields. We find it better to create many focused Field Sets rather than a large overbearing one. This also makes switching between Field Sets quick and efficient. 
 
 ### Saving the new Field Set
 Before saving the new Field Set, it must be given a name so it can be selected again. The name must be unique, and is entered in the Field Set Name text box at the top of the dialog.
@@ -56,11 +56,11 @@ The Manage Field Set dialog will open with the fields in the current item shown 
 Editing a Field Set allows the user to add fields from different items for editing.
 
 ## Selecting an existing Field Set
-Avtor allows the content editor to create as many Field Sets as they need to manage their content. To select an existing FieldSet, the user can choose a Field Set from their list of Field Sets in the Field Set Selector in the Home ribbon.
+Avtor allows the content editor to create as many Field Sets as they need to manage their content. To select an existing Field Set, the user can choose a Field Set from their list of Field Sets in the Field Set Selector in the Home ribbon.
 
 ![Field Set Selector](/Images/Avtor/FieldSets_FieldSetSelector.png)
 
-The content editor can use the arrows to scroll through the field sets, or use the open drop down button to open a larger list of available Field Sets.
+The content editor can use the arrows to scroll through the Field Sets, or use the open dropdown button to open a larger list of available Field Sets.
 
 ![Field Set Selector Dropdown](/Images/Avtor/FieldSets_FieldSetSelectorDropdown.png)
 

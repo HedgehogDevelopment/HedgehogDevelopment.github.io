@@ -33,7 +33,7 @@ A locked item looks like:
 
 ![Locked Item](/Images/Avtor/EditingItems_LockedRow.png)
 
-Note the column next to the content tree. This is the version columns, and it shows the version number of the current item and any item actions the user can perform on the item. Depending on the item state and user permissions, these may be check-out, check-in or add new version. The user may also use the version drop-down to select a different version of the fields for review and editing.
+Note the column next to the content tree. This is the version columns, and it shows the version number of the current item and any item actions the user can perform on the item. Depending on the item state and user permissions, these may be check-out, check-in or add new version. The user may also use the version dropdown to select a different version of the fields for review and editing.
 
 If the user clicks anywhere on the row, it will be selected and look like:
 
