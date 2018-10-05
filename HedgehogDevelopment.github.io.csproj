@@ -54,6 +54,7 @@
     <Content Include="fonts\iconFont.svg" />
     <Content Include="fonts\metroSysIcons.svg" />
     <Content Include="Images\Avtor\Avtor.png" />
+    <Content Include="Images\Avtor\EditingItems_SelectLanguage.png" />
     <Content Include="Images\Avtor\FieldSets_CopyFieldSet.png" />
     <Content Include="Images\Avtor\FieldSets_EditFieldSet.png" />
     <Content Include="Images\Avtor\FieldSets_FieldSetSelector.png" />
@@ -95,6 +96,13 @@
     <Content Include="Images\Avtor\GettingStarted_SelectedFields.png" />
     <Content Include="Images\Avtor\GettingStarted_StartEditing.png" />
     <Content Include="Images\Avtor\GettingStarted_StartEditingSave.png" />
+    <Content Include="Images\Avtor\ImportExport_ExcelCSV.png" />
+    <Content Include="Images\Avtor\ImportExport_ExcelCSVClean.png" />
+    <Content Include="Images\Avtor\ImportExport_ExcelOpenXML.png" />
+    <Content Include="Images\Avtor\ImportExport_ExcelSaveXML.png" />
+    <Content Include="Images\Avtor\ImportExport_ExcelXML.png" />
+    <Content Include="Images\Avtor\ImportExport_ExportItemRibbon.png" />
+    <Content Include="Images\Avtor\ImportExport_ExportItemsDialog.png" />
     <Content Include="Images\Avtor\LicMan_1.png" />
     <Content Include="Images\Avtor\LicMan_2.png" />
     <Content Include="Images\Avtor\LicMan_3.png" />
@@ -339,6 +347,7 @@
     <Content Include="avtor\editingitems.markdown" />
     <None Include="avtor\gettingstarted.markdown" />
     <Content Include="avtor\index.markdown" />
+    <Content Include="avtor\importexport.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
