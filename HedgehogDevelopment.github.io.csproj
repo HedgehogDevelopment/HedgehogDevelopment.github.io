@@ -116,6 +116,8 @@
     <Content Include="Images\Avtor\Icon_NavigateUp.png" />
     <Content Include="Images\Avtor\Pointer.png" />
     <Content Include="Images\Avtor\Icon_ChildResults.png" />
+    <Content Include="Images\Avtor\Search_Results.png" />
+    <Content Include="Images\Avtor\Search_Ribbon.png" />
     <Content Include="Images\Feydra\ActivationDropdown.png" />
     <Content Include="Images\Feydra\ActivationLink.png" />
     <Content Include="Images\Feydra\DeactivateLink.png" />
