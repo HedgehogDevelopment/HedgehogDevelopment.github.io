@@ -103,6 +103,9 @@
     <Content Include="Images\Avtor\ImportExport_ExcelXML.png" />
     <Content Include="Images\Avtor\ImportExport_ExportItemsRibbon.png" />
     <Content Include="Images\Avtor\ImportExport_ExportItemsDialog.png" />
+    <Content Include="Images\Avtor\ImportExport_ImportItemsRibbon.png" />
+    <Content Include="Images\Avtor\ImportExport_ImportResults.png" />
+    <Content Include="Images\Avtor\ImportExport_ImportWizard1.png" />
     <Content Include="Images\Avtor\LicMan_1.png" />
     <Content Include="Images\Avtor\LicMan_2.png" />
     <Content Include="Images\Avtor\LicMan_3.png" />
