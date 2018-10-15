@@ -9,10 +9,10 @@ Avtor contains a number of features that do not immediately fit in to any of the
 ## Character counts
 Avtor assists the content editor by optionally showing character counts for text fields. This is very useful for content, like SEO fields, where the number of characters in the content is significant. 
 
-To activate the Avtor character count display, select the "Options" ribbon and enable the "Character Count" checkbox.
+To activate the Avtor character count display, select the "Options" ribbon and enable the "Character Count" check-box.
 
 ![Character Count](/Images/Avtor/SpecialFeatures_CharCount.png)
-<br/></br>
+<br/><br/>
 
 Each text field will show the current character count. As the user updates a field, the character count will automatically be updated.
 
@@ -29,7 +29,7 @@ The user can select any of the gutter widgets in the list and the gutter will be
 Avtor supports all of the normal Sitecore right-click menus in the content tree. Each of the right-click menu items function exactly as the content editor would expect from using the Sitecore Content Editor.
 
 ![Right click](/Images/Avtor/SpecialFeatures_RightClick.png)
-<br/></br>
+<br/><br/>
 
 Custom right-click menu items will not show up in Avtor because Avtor manages its right click menu separately from the normal Sitecore content editor.
 
@@ -37,9 +37,9 @@ Custom right-click menu items will not show up in Avtor because Avtor manages it
 Avtor adds an additional right click menu options to the default Sitecore content editor menu. These allow the user to find items the current item links to or items linked to the current item. 
 
 The custom item links menu is opened by right clicking on the desired item in the content tree and selecting "Item Links". This opens a fly-out menu containing link options.
-<br/></br>
+<br/><br/>
 ![Item Links](/Images/Avtor/SpecialFeatures_ItemLinks.png)
-<br/></br>
+<br/><br/>
 The menu choices perform the following tasks:
 
 - **Items linked to this** - Highlight items in the content tree with links to the selected item.
@@ -50,7 +50,7 @@ The links could be links from any link field, data source or links in rich text 
 The following is an example of items the home page links to:
 
 ![Home Links](/Images/Avtor/SpecialFeatures_HomeLinks.png)
-<br/></br>
+<br/><br/>
 
 This example shows that /Avtor-Beta and /Free-Trial are linked from the home page. Also, there is a link under /Download since it has the ![Child Result](/Images/Avtor/Icon_ChildResults.png) icon.
 
