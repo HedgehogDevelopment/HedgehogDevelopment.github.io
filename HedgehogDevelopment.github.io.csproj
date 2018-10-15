@@ -121,6 +121,13 @@
     <Content Include="Images\Avtor\Icon_ChildResults.png" />
     <Content Include="Images\Avtor\Search_Results.png" />
     <Content Include="Images\Avtor\Search_Ribbon.png" />
+    <Content Include="Images\Avtor\SpecialFeatures_CharCount.png" />
+    <Content Include="Images\Avtor\SpecialFeatures_CheckInOnSave.png" />
+    <Content Include="Images\Avtor\SpecialFeatures_Gutter.png" />
+    <Content Include="Images\Avtor\SpecialFeatures_GutterSelected.png" />
+    <Content Include="Images\Avtor\SpecialFeatures_HomeLinks.png" />
+    <Content Include="Images\Avtor\SpecialFeatures_ItemLinks.png" />
+    <Content Include="Images\Avtor\SpecialFeatures_RightClick.png" />
     <Content Include="Images\Feydra\ActivationDropdown.png" />
     <Content Include="Images\Feydra\ActivationLink.png" />
     <Content Include="Images\Feydra\DeactivateLink.png" />
