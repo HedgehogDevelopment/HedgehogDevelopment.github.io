@@ -52,11 +52,15 @@ Before TDS Classic version 5.5, the build server needed to have TDS Classic inst
 
 #### Installing the NuGet build components package
 
-If you wish to use the build components in the NuGet package on your build server, you should add the NuGet package to a **private** NuGet repository that the build server can access. Password protected feeds like MyGet are a great place to host these package.
+If you wish to use the build components in the NuGet package on your build server, the TDS Nuget packages are available as private NuGet packages on the public **nuget.org** feed. You may add these components to your project using the following command in the NuGet command prompt:
 
-The NuGet package containing the build components is named **HedgehogDevelopment.TDS.[x.x.x.x].nupkg**, where x.x.x.x is the version of the package. This follows the standard NuGet naming convention.
+    PM> Install-Package HedgehogDevelopment.TDS
 
-The NuGet package can be added to your TDS Classic project(s) the same way you add any other NuGet packages in Visual Studio.
+To install a specific version please add the switch **-Version x.x.x.x ** where x.x.x.x represents the version of TDS you have installed.
+
+**Please Note:** The TDS package is unlisted on the NuGet feed. You must explicitly add it using the above command, or place it in your own private feed. Once added to your projects, NuGet will recognize the package and check it for updates. 
+
+When using the TDS NuGet packages, it is important that you keep the version of the NuGet package the same as the version of TDS you are running. This is needed because the TDS Add-in in visual studio works closely with the NuGet package. 
 
 #### Licensing TDS Classic on the build server ###
 
