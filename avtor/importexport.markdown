@@ -7,9 +7,9 @@ layout: AvtorLayout
 Avtor allows the content editor to export items from Sitecore to an XML or CSV file. These files can be opened in spreadsheet programs like Excel to perform much more sophisticated analysis of Sitecore content than Avtor provides. One of the unique features of Avtor is the ability to import updated export files back into Sitecore. This offers the content editor very powerful editing and analysis tools.
 
 ## Exporting items
-Avtor allows the content editor to export items from their Sitecore content tree. When exporting items, Avtor will start at the item in the top of the Avtor content tree find all items the content editor has access to. This can create very large exports if the content editor starts Avtor at the top of all content. When exporting items from Avtor, it is a good practice to open Avtor at the top of the items the user wants to export. For more information on opening Avtor at a specific location, please see [Starting in the Content Editor](/avtor/gettingstarted.html#starting-in-the-content-editor).
+Avtor allows the content editor to export items from their Sitecore content tree. When exporting items, Avtor will start with the item at the top of the Avtor content tree and find all items the content editor has access to. This can create very large exports if the content editor starts Avtor at the top of all content. When exporting items from Avtor, it is a good practice to open Avtor at the top of the items the user wants to export. For more information on opening Avtor at a specific location, please see [Starting in the Content Editor](/avtor/gettingstarted.html#starting-in-the-content-editor).
 
-Avtor only exports field values from the current Field Set. This allows the content editor to limit the fields in the export to the ones they are interested updating or analyzing in Excel.
+Avtor only exports field values from the current Field Set. This allows the content editor to limit the fields in the export to the ones they are interested in updating or analyzing in Excel.
 
 Once Avtor has been opened at the appropriate export location and the desired Field Set is selected, click on the Export Items ribbon button and choose the export options from the Export Items dialog.
 
@@ -35,7 +35,7 @@ Avtor offers a number of options for the user when exporting items from Sitecore
 - **File Format**: The user can choose what format to use when generating the file. Please see below for details on each of the formats.
 
 ### Export items as CSV
-Avtor can generate an export using the CSV or Comma Separated Values format. This format is a text file where the first line contains column names separated by commas followed by a single line for each item with the values of each field seperated by commas.
+Avtor can generate an export using the CSV or Comma Separated Values format. This format is a text file where the first line contains column names separated by commas, followed by a single line for each item, with the values of each field separated by commas.
 
 Because the CSV format is relatively primitive, it is not importable back into Avtor. It is easily opened in Excel or other spreadsheet programs, but doesn't handle complex types like Rich Text fields or link fields very well.
 
@@ -53,7 +53,7 @@ Avtor can export items as an XML or Extensible Markup Language file. For more in
 Avtor allows XML files to be imported back into Sitecore because the robust nature of XML allows field values to be associated together as items. This is very important for ensuring the accuracy of the items when importing them back into Sitecore.
 
 ### Using Exported XML data in Excel
-Using the Exported XML data in Excel isn't as easy as using the CSV data described above. A few additional steps are required to allow Excel to accurately read and edited the XML file.
+Using the Exported XML data in Excel isn't as easy as using the CSV data described above. A few additional steps are required to allow Excel to accurately read and edit the XML file.
 
 To use the Exported XML file in Excel, perform the following steps:
 
@@ -72,7 +72,7 @@ To import items updated in Excel, you must save the Excel spreadsheet as an XML 
 
 ![Excel Save XML](/Images/Avtor/ImportExport_ExcelSaveXML.png)
 
-Excel will warn you about loosing Worksheet features when you save the file. This is OK, since that information should not be included in an import. Clicking "Continue" will save the new XML file.
+Excel will warn you about losing Worksheet features when you save the file. This is OK, since that information should not be included in an import. Clicking "Continue" will save the new XML file.
 
 ## Importing items
 Avtor can import items from an XML file previously exported from Avtor. This file must contain the field values for **Item URI** and **Item Revision**. Avtor uses these values to correctly match items in the Sitecore database to items in the import file. Without these values, Avtor would have no way to ensure updated field values are being stored in the correct item.

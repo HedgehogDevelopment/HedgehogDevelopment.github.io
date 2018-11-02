@@ -13,13 +13,13 @@ When working with items in an Item Bucket, the user is presented with a search b
 
 **Please Note:** This search box will only show up if the "View Buckets" check box in the content editor is disabled. This shouldn't be a problem in most cases since this is only available to administrators.
 
-Entering a value into the item bucket causes Avtor to add any content items containing the search value into the content tree and editing area.
+Entering a value into the "Find in bucket" search causes Avtor to add any content items containing the search value into the content tree and editing area.
 
 ![Bucket Search Results](/Images/Avtor/ItemBuckets_SearchResults.png)
 
 The content editor can update these items the same way they would update any other items in the content tree.
 
-Performing an additional search will add any newly found items to the list of items shown to the content editor for editing.
+Performing an additional search will append any newly found items to the list on the tree under the bucket. These additional items will all be availble for editing by the content editor in addition to the previous results.
 
 Pressing the Clear Results button will remove any Items located by the user from the result list under the bucket.
 
