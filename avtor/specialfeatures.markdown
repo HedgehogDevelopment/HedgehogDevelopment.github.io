@@ -20,7 +20,7 @@ Each text field will show the current character count. As the user updates a fie
 The gutter of content tree in Avtor works exactly the same as the gutter in the Sitecore content editor. The gutter is activated by right clicking on the gutter area to the left of the content tree.
 
 ![Gutter](/Images/Avtor/SpecialFeatures_Gutter.png)
-<br/></br>
+<br/><br/>
 The user can select any of the gutter widgets in the list and the gutter will be updated.
 
 ![Gutter widgets](/Images/Avtor/SpecialFeatures_GutterSelected.png)
@@ -34,7 +34,7 @@ Avtor supports all of the normal Sitecore right-click menus in the content tree.
 Custom right-click menu items will not show up in Avtor because Avtor manages its right click menu separately from the normal Sitecore content editor.
 
 ### Item links
-Avtor adds an additional right click menu options to the default Sitecore content editor menu. These allow the user to find items the current item links to or items linked to the current item. 
+Avtor adds additional right click menu options to the default Sitecore content editor menu. These allow the user to find items the current item links to or items linked to the current item. 
 
 The custom item links menu is opened by right clicking on the desired item in the content tree and selecting "Item Links". This opens a fly-out menu containing link options.
 <br/><br/>
