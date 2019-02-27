@@ -113,7 +113,7 @@ When configuring Web Deploy on a server, you can generate a .publishsettings fil
 </div></div>
 
 ### WebAPI Service Functions
-The TDS WebAPI deployment service is designed to return status information and detailed logs while a deployment is taking place. The WebAPI service exposes the following methods:
+The TDS WebAPI deployment service is designed to return status information and detailed logs while a deployment is taking place. The endpoint for the Deployment service is http://[server]/Api/TDS/WebDeploy. The WebAPI service exposes the following actions:
 
 * **public string Invoke()**: Triggers the deployment process if it isn't already running. Normally, the deployment process starts when Sitecore starts. Calling Invoke will ensure it has started.
 	* *Return Value*: Always returns "OK".
@@ -127,7 +127,7 @@ The TDS WebAPI deployment service is designed to return status information and d
 	  * **DeploymentStatus**: Returns one of [**Idle**, **Deploying**, **Complete**, **Failed**, **AnotherServerBusy**]. These values describe the service state. The value **AnotherServerBusy** indicates that a deployment is happening on a load balanced or scaled out instance of Sitecore and the load balancer sent the status request to a server in the cluster that is not performing the install.
 * **public void ClearLogs()**: Empties the message log without returning the contents of the log. This performs the same function as passing true to Messages().
 
-All functions use the HttpGet request verb to invoke the functions.
+All actions use the HttpGet request verb to invoke their function.
 
 
 

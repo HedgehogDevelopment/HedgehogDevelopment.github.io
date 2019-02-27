@@ -726,6 +726,27 @@ After selecting the desired operations, clicking the “**Do Updates**” button
 
 Roles in the TDS Classic project can be deployed using TDS Classic, or compiled into an update package for deployment on a remote server.
 
+### TDS Solution Features
+TDS Classic adds a number of options to Visual studio outside the TDS project. There is a Team Development for Sitecore solution right-click menu and a TDS Toolbar.
+
+#### TDS Solution Right-Click menu
+The TDS Classic solution right click menu allows the developer access to TDS features that effect all projects in the solution. To open the TDS Class Solution Right click menu, right click on the solution and click on Team Development for Sitecore on the solution menu. This will open a fly-out menu with the TDS Classic solution level functions:
+
+![](/Images/Tds/chapter4-tdssolutionmenu.png)
+
+#### TDS Toolbar
+The TDS Classic toolbar allows the developer to quickly access the same functions as the TDS Solution right-click menu without opening the right-click menu. The toolbar is hidden by default, but can be opened by right-clicking on the toolbar area of Visual Studio and checking "TDS Toolbar"
+
+![](/Images/Tds/chapter4-tdstoolbar.png)
+
+The functions of the buttons on the toolbar are as follows:
+
+1) Sync all projects with Sitecore
+2) Sync all TDS projects using History
+3) Quick Push all TDS projects
+4) Run Validators for all projects
+5) Run code generation for all projects
+
 ### Sitecore Item Merge
 
 The Sitecore Item Merge tool is a stand alone tool used to resolve merge conflicts in .item files during a source control merge/check-in. During installation, TDS Classic automatically configures the Item Merge Tool for TFS. Configuring the Sitecore Item Merge tool for other Source Control providers will be covered below.
