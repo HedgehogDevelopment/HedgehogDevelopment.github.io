@@ -232,6 +232,9 @@
     <Content Include="Images\Tds\chapter4-arrow-previous.png" />
     <Content Include="Images\Tds\chapter4-checkmark3.png" />
     <Content Include="Images\Tds\chapter4-deploy.png" />
+    <Content Include="Images\Tds\chapter4-fieldmerge1.png" />
+    <Content Include="Images\Tds\chapter4-fieldmerge2.png" />
+    <Content Include="Images\Tds\chapter4-fieldmerge3.png" />
     <Content Include="Images\Tds\chapter4-manage-nuget-packages.png" />
     <Content Include="Images\Tds\chapter4-nuget-properties.png" />
     <Content Include="Images\Tds\chapter4-packagevalidation.png" />
@@ -248,6 +251,7 @@
     <Content Include="Images\Tds\chapter4-SyncUsingHistory.png" />
     <Content Include="Images\Tds\chapter4-syncwindow_language.png" />
     <Content Include="Images\Tds\chapter4-wand.png" />
+    <Content Include="Images\Tds\chapter4-webdeploypackage.png" />
     <Content Include="Images\Tds\chapter6-codegendialog.png" />
     <Content Include="Images\Tds\chapter6-codegenname.png" />
     <Content Include="Images\Tds\chapter6-codegennewitem.png" />
@@ -300,6 +304,10 @@
     <Content Include="Images\Tds\chapter4-vsproject.png" />
     <Content Include="Images\Logo-24.png" />
     <Content Include="Images\Logo.png" />
+    <Content Include="Images\Tds\chapter7-azureappservicedeploy.png" />
+    <Content Include="Images\Tds\chapter7-getpublishprofile.png" />
+    <Content Include="Images\Tds\chapter7-powershellscript.png" />
+    <Content Include="Images\Tds\chapter7-vsopipelinesteps.png" />
     <Content Include="js\metro.min.js" />
     <Content Include="js\metro\metro-accordion.js" />
     <Content Include="js\metro\metro-button-set.js" />
@@ -367,6 +375,7 @@
     <Content Include="avtor\search.markdown" />
     <Content Include="avtor\itembuckets.markdown" />
     <Content Include="avtor\specialfeatures.markdown" />
+    <Content Include="tds\chapter7.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />

@@ -53,9 +53,23 @@ Contains settings that are common to all project configurations.
 
 ![](/Images/Tds/chapter4-general.png)
 
-* **Source Web Project** – This checklist selects the web project or projects to copy to Sitecore when the TDS Classic project is built. If there is no need to copy files to Sitecore, please leave all projects un-checked. When building a package, content files and binary assemblies from the selected web project(s) are added to the package.
+* **Source Web Project** – This checklist selects the web project or projects to copy to Sitecore when the TDS Classic project is built. If there is no need to copy files to Sitecore, please leave all projects unchecked. When building a package, content files and binary assemblies from the selected web project(s) are added to the package.
 * **Sitecore Database** – Configures the Sitecore database the TDS Classic project will use.
-* **Assemblies** – When deploying to Sitecore, TDS Classic can skip the deployment of certain assemblies. These assemblies may be referenced by one or more projects in the solution. Excluding/including static assemblies from the build will reduce the size of the packages TDS Classic generates and improve deployment time. By default, TDS Classic excludes assemblies beginning with "Sitecore.". Selecting **Exclude** from the dropdown will cause TDS Classic to skip these files and not add them to the deployment. Selecting **Include** from the dropdown will only include the assemblies listed and cause TDS Classic to skip all other assemblies.
+* **Assemblies** – When deploying to Sitecore, TDS Classic can skip the deployment of certain assemblies. These assemblies may be referenced by one or more projects in the solution. Excluding/including static assemblies from the build will reduce the size of the packages TDS Classic generates and improve deployment time. By default, TDS Classic excludes assemblies beginning with "Sitecore.". Selecting **Exclude** from the drop down will cause TDS Classic to skip these files and not add them to the deployment. Selecting **Include** from the drop down will only include the assemblies listed and cause TDS Classic to skip all other assemblies.
+* **Compact Sitecore items in the project** - The MSBuild project file format isn't handled very well by file merge tools. The item meta data can sometimes confuse merge tools, leading to difficult merges. Enabling this feature compacts all item meta data onto the same line as the item declaration, making it very simple to keep all meta data for an item together.
+
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
+
+This feature needs to be enabled in the source and target branches before merging the project files. 
+
+All developers using a project file with this feature enabled need to be on a version of TDS that supports this feature. The project file is still a valid MSBuild project file, but when saved, the format of the file will not be the new compressed form. This can lead to confusion around changes to the project file.
+</div>
+</div>
+
 * **Manage Sitecore Roles in TDS Classic** - Enables the Sitecore Role Sync functionality. This allows you to compare the roles in your TDS Classic project to the roles in Sitecore. Roles are deployed and packaged along with your Sitecore items.
 * **Deploy Items Changed After** - When deploying and/or packaging items, can check the item to see if it should be included in the build/package. When this check box is enabled, __**updated** field is checked on the Sitecore item and if any version of the __**updated** field has a date before the absolute or relative date specified in the date selector, it is excluded from the build. This allows TDS Classic to create delta deployments.
 
@@ -87,7 +101,7 @@ The Base Template Reference section can be used to tell a TDS Classic project wh
 
 ![](/Images/Tds/chapter4-basetemplates.png)
 
-For example, imagine the there is the following project setup with templates T1 and T2. Template T2 inherits template T1 but they are in different Tprojects.
+For example, imagine the there is the following project setup with templates T1 and T2. Template T2 inherits template T1 but they are in different projects.
 
 ![](/Images/Tds/chapter4-basetemplatesprojects.png)
 
@@ -152,7 +166,7 @@ The Selected Package list is the list of Sitecore packages that are required for
 If the selected Sitecore packages are not present on the server, the build fails with an error message.
 
 ##### Install Package Configurations
-Install Package Configurations shows the available configurations in the TDS Classic project. If the configuration is selected in the list, TDS Classic will install the package on the server if it is missing instead of failing the buld. Please note, package post steps will not run when this package is installed. The only items and files will be deployed.
+Install Package Configurations shows the available configurations in the TDS Classic project. If the configuration is selected in the list, TDS Classic will install the package on the server if it is missing instead of failing the build. Please note, package post steps will not run when this package is installed. The only items and files will be deployed.
 
 ##### Assembly Validation
 Assembly Validation causes TDS to check the specified assembly versions and terminate the build/deployment if the assemblies being deployed are different than the version in the target folder. This feature is designed to prevent different versions of assemblies from being deployed over the assemblies provided with the installed
@@ -164,7 +178,7 @@ Contains settings used to connect TDS Classic to a Sitecore instance. The settin
 ![](/Images/Tds/chapter4-build.png)
 
 *	**Build Output Path** – Sets the location TDS Classic will use to collect the files to be deployed or packaged.
-*	**Edit user specific configuration** – When this checkbox is checked, the user will edit the settings in the .user file instead of the project (.csproj) file. This allows developers to have specific settings for their local TDS Classic deployment that are different than other developers on the team without creating a configuration that is specifically for that user.
+*	**Edit user specific configuration** – When this check box is checked, the user will edit the settings in the .user file instead of the project (.csproj) file. This allows developers to have specific settings for their local TDS Classic deployment that are different than other developers on the team without creating a configuration that is specifically for that user.
 
 <div class="panel">
  <div class="panel-header bg-lightBlue fg-white">
@@ -193,12 +207,13 @@ TDS Classic uses standard windows file operations to copy files to Sitecore. The
 * **Install Sitecore Connector** – When checked, TDS Classic can install the Sitecore service permanently on the configured Sitecore instance. This is needed for the developer features of TDS Classic to work correctly. In a configuration that is only used to build or deploy items, this can be left unchecked. If TDS Classic needs to install the service, TDS Classic will pick a random Access Guid at install time.
 * **Enable Lightning Deploy Mode** - This setting causes TDS deployments to check the Revision ID's of an item before trying to deploy the item. If the Revision ID's match, the item isn't deployed. Enabling this feature can reduce deployment times dramatically if there are few changes to the project.    
 * **Disable File Deployment** – Stops TDS Classic deploying files to the directory specified in the **Sitecore Deploy Folder**.
+* **Connector Timeout** - This setting allows the developer to specify the number of seconds TDS will wait for the service to respond. This is useful on Sitecore instances where it takes a long time for the AppPool to recycle.
 
 **Sitecore Deploy Folder** should point at the location that the **Sitecore Web URL** is running from. If you select a folder that TDS Classic does not think it is a Sitecore web root a warning symbol next the **Sitecore Deploy Folder**:
 
 ![](/Images/Tds/chapter4-deployfolder.png)  
 
-Once you have set the **Sitecore Web Url, Sitecore Deploy Folder** and checked the **Install Sitecore Connector** field you can test your settings using the **Test** button:
+Once you have set the **Sitecore Web URL, Sitecore Deploy Folder** and checked the **Install Sitecore Connector** field you can test your settings using the **Test** button:
 
 ![](/Images/Tds/chapter4-testbutton.png)  
 
@@ -225,7 +240,7 @@ TDS Classic generates Sitecore Update Packages. These packages are not the same 
 * **Package Author** – Sets the author field in the generated package.
 * **Package Publisher** – Sets the publisher field in the generated package.
 * **Package Version** – Sets the version number in the generated package.
-* **Package Readme** – Sets the readme field in the generated package.
+* **Package Readme** – Sets the read me field in the generated package.
 * **Package Generation Options** – There are three options for generating a package. They are:
 	1. Generate a package with compiled code and items
 	2. Generate separate code and item packages
@@ -242,6 +257,17 @@ TDS Classic generates Sitecore Update Packages. These packages are not the same 
   </div>
 </div>
 
+#### WebDeploy Package
+Contains the settings needed to build WebDeploy packages with TDS. These packages contain both code and items. When the package is installed on a Sitecore server, the package will automatically deploy any items in the package.
+
+![](/Images/Tds/chapter4-webdeploypackages.png)
+
+* **Build WebDeploy package** - Enables building WebDeploy packages during the build.
+* **Package Name** - Allows the developer to specify the name of the package being built.
+* **Append the current date and time to the package name** – When checked, the package name has the current date and time. This is sometimes useful for associating the package with a specific version or build.
+* **Code and Item Packaging options** - Allows the developer to specify the contents of the package at build time.
+
+For more information on deploying packages in Azure and to stand alone Sitecore servers, please see [Using WebDeploy packages](/TDS/chapter7.html).
 
 #### Deploy
 The TDS Classic Deploy property page allows the developer to select actions to perform at deployment time. These actions will be executed for TDS Classic Deployments and Package Installation as Post Deploy Steps. 
@@ -253,6 +279,7 @@ The Deploy property page comes with a few built in functions. These are designed
 * **Publish After Deploy** - Adds the deployed items to the publish queue for the publish target(s) specified in the parameter text box. The publish targets are specified as a comma separated list of deployment targets. These should be entered as the 'Parameter' values.
 * **Update Link Database** - Adds the items in the deployment/package to the Sitecore link database. This is needed because Sitecore serialization may not update the link database when items are deployed.
 * **Trigger Save Events** - In some cases, Sitecore functionality depends on save events. Since Serialization doesn't trigger save events, it is difficult for these features to function correctly. Triggering save events helps these functions to work correctly.
+* **Replace Config Files** - Replace the configuration files on the deployment server with the files in the package. This is done because the Sitecore update API doesn't automatically replace changed configuration files.
 
 Each post deployment action has its own parameter value.
 
@@ -276,9 +303,9 @@ The NuGet package generation property page allows the developer to set all NuGet
 
 ![](/Images/Tds/chapter4-nuget-properties.png)
 
-* **Generate NuGet package** - Enable this checkbox to create a NuGet package during the build.
+* **Generate NuGet package** - Enable this check box to create a NuGet package during the build.
 * **Path to NuGet.exe** TDS Classic needs to know where to find the NuGet executable. This can be downloaded from the [NuGet Download Page](http://nuget.codeplex.com/releases "NuGet Download Page") or you can add the "NuGet Command Line" package to a project in your solution. The NuGet executable will be located in the [solution dir]\packages folder.
-* **NuGet Metadata fields** - All other fields are NuGet metadata fields passed to NuGet.exe when creating the NuGet package. Documentation for these fields can be found in the metadata reference section of the [Nuspec Reference](https://docs.nuget.org/Create/Nuspec-Reference "Nuspec Reference") page.
+* **NuGet Metadata fields** - All other fields are NuGet meta data fields passed to NuGet.exe when creating the NuGet package. Documentation for these fields can be found in the meta data reference section of the [Nuspec Reference](https://docs.nuget.org/Create/Nuspec-Reference "Nuspec Reference") page.
 
 #### Validations
 
@@ -295,8 +322,8 @@ The Validations tab allows you turn on checks that TDS Classic can perform on th
 TDS Classic supports the following validations:
 
 * **Template Structure** – Validates that templates have only a single Standard Value template, field sections and sections only contain fields. 
-* **Should be Deploy Once** – Ensure that certain items are set to DeployOnce. The paths that the check will applied to can be configured in the Additional Propeties area.
-* **Don't Sync Children** – Ensure that specific items don't have child synchronization set, this prevents the possible deletion of items. The paths that the check will applied to can be configured in the Additional Propeties area.
+* **Should be Deploy Once** – Ensure that certain items are set to DeployOnce. The paths that the check will applied to can be configured in the Additional Properties area.
+* **Don't Sync Children** – Ensure that specific items don't have child synchronization set, this prevents the possible deletion of items. The paths that the check will applied to can be configured in the Additional Properties area.
 * **Ensure Parent Integrity** – Validates that the structure of the TDS Classic project matches what will be deployed to Sitecore.
 * **Should use .user file** -  TDS Classic properties for DEBUG configurations should typically be stored in the .user file.
 * **Prevent item by path** – Checks that items in the project are not found at or beneath the configured location.
@@ -313,6 +340,7 @@ TDS Classic supports the following validations:
 * **Helix Foundations don't reference Features** - Makes sure items in a helix foundation namespace do not reference items in the helix feature namespace.
 * **Helix Features don't reference Projects** - Makes sure items in a helix feature namespace do not reference items in the helix project namespace.
 * **Helix Foundations don't reference other Projects** - Makes sure items in a helix foundation namespace do not reference items in the helix project namespace.
+* **Ensure all item files are in the project** - Occasionally when merging branches, item files may be merged into the project folders, but not actually added to the project file. This validator will generate a build error if any files are found in the folder structure but not in the project.
 
 #### Project Report
 The Project Report property page enables generation of a project report at build time. This report will contain information about each item in the project. This is useful for documenting the items in a solution.
@@ -329,7 +357,7 @@ The Project Report property page enables generation of a project report at build
 ![](/Images/Tds/chapter4-projectreport.png)
 
 * **Enable Project Report** - Enables report generation at build time.
-* **Report Type** - Selects the type of report to generate. Currently, there are two report types. Markdown and XML. While the format of the generated reports is fixed and not easilly changed, the XML format can be parsed an adapted as needed. In addition, the XML report will also create an XSLT to convert the XML into HTML so it can be shown in a browser. If you wish to change the HTML displayed, you should edit the XSLT as needed.
+* **Report Type** - Selects the type of report to generate. Currently, there are two report types. Markdown and XML. While the format of the generated reports is fixed and not easily changed, the XML format can be parsed an adapted as needed. In addition, the XML report will also create an XSLT to convert the XML into HTML so it can be shown in a browser. If you wish to change the HTML displayed, you should edit the XSLT as needed.
 * **Report Name** - Allows the user to specify the name of the report.
 * **Fields to include in report** - Allows the user to pick fields from Sitecore to include in the report. These fields are in addition to the fields normally included in the report, and can vary based on the implementation. Use the left and right arrows to select/un-select the fields for the report.
 * **Field Search Box** - There is a search box above the field list. As you type into the search box, the field list will automatically update to show only fields contain the characters in the search box. This makes finding and selecting fields easier. 
@@ -350,7 +378,7 @@ Allows the TDS Classic project to be configured to automatically copy files into
 <br />
 ![](/Images/Tds/chapter4-filereplacement.png) 
 
-* **Type** – The type dropdown allows you to choose the type of the Source Location. If you choose "File", the individual file specified in the Source Location is copied to the Target location. Choosing "Folder" causes all items under the Source Location to be copied to the Target Location.
+* **Type** – The type drop down allows you to choose the type of the Source Location. If you choose "File", the individual file specified in the Source Location is copied to the Target location. Choosing "Folder" causes all items under the Source Location to be copied to the Target Location.
 * **Source Location** – Specifies where to copy files from. The path can be relative to the project folder or an absolute path.
 * **Target Location** – Specifies the location to copy files to. The path for the target location can be relative to the build output folder or an absolute path.
 
@@ -391,15 +419,16 @@ Deployment properties are managed for an individual item in the Visual Studio pr
 </div>
 
 * **Code Generation Template** – Allows the developer to specify a particular template to use for code generation with this item. See the Code Generation section for more information.
-* **Custom Data** – metadata that will be passed to the code generator. See the Code Generation section for more information.
+* **Custom Data** – meta data that will be passed to the code generator. See the Code Generation section for more information.
 * **Deploy Always Fields** – In some cases, developers may want to deploy only a few fields for an item, and not the entire item. This is useful when a Sitecore item is acting as both taxonomy and content and the development team wants to update a field like insert options or permissions on the item.<br />![](/Images/Tds/chapter4-fields.png) <br /> When the developer edits the Deploy Always Field, the above dialog is opened. Any field on the item can be chosen to always be deployed from this dialog. This setting is only available if the item is set to Deploy Once (see Item Deployment below).
 * **Exclude Item From** – This setting allows the developer to choose to exclude an item from a specific project configuration. This can be used to create test content items that the development team would use during development. The test items could be excluded from the production project configuration, preventing them from being deployed in that environment. This feature is very much like a conditional compilation directive in a code file.
 * **File Name** – The name of the file that contains the item information on disk.
 * **File System Alias** – The file system name to use when an items name is to long. This property is used to get around the file path limit in Windows by allowing the developer to specify a shorter name.
 * **Full Path** – The full disk path to the file that contains the information about the item.
 * **Item Deployment** – This setting determines if an item should be deployed to Sitecore based on its presence in the target Sitecore instance.
- * **DeployOnce** – When this option is chosen, an item will not be overwritten during deployment. This is useful for setting up new sections of the content tree. A new section or meta-data could be created with the proper permissions and insert options during a deployment. Content editors can update the item and future deployments will not overwrite their changes.
- * **AlwaysUpdate** – When this option is chosen, the item will always be updated during deployment. This is normally used for Sitecore schema items like Templates, Layouts, Sublayouts and Renderings.
+  * **Never Deploy** - This option allows the developer to create an item that will never be deployed. This item will act as a "placeholder" for child items in the content tree. This is useful for the Sitecore items in the root of the content tree.
+  * **DeployOnce** – When this option is chosen, an item will not be overwritten during deployment. This is useful for setting up new sections of the content tree. A new section or meta-data could be created with the proper permissions and insert options during a deployment. Content editors can update the item and future deployments will not overwrite their changes.
+  * **AlwaysUpdate** – When this option is chosen, the item will always be updated during deployment. This is normally used for Sitecore schema items like Templates, Layouts, Sublayouts and Renderings.
 * **Namespace** – A custom namespace to use with code generation. See the code generation section for more information.
 * **SitecorePath** – The path to the item within Sitecore.
 
@@ -416,7 +445,7 @@ To access the TDS Classic Option Window click on the **Tools** menu then **Optio
 
 ![](/Images/Tds/chapter4-generaloptions.png)
 
-The following options are are available in the **General Options** screen:
+The following options are available in the **General Options** screen:
 
 * **Autorun Code Generation** – Indicates if code generation should automatically run when new items are added to a TDS Classic project or an items custom properties / namespace change. Setting this value to false will required a developer to manually run code generation.
 * **Run Code Generation for Changes** - Causes code generation to run after items are changed in the project. If this is set to 'False', the developer will have to manually re-generate code from the project right-click menu.
@@ -424,6 +453,7 @@ The following options are are available in the **General Options** screen:
 * **AutoSync changes in Sitecore** - When set to true, TDS Classic will automatically update fetch any changed items in the project file. TDS Classic uses the history table for this, so TDS Classic will update the project with items that were changed even if the items were changed when the project was closed. The rules TDS Classic uses to update the items are the same rules TDS Classic uses when the user chooses 'Sync Using History'. The auto sync function behaves as if the use choose Sync Using History and accepted all changes in the order they were made.
 * **Background Cache Loading** - When set to True, TDS Classic will parse Sitecore items in the background at load time. This dramatically speeds up the load time of large solutions.
 * **Check for Updates** – When set to 'True' TDS Classic will check for updates when a solution is loaded and prompt the developer when an update is available.
+* **Collect Usage Data** - To help make TDS better, TDS can collect completely anonymous data on the features of TDS that are in use. For more information on the feature, please contact support@hhog.com.
 * **Content File Sync** - When set to 'True', TDS Classic will watch the Source Web Project specified in the General property tab for changes to content files (cshtml, aspx, ascx, css, js, config, etc...) and automatically copy those files to the correct location in the Sitecore Deploy Folder specified in the Build property tab.
 * **Disable Git Warnings** - Disable warning messages about Git merge configuration when using Git.
 * **Lightning Sync Mode** - Enables TDS Lightning Sync, which checks Revision ID's of items before attempting to perform a sync operation. 
@@ -514,7 +544,7 @@ When the compare process is complete, the sync window will show the items that a
 The Sync Window allows developers to inspect the differences between Sitecore and the TDS Classic project and determine what to do about those changes. The developer may select individual items, or multi-select items using standard windows selection keys (&lt;shift&gt; and &lt;ctrl&gt;) and choose an operation to perform on the items. If an item is collapsed and selected, it will be assumed by the Sync Window that all items under the item are selected as well. Once the developer has selected the operation to perform on each item, they can click on "**Do Updates**" to perform the actions.
 
 * A: If there is a difference between the TDS Classic project and Sitecore, it will be noted here.
-* B: The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS Classic will always choose "No Action".
+* B: The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the drop down. By default, TDS Classic will always choose "No Action".
 * C: The "**Make selected project items match Sitecore**" button causes all selected items to choose the action that would make the project items match the Sitecore items.
 * D: The "**Make selected Sitecore items match project**" button causes all selected items to choose the action that would make the Sitecore items match the project items.
 * E: The "**Merge fields during update**" button causes a merge window to open when updating Sitecore. The merge window allows the developer to choose to update only selected field values instead of the whole item.
@@ -559,18 +589,33 @@ The merge window allows the developer to pick individual fields from a Sitecore 
 
 ![](/Images/Tds/chapter4-mergewindow.png)
 
-The developer can pick which field value they wish to use by clicking on the field value or using the arrows at the bottom of the window to update multiple items.
+The developer can pick which field value they wish to use by clicking on the edit icon and choosing the value in the field merge window.
 
-When they have completed their selection, they can click OK to accept the changes. Selecting "**Skip Merge**" will not perform the merge action. The "**Cancel Sync**" button will abort the sync process. This will skip any updates that have not been performed yet.
+There are three types of field merge windows. They all look very similar, but perform different functions.
 
-If you are merging fields that contain large amounts of date the merge screen will display a grey button next to the field that will allow you to see the full field contents:
+##### Xml Field Merge
+The Xml or presentation field merge window allows the user to merge individual Xml elements in an Xml field. This is very useful for merging presentation details or tracking fields.
 
-![](/Images/Tds/chapter4-longfields.png)
+All guid values in the Xml are checked to see if they refer to known Sitecore items and their values are replaced with the Sitecore path. This only happens at display time and the guid values are preserved in the field
 
-Click the icon will open another dialog that shows the full field contents:
+![](/Images/Tds/chapter4-fieldmerge1.png)
 
-![](/Images/Tds/chapter4-longfieldsdialog.png)
+The developer can use the arrow keys to copy an element from the project to Sitecore, or use the trashcan to remove the element from the xml
 
+##### Multi-List Merge
+The Multi-list merge window shows the differences between multi-list items in the project and in sitecore and allows users to move the items between the two. In a multi-list, items are stored as Guids, but the merge window will show the items as Sitecore paths to make merging the values easier.
+
+![](/Images/Tds/chapter4-fieldmerge2.png)
+
+The developer can use the arrow keys to copy an element from the project to Sitecore, or use the trashcan to remove the element from the xml
+
+##### Text field merge
+The text field merge window is used for all other field values. The user can edit either side in a simple text editor.
+
+![](/Images/Tds/chapter4-fieldmerge3.png)
+
+
+When the developer has completed their selection, they can click OK to accept the changes. Selecting "**Skip Merge**" will not perform the merge action. The "**Cancel Sync**" button will abort the sync process. This will skip any updates that have not been performed yet.
 
 ##### Keyboard Shortcuts
 
@@ -619,7 +664,7 @@ Here are the new buttons in the Sync Using History Window (see above image):
 * E: The “**Date**” column contains the date of the most recent change to the item. Only the most recent changes are shown in the list.
 * F: The “**Item Path**” column contains the current path to the item.
 * G: The “**Status**” column describes the difference between the item in TDS Classic and the item in the target Sitecore instance.
-* H: The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS Classic will always choose “**No Action**”.
+* H: The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the drop down. By default, TDS Classic will always choose “**No Action**”.
 * I: The developer can review the changes to an item in more detail in the lower pane.
 After selecting the desired operations, clicking the “**Do Updates**” button performs the actions on the items.
 
@@ -669,11 +714,11 @@ Right clicking on the “**Sitecore Roles**” folder will open a menu with an o
 
 The Sync Sitecore Roles window operates much like the other Sitecore sync windows. Since there are far fewer roles in Sitecore than items, the Sync Sitecore Roles window is much simpler.
 
-* A: The “**Make selected project items match Sitecore**” button causes all selected project items,  in the project, to match their cooresponding Sitecore items.
-* B: The “**Make selected Sitecore items match project**” button causes all selected Sitecore items, in the project, to match their cooresponding project items.
+* A: The “**Make selected project items match Sitecore**” button causes all selected project items,  in the project, to match their corresponding Sitecore items.
+* B: The “**Make selected Sitecore items match project**” button causes all selected Sitecore items, in the project, to match their corresponding project items.
 * C: This column contains the name of the role.
 * D: The “**Status**” column describes the difference between the item in TDS Classic and the item in the target Sitecore instance.
-* E: The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the dropdown. By default, TDS Classic will always choose “**No Action**”.
+* E: The developer can select an action to perform by clicking on the text in this column and selecting the appropriate action from the drop down. By default, TDS Classic will always choose “**No Action**”.
 * F: Shows the members that are part of the role in the project.
 * G: Shows the members that are part of the role in Sitecore.
 
@@ -689,16 +734,16 @@ When your source control detects a conflict, it will require user intervention t
 
 ![](/Images/Tds/chapter4-SitecoreItemMerge.png)
 
-This screenshot shows a number of possible merge scenarios that may occur:
+This screen shot shows a number of possible merge scenarios that may occur:
 
 * The __**Lock** field is the same in the Source, Target and Result, and therefore has no special highlighting in any of the windows.
-* The __**Long** description field was added in the source branch. Since this change is not a conflict between the two branches, it is highlighted in green. It is present on the left indicated by a solid highlight. It is not present on the right indicated by hashes. The grey hashes on the bottom indicate that there is a difference between the original and a branch. The item was not present in the original file.
+* The __**Long** description field was added in the source branch. Since this change is not a conflict between the two branches, it is highlighted in green. It is present on the left indicated by a solid highlight. It is not present on the right indicated by hashes. The gray hashes on the bottom indicate that there is a difference between the original and a branch. The item was not present in the original file.
 * The __**Revision** field was changed in both branches, and is different in both branches. This is indicated by a red box around each item in the branches. This indicates a conflict between the two branches, and extra care should be taken when deciding how to proceed with the merge.
 * The __**Short** description field has a green highlight, indicating the field values are not in conflict. The same value was added in both branches.
 
-When resolving a merge, the user can choose to accept a change, reject a change or choose the value from one side or the other by checking the checkboxes and/or radio buttons in the top portion of the merge tool. You can see the result of your choices in the lower portion.
+When resolving a merge, the user can choose to accept a change, reject a change or choose the value from one side or the other by checking the check boxes and/or radio buttons in the top portion of the merge tool. You can see the result of your choices in the lower portion.
 
-The merge tool offers a few shortcut functions from a toolbar. The tool bar buttons perform the following tasks:
+The merge tool offers a few shortcut functions from a tool bar. The tool bar buttons perform the following tasks:
 
 |||
 | ---- | ----- |
@@ -871,8 +916,8 @@ When a developer adds, updates or removes an item or template in Rocks, TDS Clas
 
 There are two things needed to make TDS Classic react to changes made in Rocks.
 
-1. The Hedgehog Development plugin must be enabled in the Rocks plugin screen.
-2. The Sitecore Web Url (see Build Property Page above) for the active project configuration matches the Host Name in the Rocks connection dialog.
+1. The Hedgehog Development plug-in must be enabled in the Rocks plug-in screen.
+2. The Sitecore Web URL (see Build Property Page above) for the active project configuration matches the Host Name in the Rocks connection dialog.
 
 #### Getting items using Rocks
 
