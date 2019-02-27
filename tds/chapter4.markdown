@@ -267,7 +267,7 @@ Contains the settings needed to build WebDeploy packages with TDS Classic. These
 * **Append the current date and time to the package name** – When checked, the package name has the current date and time. This is sometimes useful for associating the package with a specific version or build.
 * **Code and Item Packaging options** - Allows the developer to specify the contents of the package at build time.
 
-For more information on deploying packages in Azure and to stand alone Sitecore servers, please see [Using WebDeploy packages](/Tds/chapter7.html).
+For more information on deploying packages in Azure and to stand alone Sitecore servers, please see [Using WebDeploy packages](/tds/chapter7.html).
 
 #### Deploy
 The TDS Classic Deploy property page allows the developer to select actions to perform at deployment time. These actions will be executed for TDS Classic Deployments and Package Installation as Post Deploy Steps. 

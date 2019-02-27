@@ -90,9 +90,9 @@ The biggest challenge to using Web Deploy scripts on environments other than Azu
  </div>
  <div class="panel-content">
 <p>
-The first link, shows how to switch the client machine to use TLS 1.2. Sitecore specifies that TLS 1.0 and 1.1 are disabled on the server, and MSDeploy defaults to TLS 1.0. I found this issue difficult to track down because MSDeploy would not communicate with my server at all until I forced it to TLS 1.2. Once I was communicating with the server, there were a few authentication issues to resolve. These are covered in the other blogs.
+The first link above, shows how to switch the client machine to use TLS 1.2. Sitecore specifies that TLS 1.0 and 1.1 are disabled on the server, and MSDeploy defaults to TLS 1.0. I found this issue difficult to track down because MSDeploy would not communicate with my server at all until I forced it to TLS 1.2. Once I was communicating with the server, there were a few authentication issues to resolve. These are covered in the other blogs.
 </p>
-</div></div>
+</div></div><br/>
 
 Once Web Deploy is working on the server, installing the package works much like the example above:
 
