@@ -113,7 +113,7 @@ When configuring Web Deploy on a server, you can generate a .publishsettings fil
 </div></div>
 
 ### WebAPI Service Functions
-The TDS WebAPI deployment service is designed to return status information and detailed logs while a deployment is taking place. The endpoint for the Deployment service is http://[server]/Api/TDS/WebDeploy. The WebAPI service exposes the following actions:
+The TDS WebAPI deployment service is designed to return status information and detailed logs while a deployment is taking place. The endpoint for the Deployment service is **http://[server]/Api/TDS/WebDeploy**. The WebAPI service exposes the following actions:
 
 * **public string Invoke()**: Triggers the deployment process if it isn't already running. Normally, the deployment process starts when Sitecore starts. Calling Invoke will ensure it has started.
 	* *Return Value*: Always returns "OK".
