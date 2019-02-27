@@ -741,11 +741,11 @@ The TDS Classic toolbar allows the developer to quickly access the same function
 
 The functions of the buttons on the toolbar are as follows:
 
-1) Sync all projects with Sitecore
-2) Sync all TDS projects using History
-3) Quick Push all TDS projects
-4) Run Validators for all projects
-5) Run code generation for all projects
+1. Sync all projects with Sitecore
+2. Sync all TDS projects using History
+3. Quick Push all TDS projects
+4. Run Validators for all projects
+5. Run code generation for all projects
 
 ### Sitecore Item Merge
 
