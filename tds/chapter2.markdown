@@ -10,9 +10,8 @@ layout: TdsLayout
 ### System Requirements
 
 * TDS Classic has been fully tested with Team Foundation Server and Subversion, but will also work with any Microsoft compliant source control system.
-* Visual Studio 2010, 2012, 2013, 2015 and 2017.
-* Sitecore version 6.1 and higher.
-* Sitecore Xpress is not supported by TDS Classic.
+* Visual Studio 2013, 2015, 2017 and 2019.
+* Sitecore version 7.0 and higher.
 
 ### Installation
 
@@ -21,11 +20,10 @@ The zip file you downloaded from the [TDS Classic](http://www.TeamDevelopmentFor
 
  | Visual Studio version | TDS Classic version |
  | --------- | ------- |
- | Visual Studio 2010  | HedgehogDevelopmentTDS_2010.msi |
- | Visual Studio 2012  | HedgehogDevelopmentTDS_2012.msi |
  | Visual Studio 2013  | HedgehogDevelopmentTDS_2013.msi |
  | Visual Studio 2015  | HedgehogDevelopmentTDS_2015.msi |
  | Visual Studio 2017  | HedgehogDevelopmentTDS_2017.msi |
+ | Visual Studio 2017  | HedgehogDevelopmentTDS_2019.msi |
 
 <br />
 
@@ -58,7 +56,7 @@ In Visual Studio go to <strong>Tools &gt; Options menu.</strong>
 Under the Projects and Solutions highlight the General settings
 </p>
 <p>
-Locate the Visual Studio user project template location. Verify that this path is correct. For example in VS 2012 it should be: <strong>Path to directory\Visual Studio 2012\Templates\ProjectTemplates</strong>
+Locate the Visual Studio user project template location. Verify that this path is correct. For example in VS 2013 it should be: <strong>Path to directory\Visual Studio 2013\Templates\ProjectTemplates</strong>
 </p>
 <p>
 Click OK when you are done and now you should see the TDS Classic Project Template when you try to create a new project.

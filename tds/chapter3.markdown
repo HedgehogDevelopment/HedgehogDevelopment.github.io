@@ -14,7 +14,7 @@ In addition to being tracked in source control, TDS Classic uses an MSBuild proj
 
 ### TDS Classic Add-in
 
-The TDS Classic add-in is compatible with Visual Studio 2010, 2012 and 2013. The operation of the add-in across the different versions of Visual Studio is, in most cases, exactly the same.
+The TDS Classic add-in is compatible with Visual Studio 2013, 2015, 2017 and 2019. The operation of the add-in across the different versions of Visual Studio is, in most cases, exactly the same.
 
 The TDS Classic add-in communicates with Sitecore using a web service. The web service uses the Sitecore Serialization API to convert Sitecore items to files. These files are stored in the /Data/Serialization folder in Sitecore. The service locates these files and passes them back to TDS Classic. TDS Classic adds/updates the files in a folder structure very similar to other Visual Studio projects. This allows TDS Classic projects to be compatible with all major Source Code management systems in use today.
 
