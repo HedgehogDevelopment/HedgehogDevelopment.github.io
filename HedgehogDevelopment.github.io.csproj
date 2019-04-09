@@ -72,6 +72,7 @@
     <Content Include="Images\Avtor\EditingItems_Workflow.png" />
     <Content Include="Images\Avtor\FieldSets_AddFieldSet.png" />
     <Content Include="Images\Avtor\FieldSets_EmptyFieldSet.png" />
+    <Content Include="Images\Avtor\Icon_Refresh.png" />
     <Content Include="Images\Avtor\Icon_Save.png" />
     <Content Include="Images\Avtor\EditingItems_AvtorEditor.png" />
     <Content Include="Images\Avtor\EditingItems_LockedRow.png" />
