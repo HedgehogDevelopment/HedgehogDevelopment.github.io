@@ -55,4 +55,4 @@ Users will automatically be added to Avtor when they try to start Avtor for the 
 If there are no more available Avtor licenses, the user will be presented with a dialog telling them that they need more licenses or users need to be removed from the User tab in the Avtor license manager.
 
 ### Removing Users
-Users can be removed by clicking the "Remove" (![](/Images/Avtor/Icon_Delete.png)) icon next to the username in the User management tab.
+Users can be removed by clicking the "Remove" (![](/Images/Avtor/Icon_Delete.png)) icon next to the username in the User management tab. This will free up licenses for other content editors.
