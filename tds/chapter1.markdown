@@ -10,7 +10,7 @@ layout: TdsLayout
 ### TDS Classic
 
 TDS Classic is a Sitecore developer productivity tool created by Hedgehog Development ([http://www.hhog.com](http://www.hhog.com)), a company that designs and develops customized applications and Web sites, and provides technology consulting services.  TDS Classic is used by Hedgehog Development internally and by development teams around the globe.
-TDS Classic is a Visual Studio add-in that supports 2010, 2012, 2013, 2015 and 2017 versions.  Sitecore developers use TDS Classic to increase the productivity of the Sitecore software development process. TDS Classic allows you to treat your Sitecore Items as you would .Net code, allowing you to bring your Sitecore items into your development lifecycle.
+TDS Classic is a Visual Studio add-in that supports 2013, 2015, 2017 and 2019 versions.  Sitecore developers use TDS Classic to increase the productivity of the Sitecore software development process. TDS Classic allows you to treat your Sitecore Items as you would .Net code, allowing you to bring your Sitecore items into your development lifecycle.
 
 ### How It Works
 
