@@ -118,6 +118,8 @@
     <Content Include="Images\Avtor\Icon_Plus.png" />
     <Content Include="Images\Avtor\Icon_NavigateDown.png" />
     <Content Include="Images\Avtor\Icon_NavigateUp.png" />
+    <Content Include="Images\Avtor\LicMan_AddUser.png" />
+    <Content Include="Images\Avtor\LicMan_Users.png" />
     <Content Include="Images\Avtor\Pointer.png" />
     <Content Include="Images\Avtor\Icon_ChildResults.png" />
     <Content Include="Images\Avtor\Search_Results.png" />
