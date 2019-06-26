@@ -1,40 +1,40 @@
 ---
-title: Razl - Scripts
+title: Sitecore Razl - Scripts
 layout: RazlLayout
 ---
 
-# Razl
+# Sitecore Razl
 
-## Razl Script
+## Sitecore Razl Script
 
-Razl allows the user to to create XML documents that define connections to Sitecore servers and the operations Razl should perform on those servers. These can then be executed from the Command Prompt or build scripts.
+Sitecore Razl allows the user to to create XML documents that define connections to Sitecore servers and the operations Sitecore Razl should perform on those servers. These can then be executed from the Command Prompt or build scripts.
 
 
 ### Command line parameters
 
-The command line parameters Razl accepts from the command line are as follows:
+The command line parameters Sitecore Razl accepts from the command line are as follows:
 
 1. **/script** Specifies the path to the script file
-2. **/TLS12** when passed the value "true", Razl enables the TLS 1.2 protocol when communicating with the webserver
+2. **/TLS12** when passed the value "true", Sitecore Razl enables the TLS 1.2 protocol when communicating with the webserver
 
-To run a Razl script with TLS 1.2 enabled, use a command similar to:
+To run a Sitecore Razl script with TLS 1.2 enabled, use a command similar to:
 
     Razl.exe /script:Migrate.xml /TLS12:true
 
-### Running a Razl Script
+### Running a Sitecore Razl Script
 
-A Razl script can be run from the command line with the following parameter:
+A Sitecore Razl script can be run from the command line with the following parameter:
 
     Razl.exe /script:"{path to script file}"
 
-The value {path to script file} should be replaced with the path to the XML file that contains the Razl script to run, for example:
+The value {path to script file} should be replaced with the path to the XML file that contains the Sitecore Razl script to run, for example:
 
     Razl.exe /script:Migrate.xml
     Razl.exe /script:"c:\Site Migration\Razl.xml"
 
-### Razl Script XML
+### Sitecore Razl Script XML
 
-The XML for Razl scripts is very simple and is made up of connections and operations, by combining connections with operations Razl will perform tasks on the intended Sitecore instances. Below is an overview of the entire Razl XML:
+The XML for Sitecore Razl scripts is very simple and is made up of connections and operations, by combining connections with operations Sitecore Razl will perform tasks on the intended Sitecore instances. Below is an overview of the entire Sitecore Razl XML:
 
     <razl>
       <connection name="" readOnly ="" install="true|false">
@@ -106,9 +106,9 @@ The XML for Razl scripts is very simple and is made up of connections and operat
     </razl>
 
 
-### Razl XML Connections
+### Sitecore Razl XML Connections
 
-Connections define how Razl should connect to a Sitecore instance. Connections can be fully defined in the XML or can be preset connections that have been defined in the Razl GUI. The connection XML with all options looks like this:
+Connections define how Sitecore Razl should connect to a Sitecore instance. Connections can be fully defined in the XML or can be preset connections that have been defined in the Sitecore Razl GUI. The connection XML with all options looks like this:
 
 	  <connection name="" readOnly="" install="true|false" preset="">
 	    <url></url>
@@ -123,16 +123,16 @@ Summary of attributes and elements:
 
 * **connection** - Containing element for the connection definition
 * **name** - The name of the connection. This will be used by operations to identify the connection they should use
-* **install** - Indicates if the Razl connector should be installed at the target location
-* **preset** - The name of the pre-configured connection defined using the Razl GUI
+* **install** - Indicates if the Sitecore Razl connector should be installed at the target location
+* **preset** - The name of the pre-configured connection defined using the Sitecore Razl GUI
 * **url** - The URL to the Sitecore instance. Must start with http or https.
-* **accessGuid** - The Guid used by Razl to access the Sitecore instance.
-* **database** - The database on the Sitecore instance Razl should interact with.
-* **path** - The path to the Sitecore instance. Used when installing the Razl service.
+* **accessGuid** - The Guid used by Sitecore Razl to access the Sitecore instance.
+* **database** - The database on the Sitecore instance Sitecore Razl should interact with.
+* **path** - The path to the Sitecore instance. Used when installing the Sitecore Razl service.
 * **readThreads** - The number of threads to use while looking for differences in a copyAll operation. The default value is 4.
 * **writeThreads** - The number of threads to use while copying differences in a copyAll operation. The default value is 4.
 
-At least two connections should be defined in a Razl script.
+At least two connections should be defined in a Sitecore Razl script.
 
 #### Defined Connections
 
@@ -144,7 +144,7 @@ A defined connection is a connection that has the URL, AccessGuid and Database  
 	    <database></database>
 	  </connection>
 
-Using a defined connection it is possible to install the Razl service required by Razl to communicate with Sitecore. The additional attribute install and the path element a required for this to work:
+Using a defined connection it is possible to install the Sitecore Razl service required by Sitecore Razl to communicate with Sitecore. The additional attribute install and the path element a required for this to work:
 
 	<connection name="" install="true">
 	    <url></url>
@@ -163,11 +163,11 @@ A connection can also be made read only by adding the readOnly attribute:
 
 #### Preset Connections
 
-Preset connections are connections that have been defined in the Razl GUI first. The XML for a preset connection is:
+Preset connections are connections that have been defined in the Sitecore Razl GUI first. The XML for a preset connection is:
 
 	<connection name="" preset="" />
 
-The value for the preset connection should be save value shown in the Razl Connections dropdown. For example if in the Razl GUI the following connections are defined:
+The value for the preset connection should be save value shown in the Sitecore Razl Connections dropdown. For example if in the Sitecore Razl GUI the following connections are defined:
 
 ![](/Images/Razl/script1.PNG)
 
@@ -175,11 +175,11 @@ The configuration to use the **Awesome** connection would be:
 
 	<connection name="" preset="Awesome" />
 
-Preset connections can not be made read only from the XML or be installed by the XML, these tasks should be performed in the Razl GUI.
+Preset connections can not be made read only from the XML or be installed by the XML, these tasks should be performed in the Sitecore Razl GUI.
 
 ### Operations
 
-Operations define the actions that Razl should perform. The basic XML structure for an operation is:
+Operations define the actions that Sitecore Razl should perform. The basic XML structure for an operation is:
    
    <operation name="" source="" target="">
    </operation>
@@ -237,9 +237,9 @@ The CopyHistory operation will replay the actions recorded in the Sitecore histo
 
 Summary of parameters:
 
-* **from** - the date from which Razl should start copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T03:48:57. This parameter may also be an integer representing the number of days to look back in the history. This is a required parameter.
-* **to** - the date which Razl should stop copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T13:48:57. This parameter may also be an integer representing the number of days to look back in the history. This is an optional parameter.
-* **recycle** - indicates what should happen to an item that is deleted by Razl. If set to true the item is sent to the recycle bin on the target Sitecore instance, if set to false the item is removed from the Sitecore instance. Default value is true. This parameter is optional.
+* **from** - the date from which Sitecore Razl should start copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T03:48:57. This parameter may also be an integer representing the number of days to look back in the history. This is a required parameter.
+* **to** - the date which Sitecore Razl should stop copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T13:48:57. This parameter may also be an integer representing the number of days to look back in the history. This is an optional parameter.
+* **recycle** - indicates what should happen to an item that is deleted by Sitecore Razl. If set to true the item is sent to the recycle bin on the target Sitecore instance, if set to false the item is removed from the Sitecore instance. Default value is true. This parameter is optional.
 * **lightningMode** - Enables or disables lightning mode when moving items.
 * **include** - the path to items to include when copying history. Only actions on items that exist beneath the defined paths will be performed on the target instance. Multiple paths can be defined. If this parameter is absent then all actions are performed. This parameter is optional.
 * **exclude**  - the path to items to exclude when copying history. Actions on items that exist beneath the defined paths will be ignored. Multiple paths can be defined. If this parameter is absent then all actions are performed. Excludes take precedence over includes. This parameter is optional.
@@ -274,6 +274,6 @@ Summary of parameters:
 * **continueOnError** - Default is false. If set to true, the CopyAll command will log the error and attempt to continue copying items.
 
 ### Logging
-Razl Script mode will output actions as they happen to the command prompt, this output can be piped to a text file if required.
+Sitecore Razl Script mode will output actions as they happen to the command prompt, this output can be piped to a text file if required.
 
-If a log folder has been set in the Razl GUI then Script mode will also write to the log folder.
+If a log folder has been set in the Sitecore Razl GUI then Script mode will also write to the log folder.

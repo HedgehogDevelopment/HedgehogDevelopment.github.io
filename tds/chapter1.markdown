@@ -1,36 +1,36 @@
 ---
-title: Chapter 1 - TDS Classic Documentation
+title: Chapter 1 - Sitecore TDS Documentation
 layout: TdsLayout
 ---
 
-# TDS Classic 
+# Sitecore TDS 
 
 ## Chapter 1 – Introduction
 
-### TDS Classic
+### Sitecore TDS
 
-TDS Classic is a Sitecore developer productivity tool created by Hedgehog Development ([http://www.hhog.com](http://www.hhog.com)), a company that designs and develops customized applications and Web sites, and provides technology consulting services.  TDS Classic is used by Hedgehog Development internally and by development teams around the globe.
-TDS Classic is a Visual Studio add-in that supports 2013, 2015, 2017 and 2019 versions.  Sitecore developers use TDS Classic to increase the productivity of the Sitecore software development process. TDS Classic allows you to treat your Sitecore Items as you would .Net code, allowing you to bring your Sitecore items into your development lifecycle.
+Sitecore TDS is a Sitecore developer productivity tool created by Hedgehog Development ([http://www.hhog.com](http://www.hhog.com)), a company that designs and develops customized applications and Web sites, and provides technology consulting services.  Sitecore TDS is used by Hedgehog Development internally and by development teams around the globe.
+Sitecore TDS is a Visual Studio add-in that supports 2013, 2015, 2017 and 2019 versions.  Sitecore developers use Sitecore TDS to increase the productivity of the Sitecore software development process. Sitecore TDS allows you to treat your Sitecore Items as you would .Net code, allowing you to bring your Sitecore items into your development lifecycle.
 
 ### How It Works
 
-TDS Classic gives the Sitecore development team members the ability to use source control to keep track of all Sitecore items in a project. This provides the same tracking and accountability for changes to Sitecore items as you have with .NET code.  This solves the problem of having code in Visual Studio but the Sitecore items that represent this code elsewhere.  
-TDS Classic Classic allows teams to put all Sitecore items and .Net code in a Source Control Management System (SCMS), providing one master repository of Sitecore changes and .Net code changes for a project.  The SCMS becomes the central integration point for teams allowing automation of deployment and additional control over releases.  Team members using TDS Classic can work remotely or disconnected from the network and then sync and merge changes at a later date due to the shift in reliance on the SCMS and not a shared Sitecore database.
-TDS Classic works with all known SCMS that integrate with Visual Studio including Team Foundation Server, SVN, CVS, GIT, and Perforce. Since TDS Classic stores Sitecore items in the file system as a project, TDS Classic is also compatible with version control systems such as GIT that work directly with the file system. 
+Sitecore TDS gives the Sitecore development team members the ability to use source control to keep track of all Sitecore items in a project. This provides the same tracking and accountability for changes to Sitecore items as you have with .NET code.  This solves the problem of having code in Visual Studio but the Sitecore items that represent this code elsewhere.  
+Sitecore TDS Classic allows teams to put all Sitecore items and .Net code in a Source Control Management System (SCMS), providing one master repository of Sitecore changes and .Net code changes for a project.  The SCMS becomes the central integration point for teams allowing automation of deployment and additional control over releases.  Team members using Sitecore TDS can work remotely or disconnected from the network and then sync and merge changes at a later date due to the shift in reliance on the SCMS and not a shared Sitecore database.
+Sitecore TDS works with all known SCMS that integrate with Visual Studio including Team Foundation Server, SVN, CVS, GIT, and Perforce. Since Sitecore TDS stores Sitecore items in the file system as a project, Sitecore TDS is also compatible with version control systems such as GIT that work directly with the file system. 
 Having everything in a SCMS gives you one master repository for the project. The SCMS becomes the master and central integration point for all the code and Sitecore items. Even if you are a team of one, using a SCMS is the smart way to work, and provides many benefits, including:
 
-* **Complete accountability and audit trail for all changes to all Sitecore items and .NET code in a project** – Without TDS Classic the development team loses all accountability and audit trails for changes to Sitecore items.
-* **Easy, secure backups** – All of your Sitecore items and code are stored in a single repository, meaning backups are easy to do, making your work safe. Without TDS Classic, your backup and recovery procedures have to accommodate multiple developer databases.
+* **Complete accountability and audit trail for all changes to all Sitecore items and .NET code in a project** – Without Sitecore TDS the development team loses all accountability and audit trails for changes to Sitecore items.
+* **Easy, secure backups** – All of your Sitecore items and code are stored in a single repository, meaning backups are easy to do, making your work safe. Without Sitecore TDS, your backup and recovery procedures have to accommodate multiple developer databases.
 * **Option to work remotely or disconnected from the network** – Developers can sync and merge changes at a later date to the SCMS.  This allows the developer to work independently without worrying about the conflicts than can be cause by sharing a single Sitecore database with other developers.
-* **Easily compare item changes from other developers** – Without TDS Classic you cannot view changes made by other members of the development team before integrating them into your local development environment.
-* **Ability to easily rollback to prior versions if there is a problem** – Without an audit trail and item accountability, narrowing down a problematic item change is extremely time consuming.  With TDS Classic, Sitecore items are brought into your SCMS, giving you a full history of each change to an item. This makes a rollback significantly easier to execute. 
-* **Faster, easier automatic merge of changes items** – Without TDS Classic the merging of item changes is an extremely labor intensive process. With TDS Classic, your SCMS can do this automatically for you.
-* **Ability to leverage branching and other advanced source code management techniques on Sitecore items** – Without TDS Classic this is impossible.
-* **Helps get new developers up to speed quickly** – TDS Classic helps new developers on a team get up to speed quickly. The developer can install a clean Sitecore environment, get the latest code and Sitecore items from the SCMS and then easily deploy the entire project to the new Sitecore instance. With TDS Classic, developers have the ability to easily see what other team members have been doing by reviewing the check-in comments. (Without TDS Classic, each developer is dependent on coordinating and then packaging up changes with the entire team. We have even seen partners go so far as designing their projects so that developers each work in separate areas of a project to reduce the risk of collision. This is not the optimal way to work.)
+* **Easily compare item changes from other developers** – Without Sitecore TDS you cannot view changes made by other members of the development team before integrating them into your local development environment.
+* **Ability to easily rollback to prior versions if there is a problem** – Without an audit trail and item accountability, narrowing down a problematic item change is extremely time consuming.  With Sitecore TDS, Sitecore items are brought into your SCMS, giving you a full history of each change to an item. This makes a rollback significantly easier to execute. 
+* **Faster, easier automatic merge of changes items** – Without Sitecore TDS the merging of item changes is an extremely labor intensive process. With Sitecore TDS, your SCMS can do this automatically for you.
+* **Ability to leverage branching and other advanced source code management techniques on Sitecore items** – Without Sitecore TDS this is impossible.
+* **Helps get new developers up to speed quickly** – Sitecore TDS helps new developers on a team get up to speed quickly. The developer can install a clean Sitecore environment, get the latest code and Sitecore items from the SCMS and then easily deploy the entire project to the new Sitecore instance. With Sitecore TDS, developers have the ability to easily see what other team members have been doing by reviewing the check-in comments. (Without Sitecore TDS, each developer is dependent on coordinating and then packaging up changes with the entire team. We have even seen partners go so far as designing their projects so that developers each work in separate areas of a project to reduce the risk of collision. This is not the optimal way to work.)
 
-### Why TDS Classic works
+### Why Sitecore TDS works
 
-Over the course of a project's life, the amount of time spent performing code deployments can be significant, and thus, the time savings of TDS Classic can also be significant. Based on Hedgehog’s experience developing many small, medium and large Sitecore projects, we have compiled extensive statistics on the life cycle of Sitecore projects. From these statistics, we have created graphs detailing a hypothetical Sitecore project that runs for 30 weeks.
+Over the course of a project's life, the amount of time spent performing code deployments can be significant, and thus, the time savings of Sitecore TDS can also be significant. Based on Hedgehog’s experience developing many small, medium and large Sitecore projects, we have compiled extensive statistics on the life cycle of Sitecore projects. From these statistics, we have created graphs detailing a hypothetical Sitecore project that runs for 30 weeks.
 
 When development on a project starts, there is an immediate need to begin creating Sitecore items. As development progresses, the number of new items tends to taper off. Changes to existing items continue and eventually tapers off as well.
 
@@ -44,21 +44,21 @@ As more templates are added, the cost (time) to deploy the items rises. The cost
 <img src='/Images/Tds/chapter1-developmentcost.PNG' />
 </p>
 
-Setting up an automated TDS Classic build at the start of a project incurs a small cost in developer time, but once the initial project and build are created, there is minimal costs associated with maintaining them. Having an automated process also resolves the issue of differences between deployments and environments.
+Setting up an automated Sitecore TDS build at the start of a project incurs a small cost in developer time, but once the initial project and build are created, there is minimal costs associated with maintaining them. Having an automated process also resolves the issue of differences between deployments and environments.
 
 <p  style="text-align:center">
 <img src='/Images/Tds/chapter1-tdsdevelopmentcost.PNG' />
 </p> 
 
-We have found TDS Classic easily affords an 8%-15% decrease in costs (time) to develop a Sitecore solution regardless of the size of the project. A 10% savings over 30 weeks for a 3 person team is 9 weeks of gained productivity. If the average team member salary is $75k per year this represents approximately $13k in savings.
+We have found Sitecore TDS easily affords an 8%-15% decrease in costs (time) to develop a Sitecore solution regardless of the size of the project. A 10% savings over 30 weeks for a 3 person team is 9 weeks of gained productivity. If the average team member salary is $75k per year this represents approximately $13k in savings.
 
 ### Work Environments
 
-While developing Sitecore solutions for our clients, Hedgehog Development reviewed a number of published Sitecore development methods. We decided that none of these addressed the real problem, which was tracking and deploying Sitecore items. We decided to develop our own development methodology. TDS Classic is the result of that effort.
+While developing Sitecore solutions for our clients, Hedgehog Development reviewed a number of published Sitecore development methods. We decided that none of these addressed the real problem, which was tracking and deploying Sitecore items. We decided to develop our own development methodology. Sitecore TDS is the result of that effort.
 
-#### Development Environment Before TDS Classic
+#### Development Environment Before Sitecore TDS
 
-Before we developed TDS Classic, we realized there were many manual steps our developers needed to perform to deploy their work to a server.
+Before we developed Sitecore TDS, we realized there were many manual steps our developers needed to perform to deploy their work to a server.
  
 * First they must move their Sitecore items directly to the Sitecore Development database while simultaneously checking in their .NET code to the SCMS.
 * Next, the developer has to communicate to the team that Sitecore items must be deployed to the target environment. They then have to package the Sitecore items, which involves:
@@ -74,11 +74,11 @@ Before we developed TDS Classic, we realized there were many manual steps our de
 
 These steps, while simple, became tedious and occasionally error prone.
 
-#### Development Environment Using TDS Classic
+#### Development Environment Using Sitecore TDS
 
-One of the driving principals of building TDS Classic was to allow developers to work with their Sitecore items much the same way they work with code. Developers have been working with SCMS and automated builds for years using code. We wanted to leverage these same tools when dealing with Sitecore items.
+One of the driving principals of building Sitecore TDS was to allow developers to work with their Sitecore items much the same way they work with code. Developers have been working with SCMS and automated builds for years using code. We wanted to leverage these same tools when dealing with Sitecore items.
 
-When a developer is using TDS Classic, deploying their work to a server is much simpler.
+When a developer is using Sitecore TDS, deploying their work to a server is much simpler.
 
 * The developer checks their code and Sitecore items into the SMCM.
 * The developer (or other team member) starts an automated build for the environment they wish to deploy to.

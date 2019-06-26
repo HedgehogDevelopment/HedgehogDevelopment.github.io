@@ -1,9 +1,9 @@
 ---
-title: Razl - Comparing Databases
+title: Sitecore Razl - Comparing Databases
 layout: RazlLayout
 ---
 
-# Razl
+# Sitecore Razl
 
 ## Comparing Sitecore Databases
 
@@ -11,17 +11,17 @@ Once you have two Sitecore connections setup (see [Creating a Connection](/razl/
 
 ### Setting up for comparison
 
-To setup Razl for comparison select a connection in the Left Connection dropdown and the Right Connection dropdown. Razl will automatically start loading items from each Sitecore instance in the Content Trees:
+To setup Sitecore Razl for comparison select a connection in the Left Connection dropdown and the Right Connection dropdown. Sitecore Razl will automatically start loading items from each Sitecore instance in the Content Trees:
 
 ![](/Images/Razl-V4/compare1.png)
 
 ### Comparing Items
 
-As you explore the Sitecore content tree Razl will automatically load and start to compare items in both trees:
+As you explore the Sitecore content tree Sitecore Razl will automatically load and start to compare items in both trees:
 
 ![](/Images/Razl-V4/compare2.png)
 
-There are several basic symbols pairs in Razl when comparing an items. Each symbol :
+There are several basic symbols pairs in Sitecore Razl when comparing an items. Each symbol :
 
 | Symbol | Description |
 |--------|---------|
@@ -37,7 +37,7 @@ There are several basic symbols pairs in Razl when comparing an items. Each symb
 
 ### Lightning Mode
 
-When you click the Lightning Mode ![](/Images/Razl/LightningMode.png) button, **Lightning Mode** will be toggled on and off. When **Lightning Mode** is enabled, Razl only compares the revision ID's of the items, making the compare very quick. If the revision ID's are different, then an Item is considered different regardless of your filter settings. Razl is much faster when **Lightning Mode** is enabled because all items in the folder are retrieved at once, and the comparison doesn't look at all fields.
+When you click the Lightning Mode ![](/Images/Razl/LightningMode.png) button, **Lightning Mode** will be toggled on and off. When **Lightning Mode** is enabled, Sitecore Razl only compares the revision ID's of the items, making the compare very quick. If the revision ID's are different, then an Item is considered different regardless of your filter settings. Sitecore Razl is much faster when **Lightning Mode** is enabled because all items in the folder are retrieved at once, and the comparison doesn't look at all fields.
 
 The main disadvantage to **Lightning Mode** is that your filters are ignored. This means that items may be considered different even though your filter specification would indicate that they aren't. 
 
@@ -54,7 +54,7 @@ Deep Compare looks at all items under a folder on both sides and shows differenc
 
 Once the **Deep Compare** operation completes, you may use the arrows on the left to move an item from one server to another and double clicking on an item finds it in the tree.
 
-After performing a **Deep Compare**, Razl will know if an item contains different items under it even if the item isn't expanded. This is indicated on the item in the tree using a blue arrow need the expand toggle:
+After performing a **Deep Compare**, Sitecore Razl will know if an item contains different items under it even if the item isn't expanded. This is indicated on the item in the tree using a blue arrow need the expand toggle:
 
 ![](/Images/Razl-V4/deepcomparedifference.png)
 
@@ -63,7 +63,7 @@ The blue arrow ![Deep Compare Arrow](/Images/Razl-V4/deepcomparearrow.png) shows
 **NOTE**: Deep Compare will only compare Revision ID's regardless of your **Lightning Mode** setting.
 
 ### Searching for Items
-Razl can use the Sitecore content indexes to find items in the content tree on both servers. Simply enter text into the serch window and Razl will look for those items on both servers using the Sitecore Content Search API. When Items are found, they are shown in the item list pane.
+Sitecore Razl can use the Sitecore content indexes to find items in the content tree on both servers. Simply enter text into the serch window and Sitecore Razl will look for those items on both servers using the Sitecore Content Search API. When Items are found, they are shown in the item list pane.
 
 If the items are different between servers, they are shown at the top of the list.
 
@@ -73,7 +73,7 @@ Items in the search results work the same way as results from **Deep Compare**. 
 
 ### Comparing Fields
 
-When you click on an item in the Sitecore Content Tree, Razl will load the fields and information about the item and display them in the Field Information panes. Razl will then show you the individual fields differences, you can then select each fields to move between servers:
+When you click on an item in the Sitecore Content Tree, Sitecore Razl will load the fields and information about the item and display them in the Field Information panes. Sitecore Razl will then show you the individual fields differences, you can then select each fields to move between servers:
 
 ![](/Images/Razl-V4/compare8.png)
 
@@ -87,7 +87,7 @@ The Field Information pane also displays information about an item beneath the "
 
 ![](/Images/Razl/compare9.PNG)
 
-There are several basic symbols pairs in Razl when comparing fields:
+There are several basic symbols pairs in Sitecore Razl when comparing fields:
 
 | Symbol | Description |
 |---- |---- |
@@ -109,12 +109,12 @@ The **Multi-List Field Editor** allows a user to view and edit Sitecore ID list 
 
 The user can move individual ID's left or right, and ID's can be dragged up and down in the list, allowing them to be re-ordered.
 
-When Razl opens the **Multi-List Field Editor**, it will check to see if the ID's in the list exist on the server and automatically replace the ID's with thier paths. This is only for display purposes. The original ID is still stored in the Sitecore field. When an ID is replaced with a path, the path is shown with bold text, indicating it has been replaced. Hovering the mouse over a Sitecore path will show the original ID in a tool tip.
+When Sitecore Razl opens the **Multi-List Field Editor**, it will check to see if the ID's in the list exist on the server and automatically replace the ID's with thier paths. This is only for display purposes. The original ID is still stored in the Sitecore field. When an ID is replaced with a path, the path is shown with bold text, indicating it has been replaced. Hovering the mouse over a Sitecore path will show the original ID in a tool tip.
 
 ![](/Images/Razl-V4/MultiListFieldEditor.png)
 
 #### Xml Field Editor
-The **Xml Field Editor** allows users to easily edit and update Xml fields in Razl. The XML editor attempts to line up Xml elements by their ID, and displays each attribute of the element on it's own line. The user can move individual attributes left or right or move the entire element and all it's children.
+The **Xml Field Editor** allows users to easily edit and update Xml fields in Sitecore Razl. The XML editor attempts to line up Xml elements by their ID, and displays each attribute of the element on it's own line. The user can move individual attributes left or right or move the entire element and all it's children.
 
 Like the **Multi-List Field Editor**, the Xml field editor will locate Sitecore ID's and replace them with their paths.
 
@@ -122,7 +122,7 @@ Like the **Multi-List Field Editor**, the Xml field editor will locate Sitecore 
 
 ### Controlling Comparison
 
-By default Razl will compare all the fields on an item and all languages of that item, however it is possible to control which fields and languages are compared by Razl. This can be useful in scenarios where you might want ignore the updated date on an item or certain languages because they aren’t used.
+By default Sitecore Razl will compare all the fields on an item and all languages of that item, however it is possible to control which fields and languages are compared by Sitecore Razl. This can be useful in scenarios where you might want ignore the updated date on an item or certain languages because they aren’t used.
 
 #### Ignoring a Field
 
@@ -134,7 +134,7 @@ Follow the following instructions to ignore a field:
 4. Right click on the field and a context menu will appear: <br />  ![](/Images/Razl/compare11.PNG)
 5. Click the Ignore Field
 
-When a field is ignored Razl will re-compare all loaded items and the fields name will have a strikethrough:
+When a field is ignored Sitecore Razl will re-compare all loaded items and the fields name will have a strikethrough:
 
 ![](/Images/Razl/compare12.PNG)
 
@@ -158,7 +158,7 @@ Follow the following instructions to ignore a language:
 4. Right click on the language and a context menu will appear: <br /> ![](/Images/Razl/compare14.PNG)
 5. Click the Ignore Field
 
-When a language is ignored Razl will re-compare all loaded items and the language name will have a strikethrough:
+When a language is ignored Sitecore Razl will re-compare all loaded items and the language name will have a strikethrough:
 
  ![](/Images/Razl/compare15.PNG)
 
@@ -191,13 +191,13 @@ When you select to ignore either a field or language it is added to the compare 
 
 ![](/Images/Razl/compare17.PNG)
 
-Fields and languages are identified by the different symbols.  By unchecking a field or language you will remove it from the filter and Razl will run the item comparisons again.
+Fields and languages are identified by the different symbols.  By unchecking a field or language you will remove it from the filter and Sitecore Razl will run the item comparisons again.
 
 #### Filtering Effects
 
 When a field or language is ignored for comparison it stops the field/language from being compared when determining which symbols to display in the Content Tree. The field and language will still be compared in the Field Information pane when you select an item.
 
-For example the English language is ignored in the image below, notice that the Content Tree shows that the item is the same but when the item is selected Razl shows that the English fields are actually different:
+For example the English language is ignored in the image below, notice that the Content Tree shows that the item is the same but when the item is selected Sitecore Razl shows that the English fields are actually different:
 
 ![](/Images/Razl/compare18.PNG)
 
@@ -207,7 +207,7 @@ If you right click on an item in the Content Tree a context menu will appear wit
 
 | Menu Item | Description |
 |-------------------|----|
-| Refresh | Forces Razl to refresh the item data and reload child items. |
+| Refresh | Forces Sitecore Razl to refresh the item data and reload child items. |
 | Deep Compare | Compares all items under the selected item and shows the differences in the Change Details window. |
 | Go To Template | Go to the template the item is based on. |
 | Go To Branch | Go the the branch the item was created from. |

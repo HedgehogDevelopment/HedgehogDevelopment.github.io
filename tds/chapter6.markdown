@@ -1,8 +1,8 @@
 ---
-title: Chapter 6 - TDS Classic Documentation
+title: Chapter 6 - Sitecore TDS Documentation
 layout: TdsLayout
 ---
-# TDS Classic
+# Sitecore TDS
 
 ## Chapter 6 – Code Generation
 
@@ -10,11 +10,11 @@ Code generation is the process by which a data model and one or more templates a
 
 ![](/Images/Tds/chapter6-codegenprocess.png)
 
-TDS Classic' code generation is composed of models of the Sitecore items within your project, transformation templates and a template engine within TDS Classic. The process works by TDS Classic parsing each .item file within your project and passing it to a transformation template. Once all of the items have been transformed an additional template may be executed being passed a model representation of the project.
+Sitecore TDS code generation is composed of models of the Sitecore items within your project, transformation templates and a template engine within Sitecore TDS. The process works by Sitecore TDS parsing each .item file within your project and passing it to a transformation template. Once all of the items have been transformed an additional template may be executed being passed a model representation of the project.
 
-When an item changes, either by a sync or by Rocks, TDS Classic will call the transformation template to re-generate the appropriate items. At the end of each item generation event, TDS Classic runs a template that generates the "header" and then combines all the generated code files into a single code file. This code file is located in another project in your solution. It can be either a web application or a class library.
+When an item changes, either by a sync or by Rocks, Sitecore TDS will call the transformation template to re-generate the appropriate items. At the end of each item generation event, Sitecore TDS runs a template that generates the "header" and then combines all the generated code files into a single code file. This code file is located in another project in your solution. It can be either a web application or a class library.
 
-Right clicking on the TDS Classic project and choosing "Re-generate code for all items" will run the template against all .item files in your project.
+Right clicking on the Sitecore TDS project and choosing "Re-generate code for all items" will run the template against all .item files in your project.
 
 ### Data Models
 
@@ -22,15 +22,15 @@ There are four types of models available for the code generation process. These 
 
 #### ProjectHeader
 
-The ProjectHeader model is a representation of the TDS Classic project and the code generation settings. This model is used within the "Header Transformation File" as configured on the Code Generation settings of your TDS Classic project.
+The ProjectHeader model is a representation of the Sitecore TDS project and the code generation settings. This model is used within the "Header Transformation File" as configured on the Code Generation settings of your Sitecore TDS project.
 
 #### SitecoreItem
 
-This model is the default representation of the Sitecore item within your TDS Classic project. It is also the basis for the other two Sitecore models.
+This model is the default representation of the Sitecore item within your Sitecore TDS project. It is also the basis for the other two Sitecore models.
 
 #### SitecoreTemplate
 
-This model represents a Sitecore template item. It has all of the properties of a SitecoreItem model in addition to a list of base template, fields and its path segments. If TDS Classic determines that the .item file represents a Sitecore template then this is the type of model that is passed to the T4 template.
+This model represents a Sitecore template item. It has all of the properties of a SitecoreItem model in addition to a list of base template, fields and its path segments. If Sitecore TDS determines that the .item file represents a Sitecore template then this is the type of model that is passed to the T4 template.
 
 #### SitecoreField
 
@@ -50,7 +50,7 @@ Each item in your project can be configured with a transformation template. In m
 
 ### Sample Transformation Templates
 
-Once code generation is enabled, a new folder will show up in the TDS Classic project within solution explorer. It is called "Code Generation Templates". Right click on this and choose "Add -> New Item…". You have 4 possible templates to start from. The "document" templates are provided to help you see what is available to you in the T4 templates. These will generate text output containing all the fields passed into the T4 template. They are a good place to start for seeing all the information provided. The other two are empty templates that you can use to start writing your own T4 transforms.
+Once code generation is enabled, a new folder will show up in the Sitecore TDS project within solution explorer. It is called "Code Generation Templates". Right click on this and choose "Add -> New Item…". You have 4 possible templates to start from. The "document" templates are provided to help you see what is available to you in the T4 templates. These will generate text output containing all the fields passed into the T4 template. They are a good place to start for seeing all the information provided. The other two are empty templates that you can use to start writing your own T4 transforms.
 
 Sample T4 templates are available on GitHub and there is a link to them on the code generation property page. The sample templates cover different types of code generation scenarios, and provide a great way to see what a real code generation template looks like.
 
@@ -59,8 +59,8 @@ Sample T4 templates are available on GitHub and there is a link to them on the c
 #### Project Level Setup
 
 To setup Code Generation follow the following steps:
-1.	Open the Properties tabs of a TDS Classic Project
-2.	Select the **TDS Classic Code Generation** properties tab
+1.	Open the Properties tabs of a Sitecore TDS Project
+2.	Select the **TDS Code Generation** properties tab
 3.	Check **Enable Code Generation**.
 4.	Choose a target project where the generated file will be written.
 5.	Name the target file where the generated code will sit. Make sure to give it an extension of .cs (assuming you are generating C#)
@@ -69,7 +69,7 @@ To setup Code Generation follow the following steps:
 
 #### Creating Header and Base Project Transformation Files
 
-Once code generation has been enabled on a project it is possible to add TT files to the TDS Classic project. After enabling Code Generation the **Code Generation Templates** node will appear in the TDS Classic  project:
+Once code generation has been enabled on a project it is possible to add TT files to the Sitecore TDS project. After enabling Code Generation the **Code Generation Templates** node will appear in the Sitecore TDS  project:
 
 
 ![](/Images/Tds/chapter6-codegennode.png)
@@ -85,8 +85,8 @@ This will open the Add New Item  dialog:
 The dialog allows you to create the following file types:
 
 * **Blank Template** – A blank TT file that contains no code, for use when building code generation from scratch.
-* **Document Header Template** – Used to generate documentation about the items in TDS Classic. This file is used as the Header Transform File.
-* **Document Item Template** – Used to generate documentation about the items in TDS Classic. This file is used as the Base Project Tranform File.
+* **Document Header Template** – Used to generate documentation about the items in Sitecore TDS. This file is used as the Header Transform File.
+* **Document Item Template** – Used to generate documentation about the items in Sitecore TDS. This file is used as the Base Project Tranform File.
 * **Header Template** – Contains scaffolding for creating custom Code Generated files. This file is used as the Header Transform File.
 * **Item Template** – Contains scaffolding for creating custom Code Generated files. This file is used as the Base Project Tranform File.
 
@@ -106,11 +106,11 @@ Item level properties allow a developer to override the global item settings. Pr
 
 ### Namespaces
 
-TDS Classic will automatically create namespaces based on where a template is within Sitecore. For example if the TDS Classic project is setup as below where T2 is a template:
+Sitecore TDS will automatically create namespaces based on where a template is within Sitecore. For example if the Sitecore TDS project is setup as below where T2 is a template:
 
 ![](/Images/Tds/chapter6-codegenname.png)
 
-If the Namespace setting on the Code Generation tab has the value "MyNamespace" TDS Classic will generate the following Namespace:
+If the Namespace setting on the Code Generation tab has the value "MyNamespace" Sitecore TDS will generate the following Namespace:
 
 	namespace TdsDemo.MyNamespace.sitecore.templates.TDS.Set2
 	{
