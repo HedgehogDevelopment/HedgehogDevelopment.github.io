@@ -23,7 +23,7 @@ The zip file you downloaded from the [Sitecore TDS](http://www.TeamDevelopmentFo
  | Visual Studio 2013  | HedgehogDevelopmentTDS_2013.msi |
  | Visual Studio 2015  | HedgehogDevelopmentTDS_2015.msi |
  | Visual Studio 2017  | HedgehogDevelopmentTDS_2017.msi |
- | Visual Studio 2017  | HedgehogDevelopmentTDS_2019.msi |
+ | Visual Studio 2019  | HedgehogDevelopmentTDS_2019.msi |
 
 <br />
 

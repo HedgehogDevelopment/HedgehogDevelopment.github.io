@@ -253,8 +253,12 @@
     <Content Include="Images\Tds\chapter4-SyncSitecoreRoles.png" />
     <Content Include="Images\Tds\chapter4-SyncUsingHistory.png" />
     <Content Include="Images\Tds\chapter4-syncwindow_language.png" />
+    <Content Include="Images\Tds\chapter4-tdssolutionmenu.png" />
+    <Content Include="Images\Tds\chapter4-tdstoolbar.png" />
     <Content Include="Images\Tds\chapter4-wand.png" />
     <Content Include="Images\Tds\chapter4-webdeploypackage.png" />
+    <Content Include="Images\Tds\chapter4-ymlFileList.png" />
+    <Content Include="Images\Tds\chapter4-ymlUpgradePrompt.png" />
     <Content Include="Images\Tds\chapter6-codegendialog.png" />
     <Content Include="Images\Tds\chapter6-codegenname.png" />
     <Content Include="Images\Tds\chapter6-codegennewitem.png" />

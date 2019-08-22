@@ -71,7 +71,9 @@ All developers using a project file with this feature enabled need to be on a ve
 </div>
 
 * **Manage Sitecore Roles in Sitecore TDS** - Enables the Sitecore Role Sync functionality. This allows you to compare the roles in your Sitecore TDS project to the roles in Sitecore. Roles are deployed and packaged along with your Sitecore items.
+* **Serialization Format** - Allows the developer to select the serialization format used in the project. The default format is Item Serialization. Yml Serialization can be selected if the developer is working with Sitecore 9.2 or higher. Changing the serialization format from Item to Yml will also upgrade the files in the project. For more information please see [Upgrading to Yaml](./chapter4.html#upgrading-to-yaml)
 * **Deploy Items Changed After** - When deploying and/or packaging items, can check the item to see if it should be included in the build/package. When this check box is enabled, __**updated** field is checked on the Sitecore item and if any version of the __**updated** field has a date before the absolute or relative date specified in the date selector, it is excluded from the build. This allows Sitecore TDS to create delta deployments.
+
 
 #### Code Generation
 
@@ -971,3 +973,16 @@ Each Sitecore upgrade is different. We start with the typical scenario shown bel
 13.	Deploy the upgraded Sitecore TDS project to the upgraded production environment.
 
 The steps above are a good starting point, but are not a complete upgrade plan. There are a number of places where backups and testing would be done, but these steps have been omitted for simplicity.
+
+## Upgrading to YAML
+Sitecore 9.2 allows developers to choose the format Sitecore will use when serializing items into the TDS project. The two formats supported by Sitecore are Item serialization and Yaml. TDS projects support quick and easy conversion from Item format to Yaml to make moving to the more modern serialization format quick and easy.
+
+Upgrading your Sitecore items to Yaml is very easy. The first step is to open the general property tab for the project and change the Serialization Format to YML Serialization. You will be prompted to continue:
+
+![YAML upgrade prompt](/Images/Tds/chapter4-ymlUpgradePrompt.png)
+
+Choosing "Yes" will open a dialog with a listing of all .item files in the project. 
+
+![](/Images/Tds/chapter4-ymlFileList.png)
+
+Clickig Ok will perform the upgrade. When the upgrade is complete, all .item files in the project will be removed and replaced with .yml files with the same name. All settings in the TDS project will be preserved, making the upgrade nearly effortless.
