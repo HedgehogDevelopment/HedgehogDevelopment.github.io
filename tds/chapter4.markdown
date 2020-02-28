@@ -174,9 +174,9 @@ Install Package Configurations shows the available configurations in the Sitecor
 Assembly Validation causes TDS to check the specified assembly versions and terminate the build/deployment if the assemblies being deployed are different than the version in the target folder. This feature is designed to prevent different versions of assemblies from being deployed over the assemblies provided with the installed
 
 ##### Sitecore Assembly Validation
-Sitecore TDS now supports the Sitecore Assembly Version nuget packages. These are named **Sitecore.Assemblies.\***, and contain a list of all assemblies used by the released version of Sitecore and the expected version numbers. These are a great resource for ensuring that all assemblies being deployed to Sitecore match the version Sitecore expects.
+Sitecore TDS now supports the *Sitecore Assembly Version* nuget packages. These packages are named **Sitecore.Assemblies.\***, and contain a list of all assemblies used by the released version of Sitecore and the expected version number of each assembly. These are a great resource for ensuring that all assemblies being deployed to Sitecore match the version Sitecore expects.
 
-Sitecore TDS versions after 6.0.0.14 are aware of these Nuget packages and will automatically check the versions at build time if the package is installed in the TDS project. To use them, simply add the **Sitecore.Assemblies.Platform** Nuget package for your version of Sitecore to your TDS project and TDS will flag any assemblies with the incorrect version as build errors.
+Sitecore TDS versions 6.0.0.14 and up are aware of these Nuget packages and will automatically check the versions at build time if the package is installed in the TDS project. To take advantage of the new packages check **Enable Assembly Validation** and add the **Sitecore.Assemblies.Platform** Nuget package for your version of Sitecore to your TDS project. If any assemblies being deployed to Sitecore are different than the expected version, TDS will flag the assemblies with the incorrect version as build errors.
 
 #### Build
 
