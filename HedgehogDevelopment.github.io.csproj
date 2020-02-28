@@ -315,6 +315,8 @@
     <Content Include="Images\Tds\chapter7-getpublishprofile.png" />
     <Content Include="Images\Tds\chapter7-powershellscript.png" />
     <Content Include="Images\Tds\chapter7-vsopipelinesteps.png" />
+    <Content Include="Images\Tds\chapter8-buildproperties.png" />
+    <Content Include="Images\Tds\chapter8-testwindow.png" />
     <Content Include="js\metro.min.js" />
     <Content Include="js\metro\metro-accordion.js" />
     <Content Include="js\metro\metro-button-set.js" />
@@ -384,6 +386,7 @@
     <Content Include="avtor\specialfeatures.markdown" />
     <Content Include="tds\chapter7.markdown" />
     <None Include="avtor\licensemanager.markdown" />
+    <Content Include="tds\chapter8.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
