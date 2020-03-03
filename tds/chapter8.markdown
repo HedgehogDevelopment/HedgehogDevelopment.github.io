@@ -11,7 +11,7 @@ Sitecore TDS has been able to work with containers since containers were introdu
 Setting up the community containers is as simple as following the directions on the home page of the GIT repo. This documentation will not address how to do this in detail since the provided documentation already does a job describing the process. The only pieces covered here will be the updates needed to get Sitecore TDS working.
 
 #### Quick overview of deploying code in the containers
-The community containers provide a robust mechanism for deploying code into the sSitecore instance in the container. This is handled by a powershell script specified in the docker-compose .yml file. Here is an example of the CM configuration from the Sitecore XM compose file:
+The community containers provide a robust mechanism for deploying code into the Sitecore instance in the container. This is handled by a powershell script specified in the docker-compose .yml file. Here is an example of the CM configuration from the Sitecore XM compose file:
 
     cm:
       image: ${REGISTRY}sitecore-xm-cm:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
@@ -32,7 +32,7 @@ The developer copies their files to a local folder, docker moves the files into 
 
 The easiest way to configure this in the community Sitecore containers is to copy the .yml compose file and add a volume declaration to it. This will cause docker to move all files placed in a local folder into the c:/src folder in the container. Then the background job will automatically copy them into the Sitecore root.
 
-#### Configuring a docker volume for TDS deployments
+### Configuring a docker volume for TDS deployments
 The first step for setting up Sitecore TDS deployments is to determine the folder on the local file system that will be the source for the docker volume. In our example, we will call it **c:\container\cm**. This is just an arbitary name and you should choose a structure for your folder(s) that support your development needs.
 
 Next, the .yml compose file needs to be updated. Make a copy of the docker configuration file you are interested in using for development and edit the appropriate configuration to setup the volume you configured for deployment. This is an example of setting up the volume in the CM configuration shown above:
