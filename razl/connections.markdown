@@ -3,8 +3,6 @@ title: Sitecore Razl - Connections
 layout: RazlLayout
 ---
 
-# Sitecore Razl
-
 ## Connections
 
 Razl allows you to create connections to instances of Sitecore and view the differences in between the instances side-by-side.

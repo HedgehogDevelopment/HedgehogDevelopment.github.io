@@ -1,9 +1,7 @@
 ---
-title: Sitecore Feydra - Getting Started
+title: About Sitecore Feydra
 layout: FeydraLayout
 ---
-
-# Sitecore Feydra
 
 ## About Sitecore Feydra
 When creating a Sitecore web application, there are many dependencies between the tasks of 

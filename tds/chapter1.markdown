@@ -1,13 +1,9 @@
 ---
-title: Chapter 1 - Sitecore TDS Documentation
+title: Sitecore TDS - Introduction
 layout: TdsLayout
 ---
 
-# Sitecore TDS 
-
-## Chapter 1 – Introduction
-
-### Sitecore TDS
+## Introduction
 
 Sitecore TDS is a Sitecore developer productivity tool created by Hedgehog Development ([http://www.hhog.com](http://www.hhog.com)), a company that designs and develops customized applications and Web sites, and provides technology consulting services.  Sitecore TDS is used by Hedgehog Development internally and by development teams around the globe.
 Sitecore TDS is a Visual Studio add-in that supports 2013, 2015, 2017 and 2019 versions.  Sitecore developers use Sitecore TDS to increase the productivity of the Sitecore software development process. Sitecore TDS allows you to treat your Sitecore Items as you would .Net code, allowing you to bring your Sitecore items into your development lifecycle.
