@@ -1,10 +1,9 @@
 ---
-title: Chapter 6 - Sitecore TDS Documentation
+title: Sitecore TDS - Code Generation
 layout: TdsLayout
 ---
-# Sitecore TDS
 
-## Chapter 6 – Code Generation
+## Code Generation
 
 Code generation is the process by which a data model and one or more templates are passed through a template engine. The model is transformed and the resulting output of this process would be code that can be compiled and used within your application.
 

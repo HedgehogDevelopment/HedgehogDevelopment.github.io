@@ -3,11 +3,11 @@ title: Sitecore Feydra - Getting Started
 layout: FeydraLayout
 ---
 
-# Sitecore Feydra Getting Started
+## Sitecore Feydra Getting Started
 
 ## The Virtual Sandbox - How it works
 Sitecore Feydra allows any MVC web application to host front-end development by creating virtual 
-sandboxes for each front-end developer.  A virtual sandbox is a virtualized environment 
+sandboxes for each front-end developer. A virtual sandbox is a virtualized environment 
 in which front-end assets (css, js, cshtml, etc.) can be selectively replaced without 
 disturbing the back-end functionality of the web application. This virtualization allows 
 back-end developers to create **stubs** for front-end functionality without having the actual 

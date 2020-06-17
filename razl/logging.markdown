@@ -3,8 +3,6 @@ title: Sitecore Razl - Logging
 layout: RazlLayout
 ---
 
-# Sitecore Razl
-
 ## Logging
 
 Sitecore Razl logs all of the actions it carries out in Sitecore to help you understand and review the actions Sitecore Razl has performed. Logs can be written to disk or viewed in the Log Console.

@@ -3,7 +3,7 @@ title: Installing Avtor
 layout: AvtorLayout
 ---
 
-# Introduction
+## Introduction
 Avtor needs to be installed in Sitecore by an administrator using the **Sitecore Update Installation Wizard** tool. This document will demonstrate how to choose the correct version of Avtor to install and how to install it on a Sitecore server.
 
 ## Choosing the right package

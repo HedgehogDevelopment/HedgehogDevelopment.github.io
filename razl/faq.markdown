@@ -3,8 +3,6 @@ title: Sitecore Razl - Comparing Databases
 layout: RazlLayout
 ---
 
-# Sitecore Razl
-
 ## FAQ
 
 **How do I change the Access Guid used by the Sitecore Razl Application?**

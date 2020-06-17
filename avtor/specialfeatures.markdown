@@ -1,9 +1,9 @@
 ﻿---
-title: Editing items with Avtor
+title: Avtor Special Features
 layout: AvtorLayout
 ---
 
-# Special Features
+## Special Features
 Avtor contains a number of features that do not immediately fit in to any of the other broad categories. These features are documented here.
 
 ## Character counts

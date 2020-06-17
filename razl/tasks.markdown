@@ -3,8 +3,6 @@ title: Sitecore Razl - Tasks
 layout: RazlLayout
 ---
 
-# Sitecore Razl
-
 ## Task List
 
 The Task List displays a list of actions you would like Sitecore Razl to perform, you can queue up and review tasks in the task list before executing them all or selecting a single task and executing it.

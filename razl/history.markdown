@@ -3,8 +3,6 @@ title: Sitecore Razl - History
 layout: RazlLayout
 ---
 
-# Sitecore Razl
-
 ## Using the History View
 
 The history view allows you to review entries in the Sitecore history databases and then navigate to those items in the Content Tree. The Sitecore history database stores a record of items events, for example save, add version, delete and created.

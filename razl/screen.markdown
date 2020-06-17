@@ -1,9 +1,7 @@
 ---
-title: Sitecore Razl - Sitecore Razl Screen Layout
+title: Sitecore Razl - Screen Layout
 layout: RazlLayout
 ---
-
-# Sitecore Razl
 
 ## Sitecore Razl Screen Layout
 
