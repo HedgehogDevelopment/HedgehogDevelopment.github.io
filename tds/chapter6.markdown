@@ -43,7 +43,7 @@ The Text Template Transformation Toolkit (T4) is a template based code generatio
 
 The header transformation template is passed the ProjectHeader model. This transformation template is typically used to generate ‘using' statements or common code shared amongst the rest of the generated code.
 
-# Item Transformation File
+## Item Transformation File
 
 Each item in your project can be configured with a transformation template. In most cases, you don't want to run code generation for all .items, only your Sitecore templates. To allow you the most flexibility, an inheritance model for determining the T4 template exists. Each .item file has a property in the items property page that allows you to set a t4 template for that item and all its descendants. It can be overridden at any level.
 
