@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting started with Avtor
 layout: AvtorLayout
 ---
@@ -96,7 +96,7 @@ After saving the item, the user can check the item back into Sitecore by clickin
 <br/><br/>
 <hr/>
 
-# Going further
+## Going further
 This tutorial shows the content editor how to get started with Avtor. There are many other features of the tool like:
 
 - Workflow
@@ -107,4 +107,3 @@ This tutorial shows the content editor how to get started with Avtor. There are 
 - Search for items
 
 Please see our documentation topics for additional information on these features.
-
