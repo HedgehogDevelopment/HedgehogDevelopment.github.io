@@ -3,6 +3,8 @@ title: Sitecore TDS Documentation
 layout: MainLayout
 ---
 
+# Sitecore TDS
+
 ## About Sitecore TDS
 
 Sitecore TDS, a Microsoft Visual Studio Plugin, brings Sitecore items into Visual Studio while reducing developer’s deployment time to almost zero.  
