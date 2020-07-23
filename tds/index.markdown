@@ -2,8 +2,8 @@
 title: Sitecore TDS Documentation
 layout: MainLayout
 ---
- 
-# Sitecore TDS 
+
+# Sitecore TDS
 
 ## About Sitecore TDS
 

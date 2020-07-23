@@ -1,10 +1,9 @@
 ---
-title: Chapter 5 - Sitecore TDS Documentation
+title: Sitecore TDS - Builds and Deployment
 layout: TdsLayout
 ---
-# Sitecore TDS
 
-## Chapter 5 – Sitecore TDS Builds and Deployment
+## Sitecore TDS Builds and Deployment
 
 In addition to giving developers the ability to track their Sitecore item changes with source control, Sitecore TDS allows Sitecore items to be deployed through standard build automation tools. This allows Sitecore implementations to benefit from the ease and reproducibility offered by automated builds much the same as other web implementations.
 

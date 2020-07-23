@@ -1,9 +1,9 @@
-﻿---
+---
 title: Getting started with Avtor
 layout: AvtorLayout
 ---
 
-# About Avtor ![](/Images/Avtor/Avtor.png)
+## About Avtor ![](/Images/Avtor/Avtor.png)
 Avtor adds a new dimension to editing content on Sitecore websites. Before Avtor, making changes to multiple Sitecore items could take many steps. Avtor allows the content editor to choose the fields they are interested in editing and presents them with a view of those fields across all Sitecore items in the content tree. This allows the content editor to quickly review and update those fields.
 
 Avtor can create new content items, but it is best suited to reviewing and updating existing content. This tutorial will show how to quickly get started with Avtor.
@@ -96,7 +96,7 @@ After saving the item, the user can check the item back into Sitecore by clickin
 <br/><br/>
 <hr/>
 
-# Going further
+## Going further
 This tutorial shows the content editor how to get started with Avtor. There are many other features of the tool like:
 
 - Workflow
@@ -107,4 +107,3 @@ This tutorial shows the content editor how to get started with Avtor. There are 
 - Search for items
 
 Please see our documentation topics for additional information on these features.
-

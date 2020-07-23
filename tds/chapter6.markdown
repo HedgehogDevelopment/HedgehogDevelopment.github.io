@@ -1,10 +1,9 @@
 ---
-title: Chapter 6 - Sitecore TDS Documentation
+title: Sitecore TDS - Code Generation
 layout: TdsLayout
 ---
-# Sitecore TDS
 
-## Chapter 6 – Code Generation
+## Code Generation
 
 Code generation is the process by which a data model and one or more templates are passed through a template engine. The model is transformed and the resulting output of this process would be code that can be compiled and used within your application.
 
@@ -44,7 +43,7 @@ The Text Template Transformation Toolkit (T4) is a template based code generatio
 
 The header transformation template is passed the ProjectHeader model. This transformation template is typically used to generate ‘using' statements or common code shared amongst the rest of the generated code.
 
-# Item Transformation File
+## Item Transformation File
 
 Each item in your project can be configured with a transformation template. In most cases, you don't want to run code generation for all .items, only your Sitecore templates. To allow you the most flexibility, an inheritance model for determining the T4 template exists. Each .item file has a property in the items property page that allows you to set a t4 template for that item and all its descendants. It can be overridden at any level.
 

@@ -1,12 +1,9 @@
 ---
-title: Chapter 3 - Sitecore TDS Documentation
+title: Sitecore TDS - Architecture
 layout: TdsLayout
 ---
 
-# Sitecore TDS
-
-
-## Chapter 3 – Sitecore TDS Architecture
+## Sitecore TDS Architecture
 
 Sitecore TDS is a Visual Studio add-in that allows developers to pull Sitecore items in to their local file system as files. Since the Sitecore items are files, they can easily be tracked using all common source control systems available in the marketplace.
 

@@ -1,10 +1,9 @@
 ﻿---
-title: Chapter 8 - Sitecore TDS Documentation
+title: Sitecore TDS - TDS and Containers
 layout: TdsLayout
 ---
-# Sitecore TDS
 
-## Chapter 8 - TDS and Containers
+## TDS and Containers
 Sitecore TDS has been able to work with containers since containers were introduced. As of version 6.0.0.14, Sitecore TDS has been made more aware of how the community containers are configured. The containers Sitecore TDS was tested agains were configure by the Sitecore Community and are located in the GIT repo [https://github.com/Sitecore/docker-images](https://github.com/Sitecore/docker-images). This documentation describes how Sitecore TDS works with the community containers. As of this writing, Sitecore has not released their official container configurations.
 
 ### Setting up the community containers for TDS Development

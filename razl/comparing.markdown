@@ -3,8 +3,6 @@ title: Sitecore Razl - Comparing Databases
 layout: RazlLayout
 ---
 
-# Sitecore Razl
-
 ## Comparing Sitecore Databases
 
 Once you have two Sitecore connections setup (see [Creating a Connection](/razl/connections.html#creating-a-connection)) you can start to compare Sitecore instances.

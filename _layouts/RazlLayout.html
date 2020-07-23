@@ -4,21 +4,18 @@
     <body class="metro">
         <div class="container">
             {% include navigation.html %}
-            
             <div class="grid">
                 <div class="row">
                     <div class="span4">
                         {% include razlchapters.html %}
                     </div>
                     <div class="span10">
+                        <h1 id="sitecore-razl">Sitecore Razl</h1>
                         {{content}}
                     </div>
                 </div>
             </div>
         </div>
-       
-
         {% include foot.html %}
-
     </body>
 </html>

@@ -1,9 +1,9 @@
 ﻿---
-title: Installing Avtor
+title: Avtor License Manager
 layout: AvtorLayout
 ---
 
-# Avtor License Manager
+## Avtor License Manager
 The Avtor license manager is useb by the Sitecore administrator to manage the licenses owned by your organization. The screen allows the administrator to apply new licenses, refresh expired licenses and manage users using Avtor.
 
 ## Starting the license manager

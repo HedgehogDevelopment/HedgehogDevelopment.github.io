@@ -1,11 +1,9 @@
 ---
-title: Chapter 4 - Sitecore TDS Documentation
+title: Using Sitecore TDS for Sitecore Development
 layout: TdsLayout
 ---
 
-# Sitecore TDS
-
-## Chapter 4 – Using Sitecore TDS for Sitecore Development
+## Using Sitecore TDS for Sitecore Development
 
 Hedgehog Development originally developed Sitecore TDS as an internal project to help our own development teams build Sitecore implementations. Sitecore TDS was developed for Sitecore developers, by Sitecore developers. The guidelines documented in this manual are the best practices we have built around using Sitecore TDS as a development platform for many Sitecore implementations. We recognize that not all development projects are organized the same way, and Sitecore TDS was designed to allow as many different ways of developing Sitecore sites as possible.
 
