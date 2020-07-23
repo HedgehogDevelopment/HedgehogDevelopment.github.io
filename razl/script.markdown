@@ -5,273 +5,132 @@ layout: RazlLayout
 
 ## Sitecore Razl Script
 
-Sitecore Razl allows the user to to create XML documents that define connections to Sitecore servers and the operations Sitecore Razl should perform on those servers. These can then be executed from the Command Prompt or build scripts.
+The Sitecore Razl scripting engine has been completely re-designed. Sitecore Razl now uses PowerShell to script Razl operations. All operations available in the old scripting engine have been implemented as PowerShell cmdlets. In addtion to the high-level operation cmdlets, Sitecore Razl provides PowerShell cmdlets to perform all low-level operations Sitecore Razl uses. This allows the developer to create very robust scripts to manipulate the Sitecore items as they are copied between servers.
 
+### Sitecore Razl PowerShell Connections
 
-### Command line parameters
+Connections define how Sitecore Razl should connect to a Sitecore instance. The connections are created with a PowerShell Cmdlet and are stored in a variable for later use.
 
-The command line parameters Sitecore Razl accepts from the command line are as follows:
+    $sitecoreServer = Get-RazlConnection -SitecoreWebUrl <string> -DatabaseName <string> -AccessGuid <Guid>
 
-1. **/script** Specifies the path to the script file
-2. **/TLS12** when passed the value "true", Sitecore Razl enables the TLS 1.2 protocol when communicating with the webserver
+This command creates a connection to the server specified by the -SitecoreWebUrl parameter. The connection object is stored in the $sitecoreServer variable and can be used as a parameter for other Sitecore Razl cmdlets.
 
-To run a Sitecore Razl script with TLS 1.2 enabled, use a command similar to:
+Summary of Parameters:
 
-    Razl.exe /script:Migrate.xml /TLS12:true
-
-### Running a Sitecore Razl Script
-
-A Sitecore Razl script can be run from the command line with the following parameter:
-
-    Razl.exe /script:"{path to script file}"
-
-The value {path to script file} should be replaced with the path to the XML file that contains the Sitecore Razl script to run, for example:
-
-    Razl.exe /script:Migrate.xml
-    Razl.exe /script:"c:\Site Migration\Razl.xml"
-
-### Sitecore Razl Script XML
-
-The XML for Sitecore Razl scripts is very simple and is made up of connections and operations, by combining connections with operations Sitecore Razl will perform tasks on the intended Sitecore instances. Below is an overview of the entire Sitecore Razl XML:
-
-    <razl>
-      <connection name="" readOnly ="" install="true|false">
-        <url></url>
-        <accessGuid></accessGuid>
-        <database></database>
-        <path></path>
-	    <readThreads></readThreads>
-	    <writeThreads></writeThreads>
-      </connection>
-      <connection name="">
-        <url></url>
-        <guid></guid>
-        <database></database>
-	    <readThreads></readThreads>
-	    <writeThreads></writeThreads>
-      </connection>
-      <connection name="" preset="" />
-      <operation name="CopyHistory" source="" target="">
-        <parameter name="from">[date|integer days]</parameter>
-        <parameter name="to">[date|integer days]</parameter>
-        <parameter name="recycle">true|false</parameter>
-        <parameter name="lightningMode">true|false</parameter>
-        <parameter name="include">
-          <value></value>
-        </parameter>
-        <parameter name="exclude">
-          <value></value>
-        </parameter>
-      </operation>
-      <operation name="CopyAll" source="" target="">
-        <parameter name="itemId"></parameter>
-        <parameter name="overwrite">true|false</parameter>
-        <parameter name="lightningMode">true|false</parameter>
-        <parameter name="continueOnError">true|false</parameter>
-      </operation>
-      <operation name="CopyItem" source="" target="">
-        <parameter name="itemId"></parameter>
-      </operation>
-      <operation name="CopyVersion" source="" target="">
-        <parameter name="itemId"></parameter>
-        <parameter name="languageId"></parameter>
-        <parameter name="versionNum">number or [blank]</parameter>
-        <parameter name="folderType">shared, unversioned or [blank]</parameter>
-        <parameter name="removeVersion">true|false</parameter>
-      </operation>
-      <operation name="DeleteItem" source="" target="">
-        <parameter name="itemId"></parameter>
-        <parameter name="recycle">true|false</parameter>
-      </operation>
-      <operation name="MoveItem" source="" target="">
-        <parameter name="itemId"></parameter>
-        <parameter name="newItemPath"></parameter>
-        <parameter name="newParentId"></parameter>
-      </operation>
-      <operation name="SetFieldValue" source="" target="">
-        <parameter name="itemId"></parameter>
-        <parameter name="fieldId"></parameter>
-        <parameter name="fieldName"></parameter>
-        <parameter name="fieldValue"></parameter>
-        <parameter name="languageId"></parameter>
-        <parameter name="versionNum"></parameter>
-      </operation>
-      <operation name="SetPropertyValue" source="Sitecore7.local.master" target="Sitecore7.Local.Web">
-        <parameter name="itemId"></parameter>
-        <parameter name="propertyName">Template Id</parameter>
-        <parameter name="propertyValue"></parameter>
-      </operation>
-    </razl>
-
-
-### Sitecore Razl XML Connections
-
-Connections define how Sitecore Razl should connect to a Sitecore instance. Connections can be fully defined in the XML or can be preset connections that have been defined in the Sitecore Razl GUI. The connection XML with all options looks like this:
-
-	  <connection name="" readOnly="" install="true|false" preset="">
-	    <url></url>
-	    <accessGuid></accessGuid>
-	    <database></database>
-	    <path></path>
-	    <readThreads></readThreads>
-	    <writeThreads></writeThreads>
-	  </connection>
-
-Summary of attributes and elements:
-
-* **connection** - Containing element for the connection definition
-* **name** - The name of the connection. This will be used by operations to identify the connection they should use
-* **install** - Indicates if the Sitecore Razl connector should be installed at the target location
-* **preset** - The name of the pre-configured connection defined using the Sitecore Razl GUI
-* **url** - The URL to the Sitecore instance. Must start with http or https.
-* **accessGuid** - The Guid used by Sitecore Razl to access the Sitecore instance.
-* **database** - The database on the Sitecore instance Sitecore Razl should interact with.
-* **path** - The path to the Sitecore instance. Used when installing the Sitecore Razl service.
-* **readThreads** - The number of threads to use while looking for differences in a copyAll operation. The default value is 4.
-* **writeThreads** - The number of threads to use while copying differences in a copyAll operation. The default value is 4.
-
-At least two connections should be defined in a Sitecore Razl script.
-
-#### Defined Connections
-
-A defined connection is a connection that has the URL, AccessGuid and Database   and name defined in the XML. The minimum XML required is:
-  
-	  <connection name="">
-	    <url></url>
-	    <accessGuid></accessGuid>
-	    <database></database>
-	  </connection>
-
-Using a defined connection it is possible to install the Sitecore Razl service required by Sitecore Razl to communicate with Sitecore. The additional attribute install and the path element a required for this to work:
-
-	<connection name="" install="true">
-	    <url></url>
-	    <accessGuid></accessGuid>
-	    <database></database>
-	    <path></path>
-	</connection>
-
-A connection can also be made read only by adding the readOnly attribute:
-
-	<connection name="" readOnly="true">
-	    <url></url>
-	    <accessGuid></accessGuid>
-	    <database></database>
-	</connection>
-
-#### Preset Connections
-
-Preset connections are connections that have been defined in the Sitecore Razl GUI first. The XML for a preset connection is:
-
-	<connection name="" preset="" />
-
-The value for the preset connection should be save value shown in the Sitecore Razl Connections dropdown. For example if in the Sitecore Razl GUI the following connections are defined:
-
-![](/Images/Razl/script1.PNG)
-
-The configuration to use the **Awesome** connection would be:
-
-	<connection name="" preset="Awesome" />
-
-Preset connections can not be made read only from the XML or be installed by the XML, these tasks should be performed in the Sitecore Razl GUI.
+- **-SitecoreWebUrl** [Required] - The URL to use to contact the Razl service on the Sitecore server.
+- **-DatabaseName** [Required] - The Sitecore database the connection uses when executing commands on the server.
+- **-AccessGuid** [Required] - Guid used to access the service installed on the Sitecore server.
+- **-SitecoreServerRoot** [Optional] - The UNC Path to the webroot of the Sitecore server. If this is specified, the service will be reinstalled, causing a server recycle.
+- **-ReadOnly** [Optional Switch] - The connection is readon only when this switch is present.
+- **-Username** [Optional] - The username to use when connecting to the server.
+- **-Password** [Optional] - The password to use when connecting to the server.
 
 ### Operations
+Operations are high-level functions that can be performed on a server or between two servers. Most operations are the same as tasks that can be added to the Task List in the Sitecore Razl UI. The full list of supported operations is:
 
-Operations define the actions that Sitecore Razl should perform. The basic XML structure for an operation is:
-   
-   <operation name="" source="" target="">
-   </operation>
-
-Summary of attributes and elements:
-
-* **operation** - the containing element that defines an operation
-* **name** - the name of the operation to perform. The supported values are CopyHistory, CopyAll, CopyItem
-* **source** - the name of the connection that will act as the source for the operation. The name should match the connection name.
-* **target** - the name of the connection that will act as the target for the operation. The name should match the connection name.
-
-An operation can have 0 or more child parameters. Parameters have the following basic XML structures:
-
-  	<parameter name=""></parameter>
-
-Or
-	  <parameter name="">
-	       <value></value>
-	       <value></value>
-	  </parameter>
-
-Summary of attributes and elements:
-
-* **parameter** - the containing element that defines a parameter
-* **name** - the name of the parameters. See individual operation definitions for support parameters.
-* **value** - the element that contains the parameter value. A parameters can contain 0 or more values.
-
-If a parameters contains a single value it is possible to define the parameter without a value element, e.g:
-
-	<parameter name="example">a value</parameter>
-
-If the parameters required multiple values these can be defined using the value child element:
-
-	<parameter name="example">
-	    <value>a value  1</value>
-	    <value>a value  2</value>
-	</parameter>
+- **CopyHistory** - Copies items that have changed based on the history of the changes on the source server.
+- **CopyItem** - Copy a single item from one server to another.
+- **CopyItems** - Copy a tree of items from one server to another.
+- **CopyVersion** - Copy all fields in a specific version.
 
 #### CopyHistory Operation
 
-The CopyHistory operation will replay the actions recorded in the Sitecore history engine on one instance on another instance. The full XML for the CopyHistory operation is:
+The CopyHistory operation will replay the actions recorded in the Sitecore history engine on one instance on another instance. Razl uses the history engine or the search indexes to determine what has changed on the server. If these features are disabled or modified, the CopyHistory operation may not be able to acurately determine what has changed.
 
-	  <operation name="CopyHistory" source="" target="">
-	    <parameter name="from"></parameter>
-	    <parameter name="to"></parameter>
-	    <parameter name="recycle">true|false</parameter>
-        <parameter name="lightningMode">true|false</parameter>
-	    <parameter name="include">
-	      <value></value>
-	    </parameter>
-	    <parameter name="exclude">
-	      <value></value>
-	    </parameter>
-	  </operation>
+The CopyHistory operation has the following format:
 
-Summary of parameters:
+    Copy-RazlItemsUsingHistory -Source <Connection> -Target <Connection> -From <DateTime> -Description <string>
 
-* **from** - the date from which Sitecore Razl should start copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T03:48:57. This parameter may also be an integer representing the number of days to look back in the history. This is a required parameter.
-* **to** - the date which Sitecore Razl should stop copying the history. The date should be defined in the format yyyy-MM-ddThh:mm:ss, e.g. 2014-05-08T13:48:57. This parameter may also be an integer representing the number of days to look back in the history. This is an optional parameter.
-* **recycle** - indicates what should happen to an item that is deleted by Sitecore Razl. If set to true the item is sent to the recycle bin on the target Sitecore instance, if set to false the item is removed from the Sitecore instance. Default value is true. This parameter is optional.
-* **lightningMode** - Enables or disables lightning mode when moving items.
-* **include** - the path to items to include when copying history. Only actions on items that exist beneath the defined paths will be performed on the target instance. Multiple paths can be defined. If this parameter is absent then all actions are performed. This parameter is optional.
-* **exclude**  - the path to items to exclude when copying history. Actions on items that exist beneath the defined paths will be ignored. Multiple paths can be defined. If this parameter is absent then all actions are performed. Excludes take precedence over includes. This parameter is optional.
+Summary of Parameters:
+- **-Source** [Required] - A Razl connection to the source Sitecore server. Items will be copied from this server based on the history of changes.
+- **-Target** [Required] - A Razl connection to the target Sitecore server.
+- **-From** [Required] - The DateTime to use to start looking for changes on the source server. Any changes before this time will be ignored.
+- **-To** [Optional] - The DateTime to use to stop looking for changes. Any changes after this date will not be copied. Leave blank to copy everything up to the present.
+- **-IncludePaths** [Optional] - An array of paths to copy items from. Only items under these paths will be copied. If left blank, all item changes will be copied.
+- **-ExcludePaths** [Optional] - An array of paths to NOT copy items from. If left blank, all item changes will be copied.
+- **-LightningMode** [Optional Switch] - If specified, perform a fast compare instead of a field-by-field compare of items to copy.
+- **-PermanentlyDelete** [Optional Switch] - If specified, permantely delete items if the history change specifies an item should be deleted. Otherwise, items will be moved to the recycle bin.
+- **-ContinueOnError** [Optional Switch] - Continue processing history if there are any errors.
+- **-Description** [Optional] - The description shown in progress status messages.
+
+The following is an example of using the CopyHistory Cmdlet to move items from the source to target that have changed in the last 5 days:
+
+	$ErrorActionPreference = "Stop"
+	$InformationPreference = "Continue"
+
+	$source = Get-RazlConnection -SitecoreWebUrl http://source.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Source Sitecore"
+	$target = Get-RazlConnection -SitecoreWebUrl http://target.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Target Sitecore"
+
+    $last5Days = (Get-Date).AddDays(-5)
+	Copy-RazlItemsUsingHistory -source $source -target $target -from $last5Days -Description "Copy History" -verbose
 
 #### CopyItem Operation
 
-The CopyItem operation will copy an item from the source Sitecore instance to the target Sitecore instance. The full XML for the CopyItem operation is:
+The CopyItem operation will copy an item from the source Sitecore instance to the target Sitecore instance. 
 
-	  <operation name="CopyItem" source="" target="">
-	    <parameter name="itemId"></parameter>
-	  </operation>
+The CopyItem operation has the following format:
 
-Summary of parameters:
+	Copy-RazlItem -Source <Connection> -Target <RazlConnection> [-ItemId] <Guid[]>
 
-* **itemId** - the ID of the item to copy. This parameter is required.
+Summary of Parameters:
+- **-Source** [Required] - A Razl connection to the source Sitecore server. Items will be copied from this server based on the history of changes.
+- **-Target** [Required] - A Razl connection to the target Sitecore server.
+- **-ItemID** [Required] - A single ItemID or an array of ItemID's to copy. This parameter can also use the PowerShell pipeline to get the array of ID's.
+- **-Description** [Optional] - The description shown in progress status messages.
+
+The following is an example of using the CopyItem Cmdlet to copy the Home item from the source to target:
+
+	$ErrorActionPreference = "Stop"
+	$InformationPreference = "Continue"
+
+	$source = Get-RazlConnection -SitecoreWebUrl http://source.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Source Sitecore"
+	$target = Get-RazlConnection -SitecoreWebUrl http://target.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Target Sitecore"
+    
+	Copy-RazlItem -source $source -target $target -ItemId "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" -verbose
+
+This Example uses a PowerShell pipeline to copy all items under the home item:
+
+	$ErrorActionPreference = "Stop"
+	$InformationPreference = "Continue"
+
+	$source = Get-RazlConnection -SitecoreWebUrl http://source.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Source Sitecore"
+	$target = Get-RazlConnection -SitecoreWebUrl http://target.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Target Sitecore"
+
+	# Get-RazlChildItems returns an array of ItemProperty objects that contain basic information about each item under the ParentItemID. 
+	# In this example, the array is converted into an array of ID's by pipeing it to the select statement.
+	# Next, it is sent to the Get-CopyItem Cmdlet to perform the copy.
+
+	Get-RazlChildItems -Connection $source -ParentItemID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" -verbose | `
+		select -ExpandProperty Id | `
+		Copy-RazlItem -source $source -target $target -verbose
+
 
 #### CopyAll Operation
 
-The CopyAll operation will copy an item from the source Sitecore instance to the target Sitecore instance and all child items. The full XML for the CopyAll operation is:
+The CopyAll operation will copy an item and all child items from the source to the target.
 
-	  <operation name="CopyAll" source="" target="">
-	    <parameter name="itemId"></parameter>
-	    <parameter name="overwrite">true|false</parameter>
-        <parameter name="lightningMode">true|false</parameter>
-	  </operation>
+ The CopyAll operation has the following format:
 
-Summary of parameters:
+    Copy-RazlItemTree -Source <Connection> -Target <Connection> [-ItemId] <Guid[]> 
 
-* **itemId** - the ID of the item to start coping from. This parameter is required.
-* **overwrite** - indicates if the operation should remove items that exist in the target instance but don’t exist in the source instance. If set to true items in the target instance that are missing in the source instance will be removed, if set to false  items in the target instance that are missing in the source instance are skipped.
-* **lightningMode** - Enables or disables lightning mode when moving items.
-* **continueOnError** - Default is false. If set to true, the CopyAll command will log the error and attempt to continue copying items.
+Summary of Parameters:
+- **-Source** [Required] - A Razl connection to the source Sitecore server. Items will be copied from this server based on the history of changes.
+- **-Target** [Required] - A Razl connection to the target Sitecore server.
+- **-ItemID** [Required] - A single ItemID or an array of ItemID's to copy. This parameter can also use the PowerShell pipeline to get the array of ID's.
+- **-Overwrite** [Optional Switch] -  If present, the entire tree will be overwritten. This means that any items in the target tree that are missing in the source will be removed from the target.
+- **-LightningMode** [Optional Switch] - If present, lighting mode compare will be used. This is much faster than comparing every item field by field.
+- **-ContinueOnError** [Optional Switch] - If present, Razl will continue to copy items even if an error occurs.
+- **-Description** [Optional] - The description shown in progress status messages.
 
-### Logging
-Sitecore Razl Script mode will output actions as they happen to the command prompt, this output can be piped to a text file if required.
 
-If a log folder has been set in the Sitecore Razl GUI then Script mode will also write to the log folder.
+The following is an example of using the CopyAll Cmdlet to copy the Home item and all its children from the source to target:
+
+	$ErrorActionPreference = "Stop"
+	$InformationPreference = "Continue"
+
+	$source = Get-RazlConnection -SitecoreWebUrl http://source.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Source Sitecore"
+	$target = Get-RazlConnection -SitecoreWebUrl http://target.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Target Sitecore"
+    
+	Copy-RazlItemTree -source $source -target $target -ItemId "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" -verbose -Overwrite -LightningMode -ContinueOnError
+
+
