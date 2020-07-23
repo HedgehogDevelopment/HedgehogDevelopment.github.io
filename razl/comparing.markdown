@@ -215,6 +215,8 @@ If you right click on an item in the Content Tree a context menu will appear wit
 | Left Referrers | Only appears on the left hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree |
 | Right References | Only appears on the right hand side. Lists all items that reference the selected item. Clicking on an item in the list will take you to that item in the Content Tree |
 | Right Referrers | Only appears on the right hand side. Lists all items that the selected item refers to. Clicking on an item in the list will take you to that item in the Content Tree |
+| Left Add Bookmark | Adds a bookmark to the connections bookmark collection. Bookmarks can be returned to using bookmark button in the toolbar. |
+| Right Add Bookmark | Adds a bookmark to the connections bookmark collection. Bookmarks can be returned to using bookmark button in the toolbar. |
 | Copy to Clipboard | Allows the user to copy information about the item to the clipboard. Selecting this menu item will open a menu, allowing the user to select the Item ID, Item Path, Template ID or Template Path to be copied to the clipboard |
 | Copy item and Related from Right | Only appears on the left hand site. Copies the item and all items related to the item based on the contents of the link database. |
 | Copy item and Related from Left | Only appears on the right hand site. Copies the item and all items related to the item based on the contents of the link database. |
