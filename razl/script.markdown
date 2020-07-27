@@ -11,10 +11,6 @@ The Sitecore Razl scripting engine has been completely re-designed. Sitecore Raz
 
 Connections define how Sitecore Razl should connect to a Sitecore instance. The connections are created with a PowerShell Cmdlet and are stored in a variable for later use.
 
-    $sitecoreServer = Get-RazlConnection -SitecoreWebUrl <string> -DatabaseName <string> -AccessGuid <Guid>
-
-This command creates a connection to the server specified by the -SitecoreWebUrl parameter. The connection object is stored in the $sitecoreServer variable and can be used as a parameter for other Sitecore Razl cmdlets.
-
 Summary of Parameters:
 
 - **-SitecoreWebUrl** [Required] - The URL to use to contact the Razl service on the Sitecore server.
@@ -24,6 +20,36 @@ Summary of Parameters:
 - **-ReadOnly** [Optional Switch] - The connection is readon only when this switch is present.
 - **-Username** [Optional] - The username to use when connecting to the server.
 - **-Password** [Optional] - The password to use when connecting to the server.
+
+The following is an example of creating a connection to Sitecore:
+
+    $sitecoreServer = Get-RazlConnection -SitecoreWebUrl <string> -DatabaseName <string> -AccessGuid <Guid>
+
+This command creates a connection to the server specified by the -SitecoreWebUrl parameter. The connection object is stored in the $sitecoreServer variable and can be used as a parameter for other Sitecore Razl cmdlets.
+
+#### Removing a connection
+
+In some cases, there may be a need to remove the connection from the Sitecore server. The Cmdlet Remove-RazlConnection removes the connection. This will remove the Service folder and the Sitecore Razl service assembly from the /bin folder, so it will cause the AppPool to recycle.
+
+Summary of Parameters:
+- **-Connection** [Required] - The Razl connection onject to remove. Please note: razl needs to know where the service is located in the file system. Therefore, the connection must have been created with the -SitecoreServerRoot parameter specified.
+
+Here is an example of removing the connection from an existing connection
+
+	Remove-RazlConnection $connection
+
+This assumes that $connection contains a properly initialized connection object where the **-SitecoreServerRoot** parameter was specified.
+
+#### Get-RazlConnectionStatus
+The Get-RazlConnectionStatus function allows the script to determine if a connection object is available for use.
+
+Summary of Parameters:
+- **-Connection** [Required] - A Razl connection onject.
+
+The Get-RazlConnectionStatus returns on of the following values:
+
+Ready, NotInstalled, OldVersion, InvalidAccessGuid, Deactivated,
+    NeedCredentials, AccessDenied, ServerNotFound
 
 ### Operations
 Operations are high-level functions that can be performed on a server or between two servers. Most operations are the same as tasks that can be added to the Task List in the Sitecore Razl UI. The full list of supported operations is:
@@ -36,10 +62,6 @@ Operations are high-level functions that can be performed on a server or between
 #### CopyHistory Operation
 
 The CopyHistory operation will replay the actions recorded in the Sitecore history engine on one instance on another instance. Razl uses the history engine or the search indexes to determine what has changed on the server. If these features are disabled or modified, the CopyHistory operation may not be able to acurately determine what has changed.
-
-The CopyHistory operation has the following format:
-
-    Copy-RazlItemsUsingHistory -Source <Connection> -Target <Connection> -From <DateTime> -Description <string>
 
 Summary of Parameters:
 - **-Source** [Required] - A Razl connection to the source Sitecore server. Items will be copied from this server based on the history of changes.
@@ -67,10 +89,6 @@ The following is an example of using the CopyHistory Cmdlet to move items from t
 #### CopyItem Operation
 
 The CopyItem operation will copy an item from the source Sitecore instance to the target Sitecore instance. 
-
-The CopyItem operation has the following format:
-
-	Copy-RazlItem -Source <Connection> -Target <RazlConnection> [-ItemId] <Guid[]>
 
 Summary of Parameters:
 - **-Source** [Required] - A Razl connection to the source Sitecore server. Items will be copied from this server based on the history of changes.
@@ -104,14 +122,9 @@ This Example uses a PowerShell pipeline to copy all items under the home item:
 		select -ExpandProperty Id | `
 		Copy-RazlItem -source $source -target $target -verbose
 
-
 #### CopyAll Operation
 
 The CopyAll operation will copy an item and all child items from the source to the target.
-
- The CopyAll operation has the following format:
-
-    Copy-RazlItemTree -Source <Connection> -Target <Connection> [-ItemId] <Guid[]> 
 
 Summary of Parameters:
 - **-Source** [Required] - A Razl connection to the source Sitecore server. Items will be copied from this server based on the history of changes.
@@ -122,7 +135,6 @@ Summary of Parameters:
 - **-ContinueOnError** [Optional Switch] - If present, Razl will continue to copy items even if an error occurs.
 - **-Description** [Optional] - The description shown in progress status messages.
 
-
 The following is an example of using the CopyAll Cmdlet to copy the Home item and all its children from the source to target:
 
 	$ErrorActionPreference = "Stop"
@@ -132,5 +144,31 @@ The following is an example of using the CopyAll Cmdlet to copy the Home item an
 	$target = Get-RazlConnection -SitecoreWebUrl http://target.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Target Sitecore"
     
 	Copy-RazlItemTree -source $source -target $target -ItemId "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" -verbose -Overwrite -LightningMode -ContinueOnError
+
+#### CopyVersion Operation
+
+The CopyVersion operation will copy all fields in a specific version from an item on one server to another.
+
+Summary of Parameters:
+- **-Source** [Required] - A Razl connection to the source Sitecore server. Items will be copied from this server based on the history of changes.
+- **-Target** [Required] - A Razl connection to the target Sitecore server.
+- **-ItemID** [Required] - A single ItemID or an array of ItemID's to copy. This parameter can also use the PowerShell pipeline to get the array of ID's.
+- **-LanguageId** [Optional] - The LanguageId to copy. If this isn't specified, CopyVersion assumes you are copying the Shared fields.
+- **-VersionNum** [Optional] - The Version to copy if copying a verison. If this isn't specified, CopyVersion assumes you are copying the Unversioned or Shared fields based on the presense of the -LanguageId parameter.
+- **-TargetVersionNum** [Optional] - The Version number on the item on the target server. If this isn't specified, the source version number is used.
+- **-TargetLanguageId** [Optional] - The Language on the item on the target server. If this isn't specified, the source language id is used.
+- **-RemoveVersion** [Optional Switch] - If specified, the version is removed from the target.
+- **-VersionType** [Optional] - Type of versioned item (Shared, Unversioned or [blank]) to copy.
+- **-Description** [Optional] - The description shown in progress status messages.
+
+The following is an example of using the CopyVersion Cmdlet to copy version 1 of the Home item from source to target:
+
+	$ErrorActionPreference = "Stop"
+	$InformationPreference = "Continue"
+
+	$source = Get-RazlConnection -SitecoreWebUrl http://source.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Source Sitecore"
+	$target = Get-RazlConnection -SitecoreWebUrl http://target.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Target Sitecore"
+    
+	Copy-RazlItemVersion -source $source -target $target -ItemId "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" -verbose -LanguageId "en" -VersionNum 1
 
 
