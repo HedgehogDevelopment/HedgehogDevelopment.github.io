@@ -11,10 +11,10 @@ It is recommended that the developer is familiar with creating connections descr
 
 ### Getting Sitecore Item Information 
 
-Sitecore Razl provides the developers with a number of functions used to get items and information about the items from a Sitecore server. The Cmdlets return data structures that can be manipulated by PowerShell script to provide the developer with nearly unlimited flexibility in handling Sitecore items.
+Sitecore Razl provides the developers with a cmdlets to get items and information about items from a Sitecore server. The Cmdlets return data structures that can be manipulated by PowerShell script to provide the developer with nearly unlimited flexibility in handling Sitecore items.
 
 #### Get-RazlChildItems
-The Get-RazlChildItems Cmdlet queries the Sitecore database for items under an item. The result of the Cmdlet is an array of ItemProperties objects. These objects refer to the items under the item specified by the **-ParentItemID** parameter.
+The Get-RazlChildItems cmdlet queries the Sitecore database for items under an item. The result of the cmdlet is an array of ItemProperties objects. These objects refer to the items under the item specified by the **-ParentItemID** parameter.
 
 Summary of parameters:
 - **-Connection** [Required] - A Razl connection to the Sitecore server.
@@ -45,16 +45,16 @@ The following is an example of using the Get-RazlChildItems Cmdlet to get items 
 	Get-RazlChildItems -Connection $connection -ParentItemID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 
 #### Get-RazlField
-The Get-RazlField Cmdlet gets a FieldData object for a field on an Item on the Sitecore server.
+The Get-RazlField cCmdlet gets a FieldData object for a field on an Item on the Sitecore server.
 
 Summary of parameters:
 - **-Connection** [Required] - A Razl connection to the Sitecore server.
-- **-ItemID** [Required] - The ItemID to get the field for.
 - **-FieldId** [Required] - The Field ID to retrieve.
+- **-ItemID** [Required] - The ItemID to get the field for.
 - **-LanguageId** [Optional] - The Language for the field.
 - **-VersionNum** [Optional] - The Version for the field.
 
-The Cmdlet returns a FieldData object. The FieldData object has the following properties:
+The cmdlet returns a FieldData object. The FieldData object has the following properties:
 
 - **Blob** - Boolean indicating if the field is a blob field. The blob value must be retrieved using Get-RazlFieldBlob.
 - **Id** - ID of the field.
@@ -63,22 +63,22 @@ The Cmdlet returns a FieldData object. The FieldData object has the following pr
 - **Value** - String value of the field.
 - **ValueBytes** - The value of the field expressed as an array of bytes.
 
-The following is an example of using the Get-RazlField Cmdlet to the the Text field on the Home item:
+The following is an example of using the Get-RazlField cmdlet to get the the Text field on the Home item:
 
 	$connection = Get-RazlConnection -SitecoreWebUrl http://source.sc.local -DatabaseName master -AccessGuid "00000000-1111-2222-3333-444444444444" -Name "Source Sitecore"
 
 	Get-RazlField -conection $connection -ItemID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" -FieldID "{A60ACD61-A6DB-4182-8329-C957982CEC74}" -LanguageId "en" -VersionNum 1 -verbose
 
-#### Get-GetFieldBlob
-The Get-RazlFieldBlob Cmdlet gets the value of a Blob field. The result can be returned as a byte array or stored in a file.
+#### Get-RazlFieldBlob
+The Get-RazlFieldBlob cmdlet gets the value of a Blob field. The result can be returned as a byte array or stored in a file.
 
 Summary of parameters:
 - **-Connection** [Required] - A Razl connection to the Sitecore server.
-- **-ItemID** [Required] - The ItemID to get the field for.
 - **-FieldId** [Required] - The Field ID to retrieve.
+- **-Filename** [Optional] - Filename of a file to store the blob in. If not specified, the blob will be returned as the result of the cmdlet in an array of bytes.
+- **-ItemID** [Required] - The ItemID to get the field for.
 - **-LanguageId** [Optional] - The Language for the field.
 - **-VersionNum** [Optional] - The Version for the field.
-- **-Filename** [Optional] - File name to store the blob in. If not specified, the blob will be returned as the result of the cmdlet in an array of bytes.
 
 The following is an example of using the Get-RazlFieldBlob Cmdlet to get the Blob field on the Google Plus media item:
 
@@ -87,11 +87,11 @@ The following is an example of using the Get-RazlFieldBlob Cmdlet to get the Blo
 	Get-RazlField -conection $connection -ItemID "{A5A23083-C229-47EC-B1BC-445F8BBB55AB}" -FieldID "{40E50ED9-BA07-4702-992E-A912738D32DC}" -verbose
 
 #### Get-RazlItem
-The Get-RazlItem Cmdlet gets an ItemDetails object or an array of ItemDetails objects from a server. The ItemDetails object contains all information about an item. This includes all fields for all languages and versions. The ItemDetails object is the object used to copy items between servers.
+The Get-RazlItem Cmdlet gets an ItemDetails object or an array of ItemDetails objects from a server. The ItemDetails object contains all information about an item. This includes all fields for all languages and versions. The ItemDetails object is the object used internally by Razl to copy items between servers.
 
 Summary of parameters:
 - **-Connection** [Required] - A Razl connection to the Sitecore server.
-- **-ItemID** [Required] - An ItemID or Array of ItemIDd to get the ItemDetails object(s) for.
+- **-ItemID** [Required] - An ItemID or Array of ItemIDs to get the ItemDetails object(s) for.
 
 See [Manipulating ItemDetails](#manipulating-itemdetails) below for the ItemDetails structure.
 
@@ -129,18 +129,18 @@ The following is an example of using the Get-RazlReferredItems cmdlet to get the
 	Get-RazlReferredItems -Connection $source -ItemID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 
 ### Setting Sitecore Item Information
-Sitecore Razl offers the developer the ability to update items on a Sitecore server through a number of cmdlets. These cmdlets accept data structures that could be manipulated by the PowerShell script.
+Sitecore Razl offers the developer the ability to update items on a Sitecore server through a number of cmdlets. These cmdlets accept data structures that can be manipulated by PowerShell scripts.
 
 #### Set-RazlField
 The Set-RazlField cmdlet accepts a FieldData object and uses the information in the FieldData object to update an item on a Sitecore server.
 
 Summary of parameters:
-- **-Connection** [Required] - The RazlConnection to a Sitecore server.
-- **-ItemId** [Required] - Item to set field information for.
+- **-Connection** [Required] - The connection to a Sitecore server.
+- **-FieldData** [Optional] - The FieldData object that contains the information about the field.
 - **-FieldId** [Required] - The Field ID to set.
+- **-ItemId** [Required] - Item to set field information for.
 - **-LanguageId** [Optional] - The Language for the field.
 - **-VersionNum** [Optional] - The Version for the field.
-- **-FieldData** [Optional] - The FieldData object that contains the information about the field.
 
 The following is an example of using the Set-RazlField cmdlet to update the Text field of the Home item:
 
@@ -151,16 +151,16 @@ The following is an example of using the Set-RazlField cmdlet to update the Text
 	Set-RazlField -Connection $target -ItemID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" -FieldID "{A60ACD61-A6DB-4182-8329-C957982CEC74}" -LanguageId "en" -VersionNum 1 -FieldData $fieldData -verbose
 
 #### Set-RazlFieldBlob
-The Set-RazlFieldBlob cmdlet accepts a byte array or filename updates a blob field on an item on a Sitecore server.
+The Set-RazlFieldBlob cmdlet accepts a byte array or filename and updates a blob field on an item on a Sitecore server.
 
 Summary of parameters:
 - **-Connection** [Required] - The RazlConnection to a Sitecore server.
-- **-ItemId** [Required] - Item to set field information for.
+- **-FieldBytes** [Optional] - Array of bytes that represents the field blob. If this is empty, a filename must be specified.
 - **-FieldId** [Required] - The Field ID to set.
+- **-Filename** [Optional] - The File name to set the blob from. This must be specified if FieldBytes is empty. The contents of the blob are updates with the contents of the file.
+- **-ItemId** [Required] - Item to set field information for.
 - **-LanguageId** [Optional] - The Language for the field.
 - **-VersionNum** [Optional] - The Version for the field.
-- **-Filename** [Optional] - The File name to set the blob from. This must be specified if FieldBytes is empty.
-- **-FieldBytes** [Optional] - Array of bytes that represents the field blob. If this is empty, a filename must be specified.
 
 The following is an example of using the Set-RazlFieldBlob cmdlet to update the Blob field of the Google Plus media item:
 
@@ -201,10 +201,10 @@ The following is an example of using Set-RazlItemTemplate to update the Template
 
 ### Manipulating Sitecore Items
 
-Sitecore Razl provides some cmdlets to manipulate items on a Sitecore server. 
+Sitecore Razl provides cmdlets to allow PowerShell scripts to manipulate items on a Sitecore server. 
 
 #### Move-RazlItem
-The Move-RazlItem moves a Sitecore item from one location in the content tree to another.
+The Move-RazlItem cmdlet moves a Sitecore item from one location in the content tree to another.
 
 Summary of parameters:
 - **-Connection** [Required] - The RazlConnection to a Sitecore server.
@@ -231,13 +231,13 @@ The following is an example of using Remove-RazlItem the Home item from the serv
 Sitecore Razl uses a number of different queries to assist the developer. Those queries have been exposed to PowerShell with the cmdlets below.
 
 #### Get-RazlDeepCompareResults
-The Get-RazlDeepCompareResults cmdlet performs the same comparison as the Razl Deep Compare function. It starts at a single Sitecore item and compares the item and all items below it in the content tree. The results are returned as an array of DeepCompareResult objects. These objects can be passed to other PowerShell cmdlets using the pipeline functions.
+The Get-RazlDeepCompareResults cmdlet performs the same comparison as the Razl Deep Compare function. It starts at a single Sitecore item and compares the item and all items below it in the content trees on the source and target servers. The results are returned as an array of DeepCompareResult objects. These objects can be passed to other PowerShell cmdlets using the pipeline functions.
 
 Summary of parameters:
+- **-Description** [Optional] - The description shown in progress status messages.
+- **-RootItemId** [Required] - The root item to start the comparison between the two content trees.
 - **-Source** [Required] - A Razl connection to the source Sitecore server. Items will be compared between this server and the target server.
 - **-Target** [Required] - A Razl connection to the source Sitecore server. Items will be compared between this server and the source server.
-- **-RootItemId** [Required] - The item to start the comparison between the two servers.
-- **-Description** [Optional] - The description shown in progress status messages.
 
 The cmdlet returns an array of DeepCompareResult objects. The DeepCompareResult  object has the following properties:
 
@@ -254,9 +254,9 @@ The Get-RazlHistory cmdlet returns a list of recent changes to the server. These
 
 Summary of parameters:
 
-- **-Connection** [Required] - The RazlConnection to a Sitecore server.    
-- **-From** [Optional] - The - DateTime to start getting the history of changes. No changes made before this date will be returned. If not specified, returned changes will start at the oldest avaialble change in the history table.
-- **-To** [Optional] - Date time to stop getting the history of changes. No changes made after this date will be returned. If not specified, changes up to the most recent change will be returned.
+- **-Connection** [Required] - The Connection to a Sitecore server.    
+- **-From** [Optional] - The DateTime to start getting the history of changes. No changes made before this date will be returned. If not specified, returned changes will start at the oldest avaialble change in the history table.
+- **-To** [Optional] - DateTime to stop getting the history of changes. No changes made after this date will be returned. If not specified, changes up to the most recent change will be returned.
 
 The cmdlet returns an array of ChangeHistoryDetails objects. The ChangeHistoryDetails  object has the following properties:
 
@@ -286,10 +286,10 @@ Please see [Get-RazlChildItems](#get-razlchilditems) for more information about 
 
 The following is an example of searching for some text in Sitecore:
 
-	$results = Search-RazlItems -Connection $connection -SearchText "Sitecore Rules!"
+	$results = Search-RazlItems -Connection $connection -SearchText "Sitecore"
 
 ### Manipulating ItemDetails
-The [Get-RazlItem](#get-razlitem) and [Set-RazlItem](#set-razlitem) cmdlets use the ItemDetails object to get and set items on the server. The ItemDetails object contains all field values for an item along with any known item meta-data. The ItemDetails object can be used to create or update existing items.The ItemDetails object returned by the the Get-RazlItem cmdlet contains everything needed by the Set-ItemDetails cmdlet to update an item on a server.
+The [Get-RazlItem](#get-razlitem) and [Set-RazlItem](#set-razlitem) cmdlets use the ItemDetails object to get and set items on the server. The ItemDetails object contains all field values for an item along with any known item meta-data. The ItemDetails object can be used to create or update existing items. The ItemDetails object returned by the the Get-RazlItem cmdlet contains everything needed by the Set-ItemDetails cmdlet to update an item on a server.
 
 The Razl scripting library provides a few simple cmdlets to allow the developer to manipulate the ItemDetails object. This allows the developer virtually unlimited flexibility to manipulate Sitecore items. This flexibility facilitates many upgrade/migration scenarios.
 
@@ -356,7 +356,7 @@ The ItemProperties object contains the following properties:
 - **ParentId** - ID of the items parent.
 - **Path** - Full path of the item.
 - **StandardValuesId** - ID of the standard values item in the items - template.
-- **TemplateId** - ID of the template of the item.
+- **TemplateId** - ID of the template for the item.
 - **TemplateName** - Friendly name of the template.
 - **TemplatePath** - Full path to the template.
 - **Version** - The most recent version of the item.
@@ -365,7 +365,7 @@ The ItemProperties object contains the following properties:
 The New-RazlItem cmdlet creates a new ItemDetails object with the specified name, Template, Parent and ID. This object can be passed to Set-RazlItem to create/update an item on a Sitecore server.
 
 Summary of parameters:
-- **ItemID** [Optional] - The ID of the item to create or update. If this is omitted, the ID is generated randomly.
+- **ItemID** [Optional] - The ID of the item to create or update. If this is omitted, the ID a random Guid.
 - **Name** [Required] - The name of the new Sitecore item.
 - **ParentItemID** [Required] - The ID of the parent Sitecore item. The parent item must exist on the Sitecore server when the ItemDetails object is pushed to the server using Set-RazlItem.
 - **TemplateID** [Required] - The ID of the items template. The template must exist on the Sitecore server when the ItemDetails object is pushed to the server using Set-RazlItem.
@@ -429,7 +429,7 @@ Summary of parameters:
 The cmdlets in the section provide some functionality used by Razl that could be useful in some scripts, but don't really fit into any specific category.
 
 #### Clear-RazlCache
-The Clear-RazlCache cmdlet executes a clear all Sitecore caches on the server. Pleae note: This operation can cause performance degradation of the server while the cache is re-populating, and should be used with care.
+The Clear-RazlCache cmdlet clears all Sitecore caches on the server. Pleae note: This operation can cause performance degradation of the server while the cache is re-populating, and should be used with care.
 
 Summary of parameters:
 - **-Connection** [Required] - A connection to a server.
