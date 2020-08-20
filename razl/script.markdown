@@ -20,6 +20,8 @@ Summary of Parameters:
 - **-ReadOnly** [Optional Switch] - The connection is read only when this switch is present.
 - **-Username** [Optional] - The username to use when connecting to the server.
 - **-Password** [Optional] - The password to use when connecting to the server.
+- **-ReadThreads** [Optional] - The number of read threads to use when copying a tree from one server to another.
+- **-WriteThreads** [Optional] -The number of write threads to use when copying a tree from one server to another.
 
 The following is an example of creating a connection to Sitecore:
 
