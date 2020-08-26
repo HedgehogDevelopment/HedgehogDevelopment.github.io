@@ -184,7 +184,7 @@ Since the image location and access guid are also parameterized, the environment
 #### Updating the Environment variables for the Razl Connector
 The .env file is used to configure environment variables for the docker-compose command. The following lines need to be added to the environment file to enable the Razl connector using the configuration settings specified above.
 
-    RAZL_CONNECTION_IMAGE=[TBD]/sitecore-razl-assets:[Razl Version]
+    RAZL_CONNECTION_IMAGE=scr.sitecore.com/tools/sitecore-razl-assets:[Razl Version]-1809
     RAZL_ACCESS_GUID=0000000-1111-2222-3333-444444444444
 
-The **[Razl Version]** in the RAZL_CONNECTION_IMAGE should be replaced with the version of the connnector the developer wishes to install in the environment. The format of the version is typically *Major*.*Minor*.*Release*. e.g. 5.0.0
+The **[Razl Version]** in the RAZL_CONNECTION_IMAGE should be replaced with the version of the connnector the developer wishes to install in the environment. The format of the version is typically *Major*.*Minor*.*Release*. e.g. 5.0.1
