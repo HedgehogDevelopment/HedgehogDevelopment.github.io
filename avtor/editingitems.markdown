@@ -2,6 +2,9 @@
 title: Editing items with Avtor
 layout: AvtorLayout
 ---
+<script>
+	window.location.replace("https://doc.sitecore.com/users/100/sitecore-experience-platform/en/working-with-the-avtor-editor.html");
+</script>
 
 ## Editing items with Avtor
 Avtor is a very powerful tool for creating and editing Sitecore items. Like every tool, it is designed for specific uses. This document will help content editors understand how to best use Avtor, and how it will make editing Sitecore items easier.

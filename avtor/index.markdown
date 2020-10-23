@@ -4,7 +4,7 @@ layout: AvtorLayout
 ---
 
 <script>
-	alert('test');
+	window.location.replace("https://doc.sitecore.com/users/100/sitecore-experience-platform/en/the-avtor-editor.html");
 </script>
 
 ## About Avtor ![](/Images/Avtor/Avtor.png)

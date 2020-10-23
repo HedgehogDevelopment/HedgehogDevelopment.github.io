@@ -3,6 +3,10 @@ title: Importing and Exporting items with Avtor
 layout: AvtorLayout
 ---
 
+<script>
+	window.location.replace("https://doc.sitecore.com/users/100/sitecore-experience-platform/en/exporting-items.html");
+</script>
+
 ## Importing and Exporting items
 Avtor allows the content editor to export items from Sitecore to an XML or CSV file. These files can be opened in spreadsheet programs like Excel to perform much more sophisticated analysis of Sitecore content than Avtor provides. One of the unique features of Avtor is the ability to import updated export files back into Sitecore. This offers the content editor very powerful editing and analysis tools.
 
