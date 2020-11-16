@@ -3,7 +3,7 @@ title: Using Sitecore Feydra
 layout: FeydraLayout
 ---
 
-# Using Sitecore Feydra
+## Using Sitecore Feydra
 A front-end developer needs to be able to copy files to the web server to work with 
 the website. There are a number of ways this can happen (Unc path, remote access, 
 FTP, etc.). The choice of the technology for copying files to the server is left 

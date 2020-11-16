@@ -1,11 +1,9 @@
 ---
-title: Chapter 2 - Sitecore TDS Documentation
+title: Getting started with Sitecore TDS
 layout: TdsLayout
 ---
 
-# Sitecore TDS
-
-## Chapter 2 – Getting started with Sitecore TDS
+## Getting started with Sitecore TDS
 
 ### System Requirements
 

@@ -1,9 +1,7 @@
 ---
-title: Sitecore Razl - Sitecore Razl Screen Layout
+title: Sitecore Razl - Screen Layout
 layout: RazlLayout
 ---
-
-# Sitecore Razl
 
 ## Sitecore Razl Screen Layout
 
@@ -24,10 +22,14 @@ The toolbar provides access to the different functions available in Sitecore Raz
 
 ![](/Images/Razl-V4/toolbar.png) 
 
+1. Navigate back - Move back through the items you have clicked on.
+1. Navigate forward - After navigating backwards, you can use this button to navigate forward.
 1. Left connection - the Sitecore connection used by the left hand side of Sitecore Razl.
 1. Left History engine view - displays entries in the left hand Sitecore history engine.
 1. Left connection information - summary information about the left connection.
+1. Left connection bookmarks - Displays a list of bookmarks on the left connection.
 1. Connection Manager - allows the user to manage all their connections.
+1. Right connection bookmarks - Displays a list of bookmarks on the right connection.
 1. Right connection information - summary information about the right connection.
 1. Right History engine view -  displays entries in the righthand Sitecore history engine.
 1. Right connection - the Sitecore connection used by the right hand side of Sitecore Razl.

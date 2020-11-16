@@ -1,9 +1,13 @@
 ﻿---
-title: Editing items with Avtor
+title: Avtor Search
 layout: AvtorLayout
 ---
 
-# Avtor Search
+<script>
+	window.location.replace("https://doc.sitecore.com/users/100/sitecore-experience-platform/en/search.html");
+</script>
+
+## Avtor Search
 Avtor allows the content editor to leverage Sitecore's search capabilities to find items in the content tree. When the user searches for text, the Sitecore content index queries using the search criteria the user submitted. Items matching the search criteria are highlighted in the content tree.
 
 ## Search ribbon bar

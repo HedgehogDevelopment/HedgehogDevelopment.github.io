@@ -1,9 +1,13 @@
 ﻿---
-title: Editing items with Avtor
+title: Field Sets in Avtor
 layout: AvtorLayout
 ---
 
-# Field Sets
+<script>
+	window.location.replace("https://doc.sitecore.com/users/100/sitecore-experience-platform/en/field-sets.html");
+</script>
+
+## Field Sets
 Avtor uses Field Sets to group a small number of fields together for the editor to review and/or update. The Field Set is named and saved as part of the content editor's profile so they can quickly re-select those fields for editing. Avtor makes creating and managing the fields in a Field Set very simple. The user simply selects an item from the tree that they want to update and all the editable fields are presented to the them. They can then choose the fields for their Fields Set and then save the Field Set for future use.
 
 ## Creating a Field Set

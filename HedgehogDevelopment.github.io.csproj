@@ -388,6 +388,8 @@
     <None Include="avtor\licensemanager.markdown" />
     <Content Include="tds\chapter8.markdown" />
     <Content Include="razl\xml_script.markdown" />
+    <Content Include="razl\advancedscript.markdown" />
+    <Content Include="razl\containers.markdown" />
     <None Include="_config.yml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />

@@ -3,8 +3,6 @@ title: Sitecore Razl - Connections
 layout: RazlLayout
 ---
 
-# Sitecore Razl
-
 ## Connections
 
 Razl allows you to create connections to instances of Sitecore and view the differences in between the instances side-by-side.
@@ -95,6 +93,7 @@ The buttons on the connection manager have the following function:
 - **Test Connection** - Installs the service on the Sitecore server if the connection is a direct connnection and verifies that Sitecore Razl can communicate with the service.
 - **Export** - Allows the user to export the connection information to a file. This file can be imported into another install of Sitecore Razl, duplicating the connection.
 - **Add** - Allows the user to add a connection. Clicking this button will open the connection wizard shown above.
+- **Copy** - Copy a connection to a new connection.
 - **Import** - Allows the user to import a connection from another instance of Sitecore Razl.
 - **Ok** - Accepts the change the user made to the connections in the connection manager.
 - **Cancel** - Reverts all changes made to the connections since the dialog was opened.
@@ -108,12 +107,6 @@ The connection can also be edited right from the connection selection dropdown:
 1. The edit connection screen will appear, you will see different edit screens depending on the connection being used. For Direct Connections you will see:<br /> <br /> ![](/Images/Razl-V4/editconn2.png) <br /> <br /> For Package Connections you will see:<br /> <br /> ![](/Images/Razl/editconn3.PNG)<br/> <br /> In either case, the **Export** button will allow you to export your connection so it may be used by other developers.
 1. If you make any changes you must click **Test Connection** before you can save the settings.
 1. Update the settings you want to change and click **Ok**.
-
-### Deleting a Connection
-The connection can be deleted from the connection selection dropdown without using the connection manager:
-1. Click either the left or right connection drop down
-1. Click the cross icon that is next to the connection you want to delete:  ![](/Images/Razl/deleteconn.PNG)
-1. The connection will now be removed.
 
 ### Connection Information
 
