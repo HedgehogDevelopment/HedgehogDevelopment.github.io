@@ -7,6 +7,11 @@ layout: RazlLayout
 
 The Sitecore Razl scripting engine has been completely re-designed. Sitecore Razl now uses PowerShell to script Razl operations. All operations available in the old scripting engine have been implemented as PowerShell cmdlets. In addtion to the high-level operation cmdlets, Sitecore Razl provides PowerShell cmdlets to perform all low-level operations Sitecore Razl uses. This allows the developer to create very robust scripts to manipulate the Sitecore items as they are copied between servers.
 
+The Sitecore Razl PowerShell CmdLets require at least PowerShell 5.1
+
+### Scripting in previous versions of Razl
+The Razl PowerShell CmdLets provide all of the same script functionality as previous versions of Razl, along with the flexibility of PowerShell. If you are looking for documentation on the previous version, please see: [Razl XML Scripts](./xml_script.html)
+
 ### Sitecore Razl PowerShell Connections
 
 Connections define how Sitecore Razl should connect to a Sitecore instance. The connections are created with a PowerShell Cmdlet and are stored in a variable for later use.
