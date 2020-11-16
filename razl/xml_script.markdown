@@ -3,8 +3,6 @@ title: Sitecore Razl - Scripts
 layout: RazlLayout
 ---
 
-# Sitecore Razl
-
 ## Sitecore Razl Script
 
 Sitecore Razl allows the user to to create XML documents that define connections to Sitecore servers and the operations Sitecore Razl should perform on those servers. These can then be executed from the Command Prompt or build scripts.
