@@ -12,6 +12,9 @@ The Sitecore Razl PowerShell CmdLets require at least PowerShell 5.1
 ### Scripting in previous versions of Razl
 The Razl PowerShell CmdLets provide all of the same script functionality as previous versions of Razl, along with the flexibility of PowerShell. If you are looking for documentation on the previous version, please see: [Razl XML Scripts](./xml_script.html)
 
+### Running scripts in build pipelines
+The Razl Powershell CmdLets need the customer Razl license to run in a build pipeline. This can be upplied using the environment variable **RAZL_LICENSE_KEY**. This key should be kept as a private environment variable because it contains the customers license key.
+
 ### Sitecore Razl PowerShell Connections
 
 Connections define how Sitecore Razl should connect to a Sitecore instance. The connections are created with a PowerShell Cmdlet and are stored in a variable for later use.
