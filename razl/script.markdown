@@ -9,6 +9,13 @@ The Sitecore Razl scripting engine has been completely re-designed. Sitecore Raz
 
 The Sitecore Razl PowerShell CmdLets require at least PowerShell 5.1
 
+### Importing the script module
+The Razl scripting module is imported into powershell by executing the powershell command:
+
+    import-module [Path to dll]\HedgehogDevelopment.RazlClient.dll -verbose
+
+This will import all of the Razl scripting command into the current PowerShell session.
+
 ### Scripting in previous versions of Razl
 The Razl PowerShell CmdLets provide all of the same script functionality as previous versions of Razl, along with the flexibility of PowerShell. If you are looking for documentation on the previous version, please see: [Razl XML Scripts](./xml_script.html)
 
