@@ -274,6 +274,26 @@ Contains the settings needed to build WebDeploy packages with Sitecore TDS. Thes
 
 For more information on deploying packages in Azure and to stand alone Sitecore servers, please see [Using WebDeploy packages](/tds/chapter7.html).
 
+#### Item Resource File
+Contains the settings needed to build 'Items as Resources' files.
+
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
+These files are only compatible with Sitecore versions 10.1 and above, and are loaded during Sitecore initialization from the App_Data/items folder of your website. Place the generated .dat file within the corresponding App_Data/items/&lt;database&gt; folder for your Sitecore instance, and then restart the application in order to use these items.
+<br/>
+TDS Deployment options are **not** used with Items as Resource files. All included items in the project will be in the resource file and will be available in the Sitecore instance.
+</div>
+</div>
+
+ ![](/Images/Tds/chapter4-itemresourcefile.png)
+
+* **Build Item Resource File** - Enables building of Items as Resources files. (.dat extension)
+* **Item Resource File name prefix** - Allows the developer to specify the prefixed name of the package being built. Filename will be &lt;prefix&gt;.items.&lt;database&gt;.dat.
+* **Add generated resource file(s) to deployed files** - When checked, the Items as Resources .dat file will be added to the deployed files in the App_Data/items/&lt;database&gt; folder. This means they will be copied over if File Deployment is used, or will be included in a package if that package includes 'code' in the package generation settings.
+
 #### Deploy
 The Sitecore TDS Deploy property page allows the developer to select actions to perform at deployment time. These actions will be executed for Sitecore TDS Deployments and Package Installation as Post Deploy Steps. 
 
