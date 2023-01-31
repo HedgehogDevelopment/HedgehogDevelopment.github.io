@@ -18,6 +18,8 @@ The history engine used by Sitecore may not be turned on by default, if Sitecore
 
 Also notice that the history engine specifies a lifetime to retain this data which by default is 30 days, Sitecore Razl won’t be able to display any information before this time.
 
+**Note:** Starting with version 5, Razl supports using search indexes for the history view. The history based on search indexes is available for Sitecore 9 and later. For older versions of Sitecore, the history view continues to be based on the history table and the history engine.
+
 ### Opening the History View
 
 To open the history view follows these instructions:
