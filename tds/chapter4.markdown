@@ -952,6 +952,17 @@ Opening the properties page for a project will now show that the Package Author 
 
 Values pulled from the global config can not be altered on the project page and therefore the control is disabled. The property will also display a globe to the right of the property to indicate it is a global value.
 
+<div class="panel">
+ <div class="panel-header bg-lightBlue fg-white">
+ NOTE
+ </div>
+ <div class="panel-content">
+<p>
+In TdsGlobal.config and TdsGlobal.config.user, please note that for the unconditional PropertyGroup section, only the Global Properties specified under the section can be used, which are <b>SerializationFormat</b> and <b>CompactSitecoreItemsInProjectFile</b>. Non-global properties should not be added in this section. <br />
+No custom properties should be added in TdsGlobal.config and TdsGlobal.config.user under any PropertyGroup section
+</p>
+</div></div>
+
 ### Sitecore Rocks
 
 Sitecore Rocks is a Visual Studio add-in that offers many great features designed to improve developer productivity when working with Sitecore. The features of Rocks that concern Sitecore TDS are the features that allow developers to perform some of the functions found in the Sitecore desktop without leaving the Visual Studio. Sitecore TDS takes advantage of the Sitecore Rocks plug-in framework to create a connectivity layer between Sitecore TDS and Rocks.
