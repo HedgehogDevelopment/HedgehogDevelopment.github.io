@@ -2,9 +2,6 @@
 title: Item Buckets in Avtor
 layout: AvtorLayout
 ---
-<script>
-	window.location.replace("https://doc.sitecore.com/users/100/sitecore-experience-platform/en/item-buckets.html");
-</script>
 
 ## Item Buckets in Avtor
 Avtor is designed to make working with content in Item Buckets as easy as other types of Sitecore content. Avtor has a simple search mechanism for locating items in the bucket and when items are found, they are added to the content tree like any other content.
