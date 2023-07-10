@@ -3,10 +3,6 @@ title: Avtor Special Features
 layout: AvtorLayout
 ---
 
-<script>
-	window.location.replace("https://doc.sitecore.com/users/100/sitecore-experience-platform/en/special-features.html");
-</script>
-
 ## Special Features
 Avtor contains a number of features that do not immediately fit in to any of the other broad categories. These features are documented here.
 
